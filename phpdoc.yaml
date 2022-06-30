@@ -1,0 +1,10 @@
+title: themeslug - slugification des thèmes Ecophères
+name: /georef/themeslug 
+doc: |
+  Script de slugification des thèmes d'Ecosphères.
+  Résultat publié dans une issue GiLab sur le sujet.
+journal:
+  30/6/2022:
+    - création du script et publication du résultat sur le blog
+phpScripts:
+  - /georef/themeslug/slugify.php
