@@ -1,5 +1,5 @@
 # Liste des thèmes d'Ecosphères
-#### Publiée par Benoit DAVID - 30/6/2022
+#### Publiée par Benoit DAVID - 30/6/2022 v2
 
 ## Climat
 
@@ -14,13 +14,13 @@
 - Planification
 - Études
 
-## Société et services
+## Équipements culturels, sportifs et de santé
 
 - Etablissements d'enseignement
 - Équipements sportifs ou culturels
 - Patrimoine culturel
-- Etablissements de santé et médico-sociaux
-- Equipements de tourisme
+- Établissements de santé et médico-sociaux
+- Équipements de tourisme
 - Autres établissements recevant du public
 
 ## Eau
@@ -123,6 +123,4 @@
 - Réseau navigable et ouvrages de navigation
 - Infrastructure portuaire
 - Infrastructure routière
-
-
 

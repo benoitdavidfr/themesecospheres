@@ -5,7 +5,7 @@ Voici le résultat du script Php:
 ---
 
 # Liste des thèmes d'Ecosphères
-#### Publiée par Benoit DAVID - 30/6/2022
+#### Publiée par Benoit DAVID - 30/6/2022 v2
 
 ## [Climat](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat)
 
@@ -20,13 +20,13 @@ Voici le résultat du script Php:
 - [Planification](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/planification)
 - [Études](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etudes)
 
-## [Société et services](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/societe-et-services)
+## [Équipements culturels, sportifs et de santé](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-culturels-sportifs-et-de-sante)
 
 - [Etablissements d'enseignement](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-enseignement)
 - [Équipements sportifs ou culturels](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-sportifs-ou-culturels)
 - [Patrimoine culturel](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/patrimoine-culturel)
-- [Etablissements de santé et médico-sociaux](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-de-sante-et-medico-sociaux)
-- [Equipements de tourisme](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-de-tourisme)
+- [Établissements de santé et médico-sociaux](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-de-sante-et-medico-sociaux)
+- [Équipements de tourisme](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-de-tourisme)
 - [Autres établissements recevant du public](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/autres-etablissements-recevant-du-public)
 
 ## [Eau](https://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau)
