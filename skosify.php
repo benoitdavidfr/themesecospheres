@@ -3,7 +3,9 @@
 title: skosify.php - génération d'une version Skos des thèmes Ecosphères
 name: skosify.php
 doc: |
-  Lit le fichier des thèmes en MarkDown en paramètre et fabrique le fichier ttl correspondant.
+  Lit le fichier des thèmes en MarkDown en paramètre et fabrique le fichier Skos correspondant.
+  Peut afficher en Turtle ou dans les autres formats proposés par EasyRdf ainsi que Yaml-LD
+
 journal: |
   5/7/2022:
     - création
@@ -16,12 +18,19 @@ use Symfony\Component\Yaml\Yaml;
 date_default_timezone_set('Europe/Paris');
 
 if ($argc == 1) {
-  echo "usage: php $argv[0] {mdfile} [{fmt}]\n";
+  echo "usage: php $argv[0] [-short] {mdfile} [{fmt}]\n";
   print_r(\EasyRdf\Format::getFormats());
   die();
 }
 
-$themes = file_get_contents($argv[1]);
+array_shift($argv);
+$short = false;
+if ($argv[0] == '-short') {
+  $short = true;
+  array_shift($argv);
+}
+
+$themes = file_get_contents($argv[0]);
 $themes = explode("\n", $themes);
 
 //echo "<pre>\n";
@@ -33,6 +42,7 @@ $prefixes = [
   'dct'=> 'http://purl.org/dc/terms/',
   'ecospheres'=> 'http://registre.data.developpement-durable.gouv.fr/ecospheres/',
   'themes'=> 'http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/',
+  'espsyntax'=> 'http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#',
 ];
 
 $scheme = [
@@ -53,11 +63,11 @@ foreach ($themes as $theme) {
   if (substr($theme, 0, 2)=='# ') { // Titre du document
     $scheme['dct:title'] = [substr($theme, 2)];
   }
-  elseif (substr($theme, 0, 5)=='#### ') { // Titre du document
+  elseif (substr($theme, 0, 5)=='#### ') { // Description du document
     $scheme['dct:description'] = [substr($theme, 5)];
   }
   elseif (substr($theme, 0, 3)=='## ') { // theme de niveau 1 
-    if ($concepts) break; // limite à un seul topConcept pour les tests
+    if ($short && $concepts) break; // limite à un seul topConcept pour les tests
     $theme = substr($theme, 3);
     if (!preg_match($pattern, $theme, $matches)) {
       die("No match pour $theme\n");
@@ -70,6 +80,8 @@ foreach ($themes as $theme) {
       'skos:inScheme'=> ['ecospheres:themes'],
       'skos:topConceptOf'=> ['ecospheres:themes'],
       'skos:prefLabel'=> [$theme],
+      'skos:altLabel'=> [],
+      'espsyntax:regexp'=> [],
       'skos:narrower'=> [],
     ];
     $scheme['skos:hasTopConcept'][] = $puri;
@@ -85,16 +97,42 @@ foreach ($themes as $theme) {
       'rdf:type'=> ['skos:Concept'],
       'skos:inScheme'=> ['ecospheres:themes'],
       'skos:prefLabel'=> [$theme],
+      'skos:altLabel'=> [],
+      'espsyntax:regexp'=> [],
       'skos:broader'=> [$puri],
     ];
     $concepts[$puri]['skos:narrower'][] = $uri;
   }
 }
 
+// ajout de qqs altLabels et regexps
+if (1) {
+  $concepts['themes:climat']['skos:altLabel'] = ['air-climat'];
+  $concepts['themes:changement-climatique']['skos:altLabel'] = [
+    'Air Climat/Changement climatique',
+    'climat-air-et-energie',
+    'climat',
+  ];
+  $concepts['themes:changement-climatique']['espsyntax:regexp'] = [
+    'Plans? Climat-Energie',
+    'Plan Climat Air Energie territorr?ial',
+    'Air, Énergie et Climat',
+    'PCAET',
+    "Plans de Protection de l'Atmosphère",
+    'SRCAE',
+    'territoires? à énergie positive',
+  ];
+  $concepts['themes:meteorologie']['skos:altLabel'] = [
+    'Air Climat/Météo',
+  ];
+}
+
+
 function ttlify(string $subject, array $po): string {
   unset($po['@id']);
   $ttl = "$subject\n";
   foreach ($po as $predicate => $objects) {
+    if (!$objects) continue;
     $ttl .= "  $predicate ";
     foreach ($objects as $io => $object) {
       if ((substr($object, 0, 7)=='http://') || (substr($object, 0, 8)=='https://'))
@@ -113,10 +151,12 @@ function ttlify(string $subject, array $po): string {
   return "$ttl.\n";
 }
 
-if (0) {
-  echo Yaml::dump($concepts, 6, 2);
+// affichage du résultat
+if (($argv[1] ?? null) == 'dump') { // dump brut de la structure constuite 
+  echo Yaml::dump(['prefixes'=> $prefixes, 'scheme'=> $scheme, 'concepts'=> $concepts], 6, 2);
+  die();
 }
-else {
+else { // fabrication d'une sortie Turtle
   $ttl = '';
   foreach ($prefixes as $prefix => $uri)
     $ttl .= "@prefix $prefix: <$uri> .\n";
@@ -124,16 +164,16 @@ else {
   $ttl .= ttlify($scheme['@id'][0], $scheme)."\n";
   foreach ($concepts as $uri => $po)
     $ttl .= ttlify($uri, $po)."\n";
-  if (0) {
+  if (!isset($argv[1])) { // par défaut affichage de la sortie Turtle
     die($ttl);
   }
-  else {
+  else { // transformation par EsayRdf en jsonld, yamlld ou autre
     $graph = new \EasyRdf\Graph($scheme['@id'][0]);
     $graph->parse($ttl, 'turtle', $scheme['@id'][0]);
-     switch ($ofmt = $argv[2] ?? 'turtle') {
+     switch ($ofmt = $argv[1]) {
       case 'jsonld': {
         $ser = $graph->serialise($ofmt);
-        echo json_encode(json_decode($ser), JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
+        echo json_encode(json_decode($ser), JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE),"\n";
         break;
       }
       case 'yamlld': {

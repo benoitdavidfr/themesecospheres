@@ -1,0 +1,603 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ecospheres: <http://registre.data.developpement-durable.gouv.fr/ecospheres/> .
+@prefix themes: <http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/> .
+@prefix espsyntax: <http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#> .
+
+ecospheres:themes
+  rdf:type skos:ConceptScheme;
+  dct:title "Liste des thèmes d'Ecosphères"@fr;
+  dct:description "Publiée par Benoit DAVID - 5/7/2022"@fr;
+  dct:modified "2022-07-05T16:52:57+02:00";
+  dct:license <https://www.etalab.gouv.fr/licence-ouverte-open-licence>;
+  skos:hasTopConcept themes:climat, themes:amenagement-et-urbanisme, themes:etablissements-d-activites, themes:eau, themes:foncier-et-occupation-du-sol, themes:habitat-et-politique-de-la-ville, themes:mer-et-littoral, themes:nature-paysages-et-biodiversite, themes:nuisances-dechets-et-pollution, themes:reseaux-d-energie-et-de-communication, themes:risques, themes:industrie, themes:transport-et-deplacements, themes:infrastructures-de-transport.
+
+themes:climat
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Climat"@fr;
+  skos:altLabel "air-climat"@fr;
+  skos:narrower themes:changement-climatique, themes:meteorologie.
+
+themes:changement-climatique
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Changement climatique"@fr;
+  skos:altLabel "Air Climat/Changement climatique"@fr, "climat-air-et-energie"@fr, "climat"@fr;
+  espsyntax:regexp "Plans? Climat-Energie"@fr, "Plan Climat Air Energie territorr?ial"@fr, "Air, Énergie et Climat"@fr, "PCAET"@fr, "Plans de Protection de l'Atmosphère"@fr, "SRCAE"@fr, "territoires? à énergie positive"@fr;
+  skos:broader themes:climat.
+
+themes:meteorologie
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Météorologie"@fr;
+  skos:altLabel "Air Climat/Météo"@fr;
+  skos:broader themes:climat.
+
+themes:amenagement-et-urbanisme
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Aménagement et urbanisme"@fr;
+  skos:narrower themes:servitudes-d-utilite-publique, themes:politique-europeenne-d-amenagement, themes:zonages-d-amenagement, themes:planification, themes:etudes.
+
+themes:servitudes-d-utilite-publique
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Servitudes d'utilité publique"@fr;
+  skos:broader themes:amenagement-et-urbanisme.
+
+themes:politique-europeenne-d-amenagement
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Politique européenne d'aménagement"@fr;
+  skos:broader themes:amenagement-et-urbanisme.
+
+themes:zonages-d-amenagement
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Zonages d'aménagement"@fr;
+  skos:broader themes:amenagement-et-urbanisme.
+
+themes:planification
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Planification"@fr;
+  skos:broader themes:amenagement-et-urbanisme.
+
+themes:etudes
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Études"@fr;
+  skos:broader themes:amenagement-et-urbanisme.
+
+themes:etablissements-d-activites
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Établissements d'activités"@fr;
+  skos:narrower themes:etablissements-d-enseignement, themes:equipements-sportifs-ou-culturels, themes:patrimoine-culturel, themes:etablissements-de-sante-et-medico-sociaux, themes:equipements-de-tourisme, themes:autres-etablissements-recevant-du-public.
+
+themes:etablissements-d-enseignement
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Etablissements d'enseignement"@fr;
+  skos:broader themes:etablissements-d-activites.
+
+themes:equipements-sportifs-ou-culturels
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Équipements sportifs ou culturels"@fr;
+  skos:broader themes:etablissements-d-activites.
+
+themes:patrimoine-culturel
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Patrimoine culturel"@fr;
+  skos:broader themes:etablissements-d-activites.
+
+themes:etablissements-de-sante-et-medico-sociaux
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Établissements de santé et médico-sociaux"@fr;
+  skos:broader themes:etablissements-d-activites.
+
+themes:equipements-de-tourisme
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Équipements de tourisme"@fr;
+  skos:broader themes:etablissements-d-activites.
+
+themes:autres-etablissements-recevant-du-public
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Autres établissements recevant du public"@fr;
+  skos:broader themes:etablissements-d-activites.
+
+themes:eau
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Eau"@fr;
+  skos:narrower themes:alimentation-en-eau-potable, themes:assainissement, themes:masses-d-eau, themes:ouvrages-hydrauliques, themes:peche-en-eaux-interieures, themes:surveillance-de-la-ressource-en-eau, themes:interventions-sur-les-cours-d-eau, themes:protection-de-l-eau.
+
+themes:alimentation-en-eau-potable
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Alimentation en eau potable"@fr;
+  skos:broader themes:eau.
+
+themes:assainissement
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Assainissement"@fr;
+  skos:broader themes:eau.
+
+themes:masses-d-eau
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Masses d'eau"@fr;
+  skos:broader themes:eau.
+
+themes:ouvrages-hydrauliques
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Ouvrages hydrauliques"@fr;
+  skos:broader themes:eau.
+
+themes:peche-en-eaux-interieures
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Pêche en eaux intérieures"@fr;
+  skos:broader themes:eau.
+
+themes:surveillance-de-la-ressource-en-eau
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Surveillance de la ressource en eau"@fr;
+  skos:broader themes:eau.
+
+themes:interventions-sur-les-cours-d-eau
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Interventions sur les cours d'eau"@fr;
+  skos:broader themes:eau.
+
+themes:protection-de-l-eau
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Protection de l'eau"@fr;
+  skos:broader themes:eau.
+
+themes:foncier-et-occupation-du-sol
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Foncier et occupation du sol"@fr;
+  skos:narrower themes:foncier-agricole, themes:mutation-fonciere, themes:occupation-du-sol, themes:propriete-fonciere.
+
+themes:foncier-agricole
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Foncier agricole"@fr;
+  skos:broader themes:foncier-et-occupation-du-sol.
+
+themes:mutation-fonciere
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Mutation foncière"@fr;
+  skos:broader themes:foncier-et-occupation-du-sol.
+
+themes:occupation-du-sol
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Occupation du sol"@fr;
+  skos:broader themes:foncier-et-occupation-du-sol.
+
+themes:propriete-fonciere
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Propriété foncière"@fr;
+  skos:broader themes:foncier-et-occupation-du-sol.
+
+themes:habitat-et-politique-de-la-ville
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Habitat et politique de la ville"@fr;
+  skos:narrower themes:accession-a-la-propriete, themes:besoins-en-logements, themes:construction, themes:habitat-indigne, themes:occupation-des-logements, themes:parc-locatif-social, themes:parc-de-logements, themes:politique-de-la-ville, themes:renovation-urbaine.
+
+themes:accession-a-la-propriete
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Accession à la propriété"@fr;
+  skos:broader themes:habitat-et-politique-de-la-ville.
+
+themes:besoins-en-logements
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Besoins en logements"@fr;
+  skos:broader themes:habitat-et-politique-de-la-ville.
+
+themes:construction
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Construction"@fr;
+  skos:broader themes:habitat-et-politique-de-la-ville.
+
+themes:habitat-indigne
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Habitat indigne"@fr;
+  skos:broader themes:habitat-et-politique-de-la-ville.
+
+themes:occupation-des-logements
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Occupation des logements"@fr;
+  skos:broader themes:habitat-et-politique-de-la-ville.
+
+themes:parc-locatif-social
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Parc locatif social"@fr;
+  skos:broader themes:habitat-et-politique-de-la-ville.
+
+themes:parc-de-logements
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Parc de logements"@fr;
+  skos:broader themes:habitat-et-politique-de-la-ville.
+
+themes:politique-de-la-ville
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Politique de la ville"@fr;
+  skos:broader themes:habitat-et-politique-de-la-ville.
+
+themes:renovation-urbaine
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Rénovation urbaine"@fr;
+  skos:broader themes:habitat-et-politique-de-la-ville.
+
+themes:mer-et-littoral
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Mer et littoral"@fr;
+  skos:narrower themes:ecologie-du-littoral, themes:limite-administrative-speciale-en-mer, themes:lutte-anti-pollution-en-mer, themes:navigation-maritime, themes:topographie-en-mer, themes:chasse-maritime.
+
+themes:ecologie-du-littoral
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Écologie du littoral"@fr;
+  skos:broader themes:mer-et-littoral.
+
+themes:limite-administrative-speciale-en-mer
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Limite administrative spéciale en mer et sur le littoral"@fr;
+  skos:broader themes:mer-et-littoral.
+
+themes:lutte-anti-pollution-en-mer
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Lutte anti-pollution en mer et sur le littoral"@fr;
+  skos:broader themes:mer-et-littoral.
+
+themes:navigation-maritime
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Navigation maritime"@fr;
+  skos:broader themes:mer-et-littoral.
+
+themes:topographie-en-mer
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Topographie en mer et sur le littoral"@fr;
+  skos:broader themes:mer-et-littoral.
+
+themes:chasse-maritime
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Chasse maritime"@fr;
+  skos:broader themes:mer-et-littoral.
+
+themes:nature-paysages-et-biodiversite
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Nature, paysages et biodiversité"@fr;
+  skos:narrower themes:inventaires-nature-et-biodiversite, themes:inventaires-des-paysages, themes:protection-et-gestion-de-la-nature, themes:protection-et-gestion-des-paysages, themes:chasse.
+
+themes:inventaires-nature-et-biodiversite
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Inventaires nature et biodiversité"@fr;
+  skos:broader themes:nature-paysages-et-biodiversite.
+
+themes:inventaires-des-paysages
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Inventaires des paysages"@fr;
+  skos:broader themes:nature-paysages-et-biodiversite.
+
+themes:protection-et-gestion-de-la-nature
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Protection et gestion de la nature"@fr;
+  skos:broader themes:nature-paysages-et-biodiversite.
+
+themes:protection-et-gestion-des-paysages
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Protection et gestion des paysages"@fr;
+  skos:broader themes:nature-paysages-et-biodiversite.
+
+themes:chasse
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Chasse"@fr;
+  skos:broader themes:nature-paysages-et-biodiversite.
+
+themes:nuisances-dechets-et-pollution
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Nuisances, déchets et pollution"@fr;
+  skos:narrower themes:bruit, themes:dechets, themes:perturbations-electromagnetiques, themes:pollution-des-sols, themes:qualite-de-l-air.
+
+themes:bruit
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Bruit"@fr;
+  skos:broader themes:nuisances-dechets-et-pollution.
+
+themes:dechets
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Déchets"@fr;
+  skos:broader themes:nuisances-dechets-et-pollution.
+
+themes:perturbations-electromagnetiques
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Perturbations électromagnétiques"@fr;
+  skos:broader themes:nuisances-dechets-et-pollution.
+
+themes:pollution-des-sols
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Pollution des sols"@fr;
+  skos:broader themes:nuisances-dechets-et-pollution.
+
+themes:qualite-de-l-air
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Qualité de l'air"@fr;
+  skos:broader themes:nuisances-dechets-et-pollution.
+
+themes:reseaux-d-energie-et-de-communication
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Réseaux d'énergie et de communication"@fr;
+  skos:narrower themes:amenagement-numerique-des-territoires, themes:reseau-electrique, themes:reseau-hydrocarbures, themes:reseau-de-telecommunication.
+
+themes:amenagement-numerique-des-territoires
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Aménagement numérique des territoires"@fr;
+  skos:broader themes:reseaux-d-energie-et-de-communication.
+
+themes:reseau-electrique
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Réseau électrique"@fr;
+  skos:broader themes:reseaux-d-energie-et-de-communication.
+
+themes:reseau-hydrocarbures
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Réseau de transport et de stockage des hydrocarbures"@fr;
+  skos:broader themes:reseaux-d-energie-et-de-communication.
+
+themes:reseau-de-telecommunication
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Réseau de télécommunication"@fr;
+  skos:broader themes:reseaux-d-energie-et-de-communication.
+
+themes:risques
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Risques"@fr;
+  skos:narrower themes:prevention-des-avalanches, themes:prevention-des-eruptions-volcaniques, themes:prevention-des-inondations, themes:prevention-du-risque-mouvement-de-terrain, themes:prevention-du-risque-radon, themes:prevention-du-risque-minier, themes:prevention-des-risques-technologiques, themes:prevention-du-risque-sismique, themes:reglementation-de-prevention-des-risques-naturels, themes:reglementation-de-prevention-des-risques-technologiques, themes:gestion-du-risque.
+
+themes:prevention-des-avalanches
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Prévention des avalanches"@fr;
+  skos:broader themes:risques.
+
+themes:prevention-des-eruptions-volcaniques
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Prévention des éruptions volcaniques"@fr;
+  skos:broader themes:risques.
+
+themes:prevention-des-inondations
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Prévention des inondations"@fr;
+  skos:broader themes:risques.
+
+themes:prevention-du-risque-mouvement-de-terrain
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Prévention du risque mouvement de terrain"@fr;
+  skos:broader themes:risques.
+
+themes:prevention-du-risque-radon
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Prévention du risque radon"@fr;
+  skos:broader themes:risques.
+
+themes:prevention-du-risque-minier
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Prévention du risque minier"@fr;
+  skos:broader themes:risques.
+
+themes:prevention-des-risques-technologiques
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Prévention des risques technologiques"@fr;
+  skos:broader themes:risques.
+
+themes:prevention-du-risque-sismique
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Prévention du risque sismique"@fr;
+  skos:broader themes:risques.
+
+themes:reglementation-de-prevention-des-risques-naturels
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Réglementation de prévention des risques naturels"@fr;
+  skos:broader themes:risques.
+
+themes:reglementation-de-prevention-des-risques-technologiques
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Réglementation de prévention des risques technologiques"@fr;
+  skos:broader themes:risques.
+
+themes:gestion-du-risque
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Gestion du risque"@fr;
+  skos:broader themes:risques.
+
+themes:industrie
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Industrie, production d'énergie et exploitation du sol"@fr;
+  skos:narrower themes:mines, themes:sites-industriels, themes:parcs-eoliens, themes:production-d-energie-hors-eolien.
+
+themes:mines
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Mines, carrières et extraction de granulats"@fr;
+  skos:broader themes:industrie.
+
+themes:sites-industriels
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Sites industriels"@fr;
+  skos:broader themes:industrie.
+
+themes:parcs-eoliens
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Parcs éoliens"@fr;
+  skos:broader themes:industrie.
+
+themes:production-d-energie-hors-eolien
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Production d'énergie hors éolien"@fr;
+  skos:broader themes:industrie.
+
+themes:transport-et-deplacements
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Transport et déplacements"@fr;
+  skos:narrower themes:securite-routiere, themes:trafic-routier, themes:transport-collectif, themes:transport-exceptionnel, themes:transport-de-marchandises, themes:transport-de-matieres-dangereuses.
+
+themes:securite-routiere
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Sécurité routière"@fr;
+  skos:broader themes:transport-et-deplacements.
+
+themes:trafic-routier
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Trafic routier et exploitation de la route"@fr;
+  skos:broader themes:transport-et-deplacements.
+
+themes:transport-collectif
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Transport collectif"@fr;
+  skos:broader themes:transport-et-deplacements.
+
+themes:transport-exceptionnel
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Transport exceptionnel"@fr;
+  skos:broader themes:transport-et-deplacements.
+
+themes:transport-de-marchandises
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Transport de marchandises"@fr;
+  skos:broader themes:transport-et-deplacements.
+
+themes:transport-de-matieres-dangereuses
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Transport de matières dangereuses"@fr;
+  skos:broader themes:transport-et-deplacements.
+
+themes:infrastructures-de-transport
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:topConceptOf ecospheres:themes;
+  skos:prefLabel "Infrastructures de transport"@fr;
+  skos:narrower themes:infrastructure-aeroportuaire, themes:circulation-douce, themes:infrastructure-ferree, themes:reseau-navigable, themes:infrastructure-portuaire, themes:infrastructure-routiere.
+
+themes:infrastructure-aeroportuaire
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Infrastructure aéroportuaire"@fr;
+  skos:broader themes:infrastructures-de-transport.
+
+themes:circulation-douce
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Circulation douce"@fr;
+  skos:broader themes:infrastructures-de-transport.
+
+themes:infrastructure-ferree
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Infrastructure ferrée, gares et ouvrages d'art"@fr;
+  skos:broader themes:infrastructures-de-transport.
+
+themes:reseau-navigable
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Réseau navigable et ouvrages de navigation"@fr;
+  skos:broader themes:infrastructures-de-transport.
+
+themes:infrastructure-portuaire
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Infrastructure portuaire"@fr;
+  skos:broader themes:infrastructures-de-transport.
+
+themes:infrastructure-routiere
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:prefLabel "Infrastructure routière"@fr;
+  skos:broader themes:infrastructures-de-transport.
+

@@ -1,0 +1,2500 @@
+[
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+        ],
+        "http://purl.org/dc/terms/title": [
+            {
+                "@value": "Liste des thèmes d'Ecosphères",
+                "@language": "fr"
+            }
+        ],
+        "http://purl.org/dc/terms/description": [
+            {
+                "@value": "Publiée par Benoit DAVID - 5/7/2022",
+                "@language": "fr"
+            }
+        ],
+        "http://purl.org/dc/terms/modified": [
+            {
+                "@value": "2022-07-05T17:01:37+02:00"
+            }
+        ],
+        "http://purl.org/dc/terms/license": [
+            {
+                "@id": "https://www.etalab.gouv.fr/licence-ouverte-open-licence"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#hasTopConcept": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/accession-a-la-propriete",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Accession à la propriété",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/alimentation-en-eau-potable",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Alimentation en eau potable",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Aménagement et urbanisme",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/servitudes-d-utilite-publique"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/politique-europeenne-d-amenagement"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/zonages-d-amenagement"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/planification"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etudes"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-numerique-des-territoires",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Aménagement numérique des territoires",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/assainissement",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Assainissement",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/autres-etablissements-recevant-du-public",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Autres établissements recevant du public",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/besoins-en-logements",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Besoins en logements",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/bruit",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Bruit",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/changement-climatique",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Changement climatique",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#altLabel": [
+            {
+                "@value": "Air Climat/Changement climatique",
+                "@language": "fr"
+            },
+            {
+                "@value": "climat-air-et-energie",
+                "@language": "fr"
+            },
+            {
+                "@value": "climat",
+                "@language": "fr"
+            }
+        ],
+        "http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#regexp": [
+            {
+                "@value": "Plans? Climat-Energie",
+                "@language": "fr"
+            },
+            {
+                "@value": "Plan Climat Air Energie territorr?ial",
+                "@language": "fr"
+            },
+            {
+                "@value": "Air, Énergie et Climat",
+                "@language": "fr"
+            },
+            {
+                "@value": "PCAET",
+                "@language": "fr"
+            },
+            {
+                "@value": "Plans de Protection de l'Atmosphère",
+                "@language": "fr"
+            },
+            {
+                "@value": "SRCAE",
+                "@language": "fr"
+            },
+            {
+                "@value": "territoires? à énergie positive",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/chasse",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Chasse",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/chasse-maritime",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Chasse maritime",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/circulation-douce",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Circulation douce",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Climat",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#altLabel": [
+            {
+                "@value": "air-climat",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/changement-climatique"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/meteorologie"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/construction",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Construction",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/dechets",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Déchets",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Eau",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/alimentation-en-eau-potable"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/assainissement"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ouvrages-hydrauliques"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/peche-en-eaux-interieures"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/surveillance-de-la-ressource-en-eau"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/interventions-sur-les-cours-d-eau"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-de-l-eau"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ecologie-du-littoral",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Écologie du littoral",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-de-tourisme",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Équipements de tourisme",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-sportifs-ou-culturels",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Équipements sportifs ou culturels",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Établissements d'activités",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-enseignement"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-sportifs-ou-culturels"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/patrimoine-culturel"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-de-sante-et-medico-sociaux"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-de-tourisme"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/autres-etablissements-recevant-du-public"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-enseignement",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Etablissements d'enseignement",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-de-sante-et-medico-sociaux",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Établissements de santé et médico-sociaux",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etudes",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Études",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-agricole",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Foncier agricole",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Foncier et occupation du sol",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-agricole"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mutation-fonciere"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/occupation-du-sol"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/propriete-fonciere"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/gestion-du-risque",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Gestion du risque",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Habitat et politique de la ville",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/accession-a-la-propriete"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/besoins-en-logements"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/construction"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-indigne"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/occupation-des-logements"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parc-locatif-social"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parc-de-logements"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/politique-de-la-ville"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/renovation-urbaine"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-indigne",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Habitat indigne",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Industrie, production d'énergie et exploitation du sol",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mines"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/sites-industriels"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parcs-eoliens"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/production-d-energie-hors-eolien"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-aeroportuaire",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Infrastructure aéroportuaire",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-ferree",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Infrastructure ferrée, gares et ouvrages d'art",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-portuaire",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Infrastructure portuaire",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-routiere",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Infrastructure routière",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Infrastructures de transport",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-aeroportuaire"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/circulation-douce"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-ferree"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-navigable"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-portuaire"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-routiere"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/interventions-sur-les-cours-d-eau",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Interventions sur les cours d'eau",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/inventaires-des-paysages",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Inventaires des paysages",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/inventaires-nature-et-biodiversite",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Inventaires nature et biodiversité",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/limite-administrative-speciale-en-mer",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Limite administrative spéciale en mer et sur le littoral",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/lutte-anti-pollution-en-mer",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Lutte anti-pollution en mer et sur le littoral",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Masses d'eau",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Mer et littoral",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ecologie-du-littoral"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/limite-administrative-speciale-en-mer"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/lutte-anti-pollution-en-mer"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/navigation-maritime"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/topographie-en-mer"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/chasse-maritime"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/meteorologie",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Météorologie",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#altLabel": [
+            {
+                "@value": "Air Climat/Météo",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mines",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Mines, carrières et extraction de granulats",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mutation-fonciere",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Mutation foncière",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Nature, paysages et biodiversité",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/inventaires-nature-et-biodiversite"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/inventaires-des-paysages"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-et-gestion-de-la-nature"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-et-gestion-des-paysages"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/chasse"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/navigation-maritime",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Navigation maritime",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Nuisances, déchets et pollution",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/bruit"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/dechets"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/perturbations-electromagnetiques"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/pollution-des-sols"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/qualite-de-l-air"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/occupation-des-logements",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Occupation des logements",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/occupation-du-sol",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Occupation du sol",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ouvrages-hydrauliques",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Ouvrages hydrauliques",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parc-de-logements",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Parc de logements",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parc-locatif-social",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Parc locatif social",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parcs-eoliens",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Parcs éoliens",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/patrimoine-culturel",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Patrimoine culturel",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/peche-en-eaux-interieures",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Pêche en eaux intérieures",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/perturbations-electromagnetiques",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Perturbations électromagnétiques",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/planification",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Planification",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/politique-de-la-ville",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Politique de la ville",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/politique-europeenne-d-amenagement",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Politique européenne d'aménagement",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/pollution-des-sols",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Pollution des sols",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-avalanches",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Prévention des avalanches",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-eruptions-volcaniques",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Prévention des éruptions volcaniques",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-inondations",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Prévention des inondations",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-risques-technologiques",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Prévention des risques technologiques",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-minier",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Prévention du risque minier",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-mouvement-de-terrain",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Prévention du risque mouvement de terrain",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-radon",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Prévention du risque radon",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-sismique",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Prévention du risque sismique",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/production-d-energie-hors-eolien",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Production d'énergie hors éolien",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/propriete-fonciere",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Propriété foncière",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-de-l-eau",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Protection de l'eau",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-et-gestion-de-la-nature",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Protection et gestion de la nature",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-et-gestion-des-paysages",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Protection et gestion des paysages",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/qualite-de-l-air",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Qualité de l'air",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-naturels",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Réglementation de prévention des risques naturels",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-technologiques",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Réglementation de prévention des risques technologiques",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/renovation-urbaine",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Rénovation urbaine",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-de-telecommunication",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Réseau de télécommunication",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-electrique",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Réseau électrique",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-hydrocarbures",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Réseau de transport et de stockage des hydrocarbures",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-navigable",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Réseau navigable et ouvrages de navigation",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Réseaux d'énergie et de communication",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-numerique-des-territoires"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-electrique"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-hydrocarbures"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-de-telecommunication"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Risques",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-avalanches"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-eruptions-volcaniques"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-inondations"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-mouvement-de-terrain"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-radon"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-minier"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-risques-technologiques"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-sismique"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-naturels"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-technologiques"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/gestion-du-risque"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/securite-routiere",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Sécurité routière",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/servitudes-d-utilite-publique",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Servitudes d'utilité publique",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/sites-industriels",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Sites industriels",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/surveillance-de-la-ressource-en-eau",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Surveillance de la ressource en eau",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/topographie-en-mer",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Topographie en mer et sur le littoral",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/trafic-routier",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Trafic routier et exploitation de la route",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-collectif",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Transport collectif",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-de-marchandises",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Transport de marchandises",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-de-matieres-dangereuses",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Transport de matières dangereuses",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Transport et déplacements",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#narrower": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/securite-routiere"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/trafic-routier"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-collectif"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-exceptionnel"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-de-marchandises"
+            },
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-de-matieres-dangereuses"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-exceptionnel",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Transport exceptionnel",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"
+            }
+        ]
+    },
+    {
+        "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/zonages-d-amenagement",
+        "@type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "http://www.w3.org/2004/02/skos/core#inScheme": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Zonages d'aménagement",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#broader": [
+            {
+                "@id": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+        "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    {
+        "@id": "https://www.etalab.gouv.fr/licence-ouverte-open-licence"
+    }
+]
