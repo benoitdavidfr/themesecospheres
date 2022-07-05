@@ -1,11 +1,17 @@
-title: themeslug - slugification des thèmes Ecophères
-name: /georef/themeslug 
+title: themesecosphres - définition des thèmes Ecophères
+name: /georef/themesecosphres 
 doc: |
-  Script de slugification des thèmes d'Ecosphères.
-  Résultat publié dans une issue GiLab sur le sujet
-  et le code et le résultat publiés sur https://github.com/benoitdavidfr/themeslug
+  theme3.md contient la liste sans URI dans une version périmée.
+  theme3.md a été utilisé pour générer dans theme4.md les slugs avec slugify.php.
+  skosify.php utilisé pour générer theme4.ttl en Turtle et theme4.json en JSON-LD
+  
 journal:
+  5/7/2022:
+    - nouvelle version des thèmes
+    - transformation en Turtle et en JSON-LD.
+    - chgt de nom du répertoire et du dépôt Github.
   30/6/2022:
     - création du script, publication du résultat sur le GiLab et sur GitHub
 phpScripts:
-  - /georef/themeslug/slugify.php
+  - /georef/themesecosphres/slugify.php
+  - /georef/themesecosphres/slugify.php

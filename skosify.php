@@ -18,8 +18,21 @@ use Symfony\Component\Yaml\Yaml;
 date_default_timezone_set('Europe/Paris');
 
 if ($argc == 1) {
-  echo "usage: php $argv[0] [-short] {mdfile} [{fmt}]\n";
-  print_r(\EasyRdf\Format::getFormats());
+?>
+usage: php $argv[0] [-short] {mdfile} [{fmt}]
+L'option '-short' limite le traitement au premier thème et à ses sous-thèmes.
+Sans format affiche le turtle par défaut.
+Le format 'dump' permet d'afficher les données dans la structure interne.
+La définition d'un autre format conduit à utiliser EasyRdf pour lequel les formats suivants sont proposés:
+<?php
+  foreach (\EasyRdf\Format::getFormats() as $format)
+    echo " - $format\n";
+?>
+De plus, sont proposés:
+ - yamlld
+ - cjsonld pour JSON-LD compressé en utilisant les prefixes comme contexte
+ - cyamlld idem en Yaml
+<?php
   die();
 }
 
@@ -151,6 +164,11 @@ function ttlify(string $subject, array $po): string {
   return "$ttl.\n";
 }
 
+function beautifulYaml(string $yamlText): string {
+  //return $yamlText;
+  return preg_replace('!-\n +!', '- ', $yamlText);
+}
+
 // affichage du résultat
 if (($argv[1] ?? null) == 'dump') { // dump brut de la structure constuite 
   echo Yaml::dump(['prefixes'=> $prefixes, 'scheme'=> $scheme, 'concepts'=> $concepts], 6, 2);
@@ -170,7 +188,7 @@ else { // fabrication d'une sortie Turtle
   else { // transformation par EsayRdf en jsonld, yamlld ou autre
     $graph = new \EasyRdf\Graph($scheme['@id'][0]);
     $graph->parse($ttl, 'turtle', $scheme['@id'][0]);
-     switch ($ofmt = $argv[1]) {
+    switch ($ofmt = $argv[1]) {
       case 'jsonld': {
         $ser = $graph->serialise($ofmt);
         echo json_encode(json_decode($ser), JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE),"\n";
@@ -178,12 +196,24 @@ else { // fabrication d'une sortie Turtle
       }
       case 'yamlld': {
         $ser = $graph->serialise('jsonld');
-        echo Yaml::dump(json_decode($ser, true), 6, 2);
+        echo beautifulYaml(Yaml::dump(json_decode($ser, true), 6, 2));
+        break;
+      }
+      case 'cjsonld': {
+        $ser = $graph->serialise('jsonld');
+        $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode($prefixes));
+        echo json_encode($compacted, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE),"\n";
+        break;
+      }
+      case 'cyamlld': {
+        $ser = $graph->serialise('jsonld');
+        $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode($prefixes));
+        echo beautifulYaml(Yaml::dump(json_decode(json_encode($compacted), true), 4, 2)),"\n";
         break;
       }
       default: {
         $ser = $graph->serialise($ofmt);
-        echo is_string($ser) ? $ser : Yaml::dump($ser, 6, 2);
+        echo is_string($ser) ? $ser : beautifulYaml(Yaml::dump($ser, 6, 2));
         break;
       }
     }
