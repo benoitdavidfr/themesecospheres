@@ -15,7 +15,7 @@ require_once __DIR__.'/vendor/autoload.php';
 use Symfony\Component\Yaml\Yaml;
 
 // Définit le fuseau horaire par défaut à utiliser.
-date_default_timezone_set('Europe/Paris');
+//date_default_timezone_set('Europe/Paris');
 
 if ($argc == 1) {
 ?>
@@ -77,6 +77,13 @@ class Label { // Un label potentiellement dans différentes langues
   function __construct(array $strings) { $this->strings = $strings; }
   
   function asArray(): array { return $this->strings; }
+  
+  function asTurtle(): string {
+    $ttl = '';
+    foreach ($this->strings as $lang => $string)
+      $ttl .= "\"$string\"".($lang<>'x' ? "@$lang" : '').', ';
+    return substr($ttl, 0, -2);
+  }
 };
 
 class Concept { // stockage du scheme Skos
@@ -134,7 +141,7 @@ class Concept { // stockage du scheme Skos
     return $array;
   }
   
-  static function init(array $yaml): void {
+  static function init(array $yaml, bool $short): void {
     self::$prefix = $yaml['prefix'];
     foreach ($yaml['skos:ConceptScheme'] as $pred => $objects) {
       if (Label::is($objects))
@@ -144,64 +151,57 @@ class Concept { // stockage du scheme Skos
     }
     self::$scheme['skos:hasTopConcept'] = [];
     foreach ($yaml['skos:Concept'] as $id => $concept) {
-      self::$concepts[$id] = null;
+      self::$concepts[$id] = null; // permet de créer le parent avant les enfants
       self::$concepts[$id] = new Concept($id, $concept);
-      break;
+      if ($short)
+        break; // pour limiter à un seul thème de niveau 1 en tests
     }
   }
   
   static function allAsArray(): array {
+    $scheme = [];
+    foreach (self::$scheme as $predicate => $objects) {
+      $props = [];
+      foreach ($objects as $object)
+        if (is_object($object))
+          $props[] = $object->asArray();
+        else
+          $props[] = $object;
+      $scheme[$predicate] = $props;
+    }
     $concepts = [];
     foreach (self::$concepts as $id => $concept) {
       $concepts[$id] = $concept->asArray();
     }
     return [
-      //'prefix'=> self::$prefix,
-      //'scheme'=> self::$scheme,
+      'prefix'=> self::$prefix,
+      'scheme'=> $scheme,
       'concepts'=> $concepts,
     ];
   }
   
-  
-  static function labelAsTurtle(array $label): string {
-    $ttl = '';
-    foreach ($label as $lang => $string)
-      $ttl .= "\"$string\"".($lang<>'x' ? "@$lang" : '');
-    return $ttl;
-  }
-  
-  static function asTurtle(string $subject, array $po): string {
-    unset($po['@id']);
-    echo "asTurtle($subject, ",Yaml::dump($po),")\n";
+  static function asTurtle(string $subject, array $prop): string { // Concept -> Turtle
+    unset($prop['@id']);
+    //echo "asTurtle($subject, ",Yaml::dump($po),")\n";
     $ttl = "$subject\n";
-    foreach ($po as $predicate => $objects) {
+    foreach ($prop as $predicate => $objects) {
       if (!$objects) continue;
-      if (self::isLabel($objects)) {
-        $ttl .= "  $predicate ".self::labelAsTurtle($objects).";\n";
-        continue;
-      }
       $ttl .= "  $predicate ";
       foreach ($objects as $io => $object) {
         if (is_string($object)) {
           if ((substr($object, 0, 7)=='http://') || (substr($object, 0, 8)=='https://')) // URI
             $ttl .= "<$object>";
           elseif (strpos($object, ':') !== false) // URI compacté
-            $ttl .= "$object";
+            $ttl .= $object;
           else {
             throw new Exception("Objet \"$object\" non interprété");
           }
         }
-        elseif (is_array($object)) {
-          if (array_keys($object)[0] == 0) { // liste de libellés
-            foreach ($object as $label) {
-              foreach ($label as $lang => $string)
-                $ttl .= "\"$string\"@$lang";
-            }
-          }
-          else { // un label
-            foreach ($object as $lang => $string)
-              $ttl .= "\"$string\"@$lang";
-          }
+        elseif (is_object($object)) {
+          $ttl .= $object->asTurtle();
+        }
+        else {
+          throw new Exception("Objet non interprété");
         }
         if ($io <> (count($objects)-1))
           $ttl .= ", ";
@@ -218,27 +218,26 @@ class Concept { // stockage du scheme Skos
     foreach (self::$prefix as $prefix => $uri)
       $ttl .= "@prefix $prefix: <$uri> .\n";
     $ttl .= "\n";
-    $ttl .= self::asTurtle(self::$scheme['@id'], self::$scheme)."\n";
-    return $ttl;
-    foreach ($concepts as $uri => $po)
-      $ttl .= ttlify($uri, $po)."\n";
+    $ttl .= self::asTurtle(self::$scheme['@id'][0], self::$scheme)."\n";
+    foreach (self::$concepts as $uri => $concept)
+      $ttl .= self::asTurtle($uri, $concept->prop)."\n";
     return $ttl;
   }
 }
 
-Concept::init(Yaml::parseFile($argv[0]));
+Concept::init(Yaml::parseFile($argv[0]), $short);
 
 // affichage du résultat
 if (($argv[1] ?? null) == 'dump') { // dump brut de la structure constuite 
-  print_r(['scheme'=> Concept::$scheme, 'concepts'=> Concept::$concepts]);
+  //print_r(['scheme'=> Concept::$scheme, 'concepts'=> Concept::$concepts]);
   die(beautifulYaml(Yaml::dump(Concept::allAsArray(), 5, 2)));
 }
 elseif (!isset($argv[1])) { // par défaut affichage de la sortie Turtle
   die(Concept::allAsTurtle());
 }
 else { // transformation par EsayRdf en jsonld, yamlld ou autre
-  $graph = new \EasyRdf\Graph($scheme['@id'][0]);
-  $graph->parse(Concept::allAsTurtle(), 'turtle', $scheme['@id'][0]);
+  $graph = new \EasyRdf\Graph(Concept::$scheme['@id'][0]);
+  $graph->parse(Concept::allAsTurtle(), 'turtle', Concept::$scheme['@id'][0]);
   switch ($ofmt = $argv[1]) {
     case 'jsonld': {
       $ser = $graph->serialise($ofmt);
@@ -252,13 +251,13 @@ else { // transformation par EsayRdf en jsonld, yamlld ou autre
     }
     case 'cjsonld': {
       $ser = $graph->serialise('jsonld');
-      $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode($prefixes));
+      $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode(Concept::$prefix));
       echo json_encode($compacted, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE),"\n";
       break;
     }
     case 'cyamlld': {
       $ser = $graph->serialise('jsonld');
-      $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode($prefixes));
+      $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode(Concept::$prefix));
       echo beautifulYaml(Yaml::dump(json_decode(json_encode($compacted), true), 4, 2)),"\n";
       break;
     }

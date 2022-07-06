@@ -1,14 +1,13 @@
 title: Liste des thèmes Ecosphères
 description: |
-  Définition d'une structuration pour la gestion des thèmes Ecosphères
-  utilisant notamment la strcuture hiérarchique des thèmes.
-
+  Gestion des thèmes Ecosphères et d'une structure adhoc pour les gérer.
+  On exploite notamment leur structuration hiérarchique.
 $schema:
   $id: xx
   $schema: http://json-schema.org/schema#
   definitions:
-    stringInSomeLang:
-      description: un libellé en une ou pluiseurs langues, x pour neutre
+    Label:
+      description: un libellé dans une ou pluiseurs langues, x pour neutre
       type: object
       additionalProperties: false
       patternProperties:
@@ -23,12 +22,12 @@ $schema:
         - description: URI compacté
           type: string
           pattern: '^[a-zA-Z]+:[a-zA-Z]+'
-        - description: un libellé en une ou plusieurs langues, x pour neutre
-          $ref: '#/definitions/stringInSomeLang'
+        - description: un libellé dans une ou plusieurs langues, x pour neutre
+          $ref: '#/definitions/Label'
         - description: une liste de libellés, chacun en une ou plusieurs langues, x pour neutre
           type: array
           items:
-            $ref: '#/definitions/stringInSomeLang'
+            $ref: '#/definitions/Label'
         - description: un ensemble de triplets, chaque sujet comme clé et les prédicats-objets comme valeur
           type: object
           additionalProperties: false
