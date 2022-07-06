@@ -1,6 +1,7 @@
 title: Liste des thèmes Ecosphères
 description: |
   Définition d'une structuration pour la gestion des thèmes Ecosphères
+  utilisant notamment la strcuture hiérarchique des thèmes.
 
 $schema:
   $id: xx
@@ -74,7 +75,7 @@ $schema:
         ensemble de triplets structuré en arbres avec le sujet comme clé et les prédicats-objets comme valeur
       additionalProperties: false
       patternProperties:
-        '^[a-z]+:[a-zA-Z]+$': # le sujet
+        '^[a-z]+:[-a-zA-Z]+$': # le sujet
           $ref: '#/definitions/predicates-objects'
 
 prefix:
@@ -115,6 +116,214 @@ skos:Concept:
         skos:inScheme: ecospheres:themes
         skos:prefLabel: {fr: Météorologie}
         skos:altLabel: {fr: "Air Climat/Météo"}
+
+  themes:amenagement-et-urbanisme:
+    skos:prefLabel: {fr: "Aménagement et urbanisme"}
+    skos:narrower:
+      themes:servitudes-d-utilite-publique:
+        skos:prefLabel: {fr: "Servitudes d'utilité publique"}
+      themes:politique-europeenne-d-amenagement:
+        skos:prefLabel: {fr: "Politique européenne d'aménagement"}
+      themes:zonages-d-amenagement:
+        skos:prefLabel: {fr: "Zonages d'aménagement"}
+      themes:planification:
+        skos:prefLabel: {fr: "Planification"}
+      themes:etudes:
+        skos:prefLabel: {fr: "Études"}
+
+  themes:etablissements-d-activites:
+    skos:prefLabel: {fr: "Établissements d'activités"}
+    skos:narrower:
+      themes:etablissements-d-enseignement:
+        skos:prefLabel: {fr: "Etablissements d'enseignement"}
+      themes:equipements-sportifs-ou-culturels:
+        skos:prefLabel: {fr: "Équipements sportifs ou culturels"}
+      themes:patrimoine-culturel:
+        skos:prefLabel: {fr: "Patrimoine culturel"}
+      themes:etablissements-de-sante-et-medico-sociaux:
+        skos:prefLabel: {fr: "Établissements de santé et médico-sociaux"}
+      themes:equipements-de-tourisme:
+        skos:prefLabel: {fr: "Équipements de tourisme"}
+      themes:autres-etablissements-recevant-du-public:
+        skos:prefLabel: {fr: "Autres établissements recevant du public"}
+  
+  themes:eau:
+    skos:prefLabel: {fr: "Eau"}
+    skos:narrower:
+      themes:alimentation-en-eau-potable:
+        skos:prefLabel: {fr: "Alimentation en eau potable"}
+      themes:assainissement:
+        skos:prefLabel: {fr: "Assainissement"}
+      themes:masses-d-eau:
+        skos:prefLabel: {fr: "Masses d'eau"}
+      themes:ouvrages-hydrauliques:
+        skos:prefLabel: {fr: "Ouvrages hydrauliques"}
+      themes:peche-en-eaux-interieures:
+        skos:prefLabel: {fr: "Pêche en eaux intérieures"}
+      themes:surveillance-de-la-ressource-en-eau:
+        skos:prefLabel: {fr: "Surveillance de la ressource en eau"}
+      themes:interventions-sur-les-cours-d-eau:
+        skos:prefLabel: {fr: "Interventions sur les cours d'eau"}
+      themes:protection-de-l-eau:
+        skos:prefLabel: {fr: "Protection de l'eau"}
+  
+  themes:foncier-et-occupation-du-sol:
+    skos:prefLabel: {fr: "Foncier et occupation du sol"}
+    skos:narrower:
+      themes:foncier-agricole:
+        skos:prefLabel: {fr: "Foncier agricole"}
+      themes:mutation-fonciere:
+        skos:prefLabel: {fr: "Mutation foncière"}
+      themes:occupation-du-sol:
+        skos:prefLabel: {fr: "Occupation du sol"}
+      themes:propriete-fonciere:
+        skos:prefLabel: {fr: "Propriété foncière"}
+  
+  themes:habitat-et-politique-de-la-ville:
+    skos:prefLabel: {fr: "Habitat et politique de la ville"}
+    skos:narrower:
+      themes:accession-a-la-propriete:
+        skos:prefLabel: {fr: "Accession à la propriété"}
+      themes:besoins-en-logements:
+        skos:prefLabel: {fr: "Besoins en logements"}
+      themes:construction:
+        skos:prefLabel: {fr: "Construction"}
+      themes:habitat-indigne:
+        skos:prefLabel: {fr: "Habitat indigne"}
+      themes:occupation-des-logements:
+        skos:prefLabel: {fr: "Occupation des logements"}
+      themes:parc-locatif-social:
+        skos:prefLabel: {fr: "Parc locatif social"}
+      themes:parc-de-logements:
+        skos:prefLabel: {fr: "Parc de logements"}
+      themes:politique-de-la-ville:
+        skos:prefLabel: {fr: "Politique de la ville"}
+      themes:renovation-urbaine:
+        skos:prefLabel: {fr: "Rénovation urbaine"}
+  
+  themes:mer-et-littoral:
+    skos:prefLabel: {fr: "Mer et littoral"}
+    skos:narrower:
+      themes:ecologie-du-littoral:
+        skos:prefLabel: {fr: "Écologie du littoral"}
+      themes:limite-administrative-speciale-en-mer:
+        skos:prefLabel: {fr: "Limite administrative spéciale en mer et sur le littoral"}
+      themes:lutte-anti-pollution-en-mer:
+        skos:prefLabel: {fr: "Lutte anti-pollution en mer et sur le littoral"}
+      themes:navigation-maritime:
+        skos:prefLabel: {fr: "Navigation maritime"}
+      themes:topographie-en-mer:
+        skos:prefLabel: {fr: "Topographie en mer et sur le littoral"}
+      themes:chasse-maritime:
+        skos:prefLabel: {fr: "Chasse maritime"}
+  
+  themes:nature-paysages-et-biodiversite:
+    skos:prefLabel: {fr: "Nature, paysages et biodiversité"}
+    skos:narrower:
+      themes:inventaires-nature-et-biodiversite:
+        skos:prefLabel: {fr: "Inventaires nature et biodiversité"}
+      themes:inventaires-des-paysages:
+        skos:prefLabel: {fr: "Inventaires des paysages"}
+      themes:protection-et-gestion-de-la-nature:
+        skos:prefLabel: {fr: "Protection et gestion de la nature"}
+      themes:protection-et-gestion-des-paysages:
+        skos:prefLabel: {fr: "Protection et gestion des paysages"}
+      themes:chasse:
+        skos:prefLabel: {fr: "Chasse"}
         
-        
-        
+  themes:nuisances-dechets-et-pollution:
+    skos:prefLabel: {fr: "Nuisances, déchets et pollution"}
+    skos:narrower:
+      themes:bruit:
+        skos:prefLabel: {fr: "Bruit"}
+      themes:dechets:
+        skos:prefLabel: {fr: "Déchets"}
+      themes:perturbations-electromagnetiques:
+        skos:prefLabel: {fr: "Perturbations électromagnétiques"}
+      themes:pollution-des-sols:
+        skos:prefLabel: {fr: "Pollution des sols"}
+      themes:qualite-de-l-air:
+        skos:prefLabel: {fr: "Qualité de l'air"}
+  
+  themes:reseaux-d-energie-et-de-communication:
+    skos:prefLabel: {fr: "Réseaux d'énergie et de communication"}
+    skos:narrower:
+      themes:amenagement-numerique-des-territoires:
+        skos:prefLabel: {fr: "Aménagement numérique des territoires"}
+      themes:reseau-electrique:
+        skos:prefLabel: {fr: "Réseau électrique"}
+      themes:reseau-hydrocarbures:
+        skos:prefLabel: {fr: "Réseau de transport et de stockage des hydrocarbures"}
+      themes:reseau-de-telecommunication:
+        skos:prefLabel: {fr: "Réseau de télécommunication"}
+  
+  themes:risques:
+    skos:prefLabel: {fr: "Risques"}
+    skos:narrower:
+      themes:prevention-des-avalanches:
+        skos:prefLabel: {fr: "Prévention des avalanches"}
+      themes:prevention-des-eruptions-volcaniques:
+        skos:prefLabel: {fr: "Prévention des éruptions volcaniques"}
+      themes:prevention-des-inondations:
+        skos:prefLabel: {fr: "Prévention des inondations"}
+      themes:prevention-du-risque-mouvement-de-terrain:
+        skos:prefLabel: {fr: "Prévention du risque mouvement de terrain"}
+      themes:prevention-du-risque-radon:
+        skos:prefLabel: {fr: "Prévention du risque radon"}
+      themes:prevention-du-risque-minier:
+        skos:prefLabel: {fr: "Prévention du risque minier"}
+      themes:prevention-des-risques-technologiques:
+        skos:prefLabel: {fr: "Prévention des risques technologiques"}
+      themes:prevention-du-risque-sismique:
+        skos:prefLabel: {fr: "Prévention du risque sismique"}
+      themes:reglementation-de-prevention-des-risques-naturels:
+        skos:prefLabel: {fr: "Réglementation de prévention des risques naturels"}
+      themes:reglementation-de-prevention-des-risques-technologiques:
+        skos:prefLabel: {fr: "Réglementation de prévention des risques technologiques"}
+      themes:gestion-du-risque:
+        skos:prefLabel: {fr: "Gestion du risque"}
+  
+  themes:industrie:
+    skos:prefLabel: {fr: "Industrie, production d'énergie et exploitation du sol"}
+    skos:narrower:
+      themes:mines:
+        skos:prefLabel: {fr: "Mines, carrières et extraction de granulats"}
+      themes:sites-industriels:
+        skos:prefLabel: {fr: "Sites industriels"}
+      themes:parcs-eoliens:
+        skos:prefLabel: {fr: "Parcs éoliens"}
+      themes:production-d-energie-hors-eolien:
+        skos:prefLabel: {fr: "Production d'énergie hors éolien"}
+  
+  themes:transport-et-deplacements:
+    skos:prefLabel: {fr: "Transport et déplacements"}
+    skos:narrower:
+      themes:securite-routiere:
+        skos:prefLabel: {fr: "Sécurité routière"}
+      themes:trafic-routier:
+        skos:prefLabel: {fr: "Trafic routier et exploitation de la route"}
+      themes:transport-collectif:
+        skos:prefLabel: {fr: "Transport collectif"}
+      themes:transport-exceptionnel:
+        skos:prefLabel: {fr: "Transport exceptionnel"}
+      themes:transport-de-marchandises:
+        skos:prefLabel: {fr: "Transport de marchandises"}
+      themes:transport-de-matieres-dangereuses:
+        skos:prefLabel: {fr: "Transport de matières dangereuses"}
+  
+  themes:infrastructures-de-transport:
+    skos:prefLabel: {fr: "Infrastructures de transport"}
+    skos:narrower:
+      themes:infrastructure-aeroportuaire:
+        skos:prefLabel: {fr: "Infrastructure aéroportuaire"}
+      themes:circulation-douce:
+        skos:prefLabel: {fr: "Circulation douce"}
+      themes:infrastructure-ferree:
+        skos:prefLabel: {fr: "Infrastructure ferrée, gares et ouvrages d'art"}
+      themes:reseau-navigable:
+        skos:prefLabel: {fr: "Réseau navigable et ouvrages de navigation"}
+      themes:infrastructure-portuaire:
+        skos:prefLabel: {fr: "Infrastructure portuaire"}
+      themes:infrastructure-routiere:
+        skos:prefLabel: {fr: "Infrastructure routière"}
+    
