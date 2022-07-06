@@ -1,5 +1,5 @@
 title: Schéma JSON de gestion des thèmes Ecosphères
-$id: xx
+$id: https://github.com/benoitdavidfr/themesecospheres/blob/main/thespheres.schema.yaml
 $schema: http://json-schema.org/schema#
 definitions:
   Label:

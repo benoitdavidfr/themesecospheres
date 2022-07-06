@@ -1,9 +1,10 @@
 # Définition des thèmes Ecosphères
 
 Ce dépôt correspond aux travaux de définition des thèmes Ecosphères pour le guichet de la donnée.  
-Sont disponibles:
+La liste des thèmes est disponible en:
 
-- [Liste des thèmes Ecosphères avec URI en MD](theme4.md)
-- [Liste précédente transformée en Skos en Turtle avec ajout de qqs altLabels et regexps](theme4.ttl)
-- [Liste précédente en JSON-LD](theme4.json) [compacté](https://www.w3.org/TR/json-ld11/#compact-iris)
-- [Liste précédente en Yaml-LD](theme4.yaml) [compacté](https://www.w3.org/TR/json-ld11/#compact-iris)
+- [Turtle](thespheres.ttl)
+- [JSON-LD](thespheres.json) [compacté](https://www.w3.org/TR/json-ld11/#compact-iris)
+- [Yaml-LD](thespheres-ld.yaml) compacté
+
+La liste des thèmes est gérée dans une structure adhoc en Yaml dans [thespheres.yaml](thespheres.yaml).

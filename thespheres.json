@@ -3,71 +3,11 @@
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "dct": "http://purl.org/dc/terms/",
-        "ecospheres": "http://registre.data.developpement-durable.gouv.fr/ecospheres/",
+        "ecospheres": "http://registre.data.developpement-durable.gouv.fr/ecospheres",
         "themes": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/",
         "espsyntax": "http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#"
     },
     "@graph": [
-        {
-            "@id": "ecospheres:themes",
-            "@type": "skos:ConceptScheme",
-            "dct:description": {
-                "@language": "fr",
-                "@value": "Publiée par Benoit DAVID - 5/7/2022"
-            },
-            "dct:license": {
-                "@id": "https://www.etalab.gouv.fr/licence-ouverte-open-licence"
-            },
-            "dct:modified": "2022-07-05T18:15:42+02:00",
-            "dct:title": {
-                "@language": "fr",
-                "@value": "Liste des thèmes d'Ecosphères"
-            },
-            "skos:hasTopConcept": [
-                {
-                    "@id": "themes:climat"
-                },
-                {
-                    "@id": "themes:amenagement-et-urbanisme"
-                },
-                {
-                    "@id": "themes:etablissements-d-activites"
-                },
-                {
-                    "@id": "themes:eau"
-                },
-                {
-                    "@id": "themes:foncier-et-occupation-du-sol"
-                },
-                {
-                    "@id": "themes:habitat-et-politique-de-la-ville"
-                },
-                {
-                    "@id": "themes:mer-et-littoral"
-                },
-                {
-                    "@id": "themes:nature-paysages-et-biodiversite"
-                },
-                {
-                    "@id": "themes:nuisances-dechets-et-pollution"
-                },
-                {
-                    "@id": "themes:reseaux-d-energie-et-de-communication"
-                },
-                {
-                    "@id": "themes:risques"
-                },
-                {
-                    "@id": "themes:industrie"
-                },
-                {
-                    "@id": "themes:transport-et-deplacements"
-                },
-                {
-                    "@id": "themes:infrastructures-de-transport"
-                }
-            ]
-        },
         {
             "@id": "themes:accession-a-la-propriete",
             "@type": "skos:Concept",
@@ -238,10 +178,6 @@
                 {
                     "@language": "fr",
                     "@value": "climat-air-et-energie"
-                },
-                {
-                    "@language": "fr",
-                    "@value": "climat"
                 }
             ],
             "skos:broader": {
@@ -1720,6 +1656,65 @@
                 "@language": "fr",
                 "@value": "Zonages d'aménagement"
             }
+        },
+        {
+            "@id": "ecospheres:themes",
+            "dct:description": {
+                "@language": "fr",
+                "@value": "Publiée par Benoit DAVID - 5/7/2022"
+            },
+            "dct:license": {
+                "@id": "https://www.etalab.gouv.fr/licence-ouverte-open-licence"
+            },
+            "dct:modified": "2022-07-05T16:52:57+02:00",
+            "dct:title": {
+                "@language": "fr",
+                "@value": "Liste des thèmes d'Ecosphères"
+            },
+            "skos:hasTopConcept": [
+                {
+                    "@id": "themes:climat"
+                },
+                {
+                    "@id": "themes:amenagement-et-urbanisme"
+                },
+                {
+                    "@id": "themes:etablissements-d-activites"
+                },
+                {
+                    "@id": "themes:eau"
+                },
+                {
+                    "@id": "themes:foncier-et-occupation-du-sol"
+                },
+                {
+                    "@id": "themes:habitat-et-politique-de-la-ville"
+                },
+                {
+                    "@id": "themes:mer-et-littoral"
+                },
+                {
+                    "@id": "themes:nature-paysages-et-biodiversite"
+                },
+                {
+                    "@id": "themes:nuisances-dechets-et-pollution"
+                },
+                {
+                    "@id": "themes:reseaux-d-energie-et-de-communication"
+                },
+                {
+                    "@id": "themes:risques"
+                },
+                {
+                    "@id": "themes:industrie"
+                },
+                {
+                    "@id": "themes:transport-et-deplacements"
+                },
+                {
+                    "@id": "themes:infrastructures-de-transport"
+                }
+            ]
         }
     ]
 }

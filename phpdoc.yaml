@@ -4,8 +4,17 @@ doc: |
   theme3.md contient la liste sans URI dans une version périmée.
   theme3.md a été utilisé pour générer dans theme4.md les slugs avec slugify.php.
   skosify.php utilisé pour générer theme4.ttl en Turtle et theme4.json en JSON-LD
+  skosify.php renommé en old-skosify.php
+  thespheres.yaml contient le source de la définition des thèmes
+  skosify.php adapté pour exploiter thespheres.yaml et générer
+    - thespheres.ttl en Turtle
+    - thespheres.json en JSON-LD compacté
+    - thespheresld.yaml en Yaml-LD compacté
   
 journal:
+  6/7/2022:
+    - définition du fichier Yaml thespheres.yaml comme source des thèmes remplacant les fichiers MD
+    - adaptation de skosify.php pour générer des versions Turtle, JSON-LD et Yaml-LD
   5/7/2022:
     - nouvelle version des thèmes
     - transformation en Turtle et en JSON-LD.
