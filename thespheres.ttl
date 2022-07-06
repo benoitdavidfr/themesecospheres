@@ -40,31 +40,39 @@ themes:amenagement-et-urbanisme
   skos:inScheme ecospheres:themes;
   skos:topConceptOf ecospheres:themes;
   skos:prefLabel "Aménagement et urbanisme"@fr;
+  skos:altLabel "Aménagement Urbanisme"@fr, "amenagement-urbanisme"@fr;
   skos:narrower themes:servitudes-d-utilite-publique, themes:politique-europeenne-d-amenagement, themes:zonages-d-amenagement, themes:planification, themes:etudes.
 
 themes:servitudes-d-utilite-publique
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:amenagement-et-urbanisme;
-  skos:prefLabel "Servitudes d'utilité publique"@fr.
+  skos:prefLabel "Servitudes d'utilité publique"@fr;
+  skos:altLabel "Aménagement Urbanisme/Assiette Servitude"@fr, "servitude-d-utilite-publique"@fr, "ASSIETTE SERVITUDE"@fr, "amenagement_urbanisme/n_assiette_servitude"@fr, "n_assiette_servitudes"@fr;
+  espsyntax:regexp "Assiettes? de servitude"@fr, "Servitudes des sites naturels"@fr, "AC2"@fr.
 
 themes:politique-europeenne-d-amenagement
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:amenagement-et-urbanisme;
-  skos:prefLabel "Politique européenne d'aménagement"@fr.
+  skos:prefLabel "Politique européenne d'aménagement"@fr;
+  skos:altLabel "Aménagement Urbanisme/Politique européenne"@fr.
 
 themes:zonages-d-amenagement
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:amenagement-et-urbanisme;
-  skos:prefLabel "Zonages d'aménagement"@fr.
+  skos:prefLabel "Zonages d'aménagement"@fr;
+  skos:altLabel "Aménagement Urbanisme/Zonages Aménagement"@fr, "zonages aménagement"@fr, "zonages-amenagement"@fr, "zonages-zonages-amenagement"@fr;
+  espsyntax:regexp "Parcs? naturels? régiona(l|ux)"@fr, "PNR"@fr, "Zones? de revitalisation rurale"@fr, "ZRR"@fr, "Périmètres? des Pays"@fr, "Contrat de relance et de transition écologique"@fr, "CRTE"@fr.
 
 themes:planification
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:amenagement-et-urbanisme;
-  skos:prefLabel "Planification"@fr.
+  skos:prefLabel "Planification"@fr;
+  skos:altLabel "Aménagement Urbanisme/Zonages Planification"@fr, "ptu"@fr, "loi-littoral"@fr, "loi-montagne"@fr, "documents-durbanisme"@fr, "plu"@fr, "plui"@fr, "pluis"@fr, "document-durbanisme"@fr, "document-urbanisme"@fr, "documents-durba"@fr, "scot"@fr, "ZONAGES PLANIFICATION"@fr, "amenagement_urbanisme/n_zonages_planification"@fr, "zonage planification"@fr, "urbanisme planification"@fr;
+  espsyntax:regexp "Directives? Territoriales? d'Aménagement"@fr, "DTA"@fr, "DTADD"@fr, "Document d’urbanisme"@fr, "cartes? communales?"@fr, "P\.L\.U\."@fr, "PLU"@fr, "Schémas? de Cohérence Territoriale"@fr, "SCOT"@fr, "Règlement National d'Urbanisme"@fr, "PDU"@fr, "Plan de déplacement urbain"@fr, "loi littoral"@fr, "Loi Montagne"@fr, "Zone de montagne au titre de la loi du 9 janvier 1985"@fr.
 
 themes:etudes
   rdf:type skos:Concept;

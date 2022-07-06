@@ -62,11 +62,21 @@
     <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:prefLabel xml:lang="fr">Aménagement et urbanisme</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Aménagement Urbanisme</skos:altLabel>
+    <skos:altLabel xml:lang="fr">amenagement-urbanisme</skos:altLabel>
     <skos:narrower>
       <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/servitudes-d-utilite-publique">
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
         <skos:prefLabel xml:lang="fr">Servitudes d'utilité publique</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Aménagement Urbanisme/Assiette Servitude</skos:altLabel>
+        <skos:altLabel xml:lang="fr">servitude-d-utilite-publique</skos:altLabel>
+        <skos:altLabel xml:lang="fr">ASSIETTE SERVITUDE</skos:altLabel>
+        <skos:altLabel xml:lang="fr">amenagement_urbanisme/n_assiette_servitude</skos:altLabel>
+        <skos:altLabel xml:lang="fr">n_assiette_servitudes</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Assiettes? de servitude</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Servitudes des sites naturels</ns0:regexp>
+        <ns0:regexp xml:lang="fr">AC2</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -75,6 +85,7 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
         <skos:prefLabel xml:lang="fr">Politique européenne d'aménagement</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Aménagement Urbanisme/Politique européenne</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
@@ -83,6 +94,17 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
         <skos:prefLabel xml:lang="fr">Zonages d'aménagement</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Aménagement Urbanisme/Zonages Aménagement</skos:altLabel>
+        <skos:altLabel xml:lang="fr">zonages aménagement</skos:altLabel>
+        <skos:altLabel xml:lang="fr">zonages-amenagement</skos:altLabel>
+        <skos:altLabel xml:lang="fr">zonages-zonages-amenagement</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Parcs? naturels? régiona(l|ux)</ns0:regexp>
+        <ns0:regexp xml:lang="fr">PNR</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zones? de revitalisation rurale</ns0:regexp>
+        <ns0:regexp xml:lang="fr">ZRR</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Périmètres? des Pays</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Contrat de relance et de transition écologique</ns0:regexp>
+        <ns0:regexp xml:lang="fr">CRTE</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -91,6 +113,37 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
         <skos:prefLabel xml:lang="fr">Planification</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Aménagement Urbanisme/Zonages Planification</skos:altLabel>
+        <skos:altLabel xml:lang="fr">ptu</skos:altLabel>
+        <skos:altLabel xml:lang="fr">loi-littoral</skos:altLabel>
+        <skos:altLabel xml:lang="fr">loi-montagne</skos:altLabel>
+        <skos:altLabel xml:lang="fr">documents-durbanisme</skos:altLabel>
+        <skos:altLabel xml:lang="fr">plu</skos:altLabel>
+        <skos:altLabel xml:lang="fr">plui</skos:altLabel>
+        <skos:altLabel xml:lang="fr">pluis</skos:altLabel>
+        <skos:altLabel xml:lang="fr">document-durbanisme</skos:altLabel>
+        <skos:altLabel xml:lang="fr">document-urbanisme</skos:altLabel>
+        <skos:altLabel xml:lang="fr">documents-durba</skos:altLabel>
+        <skos:altLabel xml:lang="fr">scot</skos:altLabel>
+        <skos:altLabel xml:lang="fr">ZONAGES PLANIFICATION</skos:altLabel>
+        <skos:altLabel xml:lang="fr">amenagement_urbanisme/n_zonages_planification</skos:altLabel>
+        <skos:altLabel xml:lang="fr">zonage planification</skos:altLabel>
+        <skos:altLabel xml:lang="fr">urbanisme planification</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Directives? Territoriales? d'Aménagement</ns0:regexp>
+        <ns0:regexp xml:lang="fr">DTA</ns0:regexp>
+        <ns0:regexp xml:lang="fr">DTADD</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Document d’urbanisme</ns0:regexp>
+        <ns0:regexp xml:lang="fr">cartes? communales?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">P\.L\.U\.</ns0:regexp>
+        <ns0:regexp xml:lang="fr">PLU</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Schémas? de Cohérence Territoriale</ns0:regexp>
+        <ns0:regexp xml:lang="fr">SCOT</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Règlement National d'Urbanisme</ns0:regexp>
+        <ns0:regexp xml:lang="fr">PDU</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Plan de déplacement urbain</ns0:regexp>
+        <ns0:regexp xml:lang="fr">loi littoral</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Loi Montagne</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zone de montagne au titre de la loi du 9 janvier 1985</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 

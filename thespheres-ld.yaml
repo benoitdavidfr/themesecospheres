@@ -26,6 +26,9 @@
       '@value': 'Alimentation en eau potable'
   - '@id': 'themes:amenagement-et-urbanisme'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Aménagement Urbanisme' }
+      - { '@language': fr, '@value': amenagement-urbanisme }
     'skos:inScheme':
       '@id': 'ecospheres:themes'
     'skos:narrower':
@@ -600,6 +603,39 @@
       '@value': 'Perturbations électromagnétiques'
   - '@id': 'themes:planification'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Directives? Territoriales? d''Aménagement' }
+      - { '@language': fr, '@value': DTA }
+      - { '@language': fr, '@value': DTADD }
+      - { '@language': fr, '@value': 'Document d’urbanisme' }
+      - { '@language': fr, '@value': 'cartes? communales?' }
+      - { '@language': fr, '@value': P\.L\.U\. }
+      - { '@language': fr, '@value': PLU }
+      - { '@language': fr, '@value': 'Schémas? de Cohérence Territoriale' }
+      - { '@language': fr, '@value': SCOT }
+      - { '@language': fr, '@value': 'Règlement National d''Urbanisme' }
+      - { '@language': fr, '@value': PDU }
+      - { '@language': fr, '@value': 'Plan de déplacement urbain' }
+      - { '@language': fr, '@value': 'loi littoral' }
+      - { '@language': fr, '@value': 'Loi Montagne' }
+      - { '@language': fr, '@value': 'Zone de montagne au titre de la loi du 9 janvier 1985' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Aménagement Urbanisme/Zonages Planification' }
+      - { '@language': fr, '@value': ptu }
+      - { '@language': fr, '@value': loi-littoral }
+      - { '@language': fr, '@value': loi-montagne }
+      - { '@language': fr, '@value': documents-durbanisme }
+      - { '@language': fr, '@value': plu }
+      - { '@language': fr, '@value': plui }
+      - { '@language': fr, '@value': pluis }
+      - { '@language': fr, '@value': document-durbanisme }
+      - { '@language': fr, '@value': document-urbanisme }
+      - { '@language': fr, '@value': documents-durba }
+      - { '@language': fr, '@value': scot }
+      - { '@language': fr, '@value': 'ZONAGES PLANIFICATION' }
+      - { '@language': fr, '@value': amenagement_urbanisme/n_zonages_planification }
+      - { '@language': fr, '@value': 'zonage planification' }
+      - { '@language': fr, '@value': 'urbanisme planification' }
     'skos:broader':
       '@id': 'themes:amenagement-et-urbanisme'
     'skos:inScheme':
@@ -618,6 +654,9 @@
       '@value': 'Politique de la ville'
   - '@id': 'themes:politique-europeenne-d-amenagement'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Aménagement Urbanisme/Politique européenne'
     'skos:broader':
       '@id': 'themes:amenagement-et-urbanisme'
     'skos:inScheme':
@@ -869,6 +908,16 @@
       '@value': 'Sécurité routière'
   - '@id': 'themes:servitudes-d-utilite-publique'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Assiettes? de servitude' }
+      - { '@language': fr, '@value': 'Servitudes des sites naturels' }
+      - { '@language': fr, '@value': AC2 }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Aménagement Urbanisme/Assiette Servitude' }
+      - { '@language': fr, '@value': servitude-d-utilite-publique }
+      - { '@language': fr, '@value': 'ASSIETTE SERVITUDE' }
+      - { '@language': fr, '@value': amenagement_urbanisme/n_assiette_servitude }
+      - { '@language': fr, '@value': n_assiette_servitudes }
     'skos:broader':
       '@id': 'themes:amenagement-et-urbanisme'
     'skos:inScheme':
@@ -966,6 +1015,19 @@
       '@value': 'Transport exceptionnel'
   - '@id': 'themes:zonages-d-amenagement'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Parcs? naturels? régiona(l|ux)' }
+      - { '@language': fr, '@value': PNR }
+      - { '@language': fr, '@value': 'Zones? de revitalisation rurale' }
+      - { '@language': fr, '@value': ZRR }
+      - { '@language': fr, '@value': 'Périmètres? des Pays' }
+      - { '@language': fr, '@value': 'Contrat de relance et de transition écologique' }
+      - { '@language': fr, '@value': CRTE }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Aménagement Urbanisme/Zonages Aménagement' }
+      - { '@language': fr, '@value': 'zonages aménagement' }
+      - { '@language': fr, '@value': zonages-amenagement }
+      - { '@language': fr, '@value': zonages-zonages-amenagement }
     'skos:broader':
       '@id': 'themes:amenagement-et-urbanisme'
     'skos:inScheme':

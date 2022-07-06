@@ -42,6 +42,7 @@ definitions:
       '^[a-z]+:[a-zA-Z]+$': # le prédicat
         $ref: '#/definitions/objects'
 type: object
+additionalProperties: false
 properties:
   title:
     description: titre du document
@@ -76,3 +77,6 @@ properties:
     patternProperties:
       '^[a-z]+:[-a-zA-Z]+$': # le sujet
         $ref: '#/definitions/predicates-objects'
+  eof:
+    description: marque de fin de fichier
+    type: 'null'
