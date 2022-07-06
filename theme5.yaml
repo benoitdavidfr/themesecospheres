@@ -1,0 +1,120 @@
+title: Liste des thèmes Ecosphères
+description: |
+  Définition d'une structuration pour la gestion des thèmes Ecosphères
+
+$schema:
+  $id: xx
+  $schema: http://json-schema.org/schema#
+  definitions:
+    stringInSomeLang:
+      description: un libellé en une ou pluiseurs langues, x pour neutre
+      type: object
+      additionalProperties: false
+      patternProperties:
+        '^(fr|en|x)$': # on se limite pour le moment à 2 languess + neutre
+          type: string
+    objects:
+      description: la partie objets associée à un sujet et un prédicat
+      oneOf:
+        - description: URI
+          type: string
+          pattern: '^https?://'
+        - description: URI compacté
+          type: string
+          pattern: '^[a-zA-Z]+:[a-zA-Z]+'
+        - description: un libellé en une ou plusieurs langues, x pour neutre
+          $ref: '#/definitions/stringInSomeLang'
+        - description: une liste de libellés, chacun en une ou plusieurs langues, x pour neutre
+          type: array
+          items:
+            $ref: '#/definitions/stringInSomeLang'
+        - description: un ensemble de triplets, chaque sujet comme clé et les prédicats-objets comme valeur
+          type: object
+          additionalProperties: false
+          patternProperties:
+             '^[a-z]+:[-a-zA-Z]+$': # sujet
+              $ref: '#/definitions/predicates-objects'
+    predicates-objects:
+      description: la partie prédicats-objets d'un triplet
+      type: object
+      additionalProperties: false
+      patternProperties:
+        '^[a-z]+:[a-zA-Z]+$': # le prédicat
+          $ref: '#/definitions/objects'
+  type: object
+  properties:
+    title:
+      description: titre du document
+      type: string
+    description:
+      description: commentaires sur le document
+      type: string
+    $schema:
+      description: schema JSON du document
+      oneOf:
+        - $ref: http://json-schema.org/schema#
+        - type: string
+    prefix:
+      description: dictionnaire des prefixes utilisés
+      type: object
+      additionalProperties: false
+      patternProperties:
+        '^[a-z]+': # en clé la chaine utilisée pour représenter le prefixe
+          description: l'URI du prefixe
+          type: string
+          format: uri
+    skos:ConceptScheme:
+      description: définition du scheme commun à tous les concepts, le champ @id donne l'URI compactée
+      additionalProperties: false
+      patternProperties:
+        '^([a-z]+:[a-zA-Z]+)|@id$':
+          $ref: '#/definitions/objects'
+    skos:Concept:
+      description: |
+        ensemble de triplets structuré en arbres avec le sujet comme clé et les prédicats-objets comme valeur
+      additionalProperties: false
+      patternProperties:
+        '^[a-z]+:[a-zA-Z]+$': # le sujet
+          $ref: '#/definitions/predicates-objects'
+
+prefix:
+  skos: http://www.w3.org/2004/02/skos/core#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  dct: http://purl.org/dc/terms/
+  ecospheres: http://registre.data.developpement-durable.gouv.fr/ecospheres
+  themes: http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/
+  espsyntax: http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#
+
+skos:ConceptScheme:
+  '@id': ecospheres:themes
+  dct:title: {fr: "Liste des thèmes d'Ecosphères"}
+  dct:description: {fr: "Publiée par Benoit DAVID - 5/7/2022"}
+  dct:modified: {x: "2022-07-05T16:52:57+02:00"}
+  dct:license: https://www.etalab.gouv.fr/licence-ouverte-open-licence
+
+skos:Concept:
+  themes:climat:
+    skos:prefLabel: {fr: Climat}
+    skos:altLabel: {fr: air-climat}
+    skos:narrower:
+      themes:changement-climatique:
+        skos:inScheme: ecospheres:themes
+        skos:prefLabel: {fr: Changement climatique}
+        skos:altLabel:
+           - {fr: "Air Climat/Changement climatique"}
+           - {fr: "climat-air-et-energie"}
+        espsyntax:regexp:
+          - {fr: "Plans? Climat-Energie"}
+          - {fr: "Plan Climat Air Energie territorr?ial"}
+          - {fr: "Air, Énergie et Climat"}
+          - {fr: "PCAET"}
+          - {fr: "Plans de Protection de l'Atmosphère"}
+          - {fr: "SRCAE"}
+          - {fr: "territoires? à énergie positive"}
+      themes:meteorologie:
+        skos:inScheme: ecospheres:themes
+        skos:prefLabel: {fr: Météorologie}
+        skos:altLabel: {fr: "Air Climat/Météo"}
+        
+        
+        
