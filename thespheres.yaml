@@ -2,80 +2,8 @@ title: Liste des thèmes Ecosphères
 description: |
   Gestion des thèmes Ecosphères et d'une structure adhoc pour les gérer.
   On exploite notamment leur structuration hiérarchique.
-$schema:
-  $id: xx
-  $schema: http://json-schema.org/schema#
-  definitions:
-    Label:
-      description: un libellé dans une ou pluiseurs langues, x pour neutre
-      type: object
-      additionalProperties: false
-      patternProperties:
-        '^(fr|en|x)$': # on se limite pour le moment à 2 languess + neutre
-          type: string
-    objects:
-      description: la partie objets associée à un sujet et un prédicat
-      oneOf:
-        - description: URI
-          type: string
-          pattern: '^https?://'
-        - description: URI compacté
-          type: string
-          pattern: '^[a-zA-Z]+:[a-zA-Z]+'
-        - description: un libellé dans une ou plusieurs langues, x pour neutre
-          $ref: '#/definitions/Label'
-        - description: une liste de libellés, chacun en une ou plusieurs langues, x pour neutre
-          type: array
-          items:
-            $ref: '#/definitions/Label'
-        - description: un ensemble de triplets, chaque sujet comme clé et les prédicats-objets comme valeur
-          type: object
-          additionalProperties: false
-          patternProperties:
-             '^[a-z]+:[-a-zA-Z]+$': # sujet
-              $ref: '#/definitions/predicates-objects'
-    predicates-objects:
-      description: la partie prédicats-objets d'un triplet
-      type: object
-      additionalProperties: false
-      patternProperties:
-        '^[a-z]+:[a-zA-Z]+$': # le prédicat
-          $ref: '#/definitions/objects'
-  type: object
-  properties:
-    title:
-      description: titre du document
-      type: string
-    description:
-      description: commentaires sur le document
-      type: string
-    $schema:
-      description: schema JSON du document
-      oneOf:
-        - $ref: http://json-schema.org/schema#
-        - type: string
-    prefix:
-      description: dictionnaire des prefixes utilisés
-      type: object
-      additionalProperties: false
-      patternProperties:
-        '^[a-z]+': # en clé la chaine utilisée pour représenter le prefixe
-          description: l'URI du prefixe
-          type: string
-          format: uri
-    skos:ConceptScheme:
-      description: définition du scheme commun à tous les concepts, le champ @id donne l'URI compactée
-      additionalProperties: false
-      patternProperties:
-        '^([a-z]+:[a-zA-Z]+)|@id$':
-          $ref: '#/definitions/objects'
-    skos:Concept:
-      description: |
-        ensemble de triplets structuré en arbres avec le sujet comme clé et les prédicats-objets comme valeur
-      additionalProperties: false
-      patternProperties:
-        '^[a-z]+:[-a-zA-Z]+$': # le sujet
-          $ref: '#/definitions/predicates-objects'
+
+$schema: thespheres
 
 prefix:
   skos: http://www.w3.org/2004/02/skos/core#
