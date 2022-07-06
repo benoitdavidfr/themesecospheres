@@ -44,12 +44,12 @@ if ($argv[0] == '-short') {
 }
 
 
-if (!function_exists('array_is_list')) {
-  function array_is_list($list): bool { return is_array($list) && !is_assoc_array($list); }
-}
-
 function array_is_dict(array $array): bool {
   return count(array_diff_key($array, array_keys(array_keys($array))));
+}
+
+if (!function_exists('array_is_list')) {
+  function array_is_list($list): bool { return is_array($list) && !array_is_dict($list); }
 }
 
 function beautifulYaml(string $yamlText): string {
