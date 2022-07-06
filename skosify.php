@@ -3,7 +3,7 @@
 title: skosify.php - génération d'une version Skos des thèmes Ecosphères
 name: skosify.php
 doc: |
-  Lit le fichier des thèmes en MarkDown en paramètre et fabrique le fichier Skos correspondant.
+  Lit le fichier des thèmes en Yaml en paramètre et fabrique le fichier Skos correspondant.
   Peut afficher en Turtle ou dans les autres formats proposés par EasyRdf ainsi que Yaml-LD
 
 journal: |
@@ -43,125 +43,13 @@ if ($argv[0] == '-short') {
   array_shift($argv);
 }
 
-$themes = file_get_contents($argv[0]);
-$themes = explode("\n", $themes);
 
-//echo "<pre>\n";
-//print_r($themes);
-
-$prefixes = [
-  'skos'=> 'http://www.w3.org/2004/02/skos/core#',
-  'rdf'=> 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
-  'dct'=> 'http://purl.org/dc/terms/',
-  'ecospheres'=> 'http://registre.data.developpement-durable.gouv.fr/ecospheres/',
-  'themes'=> 'http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/',
-  'espsyntax'=> 'http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#',
-];
-
-$scheme = [
-  '@id'=> ['ecospheres:themes'],
-  'rdf:type'=> ['skos:ConceptScheme'],
-  'dct:title'=> [],
-  'dct:description'=> [],
-  'dct:modified'=> ['"'.date(DATE_ATOM).'"'],
-  'dct:license'=> ['https://www.etalab.gouv.fr/licence-ouverte-open-licence'],
-  'skos:hasTopConcept'=> [],
-];
-
-$concepts = []; // [{subject}=> [{predicate}=> [{object}]]]
-
-// construction de $concepts à partir du fichier MD
-foreach ($themes as $theme) {
-  $pattern = '!^\[([^\]]+)\]\(([^)]+)\)$!';
-  if (substr($theme, 0, 2)=='# ') { // Titre du document
-    $scheme['dct:title'] = [substr($theme, 2)];
-  }
-  elseif (substr($theme, 0, 5)=='#### ') { // Description du document
-    $scheme['dct:description'] = [substr($theme, 5)];
-  }
-  elseif (substr($theme, 0, 3)=='## ') { // theme de niveau 1 
-    if ($short && $concepts) break; // limite à un seul topConcept pour les tests
-    $theme = substr($theme, 3);
-    if (!preg_match($pattern, $theme, $matches)) {
-      die("No match pour $theme\n");
-    }
-    $theme = $matches[1];
-    $puri = $matches[2];
-    $puri = str_replace('http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/','themes:', $puri);
-    $concepts[$puri] = [
-      'rdf:type'=> ['skos:Concept'],
-      'skos:inScheme'=> ['ecospheres:themes'],
-      'skos:topConceptOf'=> ['ecospheres:themes'],
-      'skos:prefLabel'=> [$theme],
-      'skos:altLabel'=> [],
-      'espsyntax:regexp'=> [],
-      'skos:narrower'=> [],
-    ];
-    $scheme['skos:hasTopConcept'][] = $puri;
-  }
-  elseif (substr($theme, 0, 2)=='- ') { // theme de niveau 2
-    $theme = substr($theme, 2);
-    if (!preg_match($pattern, $theme, $matches))
-      die("No match pour $theme\n");
-    $theme = $matches[1];
-    $uri = $matches[2];
-    $uri = str_replace('http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/','themes:', $uri);
-    $concepts[$uri] = [
-      'rdf:type'=> ['skos:Concept'],
-      'skos:inScheme'=> ['ecospheres:themes'],
-      'skos:prefLabel'=> [$theme],
-      'skos:altLabel'=> [],
-      'espsyntax:regexp'=> [],
-      'skos:broader'=> [$puri],
-    ];
-    $concepts[$puri]['skos:narrower'][] = $uri;
-  }
+if (!function_exists('array_is_list')) {
+  function array_is_list($list): bool { return is_array($list) && !is_assoc_array($list); }
 }
 
-// ajout de qqs altLabels et regexps
-if (1) {
-  $concepts['themes:climat']['skos:altLabel'] = ['air-climat'];
-  $concepts['themes:changement-climatique']['skos:altLabel'] = [
-    'Air Climat/Changement climatique',
-    'climat-air-et-energie',
-    'climat',
-  ];
-  $concepts['themes:changement-climatique']['espsyntax:regexp'] = [
-    'Plans? Climat-Energie',
-    'Plan Climat Air Energie territorr?ial',
-    'Air, Énergie et Climat',
-    'PCAET',
-    "Plans de Protection de l'Atmosphère",
-    'SRCAE',
-    'territoires? à énergie positive',
-  ];
-  $concepts['themes:meteorologie']['skos:altLabel'] = [
-    'Air Climat/Météo',
-  ];
-}
-
-
-function ttlify(string $subject, array $po): string {
-  unset($po['@id']);
-  $ttl = "$subject\n";
-  foreach ($po as $predicate => $objects) {
-    if (!$objects) continue;
-    $ttl .= "  $predicate ";
-    foreach ($objects as $io => $object) {
-      if ((substr($object, 0, 7)=='http://') || (substr($object, 0, 8)=='https://'))
-        $ttl .= "<$object>";
-      elseif (strpos($object, ':')==false)
-        $ttl .= "\"$object\"@fr";
-      else
-        $ttl .= "$object";
-      if ($io <> (count($objects)-1))
-        $ttl .= ", ";
-      else
-        $ttl .= ";\n";
-    }
-  }
-  $ttl = substr($ttl, 0, -2);
-  return "$ttl.\n";
+function array_is_dict(array $array): bool {
+  return count(array_diff_key($array, array_keys(array_keys($array))));
 }
 
 function beautifulYaml(string $yamlText): string {
@@ -169,53 +57,215 @@ function beautifulYaml(string $yamlText): string {
   return preg_replace('!-\n +!', '- ', $yamlText);
 }
 
+class Label { // Un label potentiellement dans différentes langues
+  protected array $strings; // [{lang}=> string]
+  
+  static function is($val): bool {
+    if (!is_array($val))
+      return false;
+    else {
+      foreach ($val as $lang => $string) {
+        if (($lang <> 'x') && (strlen($lang)<>2))
+          return false;
+        if (!is_string($string))
+          return false;
+      }
+    }
+    return true;
+  }
+  
+  function __construct(array $strings) { $this->strings = $strings; }
+  
+  function asArray(): array { return $this->strings; }
+};
+
+class Concept { // stockage du scheme Skos
+  protected array $prop; // [{predicat} => [{object}]] où {object} ::= URI | compactURI | Label
+  static array $prefix = [];
+  static array $scheme = [];
+  static array $concepts = []; // [id => Concept]
+  
+  function __construct(string $id, array $concept, ?string $parent=null) {
+    $this->prop = [
+      'rdf:type'=> ['skos:Concept'],
+      'skos:inScheme'=> self::$scheme['@id'],
+    ];
+    if (!$parent) {
+      $this->prop['skos:topConceptOf'] = self::$scheme['@id'];
+      self::$scheme['skos:hasTopConcept'][] = $id;
+    }
+    else {
+      $this->prop['skos:broader'] = [$parent];
+    }
+    
+    $narrower = [];
+    foreach ($concept['skos:narrower'] ?? [] as $cid => $child) {
+      self::$concepts[$cid] = new self($cid, $child, $id);
+      $narrower[] = $cid;
+    }
+    unset($concept['skos:narrower']);
+    
+    foreach ($concept as $predicate => $objects) {
+      if (Label::is($objects))
+        $this->prop[$predicate] = [new Label($objects)];
+      elseif (array_is_list($objects)) {
+        $this->prop[$predicate] = [];
+        foreach ($objects as $object) {
+          if (Label::is($object))
+            $this->prop[$predicate][] = new Label($object );
+        }
+      }
+    }
+    
+    $this->prop['skos:narrower'] = $narrower;
+  }
+  
+  function asArray(): array {
+    $array = [];
+    foreach ($this->prop as $predicate => $objects) {
+      $props = [];
+      foreach ($objects as $object)
+        if (is_object($object))
+          $props[] = $object->asArray();
+        else
+          $props[] = $object;
+      $array[$predicate] = $props;
+    }
+    return $array;
+  }
+  
+  static function init(array $yaml): void {
+    self::$prefix = $yaml['prefix'];
+    foreach ($yaml['skos:ConceptScheme'] as $pred => $objects) {
+      if (Label::is($objects))
+        self::$scheme[$pred] = [new Label($objects)];
+      elseif (is_string($objects))
+        self::$scheme[$pred] = [$objects];
+    }
+    self::$scheme['skos:hasTopConcept'] = [];
+    foreach ($yaml['skos:Concept'] as $id => $concept) {
+      self::$concepts[$id] = null;
+      self::$concepts[$id] = new Concept($id, $concept);
+      break;
+    }
+  }
+  
+  static function allAsArray(): array {
+    $concepts = [];
+    foreach (self::$concepts as $id => $concept) {
+      $concepts[$id] = $concept->asArray();
+    }
+    return [
+      //'prefix'=> self::$prefix,
+      //'scheme'=> self::$scheme,
+      'concepts'=> $concepts,
+    ];
+  }
+  
+  
+  static function labelAsTurtle(array $label): string {
+    $ttl = '';
+    foreach ($label as $lang => $string)
+      $ttl .= "\"$string\"".($lang<>'x' ? "@$lang" : '');
+    return $ttl;
+  }
+  
+  static function asTurtle(string $subject, array $po): string {
+    unset($po['@id']);
+    echo "asTurtle($subject, ",Yaml::dump($po),")\n";
+    $ttl = "$subject\n";
+    foreach ($po as $predicate => $objects) {
+      if (!$objects) continue;
+      if (self::isLabel($objects)) {
+        $ttl .= "  $predicate ".self::labelAsTurtle($objects).";\n";
+        continue;
+      }
+      $ttl .= "  $predicate ";
+      foreach ($objects as $io => $object) {
+        if (is_string($object)) {
+          if ((substr($object, 0, 7)=='http://') || (substr($object, 0, 8)=='https://')) // URI
+            $ttl .= "<$object>";
+          elseif (strpos($object, ':') !== false) // URI compacté
+            $ttl .= "$object";
+          else {
+            throw new Exception("Objet \"$object\" non interprété");
+          }
+        }
+        elseif (is_array($object)) {
+          if (array_keys($object)[0] == 0) { // liste de libellés
+            foreach ($object as $label) {
+              foreach ($label as $lang => $string)
+                $ttl .= "\"$string\"@$lang";
+            }
+          }
+          else { // un label
+            foreach ($object as $lang => $string)
+              $ttl .= "\"$string\"@$lang";
+          }
+        }
+        if ($io <> (count($objects)-1))
+          $ttl .= ", ";
+        else
+          $ttl .= ";\n";
+      }
+    }
+    $ttl = substr($ttl, 0, -2);
+    return "$ttl.\n";
+  }
+
+  static function allAsTurtle(): string {
+    $ttl = '';
+    foreach (self::$prefix as $prefix => $uri)
+      $ttl .= "@prefix $prefix: <$uri> .\n";
+    $ttl .= "\n";
+    $ttl .= self::asTurtle(self::$scheme['@id'], self::$scheme)."\n";
+    return $ttl;
+    foreach ($concepts as $uri => $po)
+      $ttl .= ttlify($uri, $po)."\n";
+    return $ttl;
+  }
+}
+
+Concept::init(Yaml::parseFile($argv[0]));
+
 // affichage du résultat
 if (($argv[1] ?? null) == 'dump') { // dump brut de la structure constuite 
-  echo Yaml::dump(['prefixes'=> $prefixes, 'scheme'=> $scheme, 'concepts'=> $concepts], 6, 2);
-  die();
+  print_r(['scheme'=> Concept::$scheme, 'concepts'=> Concept::$concepts]);
+  die(beautifulYaml(Yaml::dump(Concept::allAsArray(), 5, 2)));
 }
-else { // fabrication d'une sortie Turtle
-  $ttl = '';
-  foreach ($prefixes as $prefix => $uri)
-    $ttl .= "@prefix $prefix: <$uri> .\n";
-  $ttl .= "\n";
-  $ttl .= ttlify($scheme['@id'][0], $scheme)."\n";
-  foreach ($concepts as $uri => $po)
-    $ttl .= ttlify($uri, $po)."\n";
-  if (!isset($argv[1])) { // par défaut affichage de la sortie Turtle
-    die($ttl);
-  }
-  else { // transformation par EsayRdf en jsonld, yamlld ou autre
-    $graph = new \EasyRdf\Graph($scheme['@id'][0]);
-    $graph->parse($ttl, 'turtle', $scheme['@id'][0]);
-    switch ($ofmt = $argv[1]) {
-      case 'jsonld': {
-        $ser = $graph->serialise($ofmt);
-        echo json_encode(json_decode($ser), JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE),"\n";
-        break;
-      }
-      case 'yamlld': {
-        $ser = $graph->serialise('jsonld');
-        echo beautifulYaml(Yaml::dump(json_decode($ser, true), 6, 2));
-        break;
-      }
-      case 'cjsonld': {
-        $ser = $graph->serialise('jsonld');
-        $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode($prefixes));
-        echo json_encode($compacted, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE),"\n";
-        break;
-      }
-      case 'cyamlld': {
-        $ser = $graph->serialise('jsonld');
-        $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode($prefixes));
-        echo beautifulYaml(Yaml::dump(json_decode(json_encode($compacted), true), 4, 2)),"\n";
-        break;
-      }
-      default: {
-        $ser = $graph->serialise($ofmt);
-        echo is_string($ser) ? $ser : beautifulYaml(Yaml::dump($ser, 6, 2));
-        break;
-      }
+elseif (!isset($argv[1])) { // par défaut affichage de la sortie Turtle
+  die(Concept::allAsTurtle());
+}
+else { // transformation par EsayRdf en jsonld, yamlld ou autre
+  $graph = new \EasyRdf\Graph($scheme['@id'][0]);
+  $graph->parse(Concept::allAsTurtle(), 'turtle', $scheme['@id'][0]);
+  switch ($ofmt = $argv[1]) {
+    case 'jsonld': {
+      $ser = $graph->serialise($ofmt);
+      echo json_encode(json_decode($ser), JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE),"\n";
+      break;
+    }
+    case 'yamlld': {
+      $ser = $graph->serialise('jsonld');
+      echo beautifulYaml(Yaml::dump(json_decode($ser, true), 6, 2));
+      break;
+    }
+    case 'cjsonld': {
+      $ser = $graph->serialise('jsonld');
+      $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode($prefixes));
+      echo json_encode($compacted, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE),"\n";
+      break;
+    }
+    case 'cyamlld': {
+      $ser = $graph->serialise('jsonld');
+      $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode($prefixes));
+      echo beautifulYaml(Yaml::dump(json_decode(json_encode($compacted), true), 4, 2)),"\n";
+      break;
+    }
+    default: {
+      $ser = $graph->serialise($ofmt);
+      echo is_string($ser) ? $ser : beautifulYaml(Yaml::dump($ser, 6, 2));
+      break;
     }
   }
 }

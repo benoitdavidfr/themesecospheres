@@ -99,7 +99,6 @@ skos:Concept:
     skos:altLabel: {fr: air-climat}
     skos:narrower:
       themes:changement-climatique:
-        skos:inScheme: ecospheres:themes
         skos:prefLabel: {fr: Changement climatique}
         skos:altLabel:
            - {fr: "Air Climat/Changement climatique"}
@@ -113,7 +112,6 @@ skos:Concept:
           - {fr: "SRCAE"}
           - {fr: "territoires? à énergie positive"}
       themes:meteorologie:
-        skos:inScheme: ecospheres:themes
         skos:prefLabel: {fr: Météorologie}
         skos:altLabel: {fr: "Air Climat/Météo"}
 
