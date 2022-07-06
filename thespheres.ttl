@@ -18,6 +18,8 @@ themes:climat
   skos:topConceptOf ecospheres:themes;
   skos:prefLabel "Climat"@fr;
   skos:altLabel "air-climat"@fr;
+  skos:changeNote "Le sous-thème 'Air Climat/Qualité Pollution' a été transféré dans nuisances-dechets-et-pollution
+"@fr;
   skos:narrower themes:changement-climatique, themes:meteorologie.
 
 themes:changement-climatique
@@ -78,7 +80,9 @@ themes:etudes
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:amenagement-et-urbanisme;
-  skos:prefLabel "Études"@fr.
+  skos:prefLabel "Études"@fr;
+  skos:altLabel "Aménagement Urbanisme/Zonages Étude"@fr, "Aménagement Urbanisme / Zonages Étude"@fr;
+  espsyntax:regexp "Unités? urbaines?"@fr, "Taches? urbaines?"@fr, "Aires? urbaines?"@fr, "IRIS"@fr, "Zone d'emploi"@fr.
 
 themes:etablissements-d-activites
   rdf:type skos:Concept;
@@ -91,92 +95,142 @@ themes:etablissements-d-enseignement
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:etablissements-d-activites;
-  skos:prefLabel "Etablissements d'enseignement"@fr.
+  skos:prefLabel "Etablissements d'enseignement"@fr;
+  skos:altLabel "Culture Société Service/Enseignement"@fr;
+  espsyntax:regexp "enseignement"@fr.
 
 themes:equipements-sportifs-ou-culturels
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:etablissements-d-activites;
-  skos:prefLabel "Équipements sportifs ou culturels"@fr.
+  skos:prefLabel "Équipements sportifs ou culturels"@fr;
+  skos:altLabel "Culture Société Service/Équipement sportif ou culturel"@fr;
+  espsyntax:regexp "Équipements culturels et socio culturels"@fr.
 
 themes:patrimoine-culturel
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:etablissements-d-activites;
-  skos:prefLabel "Patrimoine culturel"@fr.
+  skos:prefLabel "Patrimoine culturel"@fr;
+  skos:altLabel "Culture Société Service/Patrimoine culturel"@fr;
+  espsyntax:regexp "Monuments? Historiques?"@fr, "Entreprises? du patrimoine vivant"@fr.
 
 themes:etablissements-de-sante-et-medico-sociaux
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:etablissements-d-activites;
-  skos:prefLabel "Établissements de santé et médico-sociaux"@fr.
+  skos:prefLabel "Établissements de santé et médico-sociaux"@fr;
+  skos:altLabel "Culture Société Service/Santé Social"@fr;
+  espsyntax:regexp "E\.P\.A\.D\."@fr, "EPAD"@fr, "Fonctions médicales et paramédicales"@fr, "Établissements et services de santé"@fr, "Établissements? d'accueil de la petite enfance"@fr.
 
 themes:equipements-de-tourisme
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:etablissements-d-activites;
-  skos:prefLabel "Équipements de tourisme"@fr.
+  skos:prefLabel "Équipements de tourisme"@fr;
+  skos:altLabel "Culture Société Service/Tourisme"@fr;
+  espsyntax:regexp "Campings?"@fr, "Etablissements Recevant du Public de type restaurant"@fr, "hébergements touristiques"@fr.
 
 themes:autres-etablissements-recevant-du-public
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:etablissements-d-activites;
-  skos:prefLabel "Autres établissements recevant du public"@fr.
+  skos:prefLabel "Autres établissements recevant du public"@fr;
+  skos:altLabel "Culture Société Service/ERP Autre"@fr;
+  espsyntax:regexp "Stations? de distribution de carburants?"@fr, "cimetière"@fr, "Etablissements Recevant du Public"@fr, "Grandes surfaces"@fr.
 
 themes:eau
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:topConceptOf ecospheres:themes;
   skos:prefLabel "Eau"@fr;
+  skos:altLabel "Eau/Utilisation Autre"@fr;
+  skos:changeNote "Le thème Covadis 'Eau/Utilisation Autre' ayant été supprimé, les mots-clés correspondants
+sont affectés au thème Eau.
+"@fr;
   skos:narrower themes:alimentation-en-eau-potable, themes:assainissement, themes:masses-d-eau, themes:ouvrages-hydrauliques, themes:peche-en-eaux-interieures, themes:surveillance-de-la-ressource-en-eau, themes:interventions-sur-les-cours-d-eau, themes:protection-de-l-eau.
 
 themes:alimentation-en-eau-potable
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:eau;
-  skos:prefLabel "Alimentation en eau potable"@fr.
+  skos:prefLabel "Alimentation en eau potable"@fr;
+  skos:altLabel "Eau/AEP"@fr, "step"@fr;
+  espsyntax:regexp "AEP"@fr, "eau potable"@fr, "Périmètres? de protection immédiats?"@fr, "Périmètres? de protection rapprochés?"@fr, "Aires? d'alimentation des? captages?"@fr.
 
 themes:assainissement
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:eau;
-  skos:prefLabel "Assainissement"@fr.
+  skos:prefLabel "Assainissement"@fr;
+  skos:definition "Les stations d'épuration, leur points de rejet, les réseaux d'assainissement, les stations
+de pompage, ...
+"@fr;
+  skos:altLabel "Eau/Assainissement"@fr, "eau/n_assainissement"@fr;
+  espsyntax:regexp "assainissement"@fr, "STEP"@fr, "Stations? d'épurations?"@fr, "Stations? de traitement des eaux usées"@fr, "Systèmes? de traitement des eaux usées"@fr, "STEU"@fr.
 
 themes:masses-d-eau
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:eau;
-  skos:prefLabel "Masses d'eau"@fr.
+  skos:prefLabel "Masses d'eau"@fr;
+  skos:definition "Les masses d'eau au sens de la DCE et autres masses d'eau (surface, cours d'eau, plan d'eau naturel,
+eau souterraine, connaissance des zones, humides, ...)
+"@fr;
+  skos:altLabel "Eau/Masse d'eau"@fr, "eau/n_masse_eau"@fr;
+  espsyntax:regexp "masses? d'eau"@fr, "Tronçons hydrographiques"@fr, "Cours d'eau"@fr, "Plans? d'eau"@fr, "Etang"@fr, "Zones? humides?"@fr, "Milieux? humides?"@fr.
 
 themes:ouvrages-hydrauliques
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:eau;
-  skos:prefLabel "Ouvrages hydrauliques"@fr.
+  skos:prefLabel "Ouvrages hydrauliques"@fr;
+  skos:definition "plans d'eau artificiels, réservoirs, ORSFP, pisciculture, déversoirs d'orage, bassins d'orage,
+moulins, usines hydroélectriques, bassins d'infiltration, bassins d'évaporation, digues,
+obstacles à l'écoulement, ...
+"@fr;
+  skos:altLabel "Eau/Ouvrage"@fr, "Eau / Ouvrage"@fr;
+  espsyntax:regexp "ouvrages? hydrauliques?"@fr, "Obstacles? à l'écoulement"@fr, "Digues"@fr.
 
 themes:peche-en-eaux-interieures
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:eau;
-  skos:prefLabel "Pêche en eaux intérieures"@fr.
+  skos:prefLabel "Pêche en eaux intérieures"@fr;
+  skos:definition "Réserve de pêche, police de la pêche,… (en eaux intérieures)
+"@fr;
+  skos:altLabel "Eau/Pêche"@fr, "Eau / Pêche"@fr.
 
 themes:surveillance-de-la-ressource-en-eau
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:eau;
-  skos:prefLabel "Surveillance de la ressource en eau"@fr.
+  skos:prefLabel "Surveillance de la ressource en eau"@fr;
+  skos:definition "points de mesure, effractions constatées, ..."@fr;
+  skos:altLabel "Eau/Surveillance"@fr, "hydrometrie"@fr, "prevision-de-crue"@fr, "hydrologie"@fr;
+  espsyntax:regexp "Vigicrues"@fr.
 
 themes:interventions-sur-les-cours-d-eau
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:eau;
-  skos:prefLabel "Interventions sur les cours d'eau"@fr.
+  skos:prefLabel "Interventions sur les cours d'eau"@fr;
+  skos:definition "Travaux sur linéaire, curage-dragage, drainages"@fr;
+  skos:changeNote "Correspond dans l'arborescence Covadis au sous-thème 'Eau/Travaux Action'"@fr;
+  skos:altLabel "Eau/Travaux Action"@fr.
 
 themes:protection-de-l-eau
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:eau;
-  skos:prefLabel "Protection de l'eau"@fr.
+  skos:prefLabel "Protection de l'eau"@fr;
+  skos:definition "Zonage réglementaire : zones sensibles eutrophisation, zones vulnérables nitrates,
+zones sensibles pollution pesticides, zones PMPOA, imperméabilisation, zones drainées,
+contrats de rivière, SAGE
+"@fr;
+  skos:changeNote "Inclus et étend le sous-thème Covadis 'Eau/Zonages Eau'."@fr;
+  skos:altLabel "Eau/Zonages Eau"@fr, "eau/n_zonages_eau"@fr, "zonages eau"@fr;
+  espsyntax:regexp "Schémas? d'Aménagement et de Gestion des Eaux"@fr, "SAGE"@fr, "Zones? sensibles?"@fr, "Zones? Vulnérables?"@fr, "Zones? d'Actions? Renforcées? Nitrate"@fr, "protection des eaux contre la pollution par les nitrates"@fr, "Cours d'eau Classement"@fr, "Classement piscicole des cours d'eau"@fr, "Zones? de répartition des eaux"@fr, "ZRE"@fr, "frayères"@fr, "Plan de Gestion de la Ressource en Eau"@fr.
 
 themes:foncier-et-occupation-du-sol
   rdf:type skos:Concept;
@@ -189,7 +243,9 @@ themes:foncier-agricole
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:foncier-et-occupation-du-sol;
-  skos:prefLabel "Foncier agricole"@fr.
+  skos:prefLabel "Foncier agricole"@fr;
+  skos:altLabel "xx"@fr;
+  espsyntax:regexp "xx"@fr.
 
 themes:mutation-fonciere
   rdf:type skos:Concept;

@@ -25,6 +25,9 @@ skos:Concept:
     skos:prefLabel: {fr: Climat}
     skos:altLabel:
       - {fr: air-climat}
+    skos:changeNote:
+      fr: |
+        Le sous-thème 'Air Climat/Qualité Pollution' a été transféré dans nuisances-dechets-et-pollution
     skos:narrower:
       themes:changement-climatique:
         skos:prefLabel: {fr: Changement climatique}
@@ -118,48 +121,195 @@ skos:Concept:
           - {fr: Zone de montagne au titre de la loi du 9 janvier 1985}
       themes:etudes:
         skos:prefLabel: {fr: "Études"}
+        skos:altLabel:
+          - {fr: Aménagement Urbanisme/Zonages Étude}
+          - {fr: Aménagement Urbanisme / Zonages Étude}
+        espsyntax:regexp:
+          - {fr: Unités? urbaines?}
+          - {fr: Taches? urbaines?}
+          - {fr: Aires? urbaines?}
+          - {fr: IRIS}
+          - {fr: Zone d'emploi}
 
   themes:etablissements-d-activites:
     skos:prefLabel: {fr: "Établissements d'activités"}
     skos:narrower:
       themes:etablissements-d-enseignement:
         skos:prefLabel: {fr: "Etablissements d'enseignement"}
+        skos:altLabel:
+          - {fr: Culture Société Service/Enseignement}
+        espsyntax:regexp:
+          - {fr: enseignement}
       themes:equipements-sportifs-ou-culturels:
         skos:prefLabel: {fr: "Équipements sportifs ou culturels"}
+        skos:altLabel:
+          - {fr: Culture Société Service/Équipement sportif ou culturel}
+        espsyntax:regexp:
+          - {fr: Équipements culturels et socio culturels}
       themes:patrimoine-culturel:
         skos:prefLabel: {fr: "Patrimoine culturel"}
+        skos:altLabel:
+          - {fr: Culture Société Service/Patrimoine culturel}
+        espsyntax:regexp:
+          - {fr: Monuments? Historiques?}
+          - {fr: Entreprises? du patrimoine vivant}
       themes:etablissements-de-sante-et-medico-sociaux:
         skos:prefLabel: {fr: "Établissements de santé et médico-sociaux"}
+        skos:altLabel:
+          - {fr: Culture Société Service/Santé Social}
+        espsyntax:regexp:
+          - {fr: E\.P\.A\.D\.}
+          - {fr: EPAD}
+          - {fr: Fonctions médicales et paramédicales}
+          - {fr: Établissements et services de santé}
+          - {fr: Établissements? d'accueil de la petite enfance}
       themes:equipements-de-tourisme:
         skos:prefLabel: {fr: "Équipements de tourisme"}
+        skos:altLabel:
+          - {fr: Culture Société Service/Tourisme}
+        espsyntax:regexp:
+          - {fr: Campings?}
+          - {fr: Etablissements Recevant du Public de type restaurant}
+          - {fr: hébergements touristiques}
       themes:autres-etablissements-recevant-du-public:
         skos:prefLabel: {fr: "Autres établissements recevant du public"}
-  
+        skos:altLabel:
+          - {fr: Culture Société Service/ERP Autre}
+        espsyntax:regexp:
+          - {fr: Stations? de distribution de carburants?}
+          - {fr: cimetière}
+          - {fr: Etablissements Recevant du Public}
+          - {fr: Grandes surfaces}
+    
   themes:eau:
     skos:prefLabel: {fr: "Eau"}
+    skos:altLabel:
+      - {fr: Eau/Utilisation Autre}
+    skos:changeNote:
+      fr: |
+        Le thème Covadis 'Eau/Utilisation Autre' ayant été supprimé, les mots-clés correspondants
+        sont affectés au thème Eau.
     skos:narrower:
       themes:alimentation-en-eau-potable:
         skos:prefLabel: {fr: "Alimentation en eau potable"}
+        skos:altLabel:
+          - {fr: Eau/AEP}
+          - {fr: step}
+        espsyntax:regexp:
+          - {fr: AEP}
+          - {fr: eau potable}
+          - {fr: Périmètres? de protection immédiats?}
+          - {fr: Périmètres? de protection rapprochés?}
+          - {fr: Aires? d'alimentation des? captages?}
       themes:assainissement:
         skos:prefLabel: {fr: "Assainissement"}
+        skos:definition:
+          fr: |
+            Les stations d'épuration, leur points de rejet, les réseaux d'assainissement, les stations
+            de pompage, ...
+        skos:altLabel:
+          - {fr: Eau/Assainissement}
+          - {fr: eau/n_assainissement}
+        espsyntax:regexp:
+          - {fr: assainissement}
+          - {fr: STEP}
+          - {fr: Stations? d'épurations?}
+          - {fr: Stations? de traitement des eaux usées}
+          - {fr: Systèmes? de traitement des eaux usées}
+          - {fr: STEU}
       themes:masses-d-eau:
         skos:prefLabel: {fr: "Masses d'eau"}
+        skos:definition:
+          fr: |
+            Les masses d'eau au sens de la DCE et autres masses d'eau (surface, cours d'eau, plan d'eau naturel,
+            eau souterraine, connaissance des zones, humides, ...)
+        skos:altLabel:
+          - {fr: Eau/Masse d'eau}
+          - {fr: eau/n_masse_eau}
+        espsyntax:regexp:
+          - {fr: masses? d'eau}
+          - {fr: Tronçons hydrographiques}
+          - {fr: Cours d'eau}
+          - {fr: Plans? d'eau}
+          - {fr: Etang}
+          - {fr: Zones? humides?}
+          - {fr: Milieux? humides?}
       themes:ouvrages-hydrauliques:
         skos:prefLabel: {fr: "Ouvrages hydrauliques"}
+        skos:definition:
+          fr: |
+            plans d'eau artificiels, réservoirs, ORSFP, pisciculture, déversoirs d'orage, bassins d'orage,
+            moulins, usines hydroélectriques, bassins d'infiltration, bassins d'évaporation, digues,
+            obstacles à l'écoulement, ...
+        skos:altLabel:
+          - {fr: Eau/Ouvrage}
+          - {fr: Eau / Ouvrage}
+        espsyntax:regexp:
+          - {fr: ouvrages? hydrauliques?}
+          - {fr: Obstacles? à l'écoulement}
+          - {fr: Digues}
       themes:peche-en-eaux-interieures:
         skos:prefLabel: {fr: "Pêche en eaux intérieures"}
+        skos:definition:
+          fr: |
+            Réserve de pêche, police de la pêche,… (en eaux intérieures)
+        skos:altLabel:
+          - {fr: Eau/Pêche}
+          - {fr: Eau / Pêche}
       themes:surveillance-de-la-ressource-en-eau:
         skos:prefLabel: {fr: "Surveillance de la ressource en eau"}
+        skos:definition:
+          fr: points de mesure, effractions constatées, ...
+        skos:altLabel:
+          - {fr: Eau/Surveillance}
+          - {fr: hydrometrie}
+          - {fr: prevision-de-crue}
+          - {fr: hydrologie}
+        espsyntax:regexp:
+          - {fr: Vigicrues}
       themes:interventions-sur-les-cours-d-eau:
         skos:prefLabel: {fr: "Interventions sur les cours d'eau"}
+        skos:definition: {fr: "Travaux sur linéaire, curage-dragage, drainages"}
+        skos:changeNote:
+          fr: Correspond dans l'arborescence Covadis au sous-thème 'Eau/Travaux Action'
+        skos:altLabel:
+          - {fr: Eau/Travaux Action}
       themes:protection-de-l-eau:
         skos:prefLabel: {fr: "Protection de l'eau"}
-  
+        skos:definition:
+          fr: |
+            Zonage réglementaire : zones sensibles eutrophisation, zones vulnérables nitrates,
+            zones sensibles pollution pesticides, zones PMPOA, imperméabilisation, zones drainées,
+            contrats de rivière, SAGE
+        skos:changeNote:
+          fr: Inclus et étend le sous-thème Covadis 'Eau/Zonages Eau'.
+        skos:altLabel:
+          - {fr: Eau/Zonages Eau}
+          - {fr: eau/n_zonages_eau}
+          - {fr: zonages eau}
+        espsyntax:regexp:
+          - {fr: Schémas? d'Aménagement et de Gestion des Eaux}
+          - {fr: SAGE}
+          - {fr: Zones? sensibles?}
+          - {fr: Zones? Vulnérables?}
+          - {fr: Zones? d'Actions? Renforcées? Nitrate}
+          - {fr: protection des eaux contre la pollution par les nitrates}
+          - {fr: Cours d'eau Classement}
+          - {fr: Classement piscicole des cours d'eau}
+          - {fr: Zones? de répartition des eaux}
+          - {fr: ZRE}
+          - {fr: frayères}
+          - {fr: Plan de Gestion de la Ressource en Eau}
+
   themes:foncier-et-occupation-du-sol:
     skos:prefLabel: {fr: "Foncier et occupation du sol"}
     skos:narrower:
       themes:foncier-agricole:
         skos:prefLabel: {fr: "Foncier agricole"}
+        skos:altLabel:
+          - {fr: xx}
+        espsyntax:regexp:
+          - {fr: xx}
       themes:mutation-fonciere:
         skos:prefLabel: {fr: "Mutation foncière"}
       themes:occupation-du-sol:
@@ -331,276 +481,8 @@ children:
           - particules
           - pm10
           - pm25
-  AMENAGEMENT_URBANISME:
-    short: C
-    children:
-      N_ZONAGES_ETUDE:
-        short: C4
-        definition: Zonages INSEE (aires urbaines - unités urbaines - IRIS) et autres
-        altLabels:
-          - Aménagement Urbanisme/Zonages Étude
-        hiddenLabels:
-          - Aménagement Urbanisme / Zonages Étude
-        regexps:
-          - Unités? urbaines?
-          - Taches? urbaines?
-          - Aires? urbaines?
-          - IRIS
-          - Zone d'emploi
   CULTURE_SOCIETE_SERVICE:
     short: D
-    children:
-      N_ENSEIGNEMENT:
-        short: D1
-        definition: Établissements scolaires et universitaires
-        altLabels:
-          - Culture Société Service/Enseignement
-        regexps:
-          - enseignement
-      N_EQUIPEMENT_SPORTIF_OU_CULTUREL:
-        short: D2
-        definition: Stades, gymnases, musées, cinéma …	
-        altLabels:
-          - Culture Société Service/Équipement sportif ou culturel
-        regexps:
-          - Équipements culturels et socio culturels
-      N_ERP_AUTRE:
-        short: D3
-        definition: Autres établissements non repris dans les répertoires précédents
-        note: plus cimetières
-        altLabels:
-          - Culture Société Service/ERP Autre
-        regexps:
-          - Stations? de distribution de carburants?
-          - cimetière
-          - Etablissements Recevant du Public
-          - Grandes surfaces
-      N_PATRIMOINE_CULTUREL:
-        short: D4
-        definition: Monuments historiques….
-        altLabels:
-          - Culture Société Service/Patrimoine culturel
-        regexps:
-          - Monuments? Historiques?
-          - Entreprises? du patrimoine vivant
-      N_SANTE_SOCIAL:
-        short: D5
-        definition: Établissements hospitaliers
-        altLabels:
-          - Culture Société Service/Santé Social
-        regexps:
-          - E\.P\.A\.D\.
-          - EPAD
-          - Fonctions médicales et paramédicales
-          - Établissements et services de santé
-          - Établissements? d'accueil de la petite enfance
-      N_TOURISME:
-        short: D6
-        definition: Camping, gîtes…
-        altLabels:
-          - Culture Société Service/Tourisme
-        regexps:
-          - Campings?
-          - Etablissements Recevant du Public de type restaurant
-          - hébergements touristiques
-  DONNEE_GENERIQUE:
-    short: E
-    note: signifie non métier
-    children:
-      N_ACTION_PUBLIQUE:
-        short: E1
-        definition: Services administratifs (Etat, collectivités locales), circonscriptions d'intervention
-        altLabels:
-          - Donnée générique/Action publique
-        regexps:
-          - Unités territoriales de la DDT
-          - Antennes techniques du Conseil Général
-          - Agences du Conseil Général
-          - zone d'intervention du peloton
-          - Secteur d'intervention des agents
-          - Répartition des cellules d'affichage des risques
-          - Zones? de compétence
-      N_ADMINISTRATIF:
-        short: E2
-        definition: |
-          Limites administratives issues d'un traitement sur couches natives, dont contours "simplifiés" pour illustration
-          de carte
-        note: y compris limites non issues d'un traitement
-        altLabels:
-          - Donnée générique/Administratif
-        regexps:
-          - Contours départementaux
-          - Contours communaux
-          - Départements de métropole à petite échelle
-      N_DECOUPAGE_ELECTORAL:
-        short: E3
-        altLabels:
-          - Donnée générique/Découpage électoral
-      N_DEMOGRAPHIE:
-        short: E4
-        definition: Données démographiques, recensement
-        altLabels:
-          - Donnée générique/Démographie
-        regexps:
-          - population
-          - Données démographiques
-      N_HABILLAGE:
-        short: E5
-        definition: Etiquettes pour habillage de cartes
-        altLabels:
-          - Donnée générique/Habillage
-      N_INTERCOMMUNALITE:
-        short: E6
-        definition: EPCI, syndicats et zonages associés
-        altLabels:
-          - Donnée générique/Intercommunalité
-          - epci
-        regexps:
-          - EPCI
-          - "Établissements? publics? de coopération intercommunale"
-          - Intercommunalités?
-      N_MILIEU_PHYSIQUE:
-        short: E7
-        definition: Géologie, pédologie, données climatiques…
-        regexps:
-          - Gisements bruts de type minéraux industriels
-          - Ressources matériaux en roches massives
-          - Ressources en minéraux
-          - granulats?
-          - Ressources matériaux
-          - cartes? géologiques?
-          - Données géologiques harmonisées
-      N_TOPOGRAPHIE:
-        short: E8
-        note: |
-          ajout le 7/11/2021 pour classer les référentiels topographiques (IGN, MNT, ortho-photos, ...) hors MER_LITTORAL
-        altLabels:
-          - Topographie terrestre
-        regexps:
-          - Modèle Numérique de Terrain
-          - MNT
-          - LIDAR
-          - pente
-          - Courbes de niveau
-          - Altitude
-          - Hypsométrie
-          - BD TOPO
-          - BDTopo
-          - BD TOPO
-          - BDCarto
-          - BD CARTO
-          - BD-Ortho
-          - Prises de vue aérienne
-          - Photos aériennes
-          - Orthophoto
-  EAU:
-    short: F
-    children:
-      N_AEP:
-        short: F1
-        definition: Réseaux, station de pompage et de traitement, réservoirs
-        altLabels:
-          - Eau/AEP
-          - step
-        regexps:
-          - AEP
-          - eau potable
-          - Périmètres? de protection immédiats?
-          - Périmètres? de protection rapprochés?
-          - Aires? d'alimentation des? captages?
-      N_ASSAINISSEMENT:
-        short: F2
-        definition: STEP et leur point de rejet, réseau assainissement, stations de pompage, …	
-        altLabels:
-          - Eau/Assainissement
-        hiddenLabels:
-          - eau/n_assainissement
-        regexps:
-          - assainissement
-          - STEP
-          - Stations? d'épurations?
-          - Stations? de traitement des eaux usées
-          - Systèmes? de traitement des eaux usées
-          - STEU
-      N_MASSE_EAU:
-        short: F3
-        definition: Masses d'eau DCE et autres masses d'eau (surface, cours d'eau, plan d'eau, souterraine..)
-        note: plus connaissance des zones humides
-        altLabels:
-          - Eau/Masse d'eau
-        hiddenLabels:
-          - eau/n_masse_eau
-        regexps:
-          - masses? d'eau
-          - Tronçons hydrographiques
-          - Cours d'eau
-          - Plans? d'eau
-          - Etang
-          - Zones? humides?
-          - Milieux? humides?
-      N_OUVRAGE:
-        short: F4
-        definition: |
-          plans d'eau, réservoirs, ORSFP, pisciculture, déversoirs d'orage, bassins d'orage, moulins,
-          usines hydroélectriques, bassins d'infiltration, bassins d'évaporation, digues, obstacles à l'écoulement
-        altLabels:
-          - Eau/Ouvrage
-        hiddenLabels:
-          - Eau / Ouvrage
-        regexps:
-          - ouvrages? hydrauliques?
-          - Obstacles? à l'écoulement
-          - Digues
-      N_PECHE:
-        short: F5
-        definition: Réserve de pêche, police de la pêche,… (en eaux intérieures)
-        altLabels:
-          - Eau/Pêche
-        hiddenLabels:
-          - Eau / Pêche
-      N_SURVEILLANCE:
-        short: F6
-        definition: points de mesure, effractions constatées, ...
-        altLabels:
-          - Eau/Surveillance
-          - hydrometrie
-          - prevision-de-crue
-          - hydrologie
-        regexps:
-          - Vigicrues
-      N_TRAVAUX_ACTION:
-        short: F7
-        definition: Travaux sur linéaire, curage-dragage, drainages
-        altLabels:
-          - Eau/Travaux Action
-      N_UTILISATION_AUTRE:
-        short: F8
-        definition: Irrigation,  prélèvements, rejets, pollution….
-        altLabels:
-         - Eau/Utilisation Autre
-      N_ZONAGES_EAU:
-        short: F9
-        definition: |
-          Zonage réglementaire : zones sensibles eutrophisation, zones vulnérables nitrates, zones sensibles pollution
-          pesticides, zones PMPOA, imperméabilisation, zones drainées, contrats de rivière, SAGE
-        altLabels:
-          - Eau/Zonages Eau
-        hiddenLabels:
-          - eau/n_zonages_eau
-          - zonages eau
-        regexps:
-          - Schémas? d'Aménagement et de Gestion des Eaux
-          - SAGE
-          - Zones? sensibles?
-          - Zones? Vulnérables?
-          - Zones? d'Actions? Renforcées? Nitrate
-          - protection des eaux contre la pollution par les nitrates
-          - Cours d'eau Classement
-          - Classement piscicole des cours d'eau
-          - Zones? de répartition des eaux
-          - ZRE
-          - frayères
-          - Plan de Gestion de la Ressource en Eau
   FONCIER_SOL:
     short: G
     children:

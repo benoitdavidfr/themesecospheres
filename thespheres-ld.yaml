@@ -17,6 +17,15 @@
       '@value': 'Accession à la propriété'
   - '@id': 'themes:alimentation-en-eau-potable'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': AEP }
+      - { '@language': fr, '@value': 'eau potable' }
+      - { '@language': fr, '@value': 'Périmètres? de protection immédiats?' }
+      - { '@language': fr, '@value': 'Périmètres? de protection rapprochés?' }
+      - { '@language': fr, '@value': 'Aires? d''alimentation des? captages?' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': Eau/AEP }
+      - { '@language': fr, '@value': step }
     'skos:broader':
       '@id': 'themes:eau'
     'skos:inScheme':
@@ -53,8 +62,21 @@
       '@value': 'Aménagement numérique des territoires'
   - '@id': 'themes:assainissement'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': assainissement }
+      - { '@language': fr, '@value': STEP }
+      - { '@language': fr, '@value': 'Stations? d''épurations?' }
+      - { '@language': fr, '@value': 'Stations? de traitement des eaux usées' }
+      - { '@language': fr, '@value': 'Systèmes? de traitement des eaux usées' }
+      - { '@language': fr, '@value': STEU }
+    'skos:altLabel':
+      - { '@language': fr, '@value': Eau/Assainissement }
+      - { '@language': fr, '@value': eau/n_assainissement }
     'skos:broader':
       '@id': 'themes:eau'
+    'skos:definition':
+      '@language': fr
+      '@value': "Les stations d'épuration, leur points de rejet, les réseaux d'assainissement, les stations\nde pompage, ...\n"
     'skos:inScheme':
       '@id': 'ecospheres:themes'
     'skos:prefLabel':
@@ -62,6 +84,14 @@
       '@value': Assainissement
   - '@id': 'themes:autres-etablissements-recevant-du-public'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Stations? de distribution de carburants?' }
+      - { '@language': fr, '@value': cimetière }
+      - { '@language': fr, '@value': 'Etablissements Recevant du Public' }
+      - { '@language': fr, '@value': 'Grandes surfaces' }
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Culture Société Service/ERP Autre'
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
@@ -139,6 +169,9 @@
     'skos:altLabel':
       '@language': fr
       '@value': air-climat
+    'skos:changeNote':
+      '@language': fr
+      '@value': "Le sous-thème 'Air Climat/Qualité Pollution' a été transféré dans nuisances-dechets-et-pollution\n"
     'skos:inScheme':
       '@id': 'ecospheres:themes'
     'skos:narrower':
@@ -169,6 +202,12 @@
       '@value': Déchets
   - '@id': 'themes:eau'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Eau/Utilisation Autre'
+    'skos:changeNote':
+      '@language': fr
+      '@value': "Le thème Covadis 'Eau/Utilisation Autre' ayant été supprimé, les mots-clés correspondants\nsont affectés au thème Eau.\n"
     'skos:inScheme':
       '@id': 'ecospheres:themes'
     'skos:narrower':
@@ -196,6 +235,13 @@
       '@value': 'Écologie du littoral'
   - '@id': 'themes:equipements-de-tourisme'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Campings?' }
+      - { '@language': fr, '@value': 'Etablissements Recevant du Public de type restaurant' }
+      - { '@language': fr, '@value': 'hébergements touristiques' }
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Culture Société Service/Tourisme'
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
@@ -205,6 +251,12 @@
       '@value': 'Équipements de tourisme'
   - '@id': 'themes:equipements-sportifs-ou-culturels'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': 'Équipements culturels et socio culturels'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Culture Société Service/Équipement sportif ou culturel'
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
@@ -230,6 +282,12 @@
       '@id': 'ecospheres:themes'
   - '@id': 'themes:etablissements-d-enseignement'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': enseignement
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Culture Société Service/Enseignement'
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
@@ -239,6 +297,15 @@
       '@value': 'Etablissements d''enseignement'
   - '@id': 'themes:etablissements-de-sante-et-medico-sociaux'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': E\.P\.A\.D\. }
+      - { '@language': fr, '@value': EPAD }
+      - { '@language': fr, '@value': 'Fonctions médicales et paramédicales' }
+      - { '@language': fr, '@value': 'Établissements et services de santé' }
+      - { '@language': fr, '@value': 'Établissements? d''accueil de la petite enfance' }
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Culture Société Service/Santé Social'
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
@@ -248,6 +315,15 @@
       '@value': 'Établissements de santé et médico-sociaux'
   - '@id': 'themes:etudes'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Unités? urbaines?' }
+      - { '@language': fr, '@value': 'Taches? urbaines?' }
+      - { '@language': fr, '@value': 'Aires? urbaines?' }
+      - { '@language': fr, '@value': IRIS }
+      - { '@language': fr, '@value': 'Zone d''emploi' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Aménagement Urbanisme/Zonages Étude' }
+      - { '@language': fr, '@value': 'Aménagement Urbanisme / Zonages Étude' }
     'skos:broader':
       '@id': 'themes:amenagement-et-urbanisme'
     'skos:inScheme':
@@ -257,6 +333,12 @@
       '@value': Études
   - '@id': 'themes:foncier-agricole'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': xx
+    'skos:altLabel':
+      '@language': fr
+      '@value': xx
     'skos:broader':
       '@id': 'themes:foncier-et-occupation-du-sol'
     'skos:inScheme':
@@ -383,8 +465,17 @@
       '@id': 'ecospheres:themes'
   - '@id': 'themes:interventions-sur-les-cours-d-eau'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Eau/Travaux Action'
     'skos:broader':
       '@id': 'themes:eau'
+    'skos:changeNote':
+      '@language': fr
+      '@value': 'Correspond dans l''arborescence Covadis au sous-thème ''Eau/Travaux Action'''
+    'skos:definition':
+      '@language': fr
+      '@value': 'Travaux sur linéaire, curage-dragage, drainages'
     'skos:inScheme':
       '@id': 'ecospheres:themes'
     'skos:prefLabel':
@@ -428,8 +519,22 @@
       '@value': 'Lutte anti-pollution en mer et sur le littoral'
   - '@id': 'themes:masses-d-eau'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'masses? d''eau' }
+      - { '@language': fr, '@value': 'Tronçons hydrographiques' }
+      - { '@language': fr, '@value': 'Cours d''eau' }
+      - { '@language': fr, '@value': 'Plans? d''eau' }
+      - { '@language': fr, '@value': Etang }
+      - { '@language': fr, '@value': 'Zones? humides?' }
+      - { '@language': fr, '@value': 'Milieux? humides?' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Eau/Masse d''eau' }
+      - { '@language': fr, '@value': eau/n_masse_eau }
     'skos:broader':
       '@id': 'themes:eau'
+    'skos:definition':
+      '@language': fr
+      '@value': "Les masses d'eau au sens de la DCE et autres masses d'eau (surface, cours d'eau, plan d'eau naturel,\neau souterraine, connaissance des zones, humides, ...)\n"
     'skos:inScheme':
       '@id': 'ecospheres:themes'
     'skos:prefLabel':
@@ -540,8 +645,18 @@
       '@value': 'Occupation du sol'
   - '@id': 'themes:ouvrages-hydrauliques'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'ouvrages? hydrauliques?' }
+      - { '@language': fr, '@value': 'Obstacles? à l''écoulement' }
+      - { '@language': fr, '@value': Digues }
+    'skos:altLabel':
+      - { '@language': fr, '@value': Eau/Ouvrage }
+      - { '@language': fr, '@value': 'Eau / Ouvrage' }
     'skos:broader':
       '@id': 'themes:eau'
+    'skos:definition':
+      '@language': fr
+      '@value': "plans d'eau artificiels, réservoirs, ORSFP, pisciculture, déversoirs d'orage, bassins d'orage,\nmoulins, usines hydroélectriques, bassins d'infiltration, bassins d'évaporation, digues,\nobstacles à l'écoulement, ...\n"
     'skos:inScheme':
       '@id': 'ecospheres:themes'
     'skos:prefLabel':
@@ -576,6 +691,12 @@
       '@value': 'Parcs éoliens'
   - '@id': 'themes:patrimoine-culturel'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Monuments? Historiques?' }
+      - { '@language': fr, '@value': 'Entreprises? du patrimoine vivant' }
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Culture Société Service/Patrimoine culturel'
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
@@ -585,8 +706,14 @@
       '@value': 'Patrimoine culturel'
   - '@id': 'themes:peche-en-eaux-interieures'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      - { '@language': fr, '@value': Eau/Pêche }
+      - { '@language': fr, '@value': 'Eau / Pêche' }
     'skos:broader':
       '@id': 'themes:eau'
+    'skos:definition':
+      '@language': fr
+      '@value': "Réserve de pêche, police de la pêche,… (en eaux intérieures)\n"
     'skos:inScheme':
       '@id': 'ecospheres:themes'
     'skos:prefLabel':
@@ -765,8 +892,31 @@
       '@value': 'Propriété foncière'
   - '@id': 'themes:protection-de-l-eau'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Schémas? d''Aménagement et de Gestion des Eaux' }
+      - { '@language': fr, '@value': SAGE }
+      - { '@language': fr, '@value': 'Zones? sensibles?' }
+      - { '@language': fr, '@value': 'Zones? Vulnérables?' }
+      - { '@language': fr, '@value': 'Zones? d''Actions? Renforcées? Nitrate' }
+      - { '@language': fr, '@value': 'protection des eaux contre la pollution par les nitrates' }
+      - { '@language': fr, '@value': 'Cours d''eau Classement' }
+      - { '@language': fr, '@value': 'Classement piscicole des cours d''eau' }
+      - { '@language': fr, '@value': 'Zones? de répartition des eaux' }
+      - { '@language': fr, '@value': ZRE }
+      - { '@language': fr, '@value': frayères }
+      - { '@language': fr, '@value': 'Plan de Gestion de la Ressource en Eau' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Eau/Zonages Eau' }
+      - { '@language': fr, '@value': eau/n_zonages_eau }
+      - { '@language': fr, '@value': 'zonages eau' }
     'skos:broader':
       '@id': 'themes:eau'
+    'skos:changeNote':
+      '@language': fr
+      '@value': 'Inclus et étend le sous-thème Covadis ''Eau/Zonages Eau''.'
+    'skos:definition':
+      '@language': fr
+      '@value': "Zonage réglementaire : zones sensibles eutrophisation, zones vulnérables nitrates,\nzones sensibles pollution pesticides, zones PMPOA, imperméabilisation, zones drainées,\ncontrats de rivière, SAGE\n"
     'skos:inScheme':
       '@id': 'ecospheres:themes'
     'skos:prefLabel':
@@ -936,8 +1086,19 @@
       '@value': 'Sites industriels'
   - '@id': 'themes:surveillance-de-la-ressource-en-eau'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': Vigicrues
+    'skos:altLabel':
+      - { '@language': fr, '@value': Eau/Surveillance }
+      - { '@language': fr, '@value': hydrometrie }
+      - { '@language': fr, '@value': prevision-de-crue }
+      - { '@language': fr, '@value': hydrologie }
     'skos:broader':
       '@id': 'themes:eau'
+    'skos:definition':
+      '@language': fr
+      '@value': 'points de mesure, effractions constatées, ...'
     'skos:inScheme':
       '@id': 'ecospheres:themes'
     'skos:prefLabel':

@@ -30,6 +30,8 @@
     <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:prefLabel xml:lang="fr">Climat</skos:prefLabel>
     <skos:altLabel xml:lang="fr">air-climat</skos:altLabel>
+    <skos:changeNote xml:lang="fr">Le sous-thème 'Air Climat/Qualité Pollution' a été transféré dans nuisances-dechets-et-pollution
+</skos:changeNote>
     <skos:narrower>
       <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/changement-climatique">
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
@@ -152,6 +154,13 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
         <skos:prefLabel xml:lang="fr">Études</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Aménagement Urbanisme/Zonages Étude</skos:altLabel>
+        <skos:altLabel xml:lang="fr">Aménagement Urbanisme / Zonages Étude</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Unités? urbaines?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Taches? urbaines?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Aires? urbaines?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">IRIS</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zone d'emploi</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -166,6 +175,8 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
         <skos:prefLabel xml:lang="fr">Etablissements d'enseignement</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Culture Société Service/Enseignement</skos:altLabel>
+        <ns0:regexp xml:lang="fr">enseignement</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -174,6 +185,8 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
         <skos:prefLabel xml:lang="fr">Équipements sportifs ou culturels</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Culture Société Service/Équipement sportif ou culturel</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Équipements culturels et socio culturels</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -182,6 +195,9 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
         <skos:prefLabel xml:lang="fr">Patrimoine culturel</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Culture Société Service/Patrimoine culturel</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Monuments? Historiques?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Entreprises? du patrimoine vivant</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -190,6 +206,12 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
         <skos:prefLabel xml:lang="fr">Établissements de santé et médico-sociaux</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Culture Société Service/Santé Social</skos:altLabel>
+        <ns0:regexp xml:lang="fr">E\.P\.A\.D\.</ns0:regexp>
+        <ns0:regexp xml:lang="fr">EPAD</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Fonctions médicales et paramédicales</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Établissements et services de santé</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Établissements? d'accueil de la petite enfance</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -198,6 +220,10 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
         <skos:prefLabel xml:lang="fr">Équipements de tourisme</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Culture Société Service/Tourisme</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Campings?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Etablissements Recevant du Public de type restaurant</ns0:regexp>
+        <ns0:regexp xml:lang="fr">hébergements touristiques</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -206,6 +232,11 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
         <skos:prefLabel xml:lang="fr">Autres établissements recevant du public</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Culture Société Service/ERP Autre</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Stations? de distribution de carburants?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">cimetière</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Etablissements Recevant du Public</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Grandes surfaces</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -215,11 +246,22 @@
     <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:prefLabel xml:lang="fr">Eau</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Eau/Utilisation Autre</skos:altLabel>
+    <skos:changeNote xml:lang="fr">Le thème Covadis 'Eau/Utilisation Autre' ayant été supprimé, les mots-clés correspondants
+sont affectés au thème Eau.
+</skos:changeNote>
     <skos:narrower>
       <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/alimentation-en-eau-potable">
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Alimentation en eau potable</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Eau/AEP</skos:altLabel>
+        <skos:altLabel xml:lang="fr">step</skos:altLabel>
+        <ns0:regexp xml:lang="fr">AEP</ns0:regexp>
+        <ns0:regexp xml:lang="fr">eau potable</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Périmètres? de protection immédiats?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Périmètres? de protection rapprochés?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Aires? d'alimentation des? captages?</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -228,6 +270,17 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Assainissement</skos:prefLabel>
+        <skos:definition xml:lang="fr">Les stations d'épuration, leur points de rejet, les réseaux d'assainissement, les stations
+de pompage, ...
+</skos:definition>
+        <skos:altLabel xml:lang="fr">Eau/Assainissement</skos:altLabel>
+        <skos:altLabel xml:lang="fr">eau/n_assainissement</skos:altLabel>
+        <ns0:regexp xml:lang="fr">assainissement</ns0:regexp>
+        <ns0:regexp xml:lang="fr">STEP</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Stations? d'épurations?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Stations? de traitement des eaux usées</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Systèmes? de traitement des eaux usées</ns0:regexp>
+        <ns0:regexp xml:lang="fr">STEU</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -236,6 +289,18 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Masses d'eau</skos:prefLabel>
+        <skos:definition xml:lang="fr">Les masses d'eau au sens de la DCE et autres masses d'eau (surface, cours d'eau, plan d'eau naturel,
+eau souterraine, connaissance des zones, humides, ...)
+</skos:definition>
+        <skos:altLabel xml:lang="fr">Eau/Masse d'eau</skos:altLabel>
+        <skos:altLabel xml:lang="fr">eau/n_masse_eau</skos:altLabel>
+        <ns0:regexp xml:lang="fr">masses? d'eau</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Tronçons hydrographiques</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Cours d'eau</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Plans? d'eau</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Etang</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zones? humides?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Milieux? humides?</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -244,6 +309,15 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Ouvrages hydrauliques</skos:prefLabel>
+        <skos:definition xml:lang="fr">plans d'eau artificiels, réservoirs, ORSFP, pisciculture, déversoirs d'orage, bassins d'orage,
+moulins, usines hydroélectriques, bassins d'infiltration, bassins d'évaporation, digues,
+obstacles à l'écoulement, ...
+</skos:definition>
+        <skos:altLabel xml:lang="fr">Eau/Ouvrage</skos:altLabel>
+        <skos:altLabel xml:lang="fr">Eau / Ouvrage</skos:altLabel>
+        <ns0:regexp xml:lang="fr">ouvrages? hydrauliques?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Obstacles? à l'écoulement</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Digues</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -252,6 +326,10 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Pêche en eaux intérieures</skos:prefLabel>
+        <skos:definition xml:lang="fr">Réserve de pêche, police de la pêche,… (en eaux intérieures)
+</skos:definition>
+        <skos:altLabel xml:lang="fr">Eau/Pêche</skos:altLabel>
+        <skos:altLabel xml:lang="fr">Eau / Pêche</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
@@ -260,6 +338,12 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Surveillance de la ressource en eau</skos:prefLabel>
+        <skos:definition xml:lang="fr">points de mesure, effractions constatées, ...</skos:definition>
+        <skos:altLabel xml:lang="fr">Eau/Surveillance</skos:altLabel>
+        <skos:altLabel xml:lang="fr">hydrometrie</skos:altLabel>
+        <skos:altLabel xml:lang="fr">prevision-de-crue</skos:altLabel>
+        <skos:altLabel xml:lang="fr">hydrologie</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Vigicrues</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -268,6 +352,9 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Interventions sur les cours d'eau</skos:prefLabel>
+        <skos:definition xml:lang="fr">Travaux sur linéaire, curage-dragage, drainages</skos:definition>
+        <skos:changeNote xml:lang="fr">Correspond dans l'arborescence Covadis au sous-thème 'Eau/Travaux Action'</skos:changeNote>
+        <skos:altLabel xml:lang="fr">Eau/Travaux Action</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
@@ -276,6 +363,26 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Protection de l'eau</skos:prefLabel>
+        <skos:definition xml:lang="fr">Zonage réglementaire : zones sensibles eutrophisation, zones vulnérables nitrates,
+zones sensibles pollution pesticides, zones PMPOA, imperméabilisation, zones drainées,
+contrats de rivière, SAGE
+</skos:definition>
+        <skos:changeNote xml:lang="fr">Inclus et étend le sous-thème Covadis 'Eau/Zonages Eau'.</skos:changeNote>
+        <skos:altLabel xml:lang="fr">Eau/Zonages Eau</skos:altLabel>
+        <skos:altLabel xml:lang="fr">eau/n_zonages_eau</skos:altLabel>
+        <skos:altLabel xml:lang="fr">zonages eau</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Schémas? d'Aménagement et de Gestion des Eaux</ns0:regexp>
+        <ns0:regexp xml:lang="fr">SAGE</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zones? sensibles?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zones? Vulnérables?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zones? d'Actions? Renforcées? Nitrate</ns0:regexp>
+        <ns0:regexp xml:lang="fr">protection des eaux contre la pollution par les nitrates</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Cours d'eau Classement</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Classement piscicole des cours d'eau</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zones? de répartition des eaux</ns0:regexp>
+        <ns0:regexp xml:lang="fr">ZRE</ns0:regexp>
+        <ns0:regexp xml:lang="fr">frayères</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Plan de Gestion de la Ressource en Eau</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -290,6 +397,8 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
         <skos:prefLabel xml:lang="fr">Foncier agricole</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">xx</skos:altLabel>
+        <ns0:regexp xml:lang="fr">xx</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
