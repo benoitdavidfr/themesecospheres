@@ -2,6 +2,7 @@
 /*YamlDoc:
 title: skosify.php - génération d'une version Skos des thèmes Ecosphères
 name: skosify.php
+classes:
 doc: |
   Lit le fichier des thèmes en Yaml en paramètre et fabrique le fichier Skos correspondant.
   Peut afficher en Turtle ou dans les autres formats proposés par EasyRdf ainsi que Yaml-LD
@@ -86,45 +87,134 @@ class Label { // Un label potentiellement dans différentes langues
   }
 };
 
-class Concept { // stockage du scheme Skos
+/*YamlDoc: classes
+title: class Concept - définition de la classe stockant un Concept Skos et stockage du scheme Skos
+methods:
+doc: |
+  La classe Concept définit la structuration d'un concept utilisant le champ $prop.
+  Elle définit aussi 3 variables statiques stockant respectivement
+   - les prefixes utilisés
+   - la définition du Scheme
+   - le stockage des objets Concept
+  Dans le fichier Yaml en entrée, les concepts peuvent structurés hiérarchiquement,
+  le chargement du fichier applatit la hiérarchie en stockant tous les concepts dans self::$concepts
+  et en les remplacant dans la hiérarchie par l'URI du concept.
+  Le chargement ajoute aussi à chaque concept:
+   - le type RDF skos:Concept
+   - la propriété skos:inScheme vers le Scheme défini dans Scheme si elle n'est pas définie
+*/
+class Concept {
+  const SchemasDefinitions = [
+    "PredicatesObjects" => [
+      "description" => "la partie prédicats-objets d'un triplet, le prédicat comme clé sous la forme d'un URI compacté et les objets associés comme valeurs.",
+      "type" => "object",
+      "additionalProperties" => false,
+      "patternProperties" => [
+        "^[a-z]+:[a-zA-Z]+$" => [
+          '$ref' => "#/definitions/Objects",
+        ],
+      ],
+    ],
+    "Objects" => [
+      "description" => "la partie objets associée à un sujet et un prédicat",
+      "oneOf" => [
+        [
+          "description" => "une URI",
+          '$ref' => "#/definitions/Uri",
+        ],
+        [
+          "description" => "une liste d'URI",
+          "type" => "array",
+          "items" => [
+            '$ref' => "#/definitions/Uri",
+          ],
+        ],
+        [
+          "description" => "URI compacté",
+          '$ref' => "#/definitions/CompactUri",
+        ],
+        [
+          "description" => "liste d'URI compactés",
+          "type" => "array",
+          "items" => [
+            '$ref' => "#/definitions/CompactUri",
+          ],
+        ],
+        [
+          "description" => "un libellé dans une ou plusieurs langues, x pour neutre",
+          '$ref' => "#/definitions/Label",
+        ],
+        [
+          "description" => "une liste de libellés, chacun en une ou plusieurs langues, x pour neutre",
+          "type" => "array",
+          "items" => [
+            '$ref' => "#/definitions/Label",
+          ],
+        ],
+        [
+          "description" => "un ensemble de triplets, chaque sujet comme clé sous la forme d'un URI compacté et les prédicats-objets associés comme valeurs.",
+          "type" => "object",
+          "additionalProperties" => false,
+          "patternProperties" => [
+            "^[a-z]+:[-a-zA-Z0-9]+$" => [
+              '$ref' => "#/definitions/PredicatesObjects",
+            ],
+          ],
+        ],
+      ],
+    ],
+  ];
+  
   protected array $prop; // [{predicat} => [{object}]] où {object} ::= URI | compactURI | Label
   static array $prefix = [];
   static array $scheme = [];
   static array $concepts = []; // [id => Concept]
   
+  /*YamlDoc: methods
+  title: "function __construct(string $id, array $concept, ?string $parent=null)"
+  doc: |
+    Méthode récursive de création 
+    $concept est un array respectant le sous-schéma PredicatesObjects du schéma thespheres.schema.yaml
+  */
   function __construct(string $id, array $concept, ?string $parent=null) {
-    $this->prop = [
-      'rdf:type'=> ['skos:Concept'],
-      'skos:inScheme'=> self::$scheme['@id'],
-    ];
+    $this->prop = ['rdf:type'=> ['skos:Concept']]; // rajout à chaque concept du type RDF skos:Concept
+    if (!isset($concept['skos:inScheme']))
+      $this->prop['skos:inScheme'] = self::$scheme['@id'];
     if (!$parent) {
       $this->prop['skos:topConceptOf'] = self::$scheme['@id'];
       self::$scheme['skos:hasTopConcept'][] = $id;
     }
-    else {
+    elseif (!isset($concept['skos:inScheme'])) {
       $this->prop['skos:broader'] = [$parent];
     }
-    
-    $narrower = [];
-    foreach ($concept['skos:narrower'] ?? [] as $cid => $child) {
-      self::$concepts[$cid] = new self($cid, $child, $id);
-      $narrower[] = $cid;
-    }
-    unset($concept['skos:narrower']);
-    
     foreach ($concept as $predicate => $objects) {
-      if (Label::is($objects))
-        $this->prop[$predicate] = [new Label($objects)];
+      if (Label::is($objects)) {
+        $this->prop[$predicate] = [new Label($objects)]; // objects ::= Label
+      }
+      elseif (is_string($objects)) {
+        $this->prop[$predicate] = [$objects]; // objects ::= Uri | CompactUri
+      }
       elseif (array_is_list($objects)) {
         $this->prop[$predicate] = [];
-        foreach ($objects as $object) {
-          if (Label::is($object))
-            $this->prop[$predicate][] = new Label($object );
+        foreach ($objects as $item) {
+          if (Label::is($item))
+            $this->prop[$predicate][] = new Label($item); // objects ::= [Label]
+          elseif (is_string($item))
+            $this->prop[$predicate][] = $item; // objects ::= [Uri | CompactUri]
+          else
+            throw new Exception("cas non prévu");
         }
       }
+      elseif (is_array($objects)) { // objects ::= [{compactUri} => PredicatesObjects]
+        $this->prop[$predicate] = [];
+        foreach ($objects as $curi => $childPredicatesObjects) {
+          self::$concepts[$curi] = new self($curi, $childPredicatesObjects, $id);
+          $this->prop[$predicate][] = $curi;
+        }
+      }
+      else
+        throw new Exception("cas non prévu");
     }
-    
-    $this->prop['skos:narrower'] = $narrower;
   }
   
   function asArray(): array {
@@ -151,10 +241,10 @@ class Concept { // stockage du scheme Skos
     }
     self::$scheme['skos:hasTopConcept'] = [];
     foreach ($yaml['skos:Concept'] as $id => $concept) {
-      self::$concepts[$id] = null; // permet de créer le parent avant les enfants
+      // création de l'entrée pour le concept afin que le parent soit avant ses enfants
+      self::$concepts[$id] = null;
       self::$concepts[$id] = new Concept($id, $concept);
-      if ($short)
-        break; // pour limiter à un seul thème de niveau 1 en tests
+      if ($short) break; // pour limiter à un seul thème de niveau 1 en tests
     }
   }
   

@@ -7,7 +7,7 @@
   <rdf:Description rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes">
     <dc:title xml:lang="fr">Liste des thèmes d'Ecosphères</dc:title>
     <dc:description xml:lang="fr">Publiée par Benoit DAVID - 5/7/2022</dc:description>
-    <dc:modified>2022-07-05T16:52:57+02:00</dc:modified>
+    <dc:modified>2022-07-07T12:15:00+02:00</dc:modified>
     <dc:license rdf:resource="https://www.etalab.gouv.fr/licence-ouverte-open-licence"/>
     <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat"/>
     <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
@@ -29,6 +29,13 @@
     <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:prefLabel xml:lang="fr">Climat</skos:prefLabel>
+    <skos:exactMatch>
+      <skos:Concept rdf:about="http://eurovoc.europa.eu/6011">
+        <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
+        <skos:prefLabel xml:lang="fr">climat</skos:prefLabel>
+      </skos:Concept>
+    </skos:exactMatch>
+
     <skos:altLabel xml:lang="fr">air-climat</skos:altLabel>
     <skos:changeNote xml:lang="fr">Le sous-thème Covadis 'Air Climat/Qualité Pollution' a été déplacé dans nuisances-dechets-et-pollution.
 </skos:changeNote>
@@ -37,6 +44,13 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat"/>
         <skos:prefLabel xml:lang="fr">Changement climatique</skos:prefLabel>
+        <skos:exactMatch>
+          <skos:Concept rdf:about="http://eurovoc.europa.eu/5482">
+            <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
+            <skos:prefLabel xml:lang="fr">changement climatique</skos:prefLabel>
+          </skos:Concept>
+        </skos:exactMatch>
+
         <skos:altLabel xml:lang="fr">Air Climat/Changement climatique</skos:altLabel>
         <skos:altLabel xml:lang="fr">climat-air-et-energie</skos:altLabel>
         <ns0:regexp xml:lang="fr">Plans? Climat-Energie</ns0:regexp>
@@ -54,6 +68,13 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat"/>
         <skos:prefLabel xml:lang="fr">Météorologie</skos:prefLabel>
+        <skos:exactMatch>
+          <skos:Concept rdf:about="http://eurovoc.europa.eu/1892">
+            <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
+            <skos:prefLabel xml:lang="fr">météorologie</skos:prefLabel>
+          </skos:Concept>
+        </skos:exactMatch>
+
         <skos:altLabel xml:lang="fr">Air Climat/Météo</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
@@ -64,6 +85,7 @@
     <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:prefLabel xml:lang="fr">Aménagement et urbanisme</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/4619"/>
     <skos:altLabel xml:lang="fr">Aménagement Urbanisme</skos:altLabel>
     <skos:altLabel xml:lang="fr">amenagement-urbanisme</skos:altLabel>
     <skos:narrower>
@@ -115,6 +137,7 @@
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
         <skos:prefLabel xml:lang="fr">Planification</skos:prefLabel>
+        <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/2391"/>
         <skos:altLabel xml:lang="fr">Aménagement Urbanisme/Zonages Planification</skos:altLabel>
         <skos:altLabel xml:lang="fr">ptu</skos:altLabel>
         <skos:altLabel xml:lang="fr">loi-littoral</skos:altLabel>
@@ -246,6 +269,13 @@
     <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:prefLabel xml:lang="fr">Eau</skos:prefLabel>
+    <skos:exactMatch>
+      <skos:Concept rdf:about="http://eurovoc.europa.eu/597">
+        <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
+        <skos:prefLabel xml:lang="fr">eau</skos:prefLabel>
+      </skos:Concept>
+    </skos:exactMatch>
+
     <skos:altLabel xml:lang="fr">Eau/Utilisation Autre</skos:altLabel>
     <skos:changeNote xml:lang="fr">Le thème Covadis 'Eau/Utilisation Autre' ayant été supprimé, les mots-clés correspondants
 sont affectés au thème Eau.
@@ -255,6 +285,13 @@ sont affectés au thème Eau.
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Alimentation en eau potable</skos:prefLabel>
+        <skos:exactMatch>
+          <skos:Concept rdf:about="http://eurovoc.europa.eu/607">
+            <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
+            <skos:prefLabel xml:lang="fr">eau potable</skos:prefLabel>
+          </skos:Concept>
+        </skos:exactMatch>
+
         <skos:altLabel xml:lang="fr">Eau/AEP</skos:altLabel>
         <skos:altLabel xml:lang="fr">step</skos:altLabel>
         <ns0:regexp xml:lang="fr">AEP</ns0:regexp>
@@ -273,6 +310,13 @@ sont affectés au thème Eau.
         <skos:definition xml:lang="fr">Les stations d'épuration, leur points de rejet, les réseaux d'assainissement, les stations
 de pompage, ...
 </skos:definition>
+        <skos:exactMatch>
+          <skos:Concept rdf:about="http://eurovoc.europa.eu/4485">
+            <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
+            <skos:prefLabel xml:lang="fr">traitement de l'eau</skos:prefLabel>
+          </skos:Concept>
+        </skos:exactMatch>
+
         <skos:altLabel xml:lang="fr">Eau/Assainissement</skos:altLabel>
         <skos:altLabel xml:lang="fr">eau/n_assainissement</skos:altLabel>
         <ns0:regexp xml:lang="fr">assainissement</ns0:regexp>
@@ -284,26 +328,7 @@ de pompage, ...
       </skos:Concept>
     </skos:narrower>
 
-    <skos:narrower>
-      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau">
-        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
-        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
-        <skos:prefLabel xml:lang="fr">Masses d'eau</skos:prefLabel>
-        <skos:definition xml:lang="fr">Les masses d'eau au sens de la DCE et autres masses d'eau (surface, cours d'eau, plan d'eau naturel,
-eau souterraine, connaissance des zones, humides, ...)
-</skos:definition>
-        <skos:altLabel xml:lang="fr">Eau/Masse d'eau</skos:altLabel>
-        <skos:altLabel xml:lang="fr">eau/n_masse_eau</skos:altLabel>
-        <ns0:regexp xml:lang="fr">masses? d'eau</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Tronçons hydrographiques</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Cours d'eau</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Plans? d'eau</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Etang</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Zones? humides?</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Milieux? humides?</ns0:regexp>
-      </skos:Concept>
-    </skos:narrower>
-
+    <skos:narrower rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau"/>
     <skos:narrower>
       <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ouvrages-hydrauliques">
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
@@ -328,6 +353,13 @@ obstacles à l'écoulement, ...
         <skos:prefLabel xml:lang="fr">Pêche en eaux intérieures</skos:prefLabel>
         <skos:definition xml:lang="fr">Réserve de pêche, police de la pêche,… (en eaux intérieures)
 </skos:definition>
+        <skos:exactMatch>
+          <skos:Concept rdf:about="http://eurovoc.europa.eu/3338">
+            <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
+            <skos:prefLabel xml:lang="fr">pêche sportive</skos:prefLabel>
+          </skos:Concept>
+        </skos:exactMatch>
+
         <skos:altLabel xml:lang="fr">Eau/Pêche</skos:altLabel>
         <skos:altLabel xml:lang="fr">Eau / Pêche</skos:altLabel>
       </skos:Concept>
@@ -367,6 +399,13 @@ obstacles à l'écoulement, ...
 zones sensibles pollution pesticides, zones PMPOA, imperméabilisation, zones drainées,
 contrats de rivière, SAGE
 </skos:definition>
+        <skos:exactMatch>
+          <skos:Concept rdf:about="http://eurovoc.europa.eu/6398">
+            <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
+            <skos:prefLabel xml:lang="fr">protection des eaux</skos:prefLabel>
+          </skos:Concept>
+        </skos:exactMatch>
+
         <skos:changeNote xml:lang="fr">Inclus et étend le sous-thème Covadis 'Eau/Zonages Eau'.</skos:changeNote>
         <skos:altLabel xml:lang="fr">Eau/Zonages Eau</skos:altLabel>
         <skos:altLabel xml:lang="fr">eau/n_zonages_eau</skos:altLabel>
@@ -386,6 +425,38 @@ contrats de rivière, SAGE
       </skos:Concept>
     </skos:narrower>
 
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://eurovoc.europa.eu/260">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
+    <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau"/>
+    <skos:prefLabel xml:lang="fr">cours d'eau</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://eurovoc.europa.eu/609">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
+    <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau"/>
+    <skos:prefLabel xml:lang="fr">eau souterraine</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
+    <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
+    <skos:prefLabel xml:lang="fr">Masses d'eau</skos:prefLabel>
+    <skos:definition xml:lang="fr">Les masses d'eau au sens de la DCE et autres masses d'eau (surface, cours d'eau, plan d'eau naturel,
+eau souterraine, connaissance des zones, humides, ...)
+</skos:definition>
+    <skos:altLabel xml:lang="fr">Eau/Masse d'eau</skos:altLabel>
+    <skos:altLabel xml:lang="fr">eau/n_masse_eau</skos:altLabel>
+    <ns0:regexp xml:lang="fr">masses? d'eau</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Tronçons hydrographiques</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Cours d'eau</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Plans? d'eau</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Etang</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Zones? humides?</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Milieux? humides?</ns0:regexp>
+    <skos:narrowMatch rdf:resource="http://eurovoc.europa.eu/260"/>
+    <skos:narrowMatch rdf:resource="http://eurovoc.europa.eu/609"/>
   </skos:Concept>
 
   <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol">

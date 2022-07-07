@@ -3,9 +3,13 @@ description: |
   Gestion des thèmes Ecosphères et d'une structure adhoc pour les gérer.
   On exploite notamment leur structuration hiérarchique.
 
+  Les altLabels et regexps correspondent aux mots-clés trouvés dans des catalogues.
+  Ajout des altLabels et regexps en cours.
+  
+  Mapping avec EuroVoc en cours.
 $schema: thespheres
 
-prefix:
+prefix: # liste des préfixes utilisés
   skos: http://www.w3.org/2004/02/skos/core#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   dct: http://purl.org/dc/terms/
@@ -18,14 +22,16 @@ skos:ConceptScheme:
   '@id': ecospheres:themes
   dct:title: {fr: "Liste des thèmes d'Ecosphères"}
   dct:description: {fr: "Publiée par Benoit DAVID - 5/7/2022"}
-  dct:modified: {x: "2022-07-05T16:52:57+02:00"}
+  dct:modified: {x: "2022-07-07T12:15:00+02:00"}
   dct:license: https://www.etalab.gouv.fr/licence-ouverte-open-licence
 
 skos:Concept:
   themes:climat:
     skos:prefLabel: {fr: Climat}
     skos:exactMatch:
-      - eurovoc:6011
+      eurovoc:6011:
+        skos:inScheme: eurovoc:100141
+        skos:prefLabel: {fr: climat}
     skos:altLabel:
       - {fr: air-climat}
     skos:changeNote:
@@ -35,7 +41,9 @@ skos:Concept:
       themes:changement-climatique:
         skos:prefLabel: {fr: Changement climatique}
         skos:exactMatch:
-          - http://eurovoc.europa.eu/5482
+          eurovoc:5482:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: changement climatique}
         skos:altLabel:
           - {fr: "Air Climat/Changement climatique"}
           - {fr: "climat-air-et-energie"}
@@ -50,7 +58,9 @@ skos:Concept:
       themes:meteorologie:
         skos:prefLabel: {fr: Météorologie}
         skos:exactMatch:
-          - http://eurovoc.europa.eu/1892
+          eurovoc:1892:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: météorologie}
         skos:altLabel:
           - {fr: "Air Climat/Météo"}
 
@@ -195,7 +205,9 @@ skos:Concept:
   themes:eau:
     skos:prefLabel: {fr: "Eau"}
     skos:exactMatch:
-      - eurovoc:597
+      eurovoc:597:
+        skos:inScheme: eurovoc:100141
+        skos:prefLabel: {fr: eau}
     skos:altLabel:
       - {fr: Eau/Utilisation Autre}
     skos:changeNote:
@@ -206,7 +218,9 @@ skos:Concept:
       themes:alimentation-en-eau-potable:
         skos:prefLabel: {fr: "Alimentation en eau potable"}
         skos:exactMatch:
-          - http://eurovoc.europa.eu/607
+          eurovoc:607:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "eau potable"}
         skos:altLabel:
           - {fr: Eau/AEP}
           - {fr: step}
@@ -223,7 +237,9 @@ skos:Concept:
             Les stations d'épuration, leur points de rejet, les réseaux d'assainissement, les stations
             de pompage, ...
         skos:exactMatch:
-          - http://eurovoc.europa.eu/4485
+          eurovoc:4485:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: traitement de l'eau}
         skos:altLabel:
           - {fr: Eau/Assainissement}
           - {fr: eau/n_assainissement}
@@ -276,7 +292,9 @@ skos:Concept:
           fr: |
             Réserve de pêche, police de la pêche,… (en eaux intérieures)
         skos:exactMatch:
-          - http://eurovoc.europa.eu/3338
+          eurovoc:3338:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: pêche sportive}
         skos:altLabel:
           - {fr: Eau/Pêche}
           - {fr: Eau / Pêche}
@@ -306,7 +324,9 @@ skos:Concept:
             zones sensibles pollution pesticides, zones PMPOA, imperméabilisation, zones drainées,
             contrats de rivière, SAGE
         skos:exactMatch:
-          - http://eurovoc.europa.eu/6398
+          eurovoc:6398:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: protection des eaux}
         skos:changeNote:
           fr: Inclus et étend le sous-thème Covadis 'Eau/Zonages Eau'.
         skos:altLabel:

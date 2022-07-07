@@ -9,7 +9,7 @@
 ecospheres:themes
   dct:title "Liste des thèmes d'Ecosphères"@fr;
   dct:description "Publiée par Benoit DAVID - 5/7/2022"@fr;
-  dct:modified "2022-07-05T16:52:57+02:00";
+  dct:modified "2022-07-07T12:15:00+02:00";
   dct:license <https://www.etalab.gouv.fr/licence-ouverte-open-licence>;
   skos:hasTopConcept themes:climat, themes:amenagement-et-urbanisme, themes:etablissements-d-activites, themes:eau, themes:foncier-et-occupation-du-sol, themes:habitat-et-politique-de-la-ville, themes:mer-et-littoral, themes:nature-paysages-et-biodiversite, themes:nuisances-dechets-et-pollution, themes:reseaux-d-energie-et-de-communication, themes:risques, themes:industrie, themes:transport-et-deplacements, themes:infrastructures-de-transport.
 
@@ -18,24 +18,42 @@ themes:climat
   skos:inScheme ecospheres:themes;
   skos:topConceptOf ecospheres:themes;
   skos:prefLabel "Climat"@fr;
+  skos:exactMatch eurovoc:6011;
   skos:altLabel "air-climat"@fr;
   skos:changeNote "Le sous-thème Covadis 'Air Climat/Qualité Pollution' a été déplacé dans nuisances-dechets-et-pollution.
 "@fr;
   skos:narrower themes:changement-climatique, themes:meteorologie.
+
+eurovoc:6011
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "climat"@fr.
+
+eurovoc:5482
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "changement climatique"@fr.
 
 themes:changement-climatique
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:climat;
   skos:prefLabel "Changement climatique"@fr;
+  skos:exactMatch eurovoc:5482;
   skos:altLabel "Air Climat/Changement climatique"@fr, "climat-air-et-energie"@fr;
   espsyntax:regexp "Plans? Climat-Energie"@fr, "Plan Climat Air Energie territorr?ial"@fr, "Air, Énergie et Climat"@fr, "PCAET"@fr, "Plans de Protection de l'Atmosphère"@fr, "SRCAE"@fr, "territoires? à énergie positive"@fr.
+
+eurovoc:1892
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "météorologie"@fr.
 
 themes:meteorologie
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:climat;
   skos:prefLabel "Météorologie"@fr;
+  skos:exactMatch eurovoc:1892;
   skos:altLabel "Air Climat/Météo"@fr.
 
 themes:amenagement-et-urbanisme
@@ -43,6 +61,7 @@ themes:amenagement-et-urbanisme
   skos:inScheme ecospheres:themes;
   skos:topConceptOf ecospheres:themes;
   skos:prefLabel "Aménagement et urbanisme"@fr;
+  skos:exactMatch <http://eurovoc.europa.eu/4619>;
   skos:altLabel "Aménagement Urbanisme"@fr, "amenagement-urbanisme"@fr;
   skos:narrower themes:servitudes-d-utilite-publique, themes:politique-europeenne-d-amenagement, themes:zonages-d-amenagement, themes:planification, themes:etudes.
 
@@ -74,6 +93,7 @@ themes:planification
   skos:inScheme ecospheres:themes;
   skos:broader themes:amenagement-et-urbanisme;
   skos:prefLabel "Planification"@fr;
+  skos:exactMatch <http://eurovoc.europa.eu/2391>;
   skos:altLabel "Aménagement Urbanisme/Zonages Planification"@fr, "ptu"@fr, "loi-littoral"@fr, "loi-montagne"@fr, "documents-durbanisme"@fr, "plu"@fr, "plui"@fr, "pluis"@fr, "document-durbanisme"@fr, "document-urbanisme"@fr, "documents-durba"@fr, "scot"@fr, "ZONAGES PLANIFICATION"@fr, "amenagement_urbanisme/n_zonages_planification"@fr, "zonage planification"@fr, "urbanisme planification"@fr;
   espsyntax:regexp "Directives? Territoriales? d'Aménagement"@fr, "DTA"@fr, "DTADD"@fr, "Document d’urbanisme"@fr, "cartes? communales?"@fr, "P\.L\.U\."@fr, "PLU"@fr, "Schémas? de Cohérence Territoriale"@fr, "SCOT"@fr, "Règlement National d'Urbanisme"@fr, "PDU"@fr, "Plan de déplacement urbain"@fr, "loi littoral"@fr, "Loi Montagne"@fr, "Zone de montagne au titre de la loi du 9 janvier 1985"@fr.
 
@@ -145,19 +165,36 @@ themes:eau
   skos:inScheme ecospheres:themes;
   skos:topConceptOf ecospheres:themes;
   skos:prefLabel "Eau"@fr;
+  skos:exactMatch eurovoc:597;
   skos:altLabel "Eau/Utilisation Autre"@fr;
   skos:changeNote "Le thème Covadis 'Eau/Utilisation Autre' ayant été supprimé, les mots-clés correspondants
 sont affectés au thème Eau.
 "@fr;
   skos:narrower themes:alimentation-en-eau-potable, themes:assainissement, themes:masses-d-eau, themes:ouvrages-hydrauliques, themes:peche-en-eaux-interieures, themes:surveillance-de-la-ressource-en-eau, themes:interventions-sur-les-cours-d-eau, themes:protection-de-l-eau.
 
+eurovoc:597
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "eau"@fr.
+
+eurovoc:607
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "eau potable"@fr.
+
 themes:alimentation-en-eau-potable
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:eau;
   skos:prefLabel "Alimentation en eau potable"@fr;
+  skos:exactMatch eurovoc:607;
   skos:altLabel "Eau/AEP"@fr, "step"@fr;
   espsyntax:regexp "AEP"@fr, "eau potable"@fr, "Périmètres? de protection immédiats?"@fr, "Périmètres? de protection rapprochés?"@fr, "Aires? d'alimentation des? captages?"@fr.
+
+eurovoc:4485
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "traitement de l'eau"@fr.
 
 themes:assainissement
   rdf:type skos:Concept;
@@ -167,8 +204,21 @@ themes:assainissement
   skos:definition "Les stations d'épuration, leur points de rejet, les réseaux d'assainissement, les stations
 de pompage, ...
 "@fr;
+  skos:exactMatch eurovoc:4485;
   skos:altLabel "Eau/Assainissement"@fr, "eau/n_assainissement"@fr;
   espsyntax:regexp "assainissement"@fr, "STEP"@fr, "Stations? d'épurations?"@fr, "Stations? de traitement des eaux usées"@fr, "Systèmes? de traitement des eaux usées"@fr, "STEU"@fr.
+
+eurovoc:260
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:broader themes:masses-d-eau;
+  skos:prefLabel "cours d'eau"@fr.
+
+eurovoc:609
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:broader themes:masses-d-eau;
+  skos:prefLabel "eau souterraine"@fr.
 
 themes:masses-d-eau
   rdf:type skos:Concept;
@@ -179,7 +229,8 @@ themes:masses-d-eau
 eau souterraine, connaissance des zones, humides, ...)
 "@fr;
   skos:altLabel "Eau/Masse d'eau"@fr, "eau/n_masse_eau"@fr;
-  espsyntax:regexp "masses? d'eau"@fr, "Tronçons hydrographiques"@fr, "Cours d'eau"@fr, "Plans? d'eau"@fr, "Etang"@fr, "Zones? humides?"@fr, "Milieux? humides?"@fr.
+  espsyntax:regexp "masses? d'eau"@fr, "Tronçons hydrographiques"@fr, "Cours d'eau"@fr, "Plans? d'eau"@fr, "Etang"@fr, "Zones? humides?"@fr, "Milieux? humides?"@fr;
+  skos:narrowMatch eurovoc:260, eurovoc:609.
 
 themes:ouvrages-hydrauliques
   rdf:type skos:Concept;
@@ -193,6 +244,11 @@ obstacles à l'écoulement, ...
   skos:altLabel "Eau/Ouvrage"@fr, "Eau / Ouvrage"@fr;
   espsyntax:regexp "ouvrages? hydrauliques?"@fr, "Obstacles? à l'écoulement"@fr, "Digues"@fr.
 
+eurovoc:3338
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "pêche sportive"@fr.
+
 themes:peche-en-eaux-interieures
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
@@ -200,6 +256,7 @@ themes:peche-en-eaux-interieures
   skos:prefLabel "Pêche en eaux intérieures"@fr;
   skos:definition "Réserve de pêche, police de la pêche,… (en eaux intérieures)
 "@fr;
+  skos:exactMatch eurovoc:3338;
   skos:altLabel "Eau/Pêche"@fr, "Eau / Pêche"@fr.
 
 themes:surveillance-de-la-ressource-en-eau
@@ -220,6 +277,11 @@ themes:interventions-sur-les-cours-d-eau
   skos:changeNote "Correspond dans l'arborescence Covadis au sous-thème 'Eau/Travaux Action'"@fr;
   skos:altLabel "Eau/Travaux Action"@fr.
 
+eurovoc:6398
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "protection des eaux"@fr.
+
 themes:protection-de-l-eau
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
@@ -229,6 +291,7 @@ themes:protection-de-l-eau
 zones sensibles pollution pesticides, zones PMPOA, imperméabilisation, zones drainées,
 contrats de rivière, SAGE
 "@fr;
+  skos:exactMatch eurovoc:6398;
   skos:changeNote "Inclus et étend le sous-thème Covadis 'Eau/Zonages Eau'."@fr;
   skos:altLabel "Eau/Zonages Eau"@fr, "eau/n_zonages_eau"@fr, "zonages eau"@fr;
   espsyntax:regexp "Schémas? d'Aménagement et de Gestion des Eaux"@fr, "SAGE"@fr, "Zones? sensibles?"@fr, "Zones? Vulnérables?"@fr, "Zones? d'Actions? Renforcées? Nitrate"@fr, "protection des eaux contre la pollution par les nitrates"@fr, "Cours d'eau Classement"@fr, "Classement piscicole des cours d'eau"@fr, "Zones? de répartition des eaux"@fr, "ZRE"@fr, "frayères"@fr, "Plan de Gestion de la Ressource en Eau"@fr.

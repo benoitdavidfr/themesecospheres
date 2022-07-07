@@ -1,6 +1,8 @@
 title: Schéma JSON de gestion des thèmes Ecosphères
 $id: https://github.com/benoitdavidfr/themesecospheres/blob/main/thespheres.schema.yaml
 $schema: http://json-schema.org/schema#
+description: |
+  Pour facilité la gestion des thèmes, ils peuvent être organisés sous la forme d'une hiérarchie.
 definitions:
   Uri:
     description: URI
@@ -96,7 +98,7 @@ properties:
       comme valeurs.
     additionalProperties: false
     patternProperties:
-      '^[a-z]+:[-a-zA-Z]+$': # le sujet
+      '^[a-z]+:[-a-zA-Z0-9]+$': # le sujet comme URI compacté
         $ref: '#/definitions/PredicatesObjects'
   eof:
     description: marque de fin de fichier

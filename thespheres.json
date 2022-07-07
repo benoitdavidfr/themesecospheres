@@ -10,6 +10,122 @@
     },
     "@graph": [
         {
+            "@id": "eurovoc:1892",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "météorologie"
+            }
+        },
+        {
+            "@id": "eurovoc:260",
+            "@type": "skos:Concept",
+            "skos:broader": {
+                "@id": "themes:masses-d-eau"
+            },
+            "skos:inScheme": {
+                "@id": "ecospheres:themes"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "cours d'eau"
+            }
+        },
+        {
+            "@id": "eurovoc:3338",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "pêche sportive"
+            }
+        },
+        {
+            "@id": "eurovoc:4485",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "traitement de l'eau"
+            }
+        },
+        {
+            "@id": "eurovoc:5482",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "changement climatique"
+            }
+        },
+        {
+            "@id": "eurovoc:597",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "eau"
+            }
+        },
+        {
+            "@id": "eurovoc:6011",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "climat"
+            }
+        },
+        {
+            "@id": "eurovoc:607",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "eau potable"
+            }
+        },
+        {
+            "@id": "eurovoc:609",
+            "@type": "skos:Concept",
+            "skos:broader": {
+                "@id": "themes:masses-d-eau"
+            },
+            "skos:inScheme": {
+                "@id": "ecospheres:themes"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "eau souterraine"
+            }
+        },
+        {
+            "@id": "eurovoc:6398",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "protection des eaux"
+            }
+        },
+        {
             "@id": "themes:accession-a-la-propriete",
             "@type": "skos:Concept",
             "skos:broader": {
@@ -61,6 +177,9 @@
             "skos:broader": {
                 "@id": "themes:eau"
             },
+            "skos:exactMatch": {
+                "@id": "eurovoc:607"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
             },
@@ -82,6 +201,9 @@
                     "@value": "amenagement-urbanisme"
                 }
             ],
+            "skos:exactMatch": {
+                "@id": "eurovoc:4619"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
             },
@@ -169,6 +291,9 @@
             "skos:definition": {
                 "@language": "fr",
                 "@value": "Les stations d'épuration, leur points de rejet, les réseaux d'assainissement, les stations\nde pompage, ...\n"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:4485"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -288,6 +413,9 @@
             "skos:broader": {
                 "@id": "themes:climat"
             },
+            "skos:exactMatch": {
+                "@id": "eurovoc:5482"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
             },
@@ -349,6 +477,9 @@
                 "@language": "fr",
                 "@value": "Le sous-thème Covadis 'Air Climat/Qualité Pollution' a été déplacé dans nuisances-dechets-et-pollution.\n"
             },
+            "skos:exactMatch": {
+                "@id": "eurovoc:6011"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
             },
@@ -406,6 +537,9 @@
             "skos:changeNote": {
                 "@language": "fr",
                 "@value": "Le thème Covadis 'Eau/Utilisation Autre' ayant été supprimé, les mots-clés correspondants\nsont affectés au thème Eau.\n"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:597"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1028,6 +1162,14 @@
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
             },
+            "skos:narrowMatch": [
+                {
+                    "@id": "eurovoc:260"
+                },
+                {
+                    "@id": "eurovoc:609"
+                }
+            ],
             "skos:prefLabel": {
                 "@language": "fr",
                 "@value": "Masses d'eau"
@@ -1076,6 +1218,9 @@
             },
             "skos:broader": {
                 "@id": "themes:climat"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:1892"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1349,6 +1494,9 @@
                 "@language": "fr",
                 "@value": "Réserve de pêche, police de la pêche,… (en eaux intérieures)\n"
             },
+            "skos:exactMatch": {
+                "@id": "eurovoc:3338"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
             },
@@ -1504,6 +1652,9 @@
             ],
             "skos:broader": {
                 "@id": "themes:amenagement-et-urbanisme"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:2391"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1776,6 +1927,9 @@
             "skos:definition": {
                 "@language": "fr",
                 "@value": "Zonage réglementaire : zones sensibles eutrophisation, zones vulnérables nitrates,\nzones sensibles pollution pesticides, zones PMPOA, imperméabilisation, zones drainées,\ncontrats de rivière, SAGE\n"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:6398"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -2309,7 +2463,7 @@
             "dct:license": {
                 "@id": "https://www.etalab.gouv.fr/licence-ouverte-open-licence"
             },
-            "dct:modified": "2022-07-05T16:52:57+02:00",
+            "dct:modified": "2022-07-07T12:15:00+02:00",
             "dct:title": {
                 "@language": "fr",
                 "@value": "Liste des thèmes d'Ecosphères"
