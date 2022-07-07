@@ -13,20 +13,23 @@ definitions:
     type: string
     pattern: '^[a-zA-Z]+:[a-zA-Z0-9]+'
   Label:
-    description: un libellé dans une ou pluiseurs langues, x pour neutre
+    description: une étiquette dans une ou plusieurs langues, x pour langue neutre
     type: object
     additionalProperties: false
     patternProperties:
       '^(fr|en|x)$': # on se limite pour le moment à 2 langues + neutre
         type: string
     examples:
-      - {fr: un libellé en français}
-      - {fr: un libellé en français et en anglais, en: in english}
-      - {x: un libellé dans aucune langue}
+      - {fr: une étiquette en français}
+      - {fr: une étiquette en français et en anglais, en: in english}
+      - {x: une étiquette dans aucune langue}
   Objects:
-    description: la partie objets associée à un sujet et un prédicat
+    description: |
+      la partie objets associée à un sujet et un prédicat.
+      Peut être un URI ou une liste d'URIs, un URI compacté ou une liste d'URIs compactés, une étiquette
+      ou une liste d'étiquettes, ou un ensemble de ressources RDF.
     oneOf:
-      - description: une URI
+      - description: un URI
         $ref: '#/definitions/Uri'
       - description: une liste d'URI
         type: array
@@ -38,20 +41,14 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/CompactUri'
-      - description: un libellé dans une ou plusieurs langues, x pour neutre
+      - description: une étiquette dans une ou plusieurs langues, x pour neutre
         $ref: '#/definitions/Label'
-      - description: une liste de libellés, chacun en une ou plusieurs langues, x pour neutre
+      - description: une liste d'étiquettes', chacun en une ou plusieurs langues, x pour neutre
         type: array
         items:
           $ref: '#/definitions/Label'
-      - description: |
-          un ensemble de triplets, chaque sujet comme clé sous la forme d'un URI compacté
-          et les prédicats-objets associés comme valeurs.
-        type: object
-        additionalProperties: false
-        patternProperties:
-           '^[a-z]+:[-a-zA-Z0-9]+$': # sujet comme compactUri
-            $ref: '#/definitions/PredicatesObjects'
+      - description: un ensemble de ressources RDF.
+        $ref: '#/definitions/setOfRdfResources'
   PredicatesObjects:
     description: |
       la partie prédicats-objets d'un triplet, le prédicat comme clé sous la forme d'un URI compacté
@@ -61,6 +58,18 @@ definitions:
     patternProperties:
       '^[a-z]+:[a-zA-Z]+$': # le prédicat
         $ref: '#/definitions/Objects'
+  setOfRdfResources:
+    description: |
+      ensemble de ressources RDF structuré en une forêt d'arbres, chaque arbre correspond à une ressource
+      ainsi qu'aux ressources attachées.  
+      Cet ensemble est structuré en Yaml comme un dictionnaire dans lequel les clés correspondent aux URI
+      compactés de chaque ressource de premier niveau et les valeurs sont structurés comme des prédicats-objets.
+    type: object
+    additionalProperties: false
+    patternProperties:
+      '^[a-z]+:[-a-zA-Z0-9]+$': # le sujet comme URI compacté
+        $ref: '#/definitions/PredicatesObjects'
+
 type: object
 additionalProperties: false
 properties:
@@ -87,19 +96,13 @@ properties:
         $ref: '#/definitions/Uri'
   skos:ConceptScheme:
     description: |
-      définition du scheme par défaut à tous les concepts, le champ @id donne l'URI compactée
-    additionalProperties: false
-    patternProperties:
-      '^([a-z]+:[a-zA-Z]+)|@id$':
-        $ref: '#/definitions/Objects'
+      Définition de Schéma de concepts. Le premier est le schéma par défaut des concepts.
+      Les autres sont ceux avec lesquels le schéma par défaut est mis en correspondance (mapping).
+    $ref: '#/definitions/setOfRdfResources'
   skos:Concept:
     description: |
-      ensemble de triplets structuré en forêt d'arbres avec le sujet comme clé et les prédicats-objets
-      comme valeurs.
-    additionalProperties: false
-    patternProperties:
-      '^[a-z]+:[-a-zA-Z0-9]+$': # le sujet comme URI compacté
-        $ref: '#/definitions/PredicatesObjects'
+      Les concepts structurés hiérarchiquement. Par défaut chaque concept appartient au schéma par défaut.
+    $ref: '#/definitions/setOfRdfResources'
   eof:
     description: marque de fin de fichier
     type: 'null'

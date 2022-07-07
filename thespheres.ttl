@@ -7,11 +7,28 @@
 @prefix eurovoc: <http://eurovoc.europa.eu/> .
 
 ecospheres:themes
+  rdf:type skos:ConceptScheme;
+  skos:hasTopConcept themes:climat, themes:amenagement-et-urbanisme, themes:etablissements-d-activites, themes:eau, themes:foncier-et-occupation-du-sol, themes:habitat-et-politique-de-la-ville, themes:mer-et-littoral, themes:nature-paysages-et-biodiversite, themes:nuisances-dechets-et-pollution, themes:reseaux-d-energie-et-de-communication, themes:risques, themes:industrie, themes:transport-et-deplacements, themes:infrastructures-de-transport;
   dct:title "Liste des thèmes d'Ecosphères"@fr;
   dct:description "Publiée par Benoit DAVID - 5/7/2022"@fr;
   dct:modified "2022-07-07T12:15:00+02:00";
-  dct:license <https://www.etalab.gouv.fr/licence-ouverte-open-licence>;
-  skos:hasTopConcept themes:climat, themes:amenagement-et-urbanisme, themes:etablissements-d-activites, themes:eau, themes:foncier-et-occupation-du-sol, themes:habitat-et-politique-de-la-ville, themes:mer-et-littoral, themes:nature-paysages-et-biodiversite, themes:nuisances-dechets-et-pollution, themes:reseaux-d-energie-et-de-communication, themes:risques, themes:industrie, themes:transport-et-deplacements, themes:infrastructures-de-transport.
+  dct:license <https://www.etalab.gouv.fr/licence-ouverte-open-licence>.
+
+eurovoc:100141
+  rdf:type skos:ConceptScheme;
+  dct:title "Thésaurus multilingue EuroVoc"@fr;
+  dct:description "EuroVoc is a multilingual, multidisciplinary thesaurus covering the activities of the EU. It contains terms in 24 EU languages (Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Irish, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish and Swedish), plus in three languages of countries which are candidate for EU accession: Albanian, Macedonian and Serbian.  
+
+EuroVoc is managed by the Publications Office of the European Union, which moved forward to ontology-based thesaurus management and semantic web technologies conformant to W3C recommendations as well as latest trends in thesaurus standards.  
+
+EuroVoc users include the European Union institutions, the Publications Office of the EU, national and regional parliaments in Europe, plus national governments and private users around the world.
+"@en, "EuroVoc est un thésaurus multilingue et multidisciplinaire couvrant les activités de l'UE. Il contient des termes dans 24 langues de l'UE (bulgare, croate, tchèque, danois, néerlandais, anglais, estonien, finnois, français, allemand, grec, hongrois, irlandais, italien, letton, lituanien, maltais, polonais, portugais, roumain, slovaque, slovène, espagnol et suédois), ainsi que dans les trois langues des pays candidats à l'adhésion à l'UE : albanais, macédonien et serbe.
+
+EuroVoc est géré par l'Office des publications de l'Union européenne, qui a évolué vers une gestion de thésaurus basée sur des ontologies et des technologies Web sémantiques conformes aux recommandations du W3C ainsi qu'aux dernières tendances en matière de normes de thésaurus.
+
+Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, l'Office des publications de l'UE, les parlements nationaux et régionaux d'Europe, ainsi que les gouvernements nationaux et les utilisateurs privés du monde entier.
+"@fr;
+  dct:modified "2021-12-17".
 
 themes:climat
   rdf:type skos:Concept;

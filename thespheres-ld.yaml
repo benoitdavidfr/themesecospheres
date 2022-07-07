@@ -7,6 +7,15 @@
   espsyntax: 'http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#'
   eurovoc: 'http://eurovoc.europa.eu/'
 '@graph':
+  - '@id': 'eurovoc:100141'
+    '@type': 'skos:ConceptScheme'
+    'dct:description':
+      - { '@language': en, '@value': "EuroVoc is a multilingual, multidisciplinary thesaurus covering the activities of the EU. It contains terms in 24 EU languages (Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Irish, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish and Swedish), plus in three languages of countries which are candidate for EU accession: Albanian, Macedonian and Serbian.  \n\nEuroVoc is managed by the Publications Office of the European Union, which moved forward to ontology-based thesaurus management and semantic web technologies conformant to W3C recommendations as well as latest trends in thesaurus standards.  \n\nEuroVoc users include the European Union institutions, the Publications Office of the EU, national and regional parliaments in Europe, plus national governments and private users around the world.\n" }
+      - { '@language': fr, '@value': "EuroVoc est un thésaurus multilingue et multidisciplinaire couvrant les activités de l'UE. Il contient des termes dans 24 langues de l'UE (bulgare, croate, tchèque, danois, néerlandais, anglais, estonien, finnois, français, allemand, grec, hongrois, irlandais, italien, letton, lituanien, maltais, polonais, portugais, roumain, slovaque, slovène, espagnol et suédois), ainsi que dans les trois langues des pays candidats à l'adhésion à l'UE : albanais, macédonien et serbe.\n\nEuroVoc est géré par l'Office des publications de l'Union européenne, qui a évolué vers une gestion de thésaurus basée sur des ontologies et des technologies Web sémantiques conformes aux recommandations du W3C ainsi qu'aux dernières tendances en matière de normes de thésaurus.\n\nLes utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, l'Office des publications de l'UE, les parlements nationaux et régionaux d'Europe, ainsi que les gouvernements nationaux et les utilisateurs privés du monde entier.\n" }
+    'dct:modified': '2021-12-17'
+    'dct:title':
+      '@language': fr
+      '@value': 'Thésaurus multilingue EuroVoc'
   - '@id': 'eurovoc:1892'
     '@type': 'skos:Concept'
     'skos:inScheme':
@@ -1295,6 +1304,7 @@
       '@language': fr
       '@value': 'Zonages d''aménagement'
   - '@id': 'ecospheres:themes'
+    '@type': 'skos:ConceptScheme'
     'dct:description':
       '@language': fr
       '@value': 'Publiée par Benoit DAVID - 5/7/2022'

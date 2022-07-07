@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:dc="http://purl.org/dc/terms/"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dc="http://purl.org/dc/terms/"
          xmlns:ns0="http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#">
 
-  <rdf:Description rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes">
-    <dc:title xml:lang="fr">Liste des thèmes d'Ecosphères</dc:title>
-    <dc:description xml:lang="fr">Publiée par Benoit DAVID - 5/7/2022</dc:description>
-    <dc:modified>2022-07-07T12:15:00+02:00</dc:modified>
-    <dc:license rdf:resource="https://www.etalab.gouv.fr/licence-ouverte-open-licence"/>
+  <skos:ConceptScheme rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes">
     <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat"/>
     <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
     <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
@@ -23,7 +19,28 @@
     <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie"/>
     <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"/>
     <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
-  </rdf:Description>
+    <dc:title xml:lang="fr">Liste des thèmes d'Ecosphères</dc:title>
+    <dc:description xml:lang="fr">Publiée par Benoit DAVID - 5/7/2022</dc:description>
+    <dc:modified>2022-07-07T12:15:00+02:00</dc:modified>
+    <dc:license rdf:resource="https://www.etalab.gouv.fr/licence-ouverte-open-licence"/>
+  </skos:ConceptScheme>
+
+  <skos:ConceptScheme rdf:about="http://eurovoc.europa.eu/100141">
+    <dc:title xml:lang="fr">Thésaurus multilingue EuroVoc</dc:title>
+    <dc:description xml:lang="en">EuroVoc is a multilingual, multidisciplinary thesaurus covering the activities of the EU. It contains terms in 24 EU languages (Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Irish, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish and Swedish), plus in three languages of countries which are candidate for EU accession: Albanian, Macedonian and Serbian.  
+
+EuroVoc is managed by the Publications Office of the European Union, which moved forward to ontology-based thesaurus management and semantic web technologies conformant to W3C recommendations as well as latest trends in thesaurus standards.  
+
+EuroVoc users include the European Union institutions, the Publications Office of the EU, national and regional parliaments in Europe, plus national governments and private users around the world.
+</dc:description>
+    <dc:description xml:lang="fr">EuroVoc est un thésaurus multilingue et multidisciplinaire couvrant les activités de l'UE. Il contient des termes dans 24 langues de l'UE (bulgare, croate, tchèque, danois, néerlandais, anglais, estonien, finnois, français, allemand, grec, hongrois, irlandais, italien, letton, lituanien, maltais, polonais, portugais, roumain, slovaque, slovène, espagnol et suédois), ainsi que dans les trois langues des pays candidats à l'adhésion à l'UE : albanais, macédonien et serbe.
+
+EuroVoc est géré par l'Office des publications de l'Union européenne, qui a évolué vers une gestion de thésaurus basée sur des ontologies et des technologies Web sémantiques conformes aux recommandations du W3C ainsi qu'aux dernières tendances en matière de normes de thésaurus.
+
+Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, l'Office des publications de l'UE, les parlements nationaux et régionaux d'Europe, ainsi que les gouvernements nationaux et les utilisateurs privés du monde entier.
+</dc:description>
+    <dc:modified>2021-12-17</dc:modified>
+  </skos:ConceptScheme>
 
   <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat">
     <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>

@@ -88,14 +88,15 @@ class Label { // Un label potentiellement dans différentes langues
 };
 
 /*YamlDoc: classes
-title: class Concept - définition de la classe stockant un Concept Skos et stockage du scheme Skos
+title: class RdfResource - déf. d'une ressource RDF et stockage des prefixes
+name: RdfResource
 methods:
 doc: |
-  La classe Concept définit la structuration d'un concept utilisant le champ $prop.
+  La classe RdfResource définit la structuration d'un ressource RDF dans le champ $prop.
   Elle définit aussi 3 variables statiques stockant respectivement
    - les prefixes utilisés
-   - la définition du Scheme
-   - le stockage des objets Concept
+   - les Schemas
+   - les Concept
   Dans le fichier Yaml en entrée, les concepts peuvent structurés hiérarchiquement,
   le chargement du fichier applatit la hiérarchie en stockant tous les concepts dans self::$concepts
   et en les remplacant dans la hiérarchie par l'URI du concept.
@@ -103,7 +104,7 @@ doc: |
    - le type RDF skos:Concept
    - la propriété skos:inScheme vers le Scheme défini dans Scheme si elle n'est pas définie
 */
-class Concept {
+class RdfResource {
   const SchemasDefinitions = [
     "PredicatesObjects" => [
       "description" => "la partie prédicats-objets d'un triplet, le prédicat comme clé sous la forme d'un URI compacté et les objets associés comme valeurs.",
@@ -167,27 +168,38 @@ class Concept {
   
   protected array $prop; // [{predicat} => [{object}]] où {object} ::= URI | compactURI | Label
   static array $prefix = [];
-  static array $scheme = [];
+  static array $schemes = []; // [id => ConceptScheme]
   static array $concepts = []; // [id => Concept]
+  
+  static function defaultSchemeId(): string { return array_keys(self::$schemes)[0]; }
   
   /*YamlDoc: methods
   title: "function __construct(string $id, array $concept, ?string $parent=null)"
   doc: |
     Méthode récursive de création 
-    $concept est un array respectant le sous-schéma PredicatesObjects du schéma thespheres.schema.yaml
+    $resource est un array respectant le sous-schéma PredicatesObjects du schéma thespheres.schema.yaml
   */
-  function __construct(string $id, array $concept, ?string $parent=null) {
-    $this->prop = ['rdf:type'=> ['skos:Concept']]; // rajout à chaque concept du type RDF skos:Concept
-    if (!isset($concept['skos:inScheme']))
-      $this->prop['skos:inScheme'] = self::$scheme['@id'];
-    if (!$parent) {
-      $this->prop['skos:topConceptOf'] = self::$scheme['@id'];
-      self::$scheme['skos:hasTopConcept'][] = $id;
+  function __construct(string $rdfType, string $id, array $resource, ?string $parent=null) {
+    $this->prop = ['rdf:type'=> [$rdfType]]; // rajout à chaque ressource de son type RDF
+    switch ($rdfType) { // traitement en fonction du type de ressource 
+      case 'skos:Concept': {
+        if (!isset($resource['skos:inScheme']))
+          $this->prop['skos:inScheme'] = [self::defaultSchemeId()];
+        if (!$parent) {
+          $this->prop['skos:topConceptOf'] = [self::defaultSchemeId()];
+          self::$schemes[self::defaultSchemeId()]->prop['skos:hasTopConcept'][] = $id;
+        }
+        elseif (!isset($resource['skos:inScheme'])) {
+          $this->prop['skos:broader'] = [$parent];
+        }
+        break;
+      }
+      case 'skos:ConceptScheme': {
+        $this->prop['skos:hasTopConcept'] = [];
+        break;
+      }
     }
-    elseif (!isset($concept['skos:inScheme'])) {
-      $this->prop['skos:broader'] = [$parent];
-    }
-    foreach ($concept as $predicate => $objects) {
+    foreach ($resource as $predicate => $objects) {
       if (Label::is($objects)) {
         $this->prop[$predicate] = [new Label($objects)]; // objects ::= Label
       }
@@ -208,7 +220,7 @@ class Concept {
       elseif (is_array($objects)) { // objects ::= [{compactUri} => PredicatesObjects]
         $this->prop[$predicate] = [];
         foreach ($objects as $curi => $childPredicatesObjects) {
-          self::$concepts[$curi] = new self($curi, $childPredicatesObjects, $id);
+          self::$concepts[$curi] = new self($rdfType, $curi, $childPredicatesObjects, $id);
           $this->prop[$predicate][] = $curi;
         }
       }
@@ -233,31 +245,21 @@ class Concept {
   
   static function init(array $yaml, bool $short): void {
     self::$prefix = $yaml['prefix'];
-    foreach ($yaml['skos:ConceptScheme'] as $pred => $objects) {
-      if (Label::is($objects))
-        self::$scheme[$pred] = [new Label($objects)];
-      elseif (is_string($objects))
-        self::$scheme[$pred] = [$objects];
+    foreach ($yaml['skos:ConceptScheme'] as $id => $scheme) {
+      self::$schemes[$id] = new self('skos:ConceptScheme', $id, $scheme);
     }
-    self::$scheme['skos:hasTopConcept'] = [];
     foreach ($yaml['skos:Concept'] as $id => $concept) {
       // création de l'entrée pour le concept afin que le parent soit avant ses enfants
       self::$concepts[$id] = null;
-      self::$concepts[$id] = new Concept($id, $concept);
+      self::$concepts[$id] = new self('skos:Concept', $id, $concept);
       if ($short) break; // pour limiter à un seul thème de niveau 1 en tests
     }
   }
   
   static function allAsArray(): array {
-    $scheme = [];
-    foreach (self::$scheme as $predicate => $objects) {
-      $props = [];
-      foreach ($objects as $object)
-        if (is_object($object))
-          $props[] = $object->asArray();
-        else
-          $props[] = $object;
-      $scheme[$predicate] = $props;
+    $schemes = [];
+    foreach (self::$schemes as $id => $scheme) {
+      $schemes[$id] = $scheme->asArray();
     }
     $concepts = [];
     foreach (self::$concepts as $id => $concept) {
@@ -265,7 +267,7 @@ class Concept {
     }
     return [
       'prefix'=> self::$prefix,
-      'scheme'=> $scheme,
+      'schemes'=> $schemes,
       'concepts'=> $concepts,
     ];
   }
@@ -308,26 +310,27 @@ class Concept {
     foreach (self::$prefix as $prefix => $uri)
       $ttl .= "@prefix $prefix: <$uri> .\n";
     $ttl .= "\n";
-    $ttl .= self::asTurtle(self::$scheme['@id'][0], self::$scheme)."\n";
+    foreach (self::$schemes as $uri => $scheme)
+      $ttl .= self::asTurtle($uri, $scheme->prop)."\n";
     foreach (self::$concepts as $uri => $concept)
       $ttl .= self::asTurtle($uri, $concept->prop)."\n";
     return $ttl;
   }
 }
 
-Concept::init(Yaml::parseFile($argv[0]), $short);
+RdfResource::init(Yaml::parseFile($argv[0]), $short);
 
 // affichage du résultat
 if (($argv[1] ?? null) == 'dump') { // dump brut de la structure constuite 
-  //print_r(['scheme'=> Concept::$scheme, 'concepts'=> Concept::$concepts]);
-  die(beautifulYaml(Yaml::dump(Concept::allAsArray(), 5, 2)));
+  print_r(['schemes'=> RdfResource::$schemes, 'concepts'=> RdfResource::$concepts]);
+  die(beautifulYaml(Yaml::dump(RdfResource::allAsArray(), 5, 2)));
 }
 elseif (!isset($argv[1])) { // par défaut affichage de la sortie Turtle
-  die(Concept::allAsTurtle());
+  die(RdfResource::allAsTurtle());
 }
 else { // transformation par EsayRdf en jsonld, yamlld ou autre
-  $graph = new \EasyRdf\Graph(Concept::$scheme['@id'][0]);
-  $graph->parse(Concept::allAsTurtle(), 'turtle', Concept::$scheme['@id'][0]);
+  $graph = new \EasyRdf\Graph(RdfResource::defaultSchemeId());
+  $graph->parse(RdfResource::allAsTurtle(), 'turtle', RdfResource::defaultSchemeId());
   switch ($ofmt = $argv[1]) {
     case 'jsonld': {
       $ser = $graph->serialise($ofmt);
@@ -341,13 +344,13 @@ else { // transformation par EsayRdf en jsonld, yamlld ou autre
     }
     case 'cjsonld': {
       $ser = $graph->serialise('jsonld');
-      $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode(Concept::$prefix));
+      $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode(RdfResource::$prefix));
       echo json_encode($compacted, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE),"\n";
       break;
     }
     case 'cyamlld': {
       $ser = $graph->serialise('jsonld');
-      $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode(Concept::$prefix));
+      $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode(RdfResource::$prefix));
       echo beautifulYaml(Yaml::dump(json_decode(json_encode($compacted), true), 4, 2)),"\n";
       break;
     }
