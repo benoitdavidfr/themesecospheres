@@ -444,18 +444,6 @@ contrats de rivière, SAGE
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://eurovoc.europa.eu/260">
-    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
-    <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau"/>
-    <skos:prefLabel xml:lang="fr">cours d'eau</skos:prefLabel>
-  </skos:Concept>
-
-  <skos:Concept rdf:about="http://eurovoc.europa.eu/609">
-    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
-    <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau"/>
-    <skos:prefLabel xml:lang="fr">eau souterraine</skos:prefLabel>
-  </skos:Concept>
-
   <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau">
     <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
@@ -472,8 +460,22 @@ eau souterraine, connaissance des zones, humides, ...)
     <ns0:regexp xml:lang="fr">Etang</ns0:regexp>
     <ns0:regexp xml:lang="fr">Zones? humides?</ns0:regexp>
     <ns0:regexp xml:lang="fr">Milieux? humides?</ns0:regexp>
-    <skos:narrowMatch rdf:resource="http://eurovoc.europa.eu/260"/>
-    <skos:narrowMatch rdf:resource="http://eurovoc.europa.eu/609"/>
+    <skos:narrowMatch>
+      <skos:Concept rdf:about="http://eurovoc.europa.eu/260">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau"/>
+        <skos:prefLabel xml:lang="fr">cours d'eau</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrowMatch>
+
+    <skos:narrowMatch>
+      <skos:Concept rdf:about="http://eurovoc.europa.eu/609">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau"/>
+        <skos:prefLabel xml:lang="fr">eau souterraine</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrowMatch>
+
   </skos:Concept>
 
   <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol">

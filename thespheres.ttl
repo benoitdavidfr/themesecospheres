@@ -46,11 +46,6 @@ eurovoc:6011
   skos:inScheme eurovoc:100141;
   skos:prefLabel "climat"@fr.
 
-eurovoc:5482
-  rdf:type skos:Concept;
-  skos:inScheme eurovoc:100141;
-  skos:prefLabel "changement climatique"@fr.
-
 themes:changement-climatique
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
@@ -60,10 +55,10 @@ themes:changement-climatique
   skos:altLabel "Air Climat/Changement climatique"@fr, "climat-air-et-energie"@fr;
   espsyntax:regexp "Plans? Climat-Energie"@fr, "Plan Climat Air Energie territorr?ial"@fr, "Air, Énergie et Climat"@fr, "PCAET"@fr, "Plans de Protection de l'Atmosphère"@fr, "SRCAE"@fr, "territoires? à énergie positive"@fr.
 
-eurovoc:1892
+eurovoc:5482
   rdf:type skos:Concept;
   skos:inScheme eurovoc:100141;
-  skos:prefLabel "météorologie"@fr.
+  skos:prefLabel "changement climatique"@fr.
 
 themes:meteorologie
   rdf:type skos:Concept;
@@ -72,6 +67,11 @@ themes:meteorologie
   skos:prefLabel "Météorologie"@fr;
   skos:exactMatch eurovoc:1892;
   skos:altLabel "Air Climat/Météo"@fr.
+
+eurovoc:1892
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "météorologie"@fr.
 
 themes:amenagement-et-urbanisme
   rdf:type skos:Concept;
@@ -194,11 +194,6 @@ eurovoc:597
   skos:inScheme eurovoc:100141;
   skos:prefLabel "eau"@fr.
 
-eurovoc:607
-  rdf:type skos:Concept;
-  skos:inScheme eurovoc:100141;
-  skos:prefLabel "eau potable"@fr.
-
 themes:alimentation-en-eau-potable
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
@@ -208,10 +203,10 @@ themes:alimentation-en-eau-potable
   skos:altLabel "Eau/AEP"@fr, "step"@fr;
   espsyntax:regexp "AEP"@fr, "eau potable"@fr, "Périmètres? de protection immédiats?"@fr, "Périmètres? de protection rapprochés?"@fr, "Aires? d'alimentation des? captages?"@fr.
 
-eurovoc:4485
+eurovoc:607
   rdf:type skos:Concept;
   skos:inScheme eurovoc:100141;
-  skos:prefLabel "traitement de l'eau"@fr.
+  skos:prefLabel "eau potable"@fr.
 
 themes:assainissement
   rdf:type skos:Concept;
@@ -225,17 +220,10 @@ de pompage, ...
   skos:altLabel "Eau/Assainissement"@fr, "eau/n_assainissement"@fr;
   espsyntax:regexp "assainissement"@fr, "STEP"@fr, "Stations? d'épurations?"@fr, "Stations? de traitement des eaux usées"@fr, "Systèmes? de traitement des eaux usées"@fr, "STEU"@fr.
 
-eurovoc:260
+eurovoc:4485
   rdf:type skos:Concept;
-  skos:inScheme ecospheres:themes;
-  skos:broader themes:masses-d-eau;
-  skos:prefLabel "cours d'eau"@fr.
-
-eurovoc:609
-  rdf:type skos:Concept;
-  skos:inScheme ecospheres:themes;
-  skos:broader themes:masses-d-eau;
-  skos:prefLabel "eau souterraine"@fr.
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "traitement de l'eau"@fr.
 
 themes:masses-d-eau
   rdf:type skos:Concept;
@@ -249,6 +237,18 @@ eau souterraine, connaissance des zones, humides, ...)
   espsyntax:regexp "masses? d'eau"@fr, "Tronçons hydrographiques"@fr, "Cours d'eau"@fr, "Plans? d'eau"@fr, "Etang"@fr, "Zones? humides?"@fr, "Milieux? humides?"@fr;
   skos:narrowMatch eurovoc:260, eurovoc:609.
 
+eurovoc:260
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:broader themes:masses-d-eau;
+  skos:prefLabel "cours d'eau"@fr.
+
+eurovoc:609
+  rdf:type skos:Concept;
+  skos:inScheme ecospheres:themes;
+  skos:broader themes:masses-d-eau;
+  skos:prefLabel "eau souterraine"@fr.
+
 themes:ouvrages-hydrauliques
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
@@ -261,11 +261,6 @@ obstacles à l'écoulement, ...
   skos:altLabel "Eau/Ouvrage"@fr, "Eau / Ouvrage"@fr;
   espsyntax:regexp "ouvrages? hydrauliques?"@fr, "Obstacles? à l'écoulement"@fr, "Digues"@fr.
 
-eurovoc:3338
-  rdf:type skos:Concept;
-  skos:inScheme eurovoc:100141;
-  skos:prefLabel "pêche sportive"@fr.
-
 themes:peche-en-eaux-interieures
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
@@ -275,6 +270,11 @@ themes:peche-en-eaux-interieures
 "@fr;
   skos:exactMatch eurovoc:3338;
   skos:altLabel "Eau/Pêche"@fr, "Eau / Pêche"@fr.
+
+eurovoc:3338
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "pêche sportive"@fr.
 
 themes:surveillance-de-la-ressource-en-eau
   rdf:type skos:Concept;
@@ -294,11 +294,6 @@ themes:interventions-sur-les-cours-d-eau
   skos:changeNote "Correspond dans l'arborescence Covadis au sous-thème 'Eau/Travaux Action'"@fr;
   skos:altLabel "Eau/Travaux Action"@fr.
 
-eurovoc:6398
-  rdf:type skos:Concept;
-  skos:inScheme eurovoc:100141;
-  skos:prefLabel "protection des eaux"@fr.
-
 themes:protection-de-l-eau
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
@@ -312,6 +307,11 @@ contrats de rivière, SAGE
   skos:changeNote "Inclus et étend le sous-thème Covadis 'Eau/Zonages Eau'."@fr;
   skos:altLabel "Eau/Zonages Eau"@fr, "eau/n_zonages_eau"@fr, "zonages eau"@fr;
   espsyntax:regexp "Schémas? d'Aménagement et de Gestion des Eaux"@fr, "SAGE"@fr, "Zones? sensibles?"@fr, "Zones? Vulnérables?"@fr, "Zones? d'Actions? Renforcées? Nitrate"@fr, "protection des eaux contre la pollution par les nitrates"@fr, "Cours d'eau Classement"@fr, "Classement piscicole des cours d'eau"@fr, "Zones? de répartition des eaux"@fr, "ZRE"@fr, "frayères"@fr, "Plan de Gestion de la Ressource en Eau"@fr.
+
+eurovoc:6398
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "protection des eaux"@fr.
 
 themes:foncier-et-occupation-du-sol
   rdf:type skos:Concept;
