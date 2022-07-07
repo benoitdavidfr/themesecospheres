@@ -30,7 +30,7 @@
     <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:prefLabel xml:lang="fr">Climat</skos:prefLabel>
     <skos:altLabel xml:lang="fr">air-climat</skos:altLabel>
-    <skos:changeNote xml:lang="fr">Le sous-thème 'Air Climat/Qualité Pollution' a été transféré dans nuisances-dechets-et-pollution
+    <skos:changeNote xml:lang="fr">Le sous-thème Covadis 'Air Climat/Qualité Pollution' a été déplacé dans nuisances-dechets-et-pollution.
 </skos:changeNote>
     <skos:narrower>
       <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/changement-climatique">

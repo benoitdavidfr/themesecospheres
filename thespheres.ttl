@@ -4,6 +4,7 @@
 @prefix ecospheres: <http://registre.data.developpement-durable.gouv.fr/ecospheres> .
 @prefix themes: <http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/> .
 @prefix espsyntax: <http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#> .
+@prefix eurovoc: <http://eurovoc.europa.eu/> .
 
 ecospheres:themes
   dct:title "Liste des thèmes d'Ecosphères"@fr;
@@ -18,7 +19,7 @@ themes:climat
   skos:topConceptOf ecospheres:themes;
   skos:prefLabel "Climat"@fr;
   skos:altLabel "air-climat"@fr;
-  skos:changeNote "Le sous-thème 'Air Climat/Qualité Pollution' a été transféré dans nuisances-dechets-et-pollution
+  skos:changeNote "Le sous-thème Covadis 'Air Climat/Qualité Pollution' a été déplacé dans nuisances-dechets-et-pollution.
 "@fr;
   skos:narrower themes:changement-climatique, themes:meteorologie.
 

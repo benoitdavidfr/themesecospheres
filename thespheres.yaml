@@ -12,6 +12,7 @@ prefix:
   ecospheres: http://registre.data.developpement-durable.gouv.fr/ecospheres
   themes: http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/
   espsyntax: http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#
+  eurovoc: http://eurovoc.europa.eu/
 
 skos:ConceptScheme:
   '@id': ecospheres:themes
@@ -23,17 +24,21 @@ skos:ConceptScheme:
 skos:Concept:
   themes:climat:
     skos:prefLabel: {fr: Climat}
+    skos:exactMatch:
+      - eurovoc:6011
     skos:altLabel:
       - {fr: air-climat}
     skos:changeNote:
       fr: |
-        Le sous-thème 'Air Climat/Qualité Pollution' a été transféré dans nuisances-dechets-et-pollution
+        Le sous-thème Covadis 'Air Climat/Qualité Pollution' a été déplacé dans nuisances-dechets-et-pollution.
     skos:narrower:
       themes:changement-climatique:
         skos:prefLabel: {fr: Changement climatique}
+        skos:exactMatch:
+          - http://eurovoc.europa.eu/5482
         skos:altLabel:
-           - {fr: "Air Climat/Changement climatique"}
-           - {fr: "climat-air-et-energie"}
+          - {fr: "Air Climat/Changement climatique"}
+          - {fr: "climat-air-et-energie"}
         espsyntax:regexp:
           - {fr: "Plans? Climat-Energie"}
           - {fr: "Plan Climat Air Energie territorr?ial"}
@@ -44,11 +49,15 @@ skos:Concept:
           - {fr: "territoires? à énergie positive"}
       themes:meteorologie:
         skos:prefLabel: {fr: Météorologie}
+        skos:exactMatch:
+          - http://eurovoc.europa.eu/1892
         skos:altLabel:
           - {fr: "Air Climat/Météo"}
 
   themes:amenagement-et-urbanisme:
     skos:prefLabel: {fr: "Aménagement et urbanisme"}
+    skos:exactMatch:
+      - http://eurovoc.europa.eu/4619
     skos:altLabel:
       - {fr: Aménagement Urbanisme}
       - {fr: amenagement-urbanisme}
@@ -86,6 +95,8 @@ skos:Concept:
           - {fr: CRTE}
       themes:planification:
         skos:prefLabel: {fr: "Planification"}
+        skos:exactMatch:
+          - http://eurovoc.europa.eu/2391
         skos:altLabel:
           - {fr: Aménagement Urbanisme/Zonages Planification}
           - {fr: ptu} # Périmètre de transport urbain
@@ -183,6 +194,8 @@ skos:Concept:
     
   themes:eau:
     skos:prefLabel: {fr: "Eau"}
+    skos:exactMatch:
+      - eurovoc:597
     skos:altLabel:
       - {fr: Eau/Utilisation Autre}
     skos:changeNote:
@@ -192,6 +205,8 @@ skos:Concept:
     skos:narrower:
       themes:alimentation-en-eau-potable:
         skos:prefLabel: {fr: "Alimentation en eau potable"}
+        skos:exactMatch:
+          - http://eurovoc.europa.eu/607
         skos:altLabel:
           - {fr: Eau/AEP}
           - {fr: step}
@@ -207,6 +222,8 @@ skos:Concept:
           fr: |
             Les stations d'épuration, leur points de rejet, les réseaux d'assainissement, les stations
             de pompage, ...
+        skos:exactMatch:
+          - http://eurovoc.europa.eu/4485
         skos:altLabel:
           - {fr: Eau/Assainissement}
           - {fr: eau/n_assainissement}
@@ -234,6 +251,11 @@ skos:Concept:
           - {fr: Etang}
           - {fr: Zones? humides?}
           - {fr: Milieux? humides?}
+        skos:narrowMatch:
+          eurovoc:260:
+            skos:prefLabel: {fr: cours d'eau}
+          eurovoc:609:
+            skos:prefLabel: {fr: eau souterraine}
       themes:ouvrages-hydrauliques:
         skos:prefLabel: {fr: "Ouvrages hydrauliques"}
         skos:definition:
@@ -253,6 +275,8 @@ skos:Concept:
         skos:definition:
           fr: |
             Réserve de pêche, police de la pêche,… (en eaux intérieures)
+        skos:exactMatch:
+          - http://eurovoc.europa.eu/3338
         skos:altLabel:
           - {fr: Eau/Pêche}
           - {fr: Eau / Pêche}
@@ -281,6 +305,8 @@ skos:Concept:
             Zonage réglementaire : zones sensibles eutrophisation, zones vulnérables nitrates,
             zones sensibles pollution pesticides, zones PMPOA, imperméabilisation, zones drainées,
             contrats de rivière, SAGE
+        skos:exactMatch:
+          - http://eurovoc.europa.eu/6398
         skos:changeNote:
           fr: Inclus et étend le sous-thème Covadis 'Eau/Zonages Eau'.
         skos:altLabel:
@@ -464,7 +490,9 @@ skos:Concept:
         skos:prefLabel: {fr: "Infrastructure portuaire"}
       themes:infrastructure-routiere:
         skos:prefLabel: {fr: "Infrastructure routière"}
-    
+  
+  # Les concepts EuroVoc utilisés
+  
 children:
   AIR_CLIMAT:
     children:
@@ -481,8 +509,6 @@ children:
           - particules
           - pm10
           - pm25
-  CULTURE_SOCIETE_SERVICE:
-    short: D
   FONCIER_SOL:
     short: G
     children:

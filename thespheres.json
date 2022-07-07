@@ -5,7 +5,8 @@
         "dct": "http://purl.org/dc/terms/",
         "ecospheres": "http://registre.data.developpement-durable.gouv.fr/ecospheres",
         "themes": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/",
-        "espsyntax": "http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#"
+        "espsyntax": "http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#",
+        "eurovoc": "http://eurovoc.europa.eu/"
     },
     "@graph": [
         {
@@ -346,7 +347,7 @@
             },
             "skos:changeNote": {
                 "@language": "fr",
-                "@value": "Le sous-thème 'Air Climat/Qualité Pollution' a été transféré dans nuisances-dechets-et-pollution\n"
+                "@value": "Le sous-thème Covadis 'Air Climat/Qualité Pollution' a été déplacé dans nuisances-dechets-et-pollution.\n"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"

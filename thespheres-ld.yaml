@@ -5,6 +5,7 @@
   ecospheres: 'http://registre.data.developpement-durable.gouv.fr/ecospheres'
   themes: 'http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/'
   espsyntax: 'http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#'
+  eurovoc: 'http://eurovoc.europa.eu/'
 '@graph':
   - '@id': 'themes:accession-a-la-propriete'
     '@type': 'skos:Concept'
@@ -171,7 +172,7 @@
       '@value': air-climat
     'skos:changeNote':
       '@language': fr
-      '@value': "Le sous-thème 'Air Climat/Qualité Pollution' a été transféré dans nuisances-dechets-et-pollution\n"
+      '@value': "Le sous-thème Covadis 'Air Climat/Qualité Pollution' a été déplacé dans nuisances-dechets-et-pollution.\n"
     'skos:inScheme':
       '@id': 'ecospheres:themes'
     'skos:narrower':
