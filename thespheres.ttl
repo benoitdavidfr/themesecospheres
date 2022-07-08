@@ -5,14 +5,40 @@
 @prefix themes: <http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/> .
 @prefix espsyntax: <http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#> .
 @prefix eurovoc: <http://eurovoc.europa.eu/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix persons: <http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/> .
 
 ecospheres:themes
   rdf:type skos:ConceptScheme;
   skos:hasTopConcept themes:climat, themes:amenagement-et-urbanisme, themes:etablissements-d-activites, themes:eau, themes:foncier-et-occupation-du-sol, themes:habitat-et-politique-de-la-ville, themes:mer-et-littoral, themes:nature-paysages-et-biodiversite, themes:nuisances-dechets-et-pollution, themes:reseaux-d-energie-et-de-communication, themes:risques, themes:industrie, themes:transport-et-deplacements, themes:infrastructures-de-transport;
   dct:title "Liste des thèmes d'Ecosphères"@fr;
-  dct:description "Publiée par Benoit DAVID - 5/7/2022"@fr;
-  dct:modified "2022-07-07T12:15:00+02:00";
+  dct:description "Les thèmes Ecosphères sont utilisés dans le guichet de la donnée de la transition écologique.  
+Ils reprennent les thèmes définis par l'arborescence Covadis et sont structurés conformément
+au [standard SKOS du W3C]().  
+A chaque concept est associé:
+  
+  - des altLabels et des regexps correspondant aux mots-clés rencontrés dans les catalogues
+    moissonnés par le guichet,
+  - une correspondance avec EuroVoc dans la mesure du possible.
+La constitution de ce thésaurus est en cours.  
+Version publiée par Benoit DAVID le 7/7/2022.
+"@fr;
+  dct:creator persons:BenoitDavid, persons:LeslieLemaire;
+  dct:contributor persons:GillesGuillouet;
+  dct:modified "2022-07-08T08:40:00+02:00";
   dct:license <https://www.etalab.gouv.fr/licence-ouverte-open-licence>.
+
+persons:BenoitDavid
+  rdf:type foaf:Person;
+  foaf:name "Benoît David".
+
+persons:LeslieLemaire
+  rdf:type foaf:Person;
+  foaf:name "Leslie Lemaire".
+
+persons:GillesGuillouet
+  rdf:type foaf:Person;
+  foaf:name "Gilles Guillouet".
 
 eurovoc:100141
   rdf:type skos:ConceptScheme;
@@ -325,130 +351,200 @@ themes:foncier-agricole
   skos:inScheme ecospheres:themes;
   skos:broader themes:foncier-et-occupation-du-sol;
   skos:prefLabel "Foncier agricole"@fr;
-  skos:altLabel "xx"@fr;
-  espsyntax:regexp "xx"@fr.
+  skos:definition "definition: Divisions, regroupements, changement propriétaires"@fr;
+  skos:altLabel "Foncier Sol/Foncier agricole"@fr.
 
 themes:mutation-fonciere
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:foncier-et-occupation-du-sol;
-  skos:prefLabel "Mutation foncière"@fr.
+  skos:prefLabel "Mutation foncière"@fr;
+  skos:definition "Remembrement, travaux connexes"@fr;
+  skos:altLabel "Foncier Sol/Mutation foncière"@fr.
 
 themes:occupation-du-sol
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:foncier-et-occupation-du-sol;
-  skos:prefLabel "Occupation du sol"@fr.
+  skos:prefLabel "Occupation du sol"@fr;
+  skos:altLabel "Foncier Sol/Occupation du sol"@fr, "usage du sol"@fr, "OCCUPATION SOL"@fr;
+  espsyntax:regexp "Occupation des sols"@fr, "Occupation du sol"@fr, "Corine Land Cover"@fr, "Espaces bâtis"@fr.
 
 themes:propriete-fonciere
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:foncier-et-occupation-du-sol;
-  skos:prefLabel "Propriété foncière"@fr.
+  skos:prefLabel "Propriété foncière"@fr;
+  skos:scopeNote "intègre le cadastre et le définition du domaine public"@fr;
+  skos:altLabel "Foncier Sol/Propriété foncière"@fr;
+  espsyntax:regexp "Domaine Public"@fr, "parcellaire"@fr, ""@fr.
 
 themes:habitat-et-politique-de-la-ville
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:topConceptOf ecospheres:themes;
   skos:prefLabel "Habitat et politique de la ville"@fr;
+  skos:altLabel "Habitat Politique de la ville"@fr;
   skos:narrower themes:accession-a-la-propriete, themes:besoins-en-logements, themes:construction, themes:habitat-indigne, themes:occupation-des-logements, themes:parc-locatif-social, themes:parc-de-logements, themes:politique-de-la-ville, themes:renovation-urbaine.
 
 themes:accession-a-la-propriete
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:habitat-et-politique-de-la-ville;
-  skos:prefLabel "Accession à la propriété"@fr.
+  skos:prefLabel "Accession à la propriété"@fr;
+  skos:altLabel "Habitat Politique de la ville/Accession Propriété"@fr, "Habitat Politique de la ville/Accession à la propriété"@fr.
 
 themes:besoins-en-logements
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:habitat-et-politique-de-la-ville;
-  skos:prefLabel "Besoins en logements"@fr.
+  skos:prefLabel "Besoins en logements"@fr;
+  skos:definition "Demande de logement social, accueil des gens du voyage"@fr;
+  skos:altLabel "Habitat Politique de la ville/Besoins en logement"@fr, "gens-du-voyage"@fr, "gens-voyage"@fr;
+  espsyntax:regexp "gens du voyage"@fr.
 
 themes:construction
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:habitat-et-politique-de-la-ville;
-  skos:prefLabel "Construction"@fr.
+  skos:prefLabel "Construction"@fr;
+  skos:definition "Zones d'instruction des permis de construire, nombre de logements, SHON, nombre de logements
+autorisés, statistiques de permis de construire, règles de construction
+"@fr;
+  skos:altLabel "Habitat Politique de la ville/Construction"@fr, "permis-de-construire"@fr, "regles-de-construction"@fr, "sitadel"@fr;
+  espsyntax:regexp "Construction de logements"@fr, "Construction de locaux"@fr.
 
 themes:habitat-indigne
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:habitat-et-politique-de-la-ville;
-  skos:prefLabel "Habitat indigne"@fr.
+  skos:prefLabel "Habitat indigne"@fr;
+  skos:definition "Inventaire de l'habitat susceptible d'être indigne"@fr;
+  skos:altLabel "Habitat Politique de la ville/Habitat indigne"@fr.
 
 themes:occupation-des-logements
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:habitat-et-politique-de-la-ville;
-  skos:prefLabel "Occupation des logements"@fr.
+  skos:prefLabel "Occupation des logements"@fr;
+  skos:definition "Aides au logements, taux d'occupation, suivi des loyers, ..."@fr;
+  skos:altLabel "Habitat Politique de la ville/Occupation des logements"@fr, "loyer"@fr;
+  espsyntax:regexp "Bâtiment majoritairement d'activités vacant"@fr, "Local d'activités vacant"@fr.
 
 themes:parc-locatif-social
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:habitat-et-politique-de-la-ville;
-  skos:prefLabel "Parc locatif social"@fr.
+  skos:prefLabel "Parc locatif social"@fr;
+  skos:definition "Zonage du locatif, hébergement d'urgence, logements en prêt locatif, PALULOS"@fr;
+  skos:altLabel "Habitat Politique de la ville/Parc locatif social"@fr, "bailleurs-sociaux"@fr, "logement-locatif-social"@fr;
+  espsyntax:regexp "hébergement d'urgence"@fr.
 
 themes:parc-de-logements
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:habitat-et-politique-de-la-ville;
-  skos:prefLabel "Parc de logements"@fr.
+  skos:prefLabel "Parc de logements"@fr;
+  skos:definition "Résidences principales collectives, logements vacants, résidences secondaires"@fr;
+  skos:altLabel "Habitat Politique de la ville/Parc Logements"@fr, "parc-logements"@fr, "logements-vacants"@fr.
 
 themes:politique-de-la-ville
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:habitat-et-politique-de-la-ville;
-  skos:prefLabel "Politique de la ville"@fr.
+  skos:prefLabel "Politique de la ville"@fr;
+  skos:definition "PRU, Opération programmée pour l'amélioration de l'habitat (OPAH), SRU, ZUS, ZRU,
+quartier prioritaire, Programme local de l'habitat (PLH),
+Contrat urbain de cohésion sociale (CUCS) ...
+"@fr;
+  skos:altLabel "Habitat Politique de la ville/Politique"@fr, "politique-de-la-ville"@fr, "ZUS"@fr, "habitat_politique_de_la_ville/n_politique"@fr, "logement politique de la ville : politique de la ville"@fr, "CUCS"@fr;
+  espsyntax:regexp "Quartiers? prioritaires?"@fr, "Contrat urbain de cohésion sociale"@fr, "ZUS"@fr, "SRU"@fr, "ZRU"@fr, "PRU"@fr, "Programmes? loca(l|ux) de l'habitat"@fr, "PLH"@fr, "Opération programmée d'amélioration de l'habitat"@fr, "Opération Programmée pour l'Amélioration de l'Habitat"@fr, "OPAH"@fr, "Programme d'intérêt général \(PIG\) habitat"@fr.
 
 themes:renovation-urbaine
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:habitat-et-politique-de-la-ville;
-  skos:prefLabel "Rénovation urbaine"@fr.
+  skos:prefLabel "Rénovation urbaine"@fr;
+  skos:altLabel "Habitat Politique de la ville/Rénovation"@fr;
+  espsyntax:regexp "ANAH"@fr, "rénovation urbaine"@fr, "ANRU"@fr.
 
 themes:mer-et-littoral
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:topConceptOf ecospheres:themes;
   skos:prefLabel "Mer et littoral"@fr;
+  skos:changeNote "Par rapport au thème Covadis 'Mer Littoral', suppression des sous-thèmes 'Culture marine', 'Pêche maritime'
+et 'Autres activités' remontés dans le thème parent de 1er niveau.
+"@fr;
+  skos:altLabel "Mer Littoral/Culture marine"@fr, "crustaces"@fr, "bulots"@fr, "moules"@fr, "autres-coquillages"@fr, "aquaculture"@fr, "Mer Littoral/Pêche maritime"@fr, "peche"@fr, "Mer Littoral/Autres activités"@fr, "dragues"@fr, "granulats-marins"@fr;
+  espsyntax:regexp "conchylicole"@fr, "Concessions? de cultures marines"@fr, "parcs ostréicoles"@fr, "Parcs à palourdes"@fr, "Gisements de coquillages"@fr, "Gisements coquillers"@fr, "Classement sanitaire des zones conchylicoles"@fr, "mytilicole"@fr, "Zones de pêche"@fr, "Réserve de pêche"@fr, "Limites de pêche"@fr, "cantonnements? de pêche"@fr, "Éolien posé"@fr, "Éolien flottant"@fr, "énergie houlomotrice"@fr, "hydrolien"@fr;
   skos:narrower themes:ecologie-du-littoral, themes:limite-administrative-speciale-en-mer, themes:lutte-anti-pollution-en-mer, themes:navigation-maritime, themes:topographie-en-mer, themes:chasse-maritime.
 
 themes:ecologie-du-littoral
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:mer-et-littoral;
-  skos:prefLabel "Écologie du littoral"@fr.
+  skos:prefLabel "Écologie du littoral"@fr;
+  skos:definition "Évolution du trait de côte, qualité des eaux littorales, sites du conservatoire, Avifaune,
+habitats naturels, arrêtés de biotope en mer, ZNIEFF en mer, sites inscrits/classés en mer,
+PNR en mer, RAMSAR, Natura 2000 en mer, réserves naturelles en mer, sites ENS du CG,
+mammifères marins, Indicateurs de sensibilité, Inventaire permanent du LIttoral (IPLI)
+"@fr;
+  skos:altLabel "Mer Littoral/Écologie du littoral"@fr;
+  espsyntax:regexp "Traits? de côte"@fr, "habitats marins"@fr, "habitats côtiers"@fr, "habitats récifaux"@fr, "Nature de l'estran"@fr, "herbiers de Zostera"@fr, "tortues marines"@fr, "Sites? du Conservatoire du Littoral"@fr, "Inventaire permanent du LIttoral"@fr, "Qualité des eaux de baignade"@fr.
 
 themes:limite-administrative-speciale-en-mer
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:mer-et-littoral;
-  skos:prefLabel "Limite administrative spéciale en mer et sur le littoral"@fr.
+  skos:prefLabel "Limite administrative spéciale en mer et sur le littoral"@fr;
+  skos:definition "Zone d'activité des préfectures maritimes, ligne de base, limite des 300m, limites des 1-3-6-12 miles
+nautiques, ZEE, limites des communes et des départements en mer, limite du domaine public, limite de salure
+des eaux, Lignes Transversales de la Mer, planification maritime
+"@fr;
+  skos:altLabel "Mer Littoral/Limite administrative spéciale"@fr, "3-milles"@fr, "eaux-interieure"@fr;
+  espsyntax:regexp "Bande des 300 m du littoral"@fr, "Zone des 12 milles"@fr, "Planification des espaces maritimes"@fr.
 
 themes:lutte-anti-pollution-en-mer
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:mer-et-littoral;
-  skos:prefLabel "Lutte anti-pollution en mer et sur le littoral"@fr.
+  skos:prefLabel "Lutte anti-pollution en mer et sur le littoral"@fr;
+  skos:definition "Plan de pose de barrages, CNPE, plan de gestion de polluants"@fr;
+  skos:altLabel "Mer Littoral/Lutte anti-pollution"@fr;
+  espsyntax:regexp "plans? de protection POLMAR"@fr.
 
 themes:navigation-maritime
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:mer-et-littoral;
-  skos:prefLabel "Navigation maritime"@fr.
+  skos:prefLabel "Navigation maritime"@fr;
+  skos:definition "Plaisance et mouillage, zones portuaires, nautique, plan de balisage, zones militaires, câbles sous-marins,
+cantonnements, zones de navigation, balises/épaves, activités des CROSS, formation et qualification
+des gens de mer
+"@fr;
+  skos:altLabel "Mer Littoral/Navigation maritime"@fr, "cross"@fr, "cantonnement"@fr, "sauvetage"@fr, "enseignement-maritime"@fr, "formations-maritimes"@fr, "gens-de-mer"@fr;
+  espsyntax:regexp "Mouillages"@fr, "Dispositif de séparation de trafics"@fr, "protection épave"@fr, "Épave dangereuse"@fr.
 
 themes:topographie-en-mer
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:mer-et-littoral;
-  skos:prefLabel "Topographie en mer et sur le littoral"@fr.
+  skos:prefLabel "Topographie en mer et sur le littoral"@fr;
+  skos:definition "Trait de côte, typologie de l'estran, bathymétrie, sédimentologie, zones de sable, granulométrie, ESI, houle,
+marées, zones inondables, rejets en mer, prises d'eau, sentier littoral, accès au DPM, aires de stationnement,
+sites industriels, amers remarquables, cartes de navigation électroniques
+"@fr;
+  skos:altLabel "Mer Littoral/Topographie"@fr;
+  espsyntax:regexp "Ouvrages statiques littoraux"@fr, "Ouvrages et aménagements littoraux"@fr, "Ouvrages côtiers"@fr, "Nature des côtes"@fr, "Défenses de côtes"@fr, "accès au DPM"@fr, "Accès au littoral"@fr, "Ortho-littorale"@fr, "Ortho littorale"@fr, "prises d'eau de mer"@fr, "Sentier du Littoral"@fr, "Artificialisation côte"@fr, "exutoires"@fr.
 
 themes:chasse-maritime
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes;
   skos:broader themes:mer-et-littoral;
-  skos:prefLabel "Chasse maritime"@fr.
+  skos:prefLabel "Chasse maritime"@fr;
+  skos:definition "Zones de chasse réglementée, concession baux"@fr;
+  skos:altLabel "Mer Littoral/Chasse maritime"@fr.
 
 themes:nature-paysages-et-biodiversite
   rdf:type skos:Concept;

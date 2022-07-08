@@ -6,7 +6,9 @@
         "ecospheres": "http://registre.data.developpement-durable.gouv.fr/ecospheres",
         "themes": "http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/",
         "espsyntax": "http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#",
-        "eurovoc": "http://eurovoc.europa.eu/"
+        "eurovoc": "http://eurovoc.europa.eu/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "persons": "http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/"
     },
     "@graph": [
         {
@@ -145,8 +147,33 @@
             }
         },
         {
+            "@id": "persons:BenoitDavid",
+            "@type": "foaf:Person",
+            "foaf:name": "Benoît David"
+        },
+        {
+            "@id": "persons:GillesGuillouet",
+            "@type": "foaf:Person",
+            "foaf:name": "Gilles Guillouet"
+        },
+        {
+            "@id": "persons:LeslieLemaire",
+            "@type": "foaf:Person",
+            "foaf:name": "Leslie Lemaire"
+        },
+        {
             "@id": "themes:accession-a-la-propriete",
             "@type": "skos:Concept",
+            "skos:altLabel": [
+                {
+                    "@language": "fr",
+                    "@value": "Habitat Politique de la ville/Accession Propriété"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Habitat Politique de la ville/Accession à la propriété"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:habitat-et-politique-de-la-ville"
             },
@@ -361,8 +388,30 @@
         {
             "@id": "themes:besoins-en-logements",
             "@type": "skos:Concept",
+            "espsyntax:regexp": {
+                "@language": "fr",
+                "@value": "gens du voyage"
+            },
+            "skos:altLabel": [
+                {
+                    "@language": "fr",
+                    "@value": "Habitat Politique de la ville/Besoins en logement"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "gens-du-voyage"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "gens-voyage"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:habitat-et-politique-de-la-ville"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Demande de logement social, accueil des gens du voyage"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -460,8 +509,16 @@
         {
             "@id": "themes:chasse-maritime",
             "@type": "skos:Concept",
+            "skos:altLabel": {
+                "@language": "fr",
+                "@value": "Mer Littoral/Chasse maritime"
+            },
             "skos:broader": {
                 "@id": "themes:mer-et-littoral"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Zones de chasse réglementée, concession baux"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -521,8 +578,40 @@
         {
             "@id": "themes:construction",
             "@type": "skos:Concept",
+            "espsyntax:regexp": [
+                {
+                    "@language": "fr",
+                    "@value": "Construction de logements"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Construction de locaux"
+                }
+            ],
+            "skos:altLabel": [
+                {
+                    "@language": "fr",
+                    "@value": "Habitat Politique de la ville/Construction"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "permis-de-construire"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "regles-de-construction"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "sitadel"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:habitat-et-politique-de-la-ville"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Zones d'instruction des permis de construire, nombre de logements, SHON, nombre de logements\nautorisés, statistiques de permis de construire, règles de construction\n"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -600,8 +689,58 @@
         {
             "@id": "themes:ecologie-du-littoral",
             "@type": "skos:Concept",
+            "espsyntax:regexp": [
+                {
+                    "@language": "fr",
+                    "@value": "Traits? de côte"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "habitats marins"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "habitats côtiers"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "habitats récifaux"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Nature de l'estran"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "herbiers de Zostera"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "tortues marines"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Sites? du Conservatoire du Littoral"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Inventaire permanent du LIttoral"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Qualité des eaux de baignade"
+                }
+            ],
+            "skos:altLabel": {
+                "@language": "fr",
+                "@value": "Mer Littoral/Écologie du littoral"
+            },
             "skos:broader": {
                 "@id": "themes:mer-et-littoral"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Évolution du trait de côte, qualité des eaux littorales, sites du conservatoire, Avifaune,\nhabitats naturels, arrêtés de biotope en mer, ZNIEFF en mer, sites inscrits/classés en mer,\nPNR en mer, RAMSAR, Natura 2000 en mer, réserves naturelles en mer, sites ENS du CG,\nmammifères marins, Indicateurs de sensibilité, Inventaire permanent du LIttoral (IPLI)\n"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -810,16 +949,16 @@
         {
             "@id": "themes:foncier-agricole",
             "@type": "skos:Concept",
-            "espsyntax:regexp": {
-                "@language": "fr",
-                "@value": "xx"
-            },
             "skos:altLabel": {
                 "@language": "fr",
-                "@value": "xx"
+                "@value": "Foncier Sol/Foncier agricole"
             },
             "skos:broader": {
                 "@id": "themes:foncier-et-occupation-du-sol"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "definition: Divisions, regroupements, changement propriétaires"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -874,6 +1013,10 @@
         {
             "@id": "themes:habitat-et-politique-de-la-ville",
             "@type": "skos:Concept",
+            "skos:altLabel": {
+                "@language": "fr",
+                "@value": "Habitat Politique de la ville"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
             },
@@ -917,8 +1060,16 @@
         {
             "@id": "themes:habitat-indigne",
             "@type": "skos:Concept",
+            "skos:altLabel": {
+                "@language": "fr",
+                "@value": "Habitat Politique de la ville/Habitat indigne"
+            },
             "skos:broader": {
                 "@id": "themes:habitat-et-politique-de-la-ville"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Inventaire de l'habitat susceptible d'être indigne"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1103,8 +1254,40 @@
         {
             "@id": "themes:limite-administrative-speciale-en-mer",
             "@type": "skos:Concept",
+            "espsyntax:regexp": [
+                {
+                    "@language": "fr",
+                    "@value": "Bande des 300 m du littoral"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Zone des 12 milles"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Planification des espaces maritimes"
+                }
+            ],
+            "skos:altLabel": [
+                {
+                    "@language": "fr",
+                    "@value": "Mer Littoral/Limite administrative spéciale"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "3-milles"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "eaux-interieure"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:mer-et-littoral"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Zone d'activité des préfectures maritimes, ligne de base, limite des 300m, limites des 1-3-6-12 miles\nnautiques, ZEE, limites des communes et des départements en mer, limite du domaine public, limite de salure\ndes eaux, Lignes Transversales de la Mer, planification maritime\n"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1117,8 +1300,20 @@
         {
             "@id": "themes:lutte-anti-pollution-en-mer",
             "@type": "skos:Concept",
+            "espsyntax:regexp": {
+                "@language": "fr",
+                "@value": "plans? de protection POLMAR"
+            },
+            "skos:altLabel": {
+                "@language": "fr",
+                "@value": "Mer Littoral/Lutte anti-pollution"
+            },
             "skos:broader": {
                 "@id": "themes:mer-et-littoral"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Plan de pose de barrages, CNPE, plan de gestion de polluants"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1197,6 +1392,122 @@
         {
             "@id": "themes:mer-et-littoral",
             "@type": "skos:Concept",
+            "espsyntax:regexp": [
+                {
+                    "@language": "fr",
+                    "@value": "conchylicole"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Concessions? de cultures marines"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "parcs ostréicoles"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Parcs à palourdes"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Gisements de coquillages"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Gisements coquillers"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Classement sanitaire des zones conchylicoles"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "mytilicole"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Zones de pêche"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Réserve de pêche"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Limites de pêche"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "cantonnements? de pêche"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Éolien posé"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Éolien flottant"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "énergie houlomotrice"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "hydrolien"
+                }
+            ],
+            "skos:altLabel": [
+                {
+                    "@language": "fr",
+                    "@value": "Mer Littoral/Culture marine"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "crustaces"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "bulots"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "moules"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "autres-coquillages"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "aquaculture"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Mer Littoral/Pêche maritime"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "peche"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Mer Littoral/Autres activités"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "dragues"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "granulats-marins"
+                }
+            ],
+            "skos:changeNote": {
+                "@language": "fr",
+                "@value": "Par rapport au thème Covadis 'Mer Littoral', suppression des sous-thèmes 'Culture marine', 'Pêche maritime'\net 'Autres activités' remontés dans le thème parent de 1er niveau.\n"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
             },
@@ -1266,8 +1577,16 @@
         {
             "@id": "themes:mutation-fonciere",
             "@type": "skos:Concept",
+            "skos:altLabel": {
+                "@language": "fr",
+                "@value": "Foncier Sol/Mutation foncière"
+            },
             "skos:broader": {
                 "@id": "themes:foncier-et-occupation-du-sol"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Remembrement, travaux connexes"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1311,8 +1630,60 @@
         {
             "@id": "themes:navigation-maritime",
             "@type": "skos:Concept",
+            "espsyntax:regexp": [
+                {
+                    "@language": "fr",
+                    "@value": "Mouillages"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Dispositif de séparation de trafics"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "protection épave"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Épave dangereuse"
+                }
+            ],
+            "skos:altLabel": [
+                {
+                    "@language": "fr",
+                    "@value": "Mer Littoral/Navigation maritime"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "cross"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "cantonnement"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "sauvetage"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "enseignement-maritime"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "formations-maritimes"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "gens-de-mer"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:mer-et-littoral"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Plaisance et mouillage, zones portuaires, nautique, plan de balisage, zones militaires, câbles sous-marins,\ncantonnements, zones de navigation, balises/épaves, activités des CROSS, formation et qualification\ndes gens de mer\n"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1356,8 +1727,32 @@
         {
             "@id": "themes:occupation-des-logements",
             "@type": "skos:Concept",
+            "espsyntax:regexp": [
+                {
+                    "@language": "fr",
+                    "@value": "Bâtiment majoritairement d'activités vacant"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Local d'activités vacant"
+                }
+            ],
+            "skos:altLabel": [
+                {
+                    "@language": "fr",
+                    "@value": "Habitat Politique de la ville/Occupation des logements"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "loyer"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:habitat-et-politique-de-la-ville"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Aides au logements, taux d'occupation, suivi des loyers, ..."
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1370,6 +1765,38 @@
         {
             "@id": "themes:occupation-du-sol",
             "@type": "skos:Concept",
+            "espsyntax:regexp": [
+                {
+                    "@language": "fr",
+                    "@value": "Occupation des sols"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Occupation du sol"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Corine Land Cover"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Espaces bâtis"
+                }
+            ],
+            "skos:altLabel": [
+                {
+                    "@language": "fr",
+                    "@value": "Foncier Sol/Occupation du sol"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "usage du sol"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "OCCUPATION SOL"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:foncier-et-occupation-du-sol"
             },
@@ -1426,8 +1853,26 @@
         {
             "@id": "themes:parc-de-logements",
             "@type": "skos:Concept",
+            "skos:altLabel": [
+                {
+                    "@language": "fr",
+                    "@value": "Habitat Politique de la ville/Parc Logements"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "parc-logements"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "logements-vacants"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:habitat-et-politique-de-la-ville"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Résidences principales collectives, logements vacants, résidences secondaires"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1440,8 +1885,30 @@
         {
             "@id": "themes:parc-locatif-social",
             "@type": "skos:Concept",
+            "espsyntax:regexp": {
+                "@language": "fr",
+                "@value": "hébergement d'urgence"
+            },
+            "skos:altLabel": [
+                {
+                    "@language": "fr",
+                    "@value": "Habitat Politique de la ville/Parc locatif social"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "bailleurs-sociaux"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "logement-locatif-social"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:habitat-et-politique-de-la-ville"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Zonage du locatif, hébergement d'urgence, logements en prêt locatif, PALULOS"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1686,8 +2153,88 @@
         {
             "@id": "themes:politique-de-la-ville",
             "@type": "skos:Concept",
+            "espsyntax:regexp": [
+                {
+                    "@language": "fr",
+                    "@value": "Quartiers? prioritaires?"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Contrat urbain de cohésion sociale"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "ZUS"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "SRU"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "ZRU"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "PRU"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Programmes? loca(l|ux) de l'habitat"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "PLH"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Opération programmée d'amélioration de l'habitat"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Opération Programmée pour l'Amélioration de l'Habitat"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "OPAH"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Programme d'intérêt général \\(PIG\\) habitat"
+                }
+            ],
+            "skos:altLabel": [
+                {
+                    "@language": "fr",
+                    "@value": "Habitat Politique de la ville/Politique"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "politique-de-la-ville"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "ZUS"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "habitat_politique_de_la_ville/n_politique"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "logement politique de la ville : politique de la ville"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "CUCS"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:habitat-et-politique-de-la-ville"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "PRU, Opération programmée pour l'amélioration de l'habitat (OPAH), SRU, ZUS, ZRU,\nquartier prioritaire, Programme local de l'habitat (PLH),\nContrat urbain de cohésion sociale (CUCS) ...\n"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -1858,6 +2405,24 @@
         {
             "@id": "themes:propriete-fonciere",
             "@type": "skos:Concept",
+            "espsyntax:regexp": [
+                {
+                    "@language": "fr",
+                    "@value": "Domaine Public"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "parcellaire"
+                },
+                {
+                    "@language": "fr",
+                    "@value": ""
+                }
+            ],
+            "skos:altLabel": {
+                "@language": "fr",
+                "@value": "Foncier Sol/Propriété foncière"
+            },
             "skos:broader": {
                 "@id": "themes:foncier-et-occupation-du-sol"
             },
@@ -1867,6 +2432,10 @@
             "skos:prefLabel": {
                 "@language": "fr",
                 "@value": "Propriété foncière"
+            },
+            "skos:scopeNote": {
+                "@language": "fr",
+                "@value": "intègre le cadastre et le définition du domaine public"
             }
         },
         {
@@ -2031,6 +2600,24 @@
         {
             "@id": "themes:renovation-urbaine",
             "@type": "skos:Concept",
+            "espsyntax:regexp": [
+                {
+                    "@language": "fr",
+                    "@value": "ANAH"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "rénovation urbaine"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "ANRU"
+                }
+            ],
+            "skos:altLabel": {
+                "@language": "fr",
+                "@value": "Habitat Politique de la ville/Rénovation"
+            },
             "skos:broader": {
                 "@id": "themes:habitat-et-politique-de-la-ville"
             },
@@ -2296,8 +2883,70 @@
         {
             "@id": "themes:topographie-en-mer",
             "@type": "skos:Concept",
+            "espsyntax:regexp": [
+                {
+                    "@language": "fr",
+                    "@value": "Ouvrages statiques littoraux"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Ouvrages et aménagements littoraux"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Ouvrages côtiers"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Nature des côtes"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Défenses de côtes"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "accès au DPM"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Accès au littoral"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Ortho-littorale"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Ortho littorale"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "prises d'eau de mer"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Sentier du Littoral"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "Artificialisation côte"
+                },
+                {
+                    "@language": "fr",
+                    "@value": "exutoires"
+                }
+            ],
+            "skos:altLabel": {
+                "@language": "fr",
+                "@value": "Mer Littoral/Topographie"
+            },
             "skos:broader": {
                 "@id": "themes:mer-et-littoral"
+            },
+            "skos:definition": {
+                "@language": "fr",
+                "@value": "Trait de côte, typologie de l'estran, bathymétrie, sédimentologie, zones de sable, granulométrie, ESI, houle,\nmarées, zones inondables, rejets en mer, prises d'eau, sentier littoral, accès au DPM, aires de stationnement,\nsites industriels, amers remarquables, cartes de navigation électroniques\n"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes"
@@ -2476,14 +3125,25 @@
         {
             "@id": "ecospheres:themes",
             "@type": "skos:ConceptScheme",
+            "dct:contributor": {
+                "@id": "persons:GillesGuillouet"
+            },
+            "dct:creator": [
+                {
+                    "@id": "persons:BenoitDavid"
+                },
+                {
+                    "@id": "persons:LeslieLemaire"
+                }
+            ],
             "dct:description": {
                 "@language": "fr",
-                "@value": "Publiée par Benoit DAVID - 5/7/2022"
+                "@value": "Les thèmes Ecosphères sont utilisés dans le guichet de la donnée de la transition écologique.  \nIls reprennent les thèmes définis par l'arborescence Covadis et sont structurés conformément\nau [standard SKOS du W3C]().  \nA chaque concept est associé:\n  \n  - des altLabels et des regexps correspondant aux mots-clés rencontrés dans les catalogues\n    moissonnés par le guichet,\n  - une correspondance avec EuroVoc dans la mesure du possible.\nLa constitution de ce thésaurus est en cours.  \nVersion publiée par Benoit DAVID le 7/7/2022.\n"
             },
             "dct:license": {
                 "@id": "https://www.etalab.gouv.fr/licence-ouverte-open-licence"
             },
-            "dct:modified": "2022-07-07T12:15:00+02:00",
+            "dct:modified": "2022-07-08T08:40:00+02:00",
             "dct:title": {
                 "@language": "fr",
                 "@value": "Liste des thèmes d'Ecosphères"

@@ -2,6 +2,7 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:ns0="http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#">
 
   <skos:ConceptScheme rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes">
@@ -20,8 +21,36 @@
     <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"/>
     <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
     <dc:title xml:lang="fr">Liste des thèmes d'Ecosphères</dc:title>
-    <dc:description xml:lang="fr">Publiée par Benoit DAVID - 5/7/2022</dc:description>
-    <dc:modified>2022-07-07T12:15:00+02:00</dc:modified>
+    <dc:description xml:lang="fr">Les thèmes Ecosphères sont utilisés dans le guichet de la donnée de la transition écologique.  
+Ils reprennent les thèmes définis par l'arborescence Covadis et sont structurés conformément
+au [standard SKOS du W3C]().  
+A chaque concept est associé:
+  
+  - des altLabels et des regexps correspondant aux mots-clés rencontrés dans les catalogues
+    moissonnés par le guichet,
+  - une correspondance avec EuroVoc dans la mesure du possible.
+La constitution de ce thésaurus est en cours.  
+Version publiée par Benoit DAVID le 7/7/2022.
+</dc:description>
+    <dc:creator>
+      <foaf:Person rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/BenoitDavid">
+        <foaf:name>Benoît David</foaf:name>
+      </foaf:Person>
+    </dc:creator>
+
+    <dc:creator>
+      <foaf:Person rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/LeslieLemaire">
+        <foaf:name>Leslie Lemaire</foaf:name>
+      </foaf:Person>
+    </dc:creator>
+
+    <dc:contributor>
+      <foaf:Person rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/GillesGuillouet">
+        <foaf:name>Gilles Guillouet</foaf:name>
+      </foaf:Person>
+    </dc:contributor>
+
+    <dc:modified>2022-07-08T08:40:00+02:00</dc:modified>
     <dc:license rdf:resource="https://www.etalab.gouv.fr/licence-ouverte-open-licence"/>
   </skos:ConceptScheme>
 
@@ -487,8 +516,8 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
         <skos:prefLabel xml:lang="fr">Foncier agricole</skos:prefLabel>
-        <skos:altLabel xml:lang="fr">xx</skos:altLabel>
-        <ns0:regexp xml:lang="fr">xx</ns0:regexp>
+        <skos:definition xml:lang="fr">definition: Divisions, regroupements, changement propriétaires</skos:definition>
+        <skos:altLabel xml:lang="fr">Foncier Sol/Foncier agricole</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
@@ -497,6 +526,8 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
         <skos:prefLabel xml:lang="fr">Mutation foncière</skos:prefLabel>
+        <skos:definition xml:lang="fr">Remembrement, travaux connexes</skos:definition>
+        <skos:altLabel xml:lang="fr">Foncier Sol/Mutation foncière</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
@@ -505,6 +536,13 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
         <skos:prefLabel xml:lang="fr">Occupation du sol</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Foncier Sol/Occupation du sol</skos:altLabel>
+        <skos:altLabel xml:lang="fr">usage du sol</skos:altLabel>
+        <skos:altLabel xml:lang="fr">OCCUPATION SOL</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Occupation des sols</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Occupation du sol</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Corine Land Cover</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Espaces bâtis</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -513,6 +551,11 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
         <skos:prefLabel xml:lang="fr">Propriété foncière</skos:prefLabel>
+        <skos:scopeNote xml:lang="fr">intègre le cadastre et le définition du domaine public</skos:scopeNote>
+        <skos:altLabel xml:lang="fr">Foncier Sol/Propriété foncière</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Domaine Public</ns0:regexp>
+        <ns0:regexp xml:lang="fr">parcellaire</ns0:regexp>
+        <ns0:regexp xml:lang="fr"></ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -522,11 +565,14 @@ eau souterraine, connaissance des zones, humides, ...)
     <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:prefLabel xml:lang="fr">Habitat et politique de la ville</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Habitat Politique de la ville</skos:altLabel>
     <skos:narrower>
       <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/accession-a-la-propriete">
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Accession à la propriété</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Accession Propriété</skos:altLabel>
+        <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Accession à la propriété</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
@@ -535,6 +581,11 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Besoins en logements</skos:prefLabel>
+        <skos:definition xml:lang="fr">Demande de logement social, accueil des gens du voyage</skos:definition>
+        <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Besoins en logement</skos:altLabel>
+        <skos:altLabel xml:lang="fr">gens-du-voyage</skos:altLabel>
+        <skos:altLabel xml:lang="fr">gens-voyage</skos:altLabel>
+        <ns0:regexp xml:lang="fr">gens du voyage</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -543,6 +594,15 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Construction</skos:prefLabel>
+        <skos:definition xml:lang="fr">Zones d'instruction des permis de construire, nombre de logements, SHON, nombre de logements
+autorisés, statistiques de permis de construire, règles de construction
+</skos:definition>
+        <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Construction</skos:altLabel>
+        <skos:altLabel xml:lang="fr">permis-de-construire</skos:altLabel>
+        <skos:altLabel xml:lang="fr">regles-de-construction</skos:altLabel>
+        <skos:altLabel xml:lang="fr">sitadel</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Construction de logements</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Construction de locaux</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -551,6 +611,8 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Habitat indigne</skos:prefLabel>
+        <skos:definition xml:lang="fr">Inventaire de l'habitat susceptible d'être indigne</skos:definition>
+        <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Habitat indigne</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
@@ -559,6 +621,11 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Occupation des logements</skos:prefLabel>
+        <skos:definition xml:lang="fr">Aides au logements, taux d'occupation, suivi des loyers, ...</skos:definition>
+        <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Occupation des logements</skos:altLabel>
+        <skos:altLabel xml:lang="fr">loyer</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Bâtiment majoritairement d'activités vacant</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Local d'activités vacant</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -567,6 +634,11 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Parc locatif social</skos:prefLabel>
+        <skos:definition xml:lang="fr">Zonage du locatif, hébergement d'urgence, logements en prêt locatif, PALULOS</skos:definition>
+        <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Parc locatif social</skos:altLabel>
+        <skos:altLabel xml:lang="fr">bailleurs-sociaux</skos:altLabel>
+        <skos:altLabel xml:lang="fr">logement-locatif-social</skos:altLabel>
+        <ns0:regexp xml:lang="fr">hébergement d'urgence</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -575,6 +647,10 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Parc de logements</skos:prefLabel>
+        <skos:definition xml:lang="fr">Résidences principales collectives, logements vacants, résidences secondaires</skos:definition>
+        <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Parc Logements</skos:altLabel>
+        <skos:altLabel xml:lang="fr">parc-logements</skos:altLabel>
+        <skos:altLabel xml:lang="fr">logements-vacants</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
@@ -583,6 +659,28 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Politique de la ville</skos:prefLabel>
+        <skos:definition xml:lang="fr">PRU, Opération programmée pour l'amélioration de l'habitat (OPAH), SRU, ZUS, ZRU,
+quartier prioritaire, Programme local de l'habitat (PLH),
+Contrat urbain de cohésion sociale (CUCS) ...
+</skos:definition>
+        <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Politique</skos:altLabel>
+        <skos:altLabel xml:lang="fr">politique-de-la-ville</skos:altLabel>
+        <skos:altLabel xml:lang="fr">ZUS</skos:altLabel>
+        <skos:altLabel xml:lang="fr">habitat_politique_de_la_ville/n_politique</skos:altLabel>
+        <skos:altLabel xml:lang="fr">logement politique de la ville : politique de la ville</skos:altLabel>
+        <skos:altLabel xml:lang="fr">CUCS</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Quartiers? prioritaires?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Contrat urbain de cohésion sociale</ns0:regexp>
+        <ns0:regexp xml:lang="fr">ZUS</ns0:regexp>
+        <ns0:regexp xml:lang="fr">SRU</ns0:regexp>
+        <ns0:regexp xml:lang="fr">ZRU</ns0:regexp>
+        <ns0:regexp xml:lang="fr">PRU</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Programmes? loca(l|ux) de l'habitat</ns0:regexp>
+        <ns0:regexp xml:lang="fr">PLH</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Opération programmée d'amélioration de l'habitat</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Opération Programmée pour l'Amélioration de l'Habitat</ns0:regexp>
+        <ns0:regexp xml:lang="fr">OPAH</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Programme d'intérêt général \(PIG\) habitat</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -591,6 +689,10 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Rénovation urbaine</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Rénovation</skos:altLabel>
+        <ns0:regexp xml:lang="fr">ANAH</ns0:regexp>
+        <ns0:regexp xml:lang="fr">rénovation urbaine</ns0:regexp>
+        <ns0:regexp xml:lang="fr">ANRU</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -600,11 +702,57 @@ eau souterraine, connaissance des zones, humides, ...)
     <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
     <skos:prefLabel xml:lang="fr">Mer et littoral</skos:prefLabel>
+    <skos:changeNote xml:lang="fr">Par rapport au thème Covadis 'Mer Littoral', suppression des sous-thèmes 'Culture marine', 'Pêche maritime'
+et 'Autres activités' remontés dans le thème parent de 1er niveau.
+</skos:changeNote>
+    <skos:altLabel xml:lang="fr">Mer Littoral/Culture marine</skos:altLabel>
+    <skos:altLabel xml:lang="fr">crustaces</skos:altLabel>
+    <skos:altLabel xml:lang="fr">bulots</skos:altLabel>
+    <skos:altLabel xml:lang="fr">moules</skos:altLabel>
+    <skos:altLabel xml:lang="fr">autres-coquillages</skos:altLabel>
+    <skos:altLabel xml:lang="fr">aquaculture</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Mer Littoral/Pêche maritime</skos:altLabel>
+    <skos:altLabel xml:lang="fr">peche</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Mer Littoral/Autres activités</skos:altLabel>
+    <skos:altLabel xml:lang="fr">dragues</skos:altLabel>
+    <skos:altLabel xml:lang="fr">granulats-marins</skos:altLabel>
+    <ns0:regexp xml:lang="fr">conchylicole</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Concessions? de cultures marines</ns0:regexp>
+    <ns0:regexp xml:lang="fr">parcs ostréicoles</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Parcs à palourdes</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Gisements de coquillages</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Gisements coquillers</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Classement sanitaire des zones conchylicoles</ns0:regexp>
+    <ns0:regexp xml:lang="fr">mytilicole</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Zones de pêche</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Réserve de pêche</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Limites de pêche</ns0:regexp>
+    <ns0:regexp xml:lang="fr">cantonnements? de pêche</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Éolien posé</ns0:regexp>
+    <ns0:regexp xml:lang="fr">Éolien flottant</ns0:regexp>
+    <ns0:regexp xml:lang="fr">énergie houlomotrice</ns0:regexp>
+    <ns0:regexp xml:lang="fr">hydrolien</ns0:regexp>
     <skos:narrower>
       <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ecologie-du-littoral">
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Écologie du littoral</skos:prefLabel>
+        <skos:definition xml:lang="fr">Évolution du trait de côte, qualité des eaux littorales, sites du conservatoire, Avifaune,
+habitats naturels, arrêtés de biotope en mer, ZNIEFF en mer, sites inscrits/classés en mer,
+PNR en mer, RAMSAR, Natura 2000 en mer, réserves naturelles en mer, sites ENS du CG,
+mammifères marins, Indicateurs de sensibilité, Inventaire permanent du LIttoral (IPLI)
+</skos:definition>
+        <skos:altLabel xml:lang="fr">Mer Littoral/Écologie du littoral</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Traits? de côte</ns0:regexp>
+        <ns0:regexp xml:lang="fr">habitats marins</ns0:regexp>
+        <ns0:regexp xml:lang="fr">habitats côtiers</ns0:regexp>
+        <ns0:regexp xml:lang="fr">habitats récifaux</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Nature de l'estran</ns0:regexp>
+        <ns0:regexp xml:lang="fr">herbiers de Zostera</ns0:regexp>
+        <ns0:regexp xml:lang="fr">tortues marines</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Sites? du Conservatoire du Littoral</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Inventaire permanent du LIttoral</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Qualité des eaux de baignade</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -613,6 +761,16 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Limite administrative spéciale en mer et sur le littoral</skos:prefLabel>
+        <skos:definition xml:lang="fr">Zone d'activité des préfectures maritimes, ligne de base, limite des 300m, limites des 1-3-6-12 miles
+nautiques, ZEE, limites des communes et des départements en mer, limite du domaine public, limite de salure
+des eaux, Lignes Transversales de la Mer, planification maritime
+</skos:definition>
+        <skos:altLabel xml:lang="fr">Mer Littoral/Limite administrative spéciale</skos:altLabel>
+        <skos:altLabel xml:lang="fr">3-milles</skos:altLabel>
+        <skos:altLabel xml:lang="fr">eaux-interieure</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Bande des 300 m du littoral</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zone des 12 milles</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Planification des espaces maritimes</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -621,6 +779,9 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Lutte anti-pollution en mer et sur le littoral</skos:prefLabel>
+        <skos:definition xml:lang="fr">Plan de pose de barrages, CNPE, plan de gestion de polluants</skos:definition>
+        <skos:altLabel xml:lang="fr">Mer Littoral/Lutte anti-pollution</skos:altLabel>
+        <ns0:regexp xml:lang="fr">plans? de protection POLMAR</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -629,6 +790,21 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Navigation maritime</skos:prefLabel>
+        <skos:definition xml:lang="fr">Plaisance et mouillage, zones portuaires, nautique, plan de balisage, zones militaires, câbles sous-marins,
+cantonnements, zones de navigation, balises/épaves, activités des CROSS, formation et qualification
+des gens de mer
+</skos:definition>
+        <skos:altLabel xml:lang="fr">Mer Littoral/Navigation maritime</skos:altLabel>
+        <skos:altLabel xml:lang="fr">cross</skos:altLabel>
+        <skos:altLabel xml:lang="fr">cantonnement</skos:altLabel>
+        <skos:altLabel xml:lang="fr">sauvetage</skos:altLabel>
+        <skos:altLabel xml:lang="fr">enseignement-maritime</skos:altLabel>
+        <skos:altLabel xml:lang="fr">formations-maritimes</skos:altLabel>
+        <skos:altLabel xml:lang="fr">gens-de-mer</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Mouillages</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Dispositif de séparation de trafics</ns0:regexp>
+        <ns0:regexp xml:lang="fr">protection épave</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Épave dangereuse</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -637,6 +813,24 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Topographie en mer et sur le littoral</skos:prefLabel>
+        <skos:definition xml:lang="fr">Trait de côte, typologie de l'estran, bathymétrie, sédimentologie, zones de sable, granulométrie, ESI, houle,
+marées, zones inondables, rejets en mer, prises d'eau, sentier littoral, accès au DPM, aires de stationnement,
+sites industriels, amers remarquables, cartes de navigation électroniques
+</skos:definition>
+        <skos:altLabel xml:lang="fr">Mer Littoral/Topographie</skos:altLabel>
+        <ns0:regexp xml:lang="fr">Ouvrages statiques littoraux</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Ouvrages et aménagements littoraux</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Ouvrages côtiers</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Nature des côtes</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Défenses de côtes</ns0:regexp>
+        <ns0:regexp xml:lang="fr">accès au DPM</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Accès au littoral</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Ortho-littorale</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Ortho littorale</ns0:regexp>
+        <ns0:regexp xml:lang="fr">prises d'eau de mer</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Sentier du Littoral</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Artificialisation côte</ns0:regexp>
+        <ns0:regexp xml:lang="fr">exutoires</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
@@ -645,6 +839,8 @@ eau souterraine, connaissance des zones, humides, ...)
         <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheresthemes"/>
         <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Chasse maritime</skos:prefLabel>
+        <skos:definition xml:lang="fr">Zones de chasse réglementée, concession baux</skos:definition>
+        <skos:altLabel xml:lang="fr">Mer Littoral/Chasse maritime</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 

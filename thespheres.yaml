@@ -9,7 +9,7 @@ description: |
   Mapping avec EuroVoc en cours.
 $schema: thespheres
 
-prefix: # liste des préfixes utilisés
+prefix: # dictionnaire des préfixes utilisés
   skos: http://www.w3.org/2004/02/skos/core#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   dct: http://purl.org/dc/terms/
@@ -17,12 +17,36 @@ prefix: # liste des préfixes utilisés
   themes: http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/
   espsyntax: http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#
   eurovoc: http://eurovoc.europa.eu/
+  foaf: http://xmlns.com/foaf/0.1/
+  persons: http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/
 
-skos:ConceptScheme:
+skos:ConceptScheme: # dictionnaire des schémas de concepts, le premier est celui par défaut des concepts
   ecospheres:themes:
     dct:title: {fr: "Liste des thèmes d'Ecosphères"}
-    dct:description: {fr: "Publiée par Benoit DAVID - 5/7/2022"}
-    dct:modified: {x: "2022-07-07T12:15:00+02:00"}
+    dct:description:
+      fr: |
+        Les thèmes Ecosphères sont utilisés dans le guichet de la donnée de la transition écologique.  
+        Ils reprennent les thèmes définis par l'arborescence Covadis et sont structurés conformément
+        au [standard SKOS du W3C]().  
+        A chaque concept est associé:
+          
+          - des altLabels et des regexps correspondant aux mots-clés rencontrés dans les catalogues
+            moissonnés par le guichet,
+          - une correspondance avec EuroVoc dans la mesure du possible.
+        La constitution de ce thésaurus est en cours.  
+        Version publiée par Benoit DAVID le 7/7/2022.
+    dct:creator:
+      persons:BenoitDavid:
+        rdf:type: foaf:Person
+        foaf:name: {x: Benoît David}
+      persons:LeslieLemaire:
+        rdf:type: foaf:Person
+        foaf:name: {x: Leslie Lemaire}
+    dct:contributor:
+      persons:GillesGuillouet:
+        rdf:type: foaf:Person
+        foaf:name: {x: Gilles Guillouet}
+    dct:modified: {x: "2022-07-08T08:40:00+02:00"}
     dct:license: https://www.etalab.gouv.fr/licence-ouverte-open-licence
   eurovoc:100141:
     dct:title: {fr: "Thésaurus multilingue EuroVoc"}
@@ -40,6 +64,7 @@ skos:ConceptScheme:
 
         Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, l'Office des publications de l'UE, les parlements nationaux et régionaux d'Europe, ainsi que les gouvernements nationaux et les utilisateurs privés du monde entier.
     dct:modified: {x: "2021-12-17"}
+
 skos:Concept:
   themes:climat:
     skos:prefLabel: {fr: Climat}
@@ -367,55 +392,262 @@ skos:Concept:
     skos:narrower:
       themes:foncier-agricole:
         skos:prefLabel: {fr: "Foncier agricole"}
+        skos:definition: {fr: "definition: Divisions, regroupements, changement propriétaires"}
         skos:altLabel:
-          - {fr: xx}
-        espsyntax:regexp:
-          - {fr: xx}
+          - {fr: Foncier Sol/Foncier agricole}
       themes:mutation-fonciere:
         skos:prefLabel: {fr: "Mutation foncière"}
+        skos:definition: {fr: "Remembrement, travaux connexes"}
+        skos:altLabel:
+          - {fr: "Foncier Sol/Mutation foncière"}
       themes:occupation-du-sol:
         skos:prefLabel: {fr: "Occupation du sol"}
+        skos:altLabel:
+          - {fr: "Foncier Sol/Occupation du sol"}
+          - {fr: "usage du sol"}
+          - {fr: "OCCUPATION SOL"}
+        espsyntax:regexp:
+          - {fr: "Occupation des sols"}
+          - {fr: "Occupation du sol"}
+          - {fr: "Corine Land Cover"}
+          - {fr: "Espaces bâtis"}
       themes:propriete-fonciere:
         skos:prefLabel: {fr: "Propriété foncière"}
+        skos:scopeNote: {fr: "intègre le cadastre et le définition du domaine public"}
+        skos:altLabel:
+          - {fr: "Foncier Sol/Propriété foncière"}
+        espsyntax:regexp:
+          - {fr: "Domaine Public"}
+          - {fr: "parcellaire"}
+          - {fr: ""}
   
   themes:habitat-et-politique-de-la-ville:
     skos:prefLabel: {fr: "Habitat et politique de la ville"}
+    skos:altLabel:
+      - {fr: "Habitat Politique de la ville"}
     skos:narrower:
       themes:accession-a-la-propriete:
         skos:prefLabel: {fr: "Accession à la propriété"}
+        skos:altLabel:
+          - {fr: "Habitat Politique de la ville/Accession Propriété"}
+          - {fr: "Habitat Politique de la ville/Accession à la propriété"}
       themes:besoins-en-logements:
         skos:prefLabel: {fr: "Besoins en logements"}
+        skos:definition: {fr: "Demande de logement social, accueil des gens du voyage"}
+        skos:altLabel:
+          - {fr: "Habitat Politique de la ville/Besoins en logement"}
+          - {fr: "gens-du-voyage"}
+          - {fr: "gens-voyage"}
+        espsyntax:regexp:
+          - {fr: "gens du voyage"}
       themes:construction:
         skos:prefLabel: {fr: "Construction"}
+        skos:definition:
+          fr: |
+            Zones d'instruction des permis de construire, nombre de logements, SHON, nombre de logements
+            autorisés, statistiques de permis de construire, règles de construction
+        skos:altLabel:
+          - {fr: "Habitat Politique de la ville/Construction"}
+          - {fr: "permis-de-construire"}
+          - {fr: "regles-de-construction"}
+          - {fr: "sitadel"}
+        espsyntax:regexp:
+          - {fr: "Construction de logements"}
+          - {fr: "Construction de locaux"}
       themes:habitat-indigne:
         skos:prefLabel: {fr: "Habitat indigne"}
+        skos:definition: {fr: "Inventaire de l'habitat susceptible d'être indigne"}
+        skos:altLabel:
+          - {fr: "Habitat Politique de la ville/Habitat indigne"}
       themes:occupation-des-logements:
         skos:prefLabel: {fr: "Occupation des logements"}
+        skos:definition: {fr: "Aides au logements, taux d'occupation, suivi des loyers, ..."}
+        skos:altLabel:
+          - {fr: "Habitat Politique de la ville/Occupation des logements"}
+          - {fr: "loyer"}
+        espsyntax:regexp:
+          - {fr: "Bâtiment majoritairement d'activités vacant"}
+          - {fr: "Local d'activités vacant"}
       themes:parc-locatif-social:
         skos:prefLabel: {fr: "Parc locatif social"}
+        skos:definition: {fr: "Zonage du locatif, hébergement d'urgence, logements en prêt locatif, PALULOS"}
+        skos:altLabel:
+          - {fr: "Habitat Politique de la ville/Parc locatif social"}
+          - {fr: "bailleurs-sociaux"}
+          - {fr: "logement-locatif-social"}
+        espsyntax:regexp:
+          - {fr: "hébergement d'urgence"}
       themes:parc-de-logements:
         skos:prefLabel: {fr: "Parc de logements"}
+        skos:definition: {fr: "Résidences principales collectives, logements vacants, résidences secondaires"}
+        skos:altLabel:
+          - {fr: "Habitat Politique de la ville/Parc Logements"}
+          - {fr: "parc-logements"}
+          - {fr: "logements-vacants"}
       themes:politique-de-la-ville:
         skos:prefLabel: {fr: "Politique de la ville"}
+        skos:definition:
+          fr: |
+            PRU, Opération programmée pour l'amélioration de l'habitat (OPAH), SRU, ZUS, ZRU,
+            quartier prioritaire, Programme local de l'habitat (PLH),
+            Contrat urbain de cohésion sociale (CUCS) ...
+        skos:altLabel:
+          - {fr: "Habitat Politique de la ville/Politique"}
+          - {fr: "politique-de-la-ville"}
+          - {fr: "ZUS"}
+          - {fr: "habitat_politique_de_la_ville/n_politique"}
+          - {fr: "logement politique de la ville : politique de la ville"}
+          - {fr: "CUCS"}
+        espsyntax:regexp:
+          - {fr: "Quartiers? prioritaires?"}
+          - {fr: "Contrat urbain de cohésion sociale"}
+          - {fr: "ZUS"}
+          - {fr: "SRU"}
+          - {fr: "ZRU"}
+          - {fr: "PRU"}
+          - {fr: "Programmes? loca(l|ux) de l'habitat"}
+          - {fr: "PLH"}
+          - {fr: "Opération programmée d'amélioration de l'habitat"}
+          - {fr: "Opération Programmée pour l'Amélioration de l'Habitat"}
+          - {fr: "OPAH"}
+          - {fr: "Programme d'intérêt général \\(PIG\\) habitat"}
       themes:renovation-urbaine:
         skos:prefLabel: {fr: "Rénovation urbaine"}
+        skos:altLabel:
+          - {fr: "Habitat Politique de la ville/Rénovation"}
+        espsyntax:regexp:
+          - {fr: "ANAH"}
+          - {fr: "rénovation urbaine"}
+          - {fr: "ANRU"}
   
   themes:mer-et-littoral:
     skos:prefLabel: {fr: "Mer et littoral"}
+    skos:changeNote:
+      fr: |
+        Par rapport au thème Covadis 'Mer Littoral', suppression des sous-thèmes 'Culture marine', 'Pêche maritime'
+        et 'Autres activités' remontés dans le thème parent de 1er niveau.
+    skos:altLabel:
+      - {fr: "Mer Littoral/Culture marine"}
+      - {fr: "crustaces"}
+      - {fr: "bulots"}
+      - {fr: "moules"}
+      - {fr: "autres-coquillages"}
+      - {fr: "aquaculture"}
+      - {fr: "Mer Littoral/Pêche maritime"}
+      - {fr: "peche"} # je privilégie la pêche maritime à celle en eaux intérieures
+      - {fr: "Mer Littoral/Autres activités"}
+      - {fr: "dragues"}
+      - {fr: "granulats-marins"}
+    espsyntax:regexp:
+      - {fr: "conchylicole"}
+      - {fr: "Concessions? de cultures marines"}
+      - {fr: "parcs ostréicoles"}
+      - {fr: "Parcs à palourdes"}
+      - {fr: "Gisements de coquillages"}
+      - {fr: "Gisements coquillers"}
+      - {fr: "Classement sanitaire des zones conchylicoles"}
+      - {fr: "mytilicole"}
+      - {fr: "Zones de pêche"}
+      - {fr: "Réserve de pêche"}
+      - {fr: "Limites de pêche"}
+      - {fr: "cantonnements? de pêche"}
+      - {fr: "Éolien posé"}
+      - {fr: "Éolien flottant"}
+      - {fr: "énergie houlomotrice"}
+      - {fr: "hydrolien"}
     skos:narrower:
       themes:ecologie-du-littoral:
         skos:prefLabel: {fr: "Écologie du littoral"}
+        skos:definition:
+          fr: |
+            Évolution du trait de côte, qualité des eaux littorales, sites du conservatoire, Avifaune,
+            habitats naturels, arrêtés de biotope en mer, ZNIEFF en mer, sites inscrits/classés en mer,
+            PNR en mer, RAMSAR, Natura 2000 en mer, réserves naturelles en mer, sites ENS du CG,
+            mammifères marins, Indicateurs de sensibilité, Inventaire permanent du LIttoral (IPLI)
+        skos:altLabel:
+          - {fr: "Mer Littoral/Écologie du littoral"}
+        espsyntax:regexp:
+          - {fr: "Traits? de côte"}
+          - {fr: "habitats marins"}
+          - {fr: "habitats côtiers"}
+          - {fr: "habitats récifaux"}
+          - {fr: "Nature de l'estran"}
+          - {fr: "herbiers de Zostera"}
+          - {fr: "tortues marines"}
+          - {fr: "Sites? du Conservatoire du Littoral"}
+          - {fr: "Inventaire permanent du LIttoral"}
+          - {fr: "Qualité des eaux de baignade"}
       themes:limite-administrative-speciale-en-mer:
         skos:prefLabel: {fr: "Limite administrative spéciale en mer et sur le littoral"}
+        skos:definition:
+          fr: |
+            Zone d'activité des préfectures maritimes, ligne de base, limite des 300m, limites des 1-3-6-12 miles
+            nautiques, ZEE, limites des communes et des départements en mer, limite du domaine public, limite de salure
+            des eaux, Lignes Transversales de la Mer, planification maritime
+        skos:altLabel:
+          - {fr: "Mer Littoral/Limite administrative spéciale"}
+          - {fr: "3-milles"}
+          - {fr: "eaux-interieure"}
+        espsyntax:regexp:
+          - {fr: "Bande des 300 m du littoral"}
+          - {fr: "Zone des 12 milles"}
+          - {fr: "Planification des espaces maritimes"}
       themes:lutte-anti-pollution-en-mer:
         skos:prefLabel: {fr: "Lutte anti-pollution en mer et sur le littoral"}
+        skos:definition: {fr: "Plan de pose de barrages, CNPE, plan de gestion de polluants"}
+        skos:altLabel:
+          - {fr: "Mer Littoral/Lutte anti-pollution"}
+        espsyntax:regexp:
+          - {fr: "plans? de protection POLMAR"}
       themes:navigation-maritime:
         skos:prefLabel: {fr: "Navigation maritime"}
+        skos:definition:
+          fr: |
+            Plaisance et mouillage, zones portuaires, nautique, plan de balisage, zones militaires, câbles sous-marins,
+            cantonnements, zones de navigation, balises/épaves, activités des CROSS, formation et qualification
+            des gens de mer
+        skos:altLabel:
+          - {fr: "Mer Littoral/Navigation maritime"}
+          - {fr: "cross"}
+          - {fr: "cantonnement"}
+          - {fr: "sauvetage"}
+          - {fr: "enseignement-maritime"}
+          - {fr: "formations-maritimes"}
+          - {fr: "gens-de-mer"}
+        espsyntax:regexp:
+          - {fr: "Mouillages"}
+          - {fr: "Dispositif de séparation de trafics"}
+          - {fr: "protection épave"}
+          - {fr: "Épave dangereuse"}
       themes:topographie-en-mer:
         skos:prefLabel: {fr: "Topographie en mer et sur le littoral"}
+        skos:definition:
+          fr: |
+            Trait de côte, typologie de l'estran, bathymétrie, sédimentologie, zones de sable, granulométrie, ESI, houle,
+            marées, zones inondables, rejets en mer, prises d'eau, sentier littoral, accès au DPM, aires de stationnement,
+            sites industriels, amers remarquables, cartes de navigation électroniques
+        skos:altLabel:
+          - {fr: "Mer Littoral/Topographie"}
+        espsyntax:regexp:
+          - {fr: "Ouvrages statiques littoraux"}
+          - {fr: "Ouvrages et aménagements littoraux"}
+          - {fr: "Ouvrages côtiers"}
+          - {fr: "Nature des côtes"}
+          - {fr: "Défenses de côtes"}
+          - {fr: "accès au DPM"}
+          - {fr: "Accès au littoral"}
+          - {fr: "Ortho-littorale"}
+          - {fr: "Ortho littorale"}
+          - {fr: "prises d'eau de mer"}
+          - {fr: "Sentier du Littoral"}
+          - {fr: "Artificialisation côte"}
+          - {fr: "exutoires"}
       themes:chasse-maritime:
         skos:prefLabel: {fr: "Chasse maritime"}
-  
+        skos:definition: {fr: "Zones de chasse réglementée, concession baux"}
+        skos:altLabel:
+          - {fr: "Mer Littoral/Chasse maritime"}
+          
   themes:nature-paysages-et-biodiversite:
     skos:prefLabel: {fr: "Nature, paysages et biodiversité"}
     skos:narrower:
@@ -526,8 +758,6 @@ skos:Concept:
       themes:infrastructure-routiere:
         skos:prefLabel: {fr: "Infrastructure routière"}
   
-  # Les concepts EuroVoc utilisés
-  
 children:
   AIR_CLIMAT:
     children:
@@ -544,337 +774,6 @@ children:
           - particules
           - pm10
           - pm25
-  FONCIER_SOL:
-    short: G
-    children:
-      N_FONCIER_AGRICOLE:
-        short: G1
-        definition: Divisions, regroupements, changement propriétaires
-        altLabels:
-          - Foncier Sol/Foncier agricole
-      N_MUTATION_FONCIERE:
-        short: G2
-        definition: Remembrement, travaux connexes
-        altLabels:
-          - Foncier Sol/Mutation foncière
-      N_OCCUPATION_SOL:
-        short: G3
-        definition: Hors Corine Land Cover (classée en référentiels pour l'instant)
-        note: réintégration Corine Land Cover
-        altLabels:
-          - Foncier Sol/Occupation du sol
-          - usage du sol
-        hiddenLabels:
-          - OCCUPATION SOL
-        regexps:
-          - Occupation des sols
-          - Occupation du sol
-          - Corine Land Cover
-          - Espaces bâtis
-      N_PROPRIETE_FONCIERE:
-        short: G4
-        definition: Propriétés bâties et non bâties
-        note: y compris cadastre, domaine public
-        altLabels:
-          - Foncier Sol/Propriété foncière
-        regexps:
-          - Domaine Public
-          - parcellaire
-  FORET:
-    short: H
-    hiddenLabels:
-      - Forêt/Forêt
-      - forêts
-      - forêt
-    children:
-      N_DESCRIPTION:
-        short: H1
-        definition: Espaces spécifiques, voirie et équipements hors DFCI
-        altLabels:
-          - Forêt/Description
-        regexps:
-          - Formations forestières
-      N_DFCI:
-        short: H2
-        definition: Chemins d'accès, zonages, …
-        altLabels:
-          - Forêt/DFCI
-          - DFCI
-          - feu-de-foret
-          - foret-dfci
-          - incendie-de-foret
-        regexps:
-          - DFCI
-          - défrichement
-          - incendie de forêt
-      N_GESTION:
-        short: H3
-        definition: PSG, réglementation des boisements, forêts de protection
-        altLabels:
-          - Forêt/Gestion
-        hiddenLabels:
-          - gestion foret
-      N_REGLEMENT:
-        short: H4
-        definition: |
-          Dossiers et descriptif : massifs boisés, forêts, forêts soumises, exploitations forestières, chemins
-          d'exploitation, parcelles de pépinières, …
-        altLabels:
-          - Forêt/Règlement
-        regexps:
-          - Forêts publiques
-      N_TRANSFORMATION:
-        short: H5
-        definition: Industries associés ou dérivées
-        altLabels:
-          - Forêt/Transformation
-  HABITAT_POLITIQUE_DE_LA_VILLE:
-    short: I
-    altLabels:
-      - Habitat Politique de la ville
-    children:
-      N_ACCESSION_PROPRIETE:
-        short: I1
-        definition: Zonages A, B et C, prêt à taux zéro
-        altLabels:
-          - Habitat Politique de la ville/Accession Propriété
-        hiddenLabels:
-          - Habitat Politique de la ville/Accession à la propriété
-      N_BESOINS_EN_LOGEMENT:
-        short: I2
-        definition: Demande de logement social, accueil des gens du voyage
-        note: plus hébergement d'urgence
-        altLabels:
-          - Habitat Politique de la ville/Besoins en logement
-          - gens-du-voyage
-          - gens-voyage
-        regexps:
-          - gens du voyage
-          - hébergement d'urgence 
-      N_CONSTRUCTION:
-        short: I3
-        definition: Zones  d'instruction des PC, nombre de logements, SHON, nombre de logements autorisés
-        note: y compris statistiques de permis de construire, règles de construction
-        altLabels:
-          - Habitat Politique de la ville/Construction
-          - permis-de-construire
-          - regles-de-construction
-          - sitadel
-        regexps:
-          - Construction de logements
-          - Construction de locaux
-      N_HABITAT_INDIGNE:
-        short: I4
-        definition: Inventaire de l'habitat susceptible d'être indigne
-        altLabels:
-          - Habitat Politique de la ville/Habitat indigne
-      N_OCCUPATION_LOGEMENTS:
-        short: I5
-        definition: Aides au logements, taux d'occupation
-        note: y compris suivi des loyers
-        altLabels:
-          - Habitat Politique de la ville/Occupation des logements
-          - loyer
-        regexps:
-          - Bâtiment majoritairement d'activités vacant
-          - Local d'activités vacant
-      N_PARC_LOCATIF_SOCIAL:
-        short: I6
-        definition: Zonage du locatif, hébergement d'urgence, logements en prêt locatif, PALULOS
-        altLabels:
-          - Habitat Politique de la ville/Parc locatif social
-          - bailleurs-sociaux
-          - logement-locatif-social
-      N_PARC_LOGEMENTS:
-        short: I7
-        definition: Résidences principales collectives, logements vacants, résidences secondaires
-        altLabels:
-          - Habitat Politique de la ville/Parc Logements
-          - parc-logements
-          - logements-vacants
-      N_POLITIQUE:
-        short: I8
-        definition: PRU, OPAH, SRU, ZUS, ZRU, ...
-        note: |
-          y compris quartier prioritaire, Programme local de l'habitat (PLH), Contrat urbain de cohésion sociale (CUCS)
-        altLabels:
-          - Habitat Politique de la ville/Politique
-          - politique-de-la-ville
-          - ZUS
-        hiddenLabels:
-          - habitat_politique_de_la_ville/n_politique
-          - "logement politique de la ville : politique de la ville"
-          - CUCS
-        regexps:
-          - Quartiers? prioritaires?
-          - Contrat urbain de cohésion sociale
-          - ZUS
-          - SRU
-          - ZRU
-          - PRU
-          - Programmes? loca(l|ux) de l'habitat
-          - PLH
-          - Opération programmée d'amélioration de l'habitat
-          - Opération Programmée pour l'Amélioration de l'Habitat
-          - OPAH
-          - Programme d'intérêt général \(PIG\) habitat
-      N_RENOVATION:
-        short: I9
-        definition: Financement ANAH, logements loyer intermédiaire
-        altLabels:
-          - Habitat Politique de la ville/Rénovation
-        regexps:
-          - ANAH
-          - rénovation urbaine
-          - ANRU
-  MER_LITTORAL:
-    short: J
-    children:
-      N_AUTRES_ACTIVITES:
-        short: J1
-        definition: Zones de drague, art dormant, Granulats marins, projets off-shore (y compris éoliennes ?)
-        note: y compris éoliennes en mer et énergie houlomotrice
-        altLabels:
-          - Mer Littoral/Autres activités
-          - dragues
-          - granulats-marins
-        regexps:
-          - Éolien posé
-          - Éolien flottant
-          - énergie houlomotrice
-          - hydrolien
-      N_CHASSE_MARITIME:
-        short: J2
-        definition: Zones de chasse réglementée, concession baux
-        altLabels:
-          - Mer Littoral/Chasse maritime
-      N_CULTURE_MARINE:
-        short: J3
-        definition: Cadastre conchylicole, classement sanitaire des zones de production des coquillages
-        altLabels:
-          - Mer Littoral/Culture marine
-          - crustaces
-          - bulots
-          - moules
-          - autres-coquillages
-          - aquaculture
-        regexps:
-          - conchylicole
-          - Concessions? de cultures marines
-          - parcs ostréicoles
-          - Parcs à palourdes
-          - Gisements de coquillages
-          - Gisements coquillers
-          - Classement sanitaire des zones conchylicoles
-          - mytilicole
-      N_ECOLOGIE_LITTORAL:
-        short: J4
-        definition: |
-          Évolution du trait de côte, qualité des eaux littorales, sites du conservatoire, Avifaune, habitats naturels,
-          arrêtés de biotope en mer, ZNIEFF en mer, sites inscrits/classés en mer, PNR en mer, RAMSAR, Natura 2000 en mer,
-          réserves naturelles en mer, sites ENS du CG, mammifères marins, Indicateurs de sensibilité
-        note: plus Inventaire permanent du LIttoral (IPLI)
-        altLabels:
-          - Mer Littoral/Écologie du littoral
-        regexps:
-          - Traits? de côte
-          - habitats marins
-          - habitats côtiers
-          - habitats récifaux
-          - Nature de l'estran
-          - herbiers de Zostera
-          - tortues marines
-          - Sites? du Conservatoire du Littoral
-          - Inventaire permanent du LIttoral
-          - Qualité des eaux de baignade
-      N_LIM_ADMIN_SPECIALE:
-        short: J5
-        definition: |
-          Zone d'activité des préfectures maritimes, ligne de base, limite des 300m, limites des 1-3-6-12 miles nautiques
-          (ZEE), limites des communes et des départements en mer, limite du domaine public, limite de salure des eaux,
-          Lignes Transversales de la Mer
-        note: plus planification maritime
-        altLabels:
-          - Mer Littoral/Limite administrative spéciale
-        hiddenLabels:
-          - 3-milles
-          - eaux-interieure
-        regexps:
-          - Bande des 300 m du littoral
-          - Zone des 12 milles
-          - Planification des espaces maritimes
-      N_LUTTE_ANTI-POLLUTION:
-        short: J6
-        definition: Plan de pose de barrages, CNPE, plan de gestion de polluants
-        altLabels:
-          - Mer Littoral/Lutte anti-pollution
-        regexps:
-          - plans? de protection POLMAR
-      N_NAVIGATION_MARITIME:
-        short: J7
-        definition: |
-          Plaisance et mouillage, zones portuaires, nautique, plan de balisage, zones militaires, câbles sous-marins,
-          cantonnements, zones de navigation, balises/épaves
-        note: |
-          Y compris activités des CROSS et formation et qualification des gens de mer
-        altLabels:
-          - Mer Littoral/Navigation maritime
-          - cross
-          - cantonnement
-          - sauvetage
-          - enseignement-maritime
-          - formations-maritimes
-          - gens-de-mer
-        regexps:
-          - Mouillages
-          - Dispositif de séparation de trafics
-          - protection épave
-          - Épave dangereuse
-      N_PECHE_MARITIME:
-        short: J8
-        definition: Zones de pêche, gisements d'espèce, zones de pêches réglementées, autorisation
-        altLabels:
-          - Mer Littoral/Pêche maritime
-          - peche # je privilégie la pêche maritime à celle en eaux intérieures
-          - coquille-saint-jacques
-        regexps:
-          - Zones de pêche
-          - Réserve de pêche
-          - Limites de pêche
-          - cantonnements? de pêche
-      N_TOPOGRAPHIE:
-        short: J9
-        definitionInitiale: |
-          Trait de côte Histolitt, trait de côte EUROSION, typologie du trait de côte, typologie de l'estran, bathymétrie,
-          sédimentologie, zones de sable, granulométrie, ESI, houle, marées, zones inondables, rejets en mer, prises d'eau,
-          sentier littoral, accès au DPM, aires de stationnement, sites industriels, campings, héliports/aérodromes,
-          amers remarquables, cartes de navigation électroniques
-        definition: |
-          Trait de côte, typologie de l'estran, bathymétrie, sédimentologie, zones de sable, granulométrie, ESI, houle,
-          marées, zones inondables, rejets en mer, prises d'eau, sentier littoral, accès au DPM, aires de stationnement,
-          sites industriels, amers remarquables, cartes de navigation électroniques
-        note: |
-          définition initiale un peu trop large avec risque de chevauchement avec d'autres thèmes
-          camping -> /CULTURE_SOCIETE_SERVICE/N_TOURISME
-          héliports/aérodromes -> /TRANSPORT_INFRASTRUCTURE/N_AERIEN
-        altLabels:
-          - Mer Littoral/Topographie
-        regexps:
-          - Ouvrages statiques littoraux
-          - Ouvrages et aménagements littoraux
-          - Ouvrages côtiers
-          - Nature des côtes
-          - Défenses de côtes
-          - accès au DPM
-          - Autorisation d'occupation temporaire du DPM
-          - Accès au littoral
-          - Ortho-littorale
-          - Ortho littorale
-          - Photos anciennes
-          - prises d'eau de mer
-          - Sentier du Littoral
-          - Artificialisation côte
-          - exutoires
   NATURE_PAYSAGE_BIODIVERSITE:
     short: K
     children:

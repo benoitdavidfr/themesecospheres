@@ -2,7 +2,7 @@ title: Schéma JSON de gestion des thèmes Ecosphères
 $id: https://github.com/benoitdavidfr/themesecospheres/blob/main/thespheres.schema.yaml
 $schema: http://json-schema.org/schema#
 description: |
-  Pour facilité la gestion des thèmes, ils peuvent être organisés sous la forme d'une hiérarchie.
+  Pour faciliter la gestion des thèmes, ils peuvent être organisés sous la forme d'une hiérarchie.
 definitions:
   Uri:
     description: URI
@@ -96,7 +96,7 @@ properties:
         $ref: '#/definitions/Uri'
   skos:ConceptScheme:
     description: |
-      Définition de Schéma de concepts. Le premier est le schéma par défaut des concepts.
+      Définition des Schéma de concepts. Le premier est le schéma par défaut des concepts.
       Les autres sont ceux avec lesquels le schéma par défaut est mis en correspondance (mapping).
     $ref: '#/definitions/setOfRdfResources'
   skos:Concept:
