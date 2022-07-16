@@ -220,6 +220,9 @@ abstract class RdfResource {
   // prend le contenu du fichier Yaml et construit la structure
   static function init(array $yaml, bool $short): void {
     self::$prefix = $yaml['prefix'];
+    foreach (self::$prefix as $name => &$uri) {
+      $uri = str_replace('http://registre.data.developpement-durable.gouv.fr/', 'http://registre/', $uri);
+    }
     foreach ($yaml['skos:ConceptScheme'] as $id => $resource) {
       new Scheme($id, $resource);
     }
@@ -293,6 +296,96 @@ abstract class RdfResource {
     $ttl .= Concept::allResourcesAsTurtle();
     return $ttl;
   }
+  
+  static function allAsRegistre(): array { // export selon le format de chargement du registre
+    $export = [
+      'title'=> "Définition des thèmes Ecopsphères dans le format d'import du registre",
+      'abstract'=> "Ce fichier comporte 6 chapitres",
+      '$schema'=> 'upload',
+      'chapters'=> [
+        'registre'=> [
+          'title'=> "Sous-registre Ecosphère(s)",
+          'put'=> [
+            '/ecospheres'=> [
+              'parent'=> '',
+              'type'=> 'R',
+              'title'=> 'Registre Ecosphère(s)',
+            ]
+          ],
+        ],
+        'scheme'=> [
+          'title'=> "les schémas des concepts",
+          'put'=> [],
+        ],
+        'concepts'=> [
+          'title'=> "les concepts",
+          'put'=> [],
+        ],
+        'deleteConcepts'=> [
+          'title'=> "Suppression des concepts",
+          'delete'=> [],
+        ],
+        'deleteScheme'=> [
+          'title'=> "Suppression du schéma des concepts",
+          'delete'=> [],
+        ],
+        'deleteRegistre'=> [
+          'title'=> "Suppression du registre Ecosphères",
+          'delete'=> [
+            '/ecospheres',  
+          ],
+        ],
+      ],
+    ];
+    
+    foreach (Scheme::$all as $schemeId => $scheme) {
+      $path = str_replace(
+        ['ecospheres:', 'eurovoc:', 'persons:'],
+        ['/ecospheres/', '/ecospheres/eurovoc/','/ecospheres/persons/'],
+        $schemeId);
+      $export['chapters']['scheme']['put'][$path] = Scheme::$all[$schemeId]->asRegistre($schemeId);
+      $export['chapters']['deleteScheme']['delete'][] = $path;
+    }
+    
+    foreach (Concept::$all as $id => $concept) {
+      $path = str_replace(
+        ['themes:', 'eurovoc:'],
+        ['/ecospheres/themes-ecospheres/', '/ecospheres/eurovoc/'],
+        $id);
+      $export['chapters']['concepts']['put'][$path] = $concept->asRegistre($id);
+      $export['chapters']['deleteConcepts']['delete'][] = $path;
+      //break;
+    }
+    return $export;
+  }
+  
+  function asHttl(string $id) { // Hyper Turtle
+    $ttl = str_replace('<','&lt;', $this->asTurtle($id));
+    foreach (self::$prefix as $prefix => $uri)
+      $ttl = preg_replace("!($prefix:([^ \\n;,\\.]+))!", "<a href='$uri$2'>$1</a>", $ttl);
+    return "<pre>$ttl</pre>\n";
+  }
+  
+  function asRegistre(string $id): array {
+    $ttl = '';
+    foreach (self::$prefix as $prefix => $uri)
+      $ttl .= "@prefix $prefix: <$uri> .\n";
+    $ttl .= "\n";
+    $ttl .= $this->asTurtle($id);
+    //die($ttl);
+    $graph = new \EasyRdf\Graph(Scheme::defaultSchemeId());
+    $graph->parse($ttl, 'turtle', Scheme::defaultSchemeId());
+    $ser = $graph->serialise('jsonld');
+    $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode(RdfResource::$prefix));
+    //echo beautifulYaml(Yaml::dump(json_decode(json_encode($compacted), true), 4, 2)),"\n";
+    return [
+      'parent'=> (get_class($this) == 'Scheme') ? '/ecospheres' : '/ecospheres/themes-ecospheres',
+      'type'=> 'E',
+      'title'=> $this->title(),
+      'jsonval'=> json_decode(json_encode($compacted), true),
+      'htmlval'=> $this->asHttl($id),
+    ];
+  }
 }
 
 class Scheme extends RdfResource { // sous-classe des schemas avec des traitements spécifiques à la création 
@@ -307,6 +400,16 @@ class Scheme extends RdfResource { // sous-classe des schemas avec des traitemen
     $this->prop = ['rdf:type'=> [self::Type]]; // rajout à chaque ressource de son type RDF
     $this->prop['skos:hasTopConcept'] = [];
     parent::__construct($id, $resource, $parent);
+  }
+
+  function title(): string {
+    if ($title = $this->prop['dct:title'] ?? null)
+      return $title[0]->asArray()['fr'];
+    elseif ($title = $this->prop['foaf:name'] ?? null) {
+      return $title[0]->asArray()['x'];
+    }
+    else
+      return "INCONNU";
   }
 };
 
@@ -331,6 +434,8 @@ class Concept extends RdfResource { // sous-classe des concepts avec des traitem
     // j'initialise les champs valables pour tte ressource
     parent::__construct($id, $resource, $parent);
   }
+
+  function title(): string { return $this->prop['skos:prefLabel'][0]->asArray()['fr']; }
 };
 
 RdfResource::init(Yaml::parseFile($argv[0]), $short);
@@ -368,6 +473,9 @@ else { // transformation par EasyRdf en jsonld, yamlld ou autre
       $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode(RdfResource::$prefix));
       echo beautifulYaml(Yaml::dump(json_decode(json_encode($compacted), true), 4, 2)),"\n";
       break;
+    }
+    case 'registre': {
+      die(Yaml::dump(RdfResource::allAsRegistre(), 8, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK));
     }
     default: {
       $ser = $graph->serialise($ofmt);

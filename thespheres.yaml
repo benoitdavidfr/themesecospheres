@@ -13,7 +13,7 @@ prefix: # dictionnaire des préfixes utilisés
   skos: http://www.w3.org/2004/02/skos/core#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   dct: http://purl.org/dc/terms/
-  ecospheres: http://registre.data.developpement-durable.gouv.fr/ecospheres
+  ecospheres: http://registre.data.developpement-durable.gouv.fr/ecospheres/
   themes: http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/
   espsyntax: http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#
   eurovoc: http://eurovoc.europa.eu/
@@ -21,7 +21,7 @@ prefix: # dictionnaire des préfixes utilisés
   persons: http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/
 
 skos:ConceptScheme: # dictionnaire des schémas de concepts, le premier est celui par défaut des concepts
-  ecospheres:themes:
+  ecospheres:themes-ecospheres:
     dct:title: {fr: "Liste des thèmes d'Ecosphères"}
     dct:description:
       fr: |
