@@ -163,6 +163,9 @@ abstract class RdfResource {
       ],
     ],
   ];
+  const PhpClassNameForRdfType = [
+    'foaf:Person'=> 'FoafPerson',
+  ];
   
   protected array $prop; // [{predicat} => [{object}]] où {object} ::= URI | compactURI | Label
   static array $prefix = [];
@@ -195,7 +198,11 @@ abstract class RdfResource {
       elseif (is_array($objects)) { // objects ::= setOfRdfResources
         $this->prop[$predicate] = [];
         foreach ($objects as $curi => $childPredicatesObjects) {
-          new (get_class($this))($curi, $childPredicatesObjects, $id);
+          // Si le rdf:type est défini alors il est utilisé pour définir la classe de l'objet sinon c'est la classe du père
+          $className = isset($childPredicatesObjects['rdf:type']) ?
+            self::PhpClassNameForRdfType[$childPredicatesObjects['rdf:type']]
+            : get_class($this);
+          new $className($curi, $childPredicatesObjects, $id);
           $this->prop[$predicate][] = $curi;
         }
       }
@@ -303,18 +310,27 @@ abstract class RdfResource {
       'abstract'=> "Ce fichier comporte 6 chapitres",
       '$schema'=> 'upload',
       'chapters'=> [
-        'registre'=> [
-          'title'=> "Sous-registre Ecosphère(s)",
+        'registres'=> [
+          'title'=> "Registres Ecosphère(s) et des personnes",
           'put'=> [
             '/ecospheres'=> [
               'parent'=> '',
               'type'=> 'R',
               'title'=> 'Registre Ecosphère(s)',
-            ]
+            ],
+            '/ecospheres/persons'=> [
+              'parent'=> '/ecospheres',
+              'type'=> 'R',
+              'title'=> 'Registre Ecosphère(s) des personnes',
+            ],
           ],
         ],
-        'scheme'=> [
+        'schemes'=> [
           'title'=> "les schémas des concepts",
+          'put'=> [],
+        ],
+        'persons'=> [
+          'title'=> "Les personnes",
           'put'=> [],
         ],
         'concepts'=> [
@@ -325,13 +341,18 @@ abstract class RdfResource {
           'title'=> "Suppression des concepts",
           'delete'=> [],
         ],
-        'deleteScheme'=> [
-          'title'=> "Suppression du schéma des concepts",
+        'deleteSchemes'=> [
+          'title'=> "Suppression des schéma des concepts",
           'delete'=> [],
         ],
-        'deleteRegistre'=> [
-          'title'=> "Suppression du registre Ecosphères",
+        'deletePersons'=> [
+          'title'=> "Suppression des personnes",
+          'delete'=> [],
+        ],
+        'deleteRegistres'=> [
+          'title'=> "Suppression des registres Ecosphères et des personnes",
           'delete'=> [
+            '/ecospheres/persons',
             '/ecospheres',  
           ],
         ],
@@ -343,8 +364,14 @@ abstract class RdfResource {
         ['ecospheres:', 'eurovoc:', 'persons:'],
         ['/ecospheres/', '/ecospheres/eurovoc/','/ecospheres/persons/'],
         $schemeId);
-      $export['chapters']['scheme']['put'][$path] = Scheme::$all[$schemeId]->asRegistre($schemeId);
-      $export['chapters']['deleteScheme']['delete'][] = $path;
+      $export['chapters']['schemes']['put'][$path] = Scheme::$all[$schemeId]->asRegistre($schemeId);
+      $export['chapters']['deleteSchemes']['delete'][] = $path;
+    }
+    
+    foreach (FoafPerson::$all as $id => $person) {
+      $path = str_replace(['persons:'], ['/ecospheres/persons/'], $id);
+      $export['chapters']['persons']['put'][$path] = $person->asRegistre($id);
+      $export['chapters']['deletePersons']['delete'][] = $path;
     }
     
     foreach (Concept::$all as $id => $concept) {
@@ -379,7 +406,7 @@ abstract class RdfResource {
     $compacted = ML\JsonLD\JsonLD::compact($ser, json_encode(RdfResource::$prefix));
     //echo beautifulYaml(Yaml::dump(json_decode(json_encode($compacted), true), 4, 2)),"\n";
     return [
-      'parent'=> (get_class($this) == 'Scheme') ? '/ecospheres' : '/ecospheres/themes-ecospheres',
+      'parent'=> $this->parent(),
       'type'=> 'E',
       'title'=> $this->title(),
       'jsonval'=> json_decode(json_encode($compacted), true),
@@ -402,15 +429,8 @@ class Scheme extends RdfResource { // sous-classe des schemas avec des traitemen
     parent::__construct($id, $resource, $parent);
   }
 
-  function title(): string {
-    if ($title = $this->prop['dct:title'] ?? null)
-      return $title[0]->asArray()['fr'];
-    elseif ($title = $this->prop['foaf:name'] ?? null) {
-      return $title[0]->asArray()['x'];
-    }
-    else
-      return "INCONNU";
-  }
+  function title(): string { return $this->prop['dct:title'][0]->asArray()['fr']; }
+  function parent(): string { return '/ecospheres'; }
 };
 
 class Concept extends RdfResource { // sous-classe des concepts avec des traitements spécifiques à la création 
@@ -436,6 +456,27 @@ class Concept extends RdfResource { // sous-classe des concepts avec des traitem
   }
 
   function title(): string { return $this->prop['skos:prefLabel'][0]->asArray()['fr']; }
+  
+  function parent(): string { 
+    if ($this->prop['skos:inScheme'][0] == 'ecospheres:themes-ecospheres')
+      return '/ecospheres/themes-ecospheres';
+    elseif ($this->prop['skos:inScheme'][0] == 'eurovoc:100141')
+      return '/ecospheres/eurovoc/100141';
+  }
+};
+
+class FoafPerson extends RdfResource {
+  const Type = 'foaf:Person';
+  
+  static array $all = []; // [id => FoafPerson] - toutes les personnes
+
+  function __construct(string $id, array $resource, ?string $parent=null) {
+    self::$all[$id] = $this;
+    parent::__construct($id, $resource, $parent);
+  }
+
+  function title(): string { return $this->prop['foaf:name'][0]->asArray()['x']; }
+  function parent(): string { return '/ecospheres/persons'; }
 };
 
 RdfResource::init(Yaml::parseFile($argv[0]), $short);
