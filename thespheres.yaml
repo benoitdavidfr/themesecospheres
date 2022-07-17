@@ -26,15 +26,18 @@ skos:ConceptScheme: # dictionnaire des schémas de concepts, le premier est celu
     dct:description:
       fr: |
         Les thèmes Ecosphères sont utilisés dans le guichet de la donnée de la transition écologique.  
-        Ils reprennent les thèmes définis par l'arborescence Covadis et sont structurés conformément
-        au [standard SKOS du W3C]().  
-        A chaque concept est associé:
+        Ils sont construits à partir de l'arborescence Covadis et sont structurés comme un thésaurus
+        conformément au [standard SKOS du W3C](https://www.w3.org/2004/02/skos/).  
+        A chaque concept sont associés:
           
-          - des altLabels et des regexps correspondant aux mots-clés rencontrés dans les catalogues
+          - des altLabels correspondant aux mots-clés rencontrés dans les catalogues moissonnés par le guichet,
+          - des expressions régulières permettant d'associer des fiches de métadonnées des catalogues
             moissonnés par le guichet,
-          - une correspondance avec EuroVoc dans la mesure du possible.
+          - une correspondance avec
+            [EuroVoc](https://op.europa.eu/fr/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc)
+            dans la mesure du possible.
         La constitution de ce thésaurus est en cours.  
-        Version publiée par Benoit DAVID le 7/7/2022.
+        Version intermédiaire publiée par Benoit DAVID le 17/7/2022.
     dct:creator:
       persons:BenoitDavid:
         rdf:type: foaf:Person
@@ -46,7 +49,7 @@ skos:ConceptScheme: # dictionnaire des schémas de concepts, le premier est celu
       persons:GillesGuillouet:
         rdf:type: foaf:Person
         foaf:name: {x: Gilles Guillouet}
-    dct:modified: {x: "2022-07-08T08:40:00+02:00"}
+    dct:modified: {x: "2022-07-17"}
     dct:license: https://www.etalab.gouv.fr/licence-ouverte-open-licence
   eurovoc:100141:
     dct:title: {fr: "Thésaurus multilingue EuroVoc"}

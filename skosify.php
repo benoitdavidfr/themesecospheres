@@ -166,6 +166,8 @@ abstract class RdfResource {
   const PhpClassNameForRdfType = [
     'foaf:Person'=> 'FoafPerson',
   ];
+  const RegistreUri = 'http://registre/'; // Test en dev
+  //const RegistreUri = 'http://registre.georef.eu/'; // Registre provisoire sur georef
   
   protected array $prop; // [{predicat} => [{object}]] où {object} ::= URI | compactURI | Label
   static array $prefix = [];
@@ -228,7 +230,7 @@ abstract class RdfResource {
   static function init(array $yaml, bool $short): void {
     self::$prefix = $yaml['prefix'];
     foreach (self::$prefix as $name => &$uri) {
-      $uri = str_replace('http://registre.data.developpement-durable.gouv.fr/', 'http://registre/', $uri);
+      $uri = str_replace('http://registre.data.developpement-durable.gouv.fr/', self::RegistreUri, $uri);
     }
     foreach ($yaml['skos:ConceptScheme'] as $id => $resource) {
       new Scheme($id, $resource);
@@ -307,11 +309,17 @@ abstract class RdfResource {
   static function allAsRegistre(): array { // export selon le format de chargement du registre
     $export = [
       'title'=> "Définition des thèmes Ecopsphères dans le format d'import du registre",
-      'abstract'=> "Ce fichier comporte 6 chapitres",
+      'abstract'=> "Ce fichier comporte 8 chapitres:\n"
+        ."  - d'une part 4 chapitres définissant des ressources:"
+        ."    - le chapitre registres définissant le registre Ecosphères et un sous-registre de personnes citées,"
+        ."    - le chapitre schemes définit les schéms de concepts,"
+        ."    - le chapitre persons définit les personnes citées,"
+        ."    - le chapitre concepts définissant les thèmes comme concepts,"
+        ."  - d'autre part correspondant à chacun des 4 premiers chapitres, un chapitre supprimant les ressources définies.",
       '$schema'=> 'upload',
       'chapters'=> [
         'registres'=> [
-          'title'=> "Registres Ecosphère(s) et des personnes",
+          'title'=> "Registres Ecosphère(s) et des personnes + déf. des propriétés RDF spécifiques",
           'put'=> [
             '/ecospheres'=> [
               'parent'=> '',
@@ -322,6 +330,16 @@ abstract class RdfResource {
               'parent'=> '/ecospheres',
               'type'=> 'R',
               'title'=> 'Registre Ecosphère(s) des personnes',
+            ],
+            '/ecospheres/syntax'=> [
+              'parent'=> '/ecospheres',
+              'type'=> 'E',
+              'title'=> 'Définition des propriétés RDF spécifiques à Ecosphères (en cours)',
+              'htmlval'=> "<!DOCTYPE HTML><html><head><meta charset='UTF-8'>"
+                ."<title>Propriétés RDF spécifiques à Ecosphères</title></head><body>"
+                ."<div id='regexp'><code>http://registre/ecospheres/syntax#regexp</code>"
+                  ." Associe une expression régulière à un thème Ecosphères.</div>"
+                ."</body>",
             ],
           ],
         ],
@@ -352,6 +370,7 @@ abstract class RdfResource {
         'deleteRegistres'=> [
           'title'=> "Suppression des registres Ecosphères et des personnes",
           'delete'=> [
+            '/ecospheres/syntax',
             '/ecospheres/persons',
             '/ecospheres',  
           ],
