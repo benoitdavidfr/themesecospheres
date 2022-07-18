@@ -79,6 +79,9 @@ properties:
   description:
     description: commentaires sur le document
     type: string
+  modified:
+    description: date de dernière modification du fichier yaml
+    type: string
   $schema:
     description: schema JSON du document
     oneOf:

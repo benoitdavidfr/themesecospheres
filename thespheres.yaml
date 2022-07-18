@@ -4,9 +4,10 @@ description: |
   On exploite notamment leur structuration hiérarchique.
 
   Les altLabels et regexps correspondent aux mots-clés trouvés dans des catalogues.
-  Ajout des altLabels et regexps en cours.
   
   Mapping avec EuroVoc en cours.
+modified: "2022-07-18"
+
 $schema: thespheres
 
 prefix: # dictionnaire des préfixes utilisés
@@ -37,7 +38,7 @@ skos:ConceptScheme: # dictionnaire des schémas de concepts, le premier est celu
             [EuroVoc](https://op.europa.eu/fr/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc)
             dans la mesure du possible.
         La constitution de ce thésaurus est en cours.  
-        Version intermédiaire publiée par Benoit DAVID le 17/7/2022.
+        Version intermédiaire publiée par Benoit DAVID le 18/7/2022.
     dct:creator:
       persons:BenoitDavid:
         rdf:type: foaf:Person
@@ -49,7 +50,7 @@ skos:ConceptScheme: # dictionnaire des schémas de concepts, le premier est celu
       persons:GillesGuillouet:
         rdf:type: foaf:Person
         foaf:name: {x: Gilles Guillouet}
-    dct:modified: {x: "2022-07-17"}
+    dct:modified: {x: "2022-07-18"}
     dct:license: https://www.etalab.gouv.fr/licence-ouverte-open-licence
   eurovoc:100141:
     dct:title: {fr: "Thésaurus multilingue EuroVoc"}
@@ -656,699 +657,503 @@ skos:Concept:
     skos:narrower:
       themes:inventaires-nature-et-biodiversite:
         skos:prefLabel: {fr: "Inventaires nature et biodiversité"}
+        skos:altLabel:
+          - {fr: Nature Paysage Biodiversité/Inventaire Nature Biodiversité}
+          - {fr: znieff1}
+          - {fr: znieff2}
+          - {fr: Nature Paysage Biodiversité / Inventaire Nature Biodiversité}
+          - {fr: INVENTAIRE NATURE BIODIVERSITE}
+          - {fr: inventaire_nature_biodiversite}
+        espsyntax:regexp:
+          - {fr: Habitats? naturels?}
+          - {fr: ZNIEFF}
+          - {fr: Intérêts? Ecologiques? Faunistiques? et Floristiques?}
+          - {fr: Observation de la flore}
+          - {fr: Régions? biogéographiques?}
+          - {fr: patrimoine géologique}
+          - {fr: continuité écologique}
       themes:inventaires-des-paysages:
         skos:prefLabel: {fr: "Inventaires des paysages"}
+        skos:altLabel:
+          - {fr: Nature Paysage Biodiversité/Inventaire Paysage}
+        espsyntax:regexp:
+          - {fr: Parcs et jardins}
+          - {fr: paysages?}
+          - {fr: paysagères?}
       themes:protection-et-gestion-de-la-nature:
         skos:prefLabel: {fr: "Protection et gestion de la nature"}
+        skos:altLabel:
+          - {fr: Nature Paysage Biodiversité/Zonages Nature}
+          - {fr: Schéma régional de cohérence écologique}
+          - {fr: nature_paysage_biodiversite/n_zonages_nature}
+          - {fr: zonages nature}
+          - {fr: schema-regional-de-coherence-ecologique}
+          - {fr: srce}
+          - {fr: coherence-ecologique}
+          - {fr: coherence-coherence-ecologique}
+          - {fr: trame-verte-et-bleue}
+          - {fr: tvb}
+        espsyntax:regexp:
+          - {fr: parcs? nation(al|aux)}
+          - {fr: Arrêtés? préfector(al|aux) de protection des? biotopes?}
+          - {fr: Arrêtés? de Protection de Biotopes?}
+          - {fr: Arrêtés? de Protection de Géotopes?}
+          - {fr: réserves? naturelles?}
+          - {fr: Réserves? de Biosphère}
+          - {fr: Ramsar}
+          - {fr: natura 2000}
+          - {fr: Espaces? Naturels? Sensibles?}
+          - {fr: Schéma régional de cohérence écologique}
+          - {fr: SRCE}
+          - {fr: Sites du Conservatoire}
       themes:protection-et-gestion-des-paysages:
         skos:prefLabel: {fr: "Protection et gestion des paysages"}
+        skos:altLabel:
+          - {fr: Nature Paysage Biodiversité/Zonages Paysage}
+        espsyntax:regexp:
+          - {fr: Zones de protection loi 1930}
+          - {fr: sites classés}
+          - {fr: sites inscrits}
+          - {fr: ZPPAUP}
+          - {fr: Patrimoine mondial UNESCO}
+          - {fr: Label grand site de France}
       themes:chasse:
         skos:prefLabel: {fr: "Chasse"}
-        
+        skos:altLabel:
+          - {fr: Nature Paysage Biodiversité/Chasse}
+        espsyntax:regexp:
+          - {fr: chasse}
+
   themes:nuisances-dechets-et-pollution:
     skos:prefLabel: {fr: "Nuisances, déchets et pollution"}
     skos:narrower:
       themes:bruit:
         skos:prefLabel: {fr: "Bruit"}
+        skos:altLabel:
+          - {fr: Nuisance/Bruit}
+          - {fr: bruit}
+        espsyntax:regexp:
+          - {fr: Classement sonore}
+          - {fr: gêne sonore}
+          - {fr: Cartes? de bruit strat(é|e)gique}
+          - {fr: plans? d'exposition au bruit}
+          - {fr: Niveau de bruit}
+          - {fr: cartographie du bruit}
       themes:dechets:
         skos:prefLabel: {fr: "Déchets"}
+        skos:altLabel:
+          - {fr: Nuisance/Déchet}
+          - {fr: déchetterie}
+        espsyntax:regexp:
+          - {fr: déchet}
+          - {fr: Incinérateur}
       themes:perturbations-electromagnetiques:
         skos:prefLabel: {fr: "Perturbations électromagnétiques"}
+        skos:altLabel:
+          - {fr: Nuisance/Nuisance électromagnétique}
+          - {fr: perturbations électromagnétiques}
+          - {fr: perturbation électromagnétique}
       themes:pollution-des-sols:
         skos:prefLabel: {fr: "Pollution des sols"}
+        skos:altLabel:
+          - {fr: Nuisance/Pollution du sol}
+        espsyntax:regexp:
+          - {fr: Sites? pollués?}
+          - {fr: BASOL}
       themes:qualite-de-l-air:
         skos:prefLabel: {fr: "Qualité de l'air"}
+        skos:altLabel:
+          - {fr: Air Climat/Qualité Pollution}
+          - {fr: qualite-de-l-air}
+          - {fr: pollution-atmospherique}
+          - {fr: dioxyde-d-azote}
+          - {fr: dioxyde-de-soufre}
+          - {fr: monoxyde-de-carbone}
+          - {fr: ozone}
+          - {fr: particules}
+          - {fr: pm10}
+          - {fr: pm25}
   
   themes:reseaux-d-energie-et-de-communication:
     skos:prefLabel: {fr: "Réseaux d'énergie et de communication"}
+    skos:editorialNote:
+      fr: |
+        Où mettre les jeux concernant l'énergie mais pas les réseaux ?  
+        Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
+    skos:altLabel:
+      - {fr: Réseau Énergie Divers/Autre}
+      - {fr: energie}
+      - {fr: consommation-d-energie}
+      - {fr: chaleur}
+      - {fr: froid}
+      - {fr: geothermie}
+    espsyntax:regexp:
+      - {fr: Réseaux? de chaleur}
     skos:narrower:
       themes:amenagement-numerique-des-territoires:
         skos:prefLabel: {fr: "Aménagement numérique des territoires"}
+        skos:altLabel:
+          - {fr: Réseau Énergie Divers/Aménagement numérique des territoires}
       themes:reseau-electrique:
         skos:prefLabel: {fr: "Réseau électrique"}
+        skos:altLabel:
+          - {fr: Réseau Énergie Divers/Électricité}
+          - {fr: electricite}
+        espsyntax:regexp:
+          - {fr: Transport d'électricité}
+          - {fr: haute tension}
+          - {fr: haute-tension}
+          - {fr: Pylones? d'électricité}
+          - {fr: Barrages? hydroélectriques?}
+          - {fr: Centrales? hydroélectriques?}
+          - {fr: photovoltaiques?}
+          - {fr: Postes électriques}
       themes:reseau-hydrocarbures:
         skos:prefLabel: {fr: "Réseau de transport et de stockage des hydrocarbures"}
+        skos:altLabel:
+          - {fr: Réseau Énergie Divers/Hydrocarbure}
+          - {fr: gaz-naturel}
+          - {fr: produit-petrolier}
+          - {fr: hydrocarbures-liquides-ou-gazeux}
+        espsyntax:regexp:
+          - {fr: dépôts? pétroliers?}
+          - {fr: stockage GPL}
+          - {fr: raffineries?}
+          - {fr: stockages? de gaz naturels?}
       themes:reseau-de-telecommunication:
         skos:prefLabel: {fr: "Réseau de télécommunication"}
+        skos:altLabel:
+          - {fr: Réseau Énergie Divers/Télécommunication}
   
   themes:risques:
     skos:prefLabel: {fr: "Risques"}
+    skos:altLabel:
+      - {fr: risques}
+    espsyntax:regexp:
+      - {fr: Aléas naturels connus}
+      - {fr: risque d'érodabilté}
     skos:narrower:
       themes:prevention-des-avalanches:
         skos:prefLabel: {fr: "Prévention des avalanches"}
+        skos:definition: {fr: Connaissance et prévention du risque d'avalanches}
+        skos:altLabel:
+          - {fr: Risque/Avalanche}
+        espsyntax:regexp:
+          - {fr: avalanche}
       themes:prevention-des-eruptions-volcaniques:
         skos:prefLabel: {fr: "Prévention des éruptions volcaniques"}
+        skos:definition: {fr: Connaissance et prévention du risque d'éruption volcanique}
+        skos:altLabel:
+          - {fr: Risque/Eruption volcanique}
       themes:prevention-des-inondations:
         skos:prefLabel: {fr: "Prévention des inondations"}
+        skos:definition: {fr: Connaissance et prévention du risque d'inondation}
+        skos:altLabel:
+          - {fr: Risque/Inondation}
+          - {fr: inondation}
+          - {fr: papi} # programme d'actions de prévention des inondations
+          - {fr: RISQUE/N_INONDATION}
+          - {fr: risque inondation}
+          - {fr: risques-inondations}
+          - {fr: risque-inondation}
+          - {fr: innondation}
+        espsyntax:regexp:
+          - {fr: territoires? à risque d'inondation}
+          - {fr: ' TRI '}
+          - {fr: Atlas des Zones Inondables}
+          - {fr: Zones inondables connues}
+          - {fr: repères de crue}
+          - {fr: Crue}
+          - {fr: Enveloppes? Approchées? d'Inondations? Potentielles?}
+          - {fr: EAIP}
+          - {fr: Plans d'actions pour la prévention des inondations}
+          - {fr: PAPI}
+          - {fr: Cartographie informative des zones inondables}
+          - {fr: Risques? d'Inondation}
       themes:prevention-du-risque-mouvement-de-terrain:
         skos:prefLabel: {fr: "Prévention du risque mouvement de terrain"}
+        skos:definition: {fr: Connaissance et prévention du risque de mouvement de terrain}
+        skos:altLabel:
+          - {fr: Risque/Mouvement de terrain}
+          - {fr: mouvement-de-terrain}
+          - {fr: mouvement-terrain}
+        espsyntax:regexp:
+          - {fr: mouvements de terrain}
+          - {fr: glissements de terrain}
+          - {fr: retrait/gonflement}
       themes:prevention-du-risque-radon:
         skos:prefLabel: {fr: "Prévention du risque radon"}
+        skos:definition: {fr: Connaissance et prévention du risque radon}
+        skos:altLabel:
+          - {fr: Risque/Radon}
+        espsyntax:regexp:
+          - {fr: radon}
       themes:prevention-du-risque-minier:
         skos:prefLabel: {fr: "Prévention du risque minier"}
+        skos:definition: {fr: Connaissance et prévention du risque minier}
+        skos:altLabel:
+          - {fr: Risque/Risque minier}
+          - {fr: risque-minier}
+          - {fr: alea-minier}
+          - {fr: apres-mine}
+        espsyntax:regexp:
+          - {fr: Aléas? miniers?}
+          - {fr: surveillance minière}
       themes:prevention-des-risques-technologiques:
         skos:prefLabel: {fr: "Prévention des risques technologiques"}
+        skos:definition:
+          fr: "Connaissance des riques technologiques (industriels, nucléaires, technologiques, rupture de barrages)"
+        skos:altLabel:
+          - {fr: Risque/Risque technologique}
+          - {fr: risque-risque-technologique}
+          - {fr: risque_technologique}
+        espsyntax:regexp:
+          - {fr: risques? technologiques?}
+          - {fr: rupture de barrage}
       themes:prevention-du-risque-sismique:
         skos:prefLabel: {fr: "Prévention du risque sismique"}
+        skos:definition: {fr: Connaissance et prévention du risque sismique}
+        skos:altLabel:
+          - {fr: Risque/Séisme}
+        espsyntax:regexp:
+          - {fr: Aléa sismicité}
+          - {fr: Zonage sismique}
       themes:reglementation-de-prevention-des-risques-naturels:
         skos:prefLabel: {fr: "Réglementation de prévention des risques naturels"}
+        skos:editorialNote:
+          fr: |
+            Intégrer à ce sous-thème les Plans de Prévention des Risques Miniers ou créer un nouveau sous-thème ?
+        skos:altLabel:
+          - {fr: Risque/Zonages Risque naturel}
+          - {fr: zonages-risque-naturel}
+          - {fr: zonage-a-risques-naturels}
+          - {fr: pprn}
+          - {fr: ppri}
+          - {fr: pprmvt}
+          - {fr: catnat}
+          - {fr: catastrophe-naturelle}
+          - {fr: Zonages Risque naturel}
+          - {fr: zonage risque naturel}
+          - {fr: risque/n_zonages_risque_naturel/id_gaspar}
+          - {fr: risques/n_zonages_risque_naturel/id_gaspar}
+        espsyntax:regexp:
+          - {fr: plans? de prévention des risques naturels}
+          - {fr: Plans? de Prévention des Risques d'Inondation}
+          - {fr: Plan des surfaces submersibles}
+          - {fr: PSS}
+          - {fr: Arrêtés de catastrophe naturelle}
+          - {fr: CatNat}
+          - {fr: Plan de Prévention des Risques Miniers}
+          - {fr: PPRM}
       themes:reglementation-de-prevention-des-risques-technologiques:
         skos:prefLabel: {fr: "Réglementation de prévention des risques technologiques"}
+        skos:altLabel:
+          - {fr: Risque/Zonages Risque technologique}
+          - {fr: Risque/Risque technologique}
+          - {fr: zonages-risque-technologique}
+          - {fr: risque/n_zonages_risque_technologique}
+          - {fr: pprt}
+        espsyntax:regexp:
+          - {fr: Plans? de Prévention des Risques Technologiques}
+          - {fr: PPRT}
       themes:gestion-du-risque:
         skos:prefLabel: {fr: "Gestion du risque"}
+        skos:definition:
+          fr: |
+            Entreprises requisitionnables, plans de secours, limites de compétence des SPC, cours d'eau équipés pour
+            la surveillance des crues, documents communaux de synthèse, ...  
+            y compris information et sensibilisation de la population
+        skos:altLabel:
+          - {fr: Risque/Gestion du risque}
+          - {fr: gestion du risque}
+          - {fr: gestion-des-risques}
+          - {fr: gestion-du-risque}
+        espsyntax:regexp:
+          - {fr: Centres? de secours}
+          - {fr: Plans? de secours}
+          - {fr: surveillance des crues}
+          - {fr: documents communaux de synthèse}
+          - {fr: SPC}
+          - {fr: PPI} # Plan particulier d'intervention
+          - {fr: SDIS}
+          - {fr: Plan Communal de Sauvegarde}
+          - {fr: Document d'information communal sur les risques majeurs}
   
   themes:industrie:
     skos:prefLabel: {fr: "Industrie, production d'énergie et exploitation du sol"}
     skos:narrower:
       themes:mines:
         skos:prefLabel: {fr: "Mines, carrières et extraction de granulats"}
+        skos:altLabel:
+          - {fr: Site industriel Production/Mine Carrière Granulats}
+          - {fr: permis-dexploitation}
+          - {fr: permis-exclusif-de-carrieres}
+          - {fr: permis-exclusif-de-recherches}
+          - {fr: mine}
+          - {fr: mines}
+          - {fr: carrieres}
+          - {fr: camino}
+        espsyntax:regexp:
+          - {fr: Sc?héma Régional des Carrières}
+          - {fr: Carrières existantes}
       themes:sites-industriels:
         skos:prefLabel: {fr: "Sites industriels"}
+        skos:altLabel:
+          - {fr: Site industriel Production/Site industriel}
+          - {fr: ICPE}
+          - {fr: Installation classé pour la protection de l'environnement}
+          - {fr: Installations classés pour la protection de l'environnement}
+        espsyntax:regexp:
+          - {fr: ICPE}
+          - {fr: Installations? classées? pour la protection de l'environnement}
+          - {fr: Installations? classées? pour l'environnement}
+          - {fr: SEVESO}
+          - {fr: Tours? aéroréfrigérantes?}
+          - {fr: Registre français des émissions polluantes}
+          - {fr: Directive sur les émissions industrielles}
       themes:parcs-eoliens:
         skos:prefLabel: {fr: "Parcs éoliens"}
+        skos:altLabel:
+          - {fr: Site industriel Production/Site éolien}
+          - {fr: site-site-industriel-production-site-eolien}
+          - {fr: site-eolien}
+          - {fr: eolien}
+          - {fr: eolien-terrestre}
+          - {fr: eolienne}
+        espsyntax:regexp:
+          - {fr: Éoliennes?}
+          - {fr: Zone favorable à l'éolien}
+          - {fr: Parcs? éoliens?}
+          - {fr: Mâts? éoliens?}
       themes:production-d-energie-hors-eolien:
         skos:prefLabel: {fr: "Production d'énergie hors éolien"}
+        skos:altLabel:
+          - {fr: Site industriel Production/Site de production d'énergie}
+          - {fr: photovoltaique}
+        espsyntax:regexp:
+          - {fr: installation nucléaire}
   
   themes:transport-et-deplacements:
     skos:prefLabel: {fr: "Transport et déplacements"}
     skos:narrower:
       themes:securite-routiere:
         skos:prefLabel: {fr: "Sécurité routière"}
+        skos:altLabel:
+          - {fr: Transports Déplacements/Sécurité routière}
+          - {fr: sécurité routière}
+          - {fr: securite-routiere}
+          - {fr: accidents-de-la-route}
+          - {fr: accidentologie}
+          - {fr: transport_deplacement/n_securite_routiere}
       themes:trafic-routier:
         skos:prefLabel: {fr: "Trafic routier et exploitation de la route"}
+        skos:altLabel:
+          - {fr: Transports Déplacements/Trafic}
+          - {fr: trafic}
+          - {fr: tmja}
+        espsyntax:regexp:
+          - {fr: Limitations? de circulation}
+          - {fr: PIRAA} # Plan intempéries Rhône-Alpes Auvergne
       themes:transport-collectif:
         skos:prefLabel: {fr: "Transport collectif"}
+        skos:altLabel:
+          - {fr: Transports Déplacements/Transport collectif}
+        espsyntax:regexp:
+          - {fr: dépôts de voyageurs}
       themes:transport-exceptionnel:
         skos:prefLabel: {fr: "Transport exceptionnel"}
+        skos:altLabel:
+          - {fr: Transports Déplacements/Transport exceptionnel}
+          - {fr: transports_exceptionnel}
+        espsyntax:regexp:
+          - {fr: arrêtés? de circulation}
       themes:transport-de-marchandises:
         skos:prefLabel: {fr: "Transport de marchandises"}
+        skos:altLabel:
+          - {fr: Transports Déplacements/Transport de marchandise}
       themes:transport-de-matieres-dangereuses:
         skos:prefLabel: {fr: "Transport de matières dangereuses"}
+        skos:altLabel:
+          - {fr: Transports Déplacements/Transport de matière dangereuse}
+          - {fr: transport-de-matiere-dangereuse}
+          - {fr: transport de matière dangereuse}
+        espsyntax:regexp:
+          - {fr: TMD}
   
   themes:infrastructures-de-transport:
     skos:prefLabel: {fr: "Infrastructures de transport"}
     skos:narrower:
       themes:infrastructure-aeroportuaire:
         skos:prefLabel: {fr: "Infrastructure aéroportuaire"}
+        skos:altLabel:
+          - {fr: Transports Infrastructure/Aérien}
+          - {fr: Infrastructure aéroportuaire (aéroport)}
+          - {fr: aeroport}
+        espsyntax:regexp:
+          - {fr: Aérodrome}
+          - {fr: radars aviation civile}
       themes:circulation-douce:
         skos:prefLabel: {fr: "Circulation douce"}
+        skos:altLabel:
+          - {fr: Transports Infrastructure/Circulation douce}
+        espsyntax:regexp:
+          - {fr: cyclables?}
+          - {fr: véloroutes?}
+          - {fr: voies? vertes?}
       themes:infrastructure-ferree:
         skos:prefLabel: {fr: "Infrastructure ferrée, gares et ouvrages d'art"}
+        skos:scopeNote: {fr: plus les métros et et remontées mécaniques}
+        skos:altLabel:
+          - {fr: Transports Infrastructure/Ferroviaire}
+        espsyntax:regexp:
+          - {fr: Réseau ferré}
+          - {fr: Voies? ferrées?}
+          - {fr: ferroviaire}
+          - {fr: Repère kilométrique SNCF}
+          - {fr: gares?}
+          - {fr: Lignes de métro}
+          - {fr: Stations de métro}
+          - {fr: Remontées? mécaniques?}
+          - {fr: TGV}
       themes:reseau-navigable:
         skos:prefLabel: {fr: "Réseau navigable et ouvrages de navigation"}
+        skos:altLabel:
+          - {fr: Transports Infrastructure/Fluvial}
       themes:infrastructure-portuaire:
         skos:prefLabel: {fr: "Infrastructure portuaire"}
+        skos:altLabel:
+          - {fr: Transports Infrastructure/Maritime}
+      themes:plateformes-multi-modales:
+        skos:prefLabel: {fr: Plateformes multi-modales}
+        skos:altLabel:
+          - {fr: Transports Infrastructure/Plate-forme multimodale}
       themes:infrastructure-routiere:
         skos:prefLabel: {fr: "Infrastructure routière"}
-  
-children:
-  AIR_CLIMAT:
-    children:
-      N_QUALITE_POLLUTION:
-        short: B3
-        altLabels:
-          - Air Climat/Qualité Pollution
-          - qualite-de-l-air
-          - pollution-atmospherique
-          - dioxyde-d-azote
-          - dioxyde-de-soufre
-          - monoxyde-de-carbone
-          - ozone
-          - particules
-          - pm10
-          - pm25
-  NATURE_PAYSAGE_BIODIVERSITE:
-    short: K
-    children:
-      N_CHASSE:
-        short: K1
-        definition: Plans et réserves de chasse, zones plan de chasse
-        altLabels:
-          - Nature Paysage Biodiversité/Chasse
-        regexps:
-          - chasse
-      N_INVENTAIRE_NATURE_BIODIVERSITE:
-        short: K2
-        definition: ZNIEFF, ZICO, faune, flore et habitats
-        note: plus Plan National d'Actions sur des espèces
-        altLabels:
-          - Nature Paysage Biodiversité/Inventaire Nature Biodiversité
-          - znieff1
-          - znieff2
-        hiddenLabels:
-          - Nature Paysage Biodiversité / Inventaire Nature Biodiversité
-          - INVENTAIRE NATURE BIODIVERSITE
-          - inventaire_nature_biodiversite
-        regexps:
-          - Habitats? naturels?
-          - ZNIEFF
-          - Intérêts? Ecologiques? Faunistiques? et Floristiques?
-          - Observation de la flore
-          - Régions? biogéographiques?
-          - patrimoine géologique
-          - continuité écologique
-          - Sonneur à ventre jaune
-          - Aigle de Bonelli
-          - bryophyte
-          - anguille
-          - Moule perlière
-          - Mouette
-          - Sterne
-          - Océanite
-          - Puffin
-          - PNA Butor
-          - PNA Chiroptère
-          - PNA Desman
-          - PNA Emyde
-          - PNA Faucon
-          - PNA Gypaète
-          - PNA Lézard
-          - PNA Loutre
-          - PNA Maculinéa
-          - PNA Milan
-          - PNA Odonate
-          - PNA Outarde
-          - PNA Pie-Grièche
-          - PNA Placettes
-          - PNA Vautour
-      N_INVENTAIRE_PAYSAGE:
-        short: K3
-        definition: Atlas des paysages ...
-        altLabels:
-          - Nature Paysage Biodiversité/Inventaire Paysage
-        regexps:
-          - Parcs et jardins
-          - paysages?
-          - paysagères?
-      N_ZONAGES_NATURE:
-        short: K4
-        definition: |
-          Zonage réglementaire et de gestion Nature : parc national, parc naturel régional, arrêté de protection
-          de biotope, réserve naturelle, zones humides Ramsar, Natura 2000, …
-        note: |
-          - y compris SRCE
-          - sauf PNR -> /AMENAGEMENT_URBANISME/N_ZONAGES_AMENAGEMENT
-        altLabels:
-          - Nature Paysage Biodiversité/Zonages Nature
-          - Schéma régional de cohérence écologique
-        hiddenLabels:
-          - nature_paysage_biodiversite/n_zonages_nature
-          - zonages nature
-          - schema-regional-de-coherence-ecologique
-          - srce
-          - coherence-ecologique
-          - coherence-coherence-ecologique
-          - trame-verte-et-bleue
-          - tvb
-        regexps:
-          - parcs? nation(al|aux)
-          - Arrêtés? préfector(al|aux) de protection des? biotopes?
-          - Arrêtés? de Protection de Biotopes?
-          - Arrêtés? de Protection de Géotopes?
-          - réserves? naturelles?
-          - Réserves? de Biosphère
-          - Ramsar
-          - natura 2000
-          - Espaces? Naturels? Sensibles?
-          - Schéma régional de cohérence écologique
-          - SRCE
-          - Sites du Conservatoire
-      N_ZONAGES_PAYSAGE:
-        short: K5
-        definition: "Zonage réglementaire et de gestion paysage : sites classés, inscrits, ZPPAUP ..."
-        altLabels:
-          - Nature Paysage Biodiversité/Zonages Paysage
-        regexps:
-          - Zones de protection loi 1930
-          - sites classés
-          - sites inscrits
-          - ZPPAUP
-          - Patrimoine mondial UNESCO
-          - Label grand site de France
-  NUISANCE:
-    short: L
-    children:
-      N_BRUIT:
-        short: L1
-        altLabels:
-          - Nuisance/Bruit
-        hiddenLabels:
-          - bruit
-        regexps:
-          - Classement sonore
-          - gêne sonore
-          - Cartes? de bruit strat(é|e)gique
-          - plans? d'exposition au bruit
-          - Niveau de bruit
-          - cartographie du bruit
-      N_DECHET:
-        short: L2
-        definition: Ménagers, dangereux, mines, boues STEP, nucléaires… -  traitement
-        altLabels:
-          - Nuisance/Déchet
-          - déchetterie
-        regexps:
-          - déchet
-          - Incinérateur
-      N_NUISSANCE_ELECTROMAGNETIQUE:
-        short: L3
-        definition: Connaissance nuisance électromagnétique
-        altLabels:
-          - Nuisance/Nuisance électromagnétique
-          - perturbations électromagnétiques
-          - perturbation électromagnétique
-      N_POLLUTION_SOL:
-        short: L4
-        altLabels:
-          - Nuisance/Pollution du sol
-        regexps:
-          - Sites? pollués?
-          - BASOL
-      N_ICPE:
-        note: ajouté le 6/11/2021
-        short: L5
-        definition: ICPE
-        altLabels:
-          - ICPE
-          - Installation classé pour la protection de l'environnement
-          - Installations classés pour la protection de l'environnement
-        regexps:
-          - ICPE
-          - Installations? classées? pour la protection de l'environnement
-          - Installations? classées? pour l'environnement
-          - SEVESO
-          - Tours? aéroréfrigérantes?
-          - Registre français des émissions polluantes
-          - Directive sur les émissions industrielles
-  RESEAU_ENERGIE_DIVERS:
-    short: M
-    note: Ajout de ce qui concerne l'énergie et pas uniquement les réseaux
-    altLabels:
-      - energie
-      - consommation-d-energie
-    children:
-      N_AMENAGEMENT_NUMERIQUE_DES_TERRITOIRES:
-        short: M1
-        definition: Desserte, niveau de service
-        altLabels:
-          - Réseau Énergie Divers/Aménagement numérique des territoires
-      N_AUTRE:
-        short: M2
-        altLabels:
-          - Réseau Énergie Divers/Autre
-          - chaleur
-          - froid
-          - geothermie
-        regexps:
-          - Réseaux? de chaleur
-      N_ELECTRICITE:
-        short: M3
-        definition: Réseau de transport d'énergie
-        altLabels:
-          - Réseau Énergie Divers/Électricité
-          - electricite
-        regexps:
-          - Transport d'électricité
-          - haute tension
-          - haute-tension
-          - THT
-          - Pylones? d'électricité
-          - Barrages? hydroélectriques?
-          - Centrales? hydroélectriques?
-          - photovoltaiques?
-          - Postes électriques
-      N_HYDROCARBURE:
-        short: M4
-        definition: Pipe-line, etc
-        altLabels:
-          - Réseau Énergie Divers/Hydrocarbure
-          - gaz-naturel
-          - produit-petrolier
-          - hydrocarbures-liquides-ou-gazeux
-        regexps:
-          - dépôts? pétroliers?
-          - stockage GPL
-          - raffineries?
-          - stockages? de gaz naturels?
-      N_TELECOMMUNICATION:
-        short: M5
-        definition: Infra (pylône, fibre optique, )
-        altLabels:
-          - Réseau Énergie Divers/Télécommunication
-  RISQUE:
-    short: N
-    altLabels:
-      - risques
-    regexps:
-      - Aléas naturels connus
-      - risque d'érodabilté
-    children:
-      N_AVALANCHE:
-        short: N1
-        definition: Prévention, connaissance du risque
-        altLabels:
-          - Risque/Avalanche
-        regexps:
-          - avalanche
-      N_ERUPTION_VOLCANIQUE:
-        short: N2
-        definition: Prévention, connaissance du risque
-        altLabels:
-          - Risque/Eruption volcanique
-      N_GESTION_RISQUE:
-        short: N3
-        definition: |
-          Entreprises requisitionnables, plans de secours, limites de compétence des SPC, cours d'eau équipés pour
-          la surveillance des crues, documents communaux de synthèse, ...
-        note: y compris information et sensibilisation de la population
-        altLabels:
-          - Risque/Gestion du risque
-          - gestion du risque
-          - gestion-des-risques
-          - gestion-du-risque
-        regexps:
-          - Centres? de secours
-          - Plans? de secours
-          - surveillance des crues
-          - documents communaux de synthèse
-          - SPC
-          - PPI # Plan particulier d'intervention
-          - SDIS
-          - Plan Communal de Sauvegarde
-          - Document d'information communal sur les risques majeurs
-      N_INONDATION:
-        short: N4
-        definition: Prévention, connaissance du risque
-        altLabels:
-          - Risque/Inondation
-          - inondation
-          - papi # programme d'actions de prévention des inondations
-        hiddenLabels:
-          - RISQUE/N_INONDATION
-          - risque inondation
-          - risques-inondations
-          - risque-inondation
-          - innondation
-        regexps:
-          - territoires? à risque d'inondation
-          - ' TRI '
-          - Atlas des Zones Inondables
-          - Zones inondables connues
-          - repères de crue
-          - Crue
-          - Enveloppes? Approchées? d'Inondations? Potentielles?
-          - EAIP
-          - Plans d'actions pour la prévention des inondations
-          - PAPI
-          - Cartographie informative des zones inondables
-          - Risques? d'Inondation
-      N_MOUVEMENT_DE_TERRAIN:
-        short: N5
-        definition: Prévention, connaissance du risque
-        altLabels:
-          - Risque/Mouvement de terrain
-          - mouvement-de-terrain
-          - mouvement-terrain
-        regexps:
-          - mouvements de terrain
-          - glissements de terrain
-          - retrait/gonflement
-      N_RADON:
-        short: N6
-        definition: Prévention, connaissance du risque
-        altLabels:
-          - Risque/Radon
-        regexps:
-          - radon
-      N_RISQUE_MINIER:
-        short: N7
-        definition: Prévention, connaissance du risque
-        altLabels:
-          - Risque/Risque minier
-          - risque-minier
-          - alea-minier
-          - apres-mine
-        regexps:
-          - Aléas? miniers?
-          - surveillance minière
-      N_RISQUE_TECHNOLOGIQUE:
-        short: N8
-        definition: Connaissance des riques technologiques (industriels, nucléaires, technologiques, rupture de barrages)	
-        altLabels:
-          - Risque/Risque technologique
-          - risque-risque-technologique
-        hiddenLabels:
-          - risque_technologique
-          - risques? technologiques?
-          - rupture de barrage
-      N_SEISME:
-        short: N9
-        definition: Prévention, connaissance du risque
-        altLabels:
-          - Risque/Séisme
-        regexps:
-          - Aléa sismicité
-          - Zonage sismique
-      N_ZONAGES_RISQUE_NATUREL:
-        short: N10
-        definition: Zonages réglementaires (PPRI, PPRMT ….)
-        note: y compris Arrêtés de catastrophe naturelle (CatNat)
-        altLabels:
-          - Risque/Zonages Risque naturel
-          - zonages-risque-naturel
-          - zonage-a-risques-naturels
-          - pprn
-          - ppri
-          - pprmvt
-          - catnat
-          - catastrophe-naturelle
-          - Zonages Risque naturel
-          - zonage risque naturel
-          - risque/n_zonages_risque_naturel/id_gaspar
-          - risques/n_zonages_risque_naturel/id_gaspar
-        regexps:
-          - plans? de prévention des risques naturels
-          - Plans? de Prévention des Risques d'Inondation
-          - Plan des surfaces submersibles
-          - PSS
-          - Arrêtés de catastrophe naturelle
-          - CatNat
-      N_ZONAGES_RISQUE_TECHNOLOGIQUE:
-        short: N11
-        definition: Zonages réglementaires (PPRT)
-        altLabels:
-          - Risque/Zonages Risque technologique
-          - zonages-risque-technologique
-          - pprt
-        hiddenLabels:
-          - Risque/Risque technologique
-          - risque/n_zonages_risque_technologique
-        regexps:
-          - Plan de Prévention des Risques Miniers
-          - PPRM
-          - Plans? de Prévention des Risques Technologiques
-          - PPRT
-  SITE_INDUSTRIEL_PRODUCTION:
-    short: O
-    children:
-      N_MINE_CARRIERE_GRANULATS:
-        short: O1
-        note: y compris schéma des carrières et cadastre minier
-        altLabels:
-          - Site industriel Production/Mine Carrière Granulats
-          - permis-dexploitation
-          - permis-exclusif-de-carrieres
-          - permis-exclusif-de-recherches
-          - mine
-          - mines
-          - carrieres
-          - camino
-        regexps:
-          - Sc?héma Régional des Carrières
-          - Carrières existantes
-      N_SITE_EOLIEN:
-        short: O2
-        altLabels:
-          - Site industriel Production/Site éolien
-          - site-site-industriel-production-site-eolien
-          - site-eolien
-          - eolien
-          - eolien-terrestre
-          - eolienne
-        regexps:
-          - Éoliennes?
-          - Zone favorable à l'éolien
-          - Parcs? éoliens?
-          - Mâts? éoliens?
-      N_SITE_INDUSTRIEL:
-        short: O3
-        altLabels:
-          - Site industriel Production/Site industriel
-      N_SITE_DE_PRODUCTION_DENERGIE:
-        short: O4
-        definition: Y compris nucléaire, photovoltaique, non compris éolien
-        altLabels:
-          - Site industriel Production/Site de production d'énergie
-          - photovoltaique
-        regexps:
-          - installation nucléaire
-  SOCIO_ECONOMIE:
-    short: P
-    note: |
-      y compris développement durable, ODD, évaluation environnementale, avis d'AE, zonage économique, ...
-    altLabels:
-      - Socio-économie
-      - developpement-durable
-      - odd
-    hiddenLabels:
-      - Socio-économie/Socio-économie
-    regexps:
-      - socio-économique
-      - Autorité Environnementale
-      - mesures compensatoires
-      - Zone d'Activités? Économiques?
-      - ZAE
-      - activité Économique
-  TRANSPORTS_DEPLACEMENT:
-    short: Q
-    children:
-      N_SECURITE_ROUTIERE:
-        short: Q1
-        definition: Accidentologie, points noirs, etc
-        altLabels:
-          - Transports Déplacements/Sécurité routière
-          - sécurité routière
-          - securite-routiere
-          - accidents-de-la-route
-          - accidentologie
-        hiddenLabels:
-          - transport_deplacement/n_securite_routiere
-      N_TRAFIC:
-        short: Q2
-        definition: Trafic routier, schéma directeur d'exploitation de la route
-        altLabels:
-          - Transports Déplacements/Trafic
-          - trafic
-          - tmja
-        regexps:
-          - Limitations? de circulation
-          - PIRAA # Plan intempéries Rhône-Alpes Auvergne
-      N_TR_COLLECTIF:
-        short: Q3
-        definition: Autorités organisatrices, lignes, arrêts, ...
-        note: y compris politique de déplacements sauf PDU -> /AMENAGEMENT_URBANISME/N_ZONAGES_PLANIFICATION
-        altLabels:
-          - Transports Déplacements/Transport collectif
-        regexps:
-          - dépôts de voyageurs
-      N_TR_EXCEPTIONNEL:
-        short: Q4
-        definition: Itinéraires, trafics, volumes
-        altLabels:
-          - Transports Déplacements/Transport exceptionnel
-        hiddenLabels:
-          - transports_exceptionnel
-        regexps:
-          - arrêtés? de circulation
-      N_TR_MARCHANDISE:
-        short: Q5
-        definition: Fret routier, ferré, fluvial, maritime
-        altLabels:
-          - Transports Déplacements/Transport de marchandise
-      N_TRANSPORT_DE_MATIERE_DANGEREUSE:
-        short: Q6
-        definition: Itinéraires, trafics, volumes, canalisations, ...
-        altLabels:
-          - Transports Déplacements/Transport de matière dangereuse
-          - transport-de-matiere-dangereuse
-        hiddenLabels:
-          - transport de matière dangereuse
-        regexps:
-          - TMD
-  TRANSPORT_INFRASTRUCTURE:
-    short: R
-    altLabels:
-      - infrastructures de transport
-    children:
-      N_AERIEN:
-        short: R1
-        definition: Infrastructure aéroportuaire (aéroport)
-        altLabels:
-          - Transports Infrastructure/Aérien
-          - aeroport
-        regexps:
-          - Aérodrome
-          - radars aviation civile
-      N_CIRCULATION_DOUCE:
-        short: R2
-        definition: Pistes cyclables, voies vertes, ...
-        altLabels:
-          - Transports Infrastructure/Circulation douce
-        regexps:
-          - cyclables?
-          - véloroutes?
-          - voies? vertes?
-      N_FERROVIAIRE:
-        short: R3
-        definition: Infrastructure ferrée, gares, ouvrage d'art
-        note: y compris métro et remontées mécaniques
-        altLabels:
-          - Transports Infrastructure/Ferroviaire
-        regexps:
-          - Réseau ferré
-          - Voies? ferrées?
-          - ferroviaire
-          - Repère kilométrique SNCF
-          - gares?
-          - Lignes de métro
-          - Stations de métro
-          - Remontées? mécaniques?
-          - TGV
-      N_FLUVIAL:
-        short: R4
-        definition: Réseau navigable, ouvrages de navigation
-        altLabels:
-          - Transports Infrastructure/Fluvial
-      N_MARITIME:
-        short: R5
-        definition: Infrastructure portuaire
-        altLabels:
-          - Transports Infrastructure/Maritime
-        #regexps:
-          #- Ports? # trop général, prend par exemple Rapportage
-      N_PLATE_FORME_MULTIMODALE:
-        short: R6
-        definition: Infrastructure des plate-formes multimodales
-        altLabels:
-          - Transports Infrastructure/Plate-forme multimodale
-      N_ROUTIER:
-        short: R7
-        definition: Infrastructure routière yc ouvrages d'art
-        note: yc lieux de covoiturage
-        altLabels:
-          - Transports Infrastructure/Routier
-          - routes-nationales
-          - reseau-routier-national
-          - rrn
-          - reseau-routier-national-non-conc
-          - rrn-nc
-          - reseau-routier-national-concede
-          - autoroutes
-          - echangeurs
-          - bretelles
-          - iqrn
-        regexps:
-          - Points? de repères? routiers?
-          - Aire de stockage des poids lourds
-          - Echangeur
-          - Routes?
-          - Sites? DIR
-          - Centres? routiers?
-          - Aires? de chaînage
-          - PR sur la RN
-          - Carrefours situés sur la RN
-          - déviations
-          - Points délicats sur la RN
-          - Aires de pesée des véhicules routiers
-          - Lieux de covoiturage
+        skos:altLabel:
+          - {fr: Transports Infrastructure/Routier}
+          - {fr: routes-nationales}
+          - {fr: reseau-routier-national}
+          - {fr: rrn}
+          - {fr: reseau-routier-national-concede}
+          - {fr: reseau-routier-national-non-conc}
+          - {fr: rrn-nc}
+          - {fr: autoroutes}
+          - {fr: echangeurs}
+          - {fr: bretelles}
+          - {fr: iqrn}
+        espsyntax:regexp:
+          - {fr: Points? de repères? routiers?}
+          - {fr: Aire de stockage des poids lourds}
+          - {fr: Echangeur}
+          - {fr: Routes?}
+          - {fr: Sites? DIR}
+          - {fr: Centres? routiers?}
+          - {fr: Aires? de chaînage}
+          - {fr: PR sur la RN}
+          - {fr: Carrefours situés sur la RN}
+          - {fr: déviations}
+          - {fr: Points délicats sur la RN}
+          - {fr: Aires de pesée des véhicules routiers}
+          - {fr: Lieux de covoiturage}
+
 eof:

@@ -2,12 +2,12 @@
   skos: 'http://www.w3.org/2004/02/skos/core#'
   rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'
   dct: 'http://purl.org/dc/terms/'
-  ecospheres: 'http://registre.data.developpement-durable.gouv.fr/ecospheres'
-  themes: 'http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/'
-  espsyntax: 'http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#'
+  ecospheres: 'http://registre/ecospheres/'
+  themes: 'http://registre/ecospheres/themes-ecospheres/'
+  espsyntax: 'http://registre/ecospheres/syntax#'
   eurovoc: 'http://eurovoc.europa.eu/'
   foaf: 'http://xmlns.com/foaf/0.1/'
-  persons: 'http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/'
+  persons: 'http://registre/ecospheres/persons/'
 '@graph':
   - '@id': 'eurovoc:100141'
     '@type': 'skos:ConceptScheme'
@@ -30,7 +30,7 @@
     'skos:broader':
       '@id': 'themes:masses-d-eau'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'cours d''eau'
@@ -81,7 +81,7 @@
     'skos:broader':
       '@id': 'themes:masses-d-eau'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'eau souterraine'
@@ -92,15 +92,37 @@
     'skos:prefLabel':
       '@language': fr
       '@value': 'protection des eaux'
-  - '@id': 'persons:BenoitDavid'
-    '@type': 'foaf:Person'
-    'foaf:name': 'Benoît David'
-  - '@id': 'persons:GillesGuillouet'
-    '@type': 'foaf:Person'
-    'foaf:name': 'Gilles Guillouet'
-  - '@id': 'persons:LeslieLemaire'
-    '@type': 'foaf:Person'
-    'foaf:name': 'Leslie Lemaire'
+  - '@id': 'ecospheres:themes-ecospheres'
+    '@type': 'skos:ConceptScheme'
+    'dct:contributor':
+      '@id': 'persons:GillesGuillouet'
+    'dct:creator':
+      - { '@id': 'persons:BenoitDavid' }
+      - { '@id': 'persons:LeslieLemaire' }
+    'dct:description':
+      '@language': fr
+      '@value': "Les thèmes Ecosphères sont utilisés dans le guichet de la donnée de la transition écologique.  \nIls sont construits à partir de l'arborescence Covadis et sont structurés comme un thésaurus\nconformément au [standard SKOS du W3C](https://www.w3.org/2004/02/skos/).  \nA chaque concept sont associés:\n  \n  - des altLabels correspondant aux mots-clés rencontrés dans les catalogues moissonnés par le guichet,\n  - des expressions régulières permettant d'associer des fiches de métadonnées des catalogues\n    moissonnés par le guichet,\n  - une correspondance avec\n    [EuroVoc](https://op.europa.eu/fr/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc)\n    dans la mesure du possible.\nLa constitution de ce thésaurus est en cours.  \nVersion intermédiaire publiée par Benoit DAVID le 18/7/2022.\n"
+    'dct:license':
+      '@id': 'https://www.etalab.gouv.fr/licence-ouverte-open-licence'
+    'dct:modified': '2022-07-18'
+    'dct:title':
+      '@language': fr
+      '@value': 'Liste des thèmes d''Ecosphères'
+    'skos:hasTopConcept':
+      - { '@id': 'themes:climat' }
+      - { '@id': 'themes:amenagement-et-urbanisme' }
+      - { '@id': 'themes:etablissements-d-activites' }
+      - { '@id': 'themes:eau' }
+      - { '@id': 'themes:foncier-et-occupation-du-sol' }
+      - { '@id': 'themes:habitat-et-politique-de-la-ville' }
+      - { '@id': 'themes:mer-et-littoral' }
+      - { '@id': 'themes:nature-paysages-et-biodiversite' }
+      - { '@id': 'themes:nuisances-dechets-et-pollution' }
+      - { '@id': 'themes:reseaux-d-energie-et-de-communication' }
+      - { '@id': 'themes:risques' }
+      - { '@id': 'themes:industrie' }
+      - { '@id': 'themes:transport-et-deplacements' }
+      - { '@id': 'themes:infrastructures-de-transport' }
   - '@id': 'themes:accession-a-la-propriete'
     '@type': 'skos:Concept'
     'skos:altLabel':
@@ -109,7 +131,7 @@
     'skos:broader':
       '@id': 'themes:habitat-et-politique-de-la-ville'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Accession à la propriété'
@@ -129,7 +151,7 @@
     'skos:exactMatch':
       '@id': 'eurovoc:607'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Alimentation en eau potable'
@@ -141,7 +163,7 @@
     'skos:exactMatch':
       '@id': 'eurovoc:4619'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:servitudes-d-utilite-publique' }
       - { '@id': 'themes:politique-europeenne-d-amenagement' }
@@ -152,13 +174,16 @@
       '@language': fr
       '@value': 'Aménagement et urbanisme'
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:amenagement-numerique-des-territoires'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Réseau Énergie Divers/Aménagement numérique des territoires'
     'skos:broader':
       '@id': 'themes:reseaux-d-energie-et-de-communication'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Aménagement numérique des territoires'
@@ -182,7 +207,7 @@
     'skos:exactMatch':
       '@id': 'eurovoc:4485'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': Assainissement
@@ -199,7 +224,7 @@
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Autres établissements recevant du public'
@@ -218,16 +243,26 @@
       '@language': fr
       '@value': 'Demande de logement social, accueil des gens du voyage'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Besoins en logements'
   - '@id': 'themes:bruit'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Classement sonore' }
+      - { '@language': fr, '@value': 'gêne sonore' }
+      - { '@language': fr, '@value': 'Cartes? de bruit strat(é|e)gique' }
+      - { '@language': fr, '@value': 'plans? d''exposition au bruit' }
+      - { '@language': fr, '@value': 'Niveau de bruit' }
+      - { '@language': fr, '@value': 'cartographie du bruit' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': Nuisance/Bruit }
+      - { '@language': fr, '@value': bruit }
     'skos:broader':
       '@id': 'themes:nuisances-dechets-et-pollution'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': Bruit
@@ -249,16 +284,22 @@
     'skos:exactMatch':
       '@id': 'eurovoc:5482'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Changement climatique'
   - '@id': 'themes:chasse'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': chasse
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Nature Paysage Biodiversité/Chasse'
     'skos:broader':
       '@id': 'themes:nature-paysages-et-biodiversite'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': Chasse
@@ -273,16 +314,23 @@
       '@language': fr
       '@value': 'Zones de chasse réglementée, concession baux'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Chasse maritime'
   - '@id': 'themes:circulation-douce'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'cyclables?' }
+      - { '@language': fr, '@value': 'véloroutes?' }
+      - { '@language': fr, '@value': 'voies? vertes?' }
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Transports Infrastructure/Circulation douce'
     'skos:broader':
       '@id': 'themes:infrastructures-de-transport'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Circulation douce'
@@ -297,7 +345,7 @@
     'skos:exactMatch':
       '@id': 'eurovoc:6011'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:changement-climatique' }
       - { '@id': 'themes:meteorologie' }
@@ -305,7 +353,7 @@
       '@language': fr
       '@value': Climat
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:construction'
     '@type': 'skos:Concept'
     'espsyntax:regexp':
@@ -322,16 +370,22 @@
       '@language': fr
       '@value': "Zones d'instruction des permis de construire, nombre de logements, SHON, nombre de logements\nautorisés, statistiques de permis de construire, règles de construction\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': Construction
   - '@id': 'themes:dechets'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': déchet }
+      - { '@language': fr, '@value': Incinérateur }
+    'skos:altLabel':
+      - { '@language': fr, '@value': Nuisance/Déchet }
+      - { '@language': fr, '@value': déchetterie }
     'skos:broader':
       '@id': 'themes:nuisances-dechets-et-pollution'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': Déchets
@@ -346,7 +400,7 @@
     'skos:exactMatch':
       '@id': 'eurovoc:597'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:alimentation-en-eau-potable' }
       - { '@id': 'themes:assainissement' }
@@ -360,7 +414,7 @@
       '@language': fr
       '@value': Eau
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:ecologie-du-littoral'
     '@type': 'skos:Concept'
     'espsyntax:regexp':
@@ -383,7 +437,7 @@
       '@language': fr
       '@value': "Évolution du trait de côte, qualité des eaux littorales, sites du conservatoire, Avifaune,\nhabitats naturels, arrêtés de biotope en mer, ZNIEFF en mer, sites inscrits/classés en mer,\nPNR en mer, RAMSAR, Natura 2000 en mer, réserves naturelles en mer, sites ENS du CG,\nmammifères marins, Indicateurs de sensibilité, Inventaire permanent du LIttoral (IPLI)\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Écologie du littoral'
@@ -399,7 +453,7 @@
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Équipements de tourisme'
@@ -414,14 +468,14 @@
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Équipements sportifs ou culturels'
   - '@id': 'themes:etablissements-d-activites'
     '@type': 'skos:Concept'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:etablissements-d-enseignement' }
       - { '@id': 'themes:equipements-sportifs-ou-culturels' }
@@ -433,7 +487,7 @@
       '@language': fr
       '@value': 'Établissements d''activités'
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:etablissements-d-enseignement'
     '@type': 'skos:Concept'
     'espsyntax:regexp':
@@ -445,7 +499,7 @@
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Etablissements d''enseignement'
@@ -463,7 +517,7 @@
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Établissements de santé et médico-sociaux'
@@ -481,7 +535,7 @@
     'skos:broader':
       '@id': 'themes:amenagement-et-urbanisme'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': Études
@@ -496,14 +550,14 @@
       '@language': fr
       '@value': 'definition: Divisions, regroupements, changement propriétaires'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Foncier agricole'
   - '@id': 'themes:foncier-et-occupation-du-sol'
     '@type': 'skos:Concept'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:foncier-agricole' }
       - { '@id': 'themes:mutation-fonciere' }
@@ -513,13 +567,31 @@
       '@language': fr
       '@value': 'Foncier et occupation du sol'
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:gestion-du-risque'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Centres? de secours' }
+      - { '@language': fr, '@value': 'Plans? de secours' }
+      - { '@language': fr, '@value': 'surveillance des crues' }
+      - { '@language': fr, '@value': 'documents communaux de synthèse' }
+      - { '@language': fr, '@value': SPC }
+      - { '@language': fr, '@value': PPI }
+      - { '@language': fr, '@value': SDIS }
+      - { '@language': fr, '@value': 'Plan Communal de Sauvegarde' }
+      - { '@language': fr, '@value': 'Document d''information communal sur les risques majeurs' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Risque/Gestion du risque' }
+      - { '@language': fr, '@value': 'gestion du risque' }
+      - { '@language': fr, '@value': gestion-des-risques }
+      - { '@language': fr, '@value': gestion-du-risque }
     'skos:broader':
       '@id': 'themes:risques'
+    'skos:definition':
+      '@language': fr
+      '@value': "Entreprises requisitionnables, plans de secours, limites de compétence des SPC, cours d'eau équipés pour\nla surveillance des crues, documents communaux de synthèse, ...  \ny compris information et sensibilisation de la population\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Gestion du risque'
@@ -529,7 +601,7 @@
       '@language': fr
       '@value': 'Habitat Politique de la ville'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:accession-a-la-propriete' }
       - { '@id': 'themes:besoins-en-logements' }
@@ -544,7 +616,7 @@
       '@language': fr
       '@value': 'Habitat et politique de la ville'
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:habitat-indigne'
     '@type': 'skos:Concept'
     'skos:altLabel':
@@ -556,14 +628,14 @@
       '@language': fr
       '@value': 'Inventaire de l''habitat susceptible d''être indigne'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Habitat indigne'
   - '@id': 'themes:industrie'
     '@type': 'skos:Concept'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:mines' }
       - { '@id': 'themes:sites-industriels' }
@@ -573,59 +645,112 @@
       '@language': fr
       '@value': 'Industrie, production d''énergie et exploitation du sol'
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:infrastructure-aeroportuaire'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': Aérodrome }
+      - { '@language': fr, '@value': 'radars aviation civile' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Transports Infrastructure/Aérien' }
+      - { '@language': fr, '@value': 'Infrastructure aéroportuaire (aéroport)' }
+      - { '@language': fr, '@value': aeroport }
     'skos:broader':
       '@id': 'themes:infrastructures-de-transport'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Infrastructure aéroportuaire'
   - '@id': 'themes:infrastructure-ferree'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Réseau ferré' }
+      - { '@language': fr, '@value': 'Voies? ferrées?' }
+      - { '@language': fr, '@value': ferroviaire }
+      - { '@language': fr, '@value': 'Repère kilométrique SNCF' }
+      - { '@language': fr, '@value': 'gares?' }
+      - { '@language': fr, '@value': 'Lignes de métro' }
+      - { '@language': fr, '@value': 'Stations de métro' }
+      - { '@language': fr, '@value': 'Remontées? mécaniques?' }
+      - { '@language': fr, '@value': TGV }
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Transports Infrastructure/Ferroviaire'
     'skos:broader':
       '@id': 'themes:infrastructures-de-transport'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Infrastructure ferrée, gares et ouvrages d''art'
+    'skos:scopeNote':
+      '@language': fr
+      '@value': 'plus les métros et et remontées mécaniques'
   - '@id': 'themes:infrastructure-portuaire'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Transports Infrastructure/Maritime'
     'skos:broader':
       '@id': 'themes:infrastructures-de-transport'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Infrastructure portuaire'
   - '@id': 'themes:infrastructure-routiere'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Points? de repères? routiers?' }
+      - { '@language': fr, '@value': 'Aire de stockage des poids lourds' }
+      - { '@language': fr, '@value': Echangeur }
+      - { '@language': fr, '@value': 'Routes?' }
+      - { '@language': fr, '@value': 'Sites? DIR' }
+      - { '@language': fr, '@value': 'Centres? routiers?' }
+      - { '@language': fr, '@value': 'Aires? de chaînage' }
+      - { '@language': fr, '@value': 'PR sur la RN' }
+      - { '@language': fr, '@value': 'Carrefours situés sur la RN' }
+      - { '@language': fr, '@value': déviations }
+      - { '@language': fr, '@value': 'Points délicats sur la RN' }
+      - { '@language': fr, '@value': 'Aires de pesée des véhicules routiers' }
+      - { '@language': fr, '@value': 'Lieux de covoiturage' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Transports Infrastructure/Routier' }
+      - { '@language': fr, '@value': routes-nationales }
+      - { '@language': fr, '@value': reseau-routier-national }
+      - { '@language': fr, '@value': rrn }
+      - { '@language': fr, '@value': reseau-routier-national-concede }
+      - { '@language': fr, '@value': reseau-routier-national-non-conc }
+      - { '@language': fr, '@value': rrn-nc }
+      - { '@language': fr, '@value': autoroutes }
+      - { '@language': fr, '@value': echangeurs }
+      - { '@language': fr, '@value': bretelles }
+      - { '@language': fr, '@value': iqrn }
     'skos:broader':
       '@id': 'themes:infrastructures-de-transport'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Infrastructure routière'
   - '@id': 'themes:infrastructures-de-transport'
     '@type': 'skos:Concept'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:infrastructure-aeroportuaire' }
       - { '@id': 'themes:circulation-douce' }
       - { '@id': 'themes:infrastructure-ferree' }
       - { '@id': 'themes:reseau-navigable' }
       - { '@id': 'themes:infrastructure-portuaire' }
+      - { '@id': 'themes:plateformes-multi-modales' }
       - { '@id': 'themes:infrastructure-routiere' }
     'skos:prefLabel':
       '@language': fr
       '@value': 'Infrastructures de transport'
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:interventions-sur-les-cours-d-eau'
     '@type': 'skos:Concept'
     'skos:altLabel':
@@ -640,25 +765,47 @@
       '@language': fr
       '@value': 'Travaux sur linéaire, curage-dragage, drainages'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Interventions sur les cours d''eau'
   - '@id': 'themes:inventaires-des-paysages'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Parcs et jardins' }
+      - { '@language': fr, '@value': 'paysages?' }
+      - { '@language': fr, '@value': 'paysagères?' }
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Nature Paysage Biodiversité/Inventaire Paysage'
     'skos:broader':
       '@id': 'themes:nature-paysages-et-biodiversite'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Inventaires des paysages'
   - '@id': 'themes:inventaires-nature-et-biodiversite'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Habitats? naturels?' }
+      - { '@language': fr, '@value': ZNIEFF }
+      - { '@language': fr, '@value': 'Intérêts? Ecologiques? Faunistiques? et Floristiques?' }
+      - { '@language': fr, '@value': 'Observation de la flore' }
+      - { '@language': fr, '@value': 'Régions? biogéographiques?' }
+      - { '@language': fr, '@value': 'patrimoine géologique' }
+      - { '@language': fr, '@value': 'continuité écologique' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Nature Paysage Biodiversité/Inventaire Nature Biodiversité' }
+      - { '@language': fr, '@value': znieff1 }
+      - { '@language': fr, '@value': znieff2 }
+      - { '@language': fr, '@value': 'Nature Paysage Biodiversité / Inventaire Nature Biodiversité' }
+      - { '@language': fr, '@value': 'INVENTAIRE NATURE BIODIVERSITE' }
+      - { '@language': fr, '@value': inventaire_nature_biodiversite }
     'skos:broader':
       '@id': 'themes:nature-paysages-et-biodiversite'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Inventaires nature et biodiversité'
@@ -678,7 +825,7 @@
       '@language': fr
       '@value': "Zone d'activité des préfectures maritimes, ligne de base, limite des 300m, limites des 1-3-6-12 miles\nnautiques, ZEE, limites des communes et des départements en mer, limite du domaine public, limite de salure\ndes eaux, Lignes Transversales de la Mer, planification maritime\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Limite administrative spéciale en mer et sur le littoral'
@@ -696,7 +843,7 @@
       '@language': fr
       '@value': 'Plan de pose de barrages, CNPE, plan de gestion de polluants'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Lutte anti-pollution en mer et sur le littoral'
@@ -719,7 +866,7 @@
       '@language': fr
       '@value': "Les masses d'eau au sens de la DCE et autres masses d'eau (surface, cours d'eau, plan d'eau naturel,\neau souterraine, connaissance des zones, humides, ...)\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrowMatch':
       - { '@id': 'eurovoc:260' }
       - { '@id': 'eurovoc:609' }
@@ -761,7 +908,7 @@
       '@language': fr
       '@value': "Par rapport au thème Covadis 'Mer Littoral', suppression des sous-thèmes 'Culture marine', 'Pêche maritime'\net 'Autres activités' remontés dans le thème parent de 1er niveau.\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:ecologie-du-littoral' }
       - { '@id': 'themes:limite-administrative-speciale-en-mer' }
@@ -773,7 +920,7 @@
       '@language': fr
       '@value': 'Mer et littoral'
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:meteorologie'
     '@type': 'skos:Concept'
     'skos:altLabel':
@@ -784,16 +931,28 @@
     'skos:exactMatch':
       '@id': 'eurovoc:1892'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': Météorologie
   - '@id': 'themes:mines'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Sc?héma Régional des Carrières' }
+      - { '@language': fr, '@value': 'Carrières existantes' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Site industriel Production/Mine Carrière Granulats' }
+      - { '@language': fr, '@value': permis-dexploitation }
+      - { '@language': fr, '@value': permis-exclusif-de-carrieres }
+      - { '@language': fr, '@value': permis-exclusif-de-recherches }
+      - { '@language': fr, '@value': mine }
+      - { '@language': fr, '@value': mines }
+      - { '@language': fr, '@value': carrieres }
+      - { '@language': fr, '@value': camino }
     'skos:broader':
       '@id': 'themes:industrie'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Mines, carrières et extraction de granulats'
@@ -808,14 +967,14 @@
       '@language': fr
       '@value': 'Remembrement, travaux connexes'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Mutation foncière'
   - '@id': 'themes:nature-paysages-et-biodiversite'
     '@type': 'skos:Concept'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:inventaires-nature-et-biodiversite' }
       - { '@id': 'themes:inventaires-des-paysages' }
@@ -826,7 +985,7 @@
       '@language': fr
       '@value': 'Nature, paysages et biodiversité'
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:navigation-maritime'
     '@type': 'skos:Concept'
     'espsyntax:regexp':
@@ -848,14 +1007,14 @@
       '@language': fr
       '@value': "Plaisance et mouillage, zones portuaires, nautique, plan de balisage, zones militaires, câbles sous-marins,\ncantonnements, zones de navigation, balises/épaves, activités des CROSS, formation et qualification\ndes gens de mer\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Navigation maritime'
   - '@id': 'themes:nuisances-dechets-et-pollution'
     '@type': 'skos:Concept'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:bruit' }
       - { '@id': 'themes:dechets' }
@@ -866,7 +1025,7 @@
       '@language': fr
       '@value': 'Nuisances, déchets et pollution'
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:occupation-des-logements'
     '@type': 'skos:Concept'
     'espsyntax:regexp':
@@ -881,7 +1040,7 @@
       '@language': fr
       '@value': 'Aides au logements, taux d''occupation, suivi des loyers, ...'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Occupation des logements'
@@ -899,7 +1058,7 @@
     'skos:broader':
       '@id': 'themes:foncier-et-occupation-du-sol'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Occupation du sol'
@@ -918,7 +1077,7 @@
       '@language': fr
       '@value': "plans d'eau artificiels, réservoirs, ORSFP, pisciculture, déversoirs d'orage, bassins d'orage,\nmoulins, usines hydroélectriques, bassins d'infiltration, bassins d'évaporation, digues,\nobstacles à l'écoulement, ...\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Ouvrages hydrauliques'
@@ -934,7 +1093,7 @@
       '@language': fr
       '@value': 'Résidences principales collectives, logements vacants, résidences secondaires'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Parc de logements'
@@ -953,16 +1112,28 @@
       '@language': fr
       '@value': 'Zonage du locatif, hébergement d''urgence, logements en prêt locatif, PALULOS'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Parc locatif social'
   - '@id': 'themes:parcs-eoliens'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Éoliennes?' }
+      - { '@language': fr, '@value': 'Zone favorable à l''éolien' }
+      - { '@language': fr, '@value': 'Parcs? éoliens?' }
+      - { '@language': fr, '@value': 'Mâts? éoliens?' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Site industriel Production/Site éolien' }
+      - { '@language': fr, '@value': site-site-industriel-production-site-eolien }
+      - { '@language': fr, '@value': site-eolien }
+      - { '@language': fr, '@value': eolien }
+      - { '@language': fr, '@value': eolien-terrestre }
+      - { '@language': fr, '@value': eolienne }
     'skos:broader':
       '@id': 'themes:industrie'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Parcs éoliens'
@@ -977,7 +1148,7 @@
     'skos:broader':
       '@id': 'themes:etablissements-d-activites'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Patrimoine culturel'
@@ -994,16 +1165,20 @@
     'skos:exactMatch':
       '@id': 'eurovoc:3338'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Pêche en eaux intérieures'
   - '@id': 'themes:perturbations-electromagnetiques'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Nuisance/Nuisance électromagnétique' }
+      - { '@language': fr, '@value': 'perturbations électromagnétiques' }
+      - { '@language': fr, '@value': 'perturbation électromagnétique' }
     'skos:broader':
       '@id': 'themes:nuisances-dechets-et-pollution'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Perturbations électromagnétiques'
@@ -1047,10 +1222,22 @@
     'skos:exactMatch':
       '@id': 'eurovoc:2391'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': Planification
+  - '@id': 'themes:plateformes-multi-modales'
+    '@type': 'skos:Concept'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Transports Infrastructure/Plate-forme multimodale'
+    'skos:broader':
+      '@id': 'themes:infrastructures-de-transport'
+    'skos:inScheme':
+      '@id': 'ecospheres:themes-ecospheres'
+    'skos:prefLabel':
+      '@language': fr
+      '@value': 'Plateformes multi-modales'
   - '@id': 'themes:politique-de-la-ville'
     '@type': 'skos:Concept'
     'espsyntax:regexp':
@@ -1079,7 +1266,7 @@
       '@language': fr
       '@value': "PRU, Opération programmée pour l'amélioration de l'habitat (OPAH), SRU, ZUS, ZRU,\nquartier prioritaire, Programme local de l'habitat (PLH),\nContrat urbain de cohésion sociale (CUCS) ...\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Politique de la ville'
@@ -1091,97 +1278,199 @@
     'skos:broader':
       '@id': 'themes:amenagement-et-urbanisme'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Politique européenne d''aménagement'
   - '@id': 'themes:pollution-des-sols'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Sites? pollués?' }
+      - { '@language': fr, '@value': BASOL }
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Nuisance/Pollution du sol'
     'skos:broader':
       '@id': 'themes:nuisances-dechets-et-pollution'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Pollution des sols'
   - '@id': 'themes:prevention-des-avalanches'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': avalanche
+    'skos:altLabel':
+      '@language': fr
+      '@value': Risque/Avalanche
     'skos:broader':
       '@id': 'themes:risques'
+    'skos:definition':
+      '@language': fr
+      '@value': 'Connaissance et prévention du risque d''avalanches'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Prévention des avalanches'
   - '@id': 'themes:prevention-des-eruptions-volcaniques'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Risque/Eruption volcanique'
     'skos:broader':
       '@id': 'themes:risques'
+    'skos:definition':
+      '@language': fr
+      '@value': 'Connaissance et prévention du risque d''éruption volcanique'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Prévention des éruptions volcaniques'
   - '@id': 'themes:prevention-des-inondations'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'territoires? à risque d''inondation' }
+      - { '@language': fr, '@value': ' TRI ' }
+      - { '@language': fr, '@value': 'Atlas des Zones Inondables' }
+      - { '@language': fr, '@value': 'Zones inondables connues' }
+      - { '@language': fr, '@value': 'repères de crue' }
+      - { '@language': fr, '@value': Crue }
+      - { '@language': fr, '@value': 'Enveloppes? Approchées? d''Inondations? Potentielles?' }
+      - { '@language': fr, '@value': EAIP }
+      - { '@language': fr, '@value': 'Plans d''actions pour la prévention des inondations' }
+      - { '@language': fr, '@value': PAPI }
+      - { '@language': fr, '@value': 'Cartographie informative des zones inondables' }
+      - { '@language': fr, '@value': 'Risques? d''Inondation' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': Risque/Inondation }
+      - { '@language': fr, '@value': inondation }
+      - { '@language': fr, '@value': papi }
+      - { '@language': fr, '@value': RISQUE/N_INONDATION }
+      - { '@language': fr, '@value': 'risque inondation' }
+      - { '@language': fr, '@value': risques-inondations }
+      - { '@language': fr, '@value': risque-inondation }
+      - { '@language': fr, '@value': innondation }
     'skos:broader':
       '@id': 'themes:risques'
+    'skos:definition':
+      '@language': fr
+      '@value': 'Connaissance et prévention du risque d''inondation'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Prévention des inondations'
   - '@id': 'themes:prevention-des-risques-technologiques'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'risques? technologiques?' }
+      - { '@language': fr, '@value': 'rupture de barrage' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Risque/Risque technologique' }
+      - { '@language': fr, '@value': risque-risque-technologique }
+      - { '@language': fr, '@value': risque_technologique }
     'skos:broader':
       '@id': 'themes:risques'
+    'skos:definition':
+      '@language': fr
+      '@value': 'Connaissance des riques technologiques (industriels, nucléaires, technologiques, rupture de barrages)'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Prévention des risques technologiques'
   - '@id': 'themes:prevention-du-risque-minier'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Aléas? miniers?' }
+      - { '@language': fr, '@value': 'surveillance minière' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Risque/Risque minier' }
+      - { '@language': fr, '@value': risque-minier }
+      - { '@language': fr, '@value': alea-minier }
+      - { '@language': fr, '@value': apres-mine }
     'skos:broader':
       '@id': 'themes:risques'
+    'skos:definition':
+      '@language': fr
+      '@value': 'Connaissance et prévention du risque minier'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Prévention du risque minier'
   - '@id': 'themes:prevention-du-risque-mouvement-de-terrain'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'mouvements de terrain' }
+      - { '@language': fr, '@value': 'glissements de terrain' }
+      - { '@language': fr, '@value': retrait/gonflement }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Risque/Mouvement de terrain' }
+      - { '@language': fr, '@value': mouvement-de-terrain }
+      - { '@language': fr, '@value': mouvement-terrain }
     'skos:broader':
       '@id': 'themes:risques'
+    'skos:definition':
+      '@language': fr
+      '@value': 'Connaissance et prévention du risque de mouvement de terrain'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Prévention du risque mouvement de terrain'
   - '@id': 'themes:prevention-du-risque-radon'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': radon
+    'skos:altLabel':
+      '@language': fr
+      '@value': Risque/Radon
     'skos:broader':
       '@id': 'themes:risques'
+    'skos:definition':
+      '@language': fr
+      '@value': 'Connaissance et prévention du risque radon'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Prévention du risque radon'
   - '@id': 'themes:prevention-du-risque-sismique'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Aléa sismicité' }
+      - { '@language': fr, '@value': 'Zonage sismique' }
+    'skos:altLabel':
+      '@language': fr
+      '@value': Risque/Séisme
     'skos:broader':
       '@id': 'themes:risques'
+    'skos:definition':
+      '@language': fr
+      '@value': 'Connaissance et prévention du risque sismique'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Prévention du risque sismique'
   - '@id': 'themes:production-d-energie-hors-eolien'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': 'installation nucléaire'
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Site industriel Production/Site de production d''énergie' }
+      - { '@language': fr, '@value': photovoltaique }
     'skos:broader':
       '@id': 'themes:industrie'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Production d''énergie hors éolien'
@@ -1197,7 +1486,7 @@
     'skos:broader':
       '@id': 'themes:foncier-et-occupation-du-sol'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Propriété foncière'
@@ -1234,52 +1523,131 @@
     'skos:exactMatch':
       '@id': 'eurovoc:6398'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Protection de l''eau'
   - '@id': 'themes:protection-et-gestion-de-la-nature'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'parcs? nation(al|aux)' }
+      - { '@language': fr, '@value': 'Arrêtés? préfector(al|aux) de protection des? biotopes?' }
+      - { '@language': fr, '@value': 'Arrêtés? de Protection de Biotopes?' }
+      - { '@language': fr, '@value': 'Arrêtés? de Protection de Géotopes?' }
+      - { '@language': fr, '@value': 'réserves? naturelles?' }
+      - { '@language': fr, '@value': 'Réserves? de Biosphère' }
+      - { '@language': fr, '@value': Ramsar }
+      - { '@language': fr, '@value': 'natura 2000' }
+      - { '@language': fr, '@value': 'Espaces? Naturels? Sensibles?' }
+      - { '@language': fr, '@value': 'Schéma régional de cohérence écologique' }
+      - { '@language': fr, '@value': SRCE }
+      - { '@language': fr, '@value': 'Sites du Conservatoire' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Nature Paysage Biodiversité/Zonages Nature' }
+      - { '@language': fr, '@value': 'Schéma régional de cohérence écologique' }
+      - { '@language': fr, '@value': nature_paysage_biodiversite/n_zonages_nature }
+      - { '@language': fr, '@value': 'zonages nature' }
+      - { '@language': fr, '@value': schema-regional-de-coherence-ecologique }
+      - { '@language': fr, '@value': srce }
+      - { '@language': fr, '@value': coherence-ecologique }
+      - { '@language': fr, '@value': coherence-coherence-ecologique }
+      - { '@language': fr, '@value': trame-verte-et-bleue }
+      - { '@language': fr, '@value': tvb }
     'skos:broader':
       '@id': 'themes:nature-paysages-et-biodiversite'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Protection et gestion de la nature'
   - '@id': 'themes:protection-et-gestion-des-paysages'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Zones de protection loi 1930' }
+      - { '@language': fr, '@value': 'sites classés' }
+      - { '@language': fr, '@value': 'sites inscrits' }
+      - { '@language': fr, '@value': ZPPAUP }
+      - { '@language': fr, '@value': 'Patrimoine mondial UNESCO' }
+      - { '@language': fr, '@value': 'Label grand site de France' }
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Nature Paysage Biodiversité/Zonages Paysage'
     'skos:broader':
       '@id': 'themes:nature-paysages-et-biodiversite'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Protection et gestion des paysages'
   - '@id': 'themes:qualite-de-l-air'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Air Climat/Qualité Pollution' }
+      - { '@language': fr, '@value': qualite-de-l-air }
+      - { '@language': fr, '@value': pollution-atmospherique }
+      - { '@language': fr, '@value': dioxyde-d-azote }
+      - { '@language': fr, '@value': dioxyde-de-soufre }
+      - { '@language': fr, '@value': monoxyde-de-carbone }
+      - { '@language': fr, '@value': ozone }
+      - { '@language': fr, '@value': particules }
+      - { '@language': fr, '@value': pm10 }
+      - { '@language': fr, '@value': pm25 }
     'skos:broader':
       '@id': 'themes:nuisances-dechets-et-pollution'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Qualité de l''air'
   - '@id': 'themes:reglementation-de-prevention-des-risques-naturels'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'plans? de prévention des risques naturels' }
+      - { '@language': fr, '@value': 'Plans? de Prévention des Risques d''Inondation' }
+      - { '@language': fr, '@value': 'Plan des surfaces submersibles' }
+      - { '@language': fr, '@value': PSS }
+      - { '@language': fr, '@value': 'Arrêtés de catastrophe naturelle' }
+      - { '@language': fr, '@value': CatNat }
+      - { '@language': fr, '@value': 'Plan de Prévention des Risques Miniers' }
+      - { '@language': fr, '@value': PPRM }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Risque/Zonages Risque naturel' }
+      - { '@language': fr, '@value': zonages-risque-naturel }
+      - { '@language': fr, '@value': zonage-a-risques-naturels }
+      - { '@language': fr, '@value': pprn }
+      - { '@language': fr, '@value': ppri }
+      - { '@language': fr, '@value': pprmvt }
+      - { '@language': fr, '@value': catnat }
+      - { '@language': fr, '@value': catastrophe-naturelle }
+      - { '@language': fr, '@value': 'Zonages Risque naturel' }
+      - { '@language': fr, '@value': 'zonage risque naturel' }
+      - { '@language': fr, '@value': risque/n_zonages_risque_naturel/id_gaspar }
+      - { '@language': fr, '@value': risques/n_zonages_risque_naturel/id_gaspar }
     'skos:broader':
       '@id': 'themes:risques'
+    'skos:editorialNote':
+      '@language': fr
+      '@value': "Intégrer à ce sous-thème les Plans de Prévention des Risques Miniers ou créer un nouveau sous-thème ?\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Réglementation de prévention des risques naturels'
   - '@id': 'themes:reglementation-de-prevention-des-risques-technologiques'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Plans? de Prévention des Risques Technologiques' }
+      - { '@language': fr, '@value': PPRT }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Risque/Zonages Risque technologique' }
+      - { '@language': fr, '@value': 'Risque/Risque technologique' }
+      - { '@language': fr, '@value': zonages-risque-technologique }
+      - { '@language': fr, '@value': risque/n_zonages_risque_technologique }
+      - { '@language': fr, '@value': pprt }
     'skos:broader':
       '@id': 'themes:risques'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Réglementation de prévention des risques technologiques'
@@ -1295,50 +1663,91 @@
     'skos:broader':
       '@id': 'themes:habitat-et-politique-de-la-ville'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Rénovation urbaine'
   - '@id': 'themes:reseau-de-telecommunication'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Réseau Énergie Divers/Télécommunication'
     'skos:broader':
       '@id': 'themes:reseaux-d-energie-et-de-communication'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Réseau de télécommunication'
   - '@id': 'themes:reseau-electrique'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Transport d''électricité' }
+      - { '@language': fr, '@value': 'haute tension' }
+      - { '@language': fr, '@value': haute-tension }
+      - { '@language': fr, '@value': 'Pylones? d''électricité' }
+      - { '@language': fr, '@value': 'Barrages? hydroélectriques?' }
+      - { '@language': fr, '@value': 'Centrales? hydroélectriques?' }
+      - { '@language': fr, '@value': 'photovoltaiques?' }
+      - { '@language': fr, '@value': 'Postes électriques' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Réseau Énergie Divers/Électricité' }
+      - { '@language': fr, '@value': electricite }
     'skos:broader':
       '@id': 'themes:reseaux-d-energie-et-de-communication'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Réseau électrique'
   - '@id': 'themes:reseau-hydrocarbures'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'dépôts? pétroliers?' }
+      - { '@language': fr, '@value': 'stockage GPL' }
+      - { '@language': fr, '@value': 'raffineries?' }
+      - { '@language': fr, '@value': 'stockages? de gaz naturels?' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Réseau Énergie Divers/Hydrocarbure' }
+      - { '@language': fr, '@value': gaz-naturel }
+      - { '@language': fr, '@value': produit-petrolier }
+      - { '@language': fr, '@value': hydrocarbures-liquides-ou-gazeux }
     'skos:broader':
       '@id': 'themes:reseaux-d-energie-et-de-communication'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Réseau de transport et de stockage des hydrocarbures'
   - '@id': 'themes:reseau-navigable'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Transports Infrastructure/Fluvial'
     'skos:broader':
       '@id': 'themes:infrastructures-de-transport'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Réseau navigable et ouvrages de navigation'
   - '@id': 'themes:reseaux-d-energie-et-de-communication'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': 'Réseaux? de chaleur'
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Réseau Énergie Divers/Autre' }
+      - { '@language': fr, '@value': energie }
+      - { '@language': fr, '@value': consommation-d-energie }
+      - { '@language': fr, '@value': chaleur }
+      - { '@language': fr, '@value': froid }
+      - { '@language': fr, '@value': geothermie }
+    'skos:editorialNote':
+      '@language': fr
+      '@value': "Où mettre les jeux concernant l'énergie mais pas les réseaux ?  \nIl faudrait étendre ce thème pour intégrer tout le champ de l'énergie.\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:amenagement-numerique-des-territoires' }
       - { '@id': 'themes:reseau-electrique' }
@@ -1348,11 +1757,17 @@
       '@language': fr
       '@value': 'Réseaux d''énergie et de communication'
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:risques'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Aléas naturels connus' }
+      - { '@language': fr, '@value': 'risque d''érodabilté' }
+    'skos:altLabel':
+      '@language': fr
+      '@value': risques
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:prevention-des-avalanches' }
       - { '@id': 'themes:prevention-des-eruptions-volcaniques' }
@@ -1369,13 +1784,20 @@
       '@language': fr
       '@value': Risques
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:securite-routiere'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Transports Déplacements/Sécurité routière' }
+      - { '@language': fr, '@value': 'sécurité routière' }
+      - { '@language': fr, '@value': securite-routiere }
+      - { '@language': fr, '@value': accidents-de-la-route }
+      - { '@language': fr, '@value': accidentologie }
+      - { '@language': fr, '@value': transport_deplacement/n_securite_routiere }
     'skos:broader':
       '@id': 'themes:transport-et-deplacements'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Sécurité routière'
@@ -1394,16 +1816,29 @@
     'skos:broader':
       '@id': 'themes:amenagement-et-urbanisme'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Servitudes d''utilité publique'
   - '@id': 'themes:sites-industriels'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': ICPE }
+      - { '@language': fr, '@value': 'Installations? classées? pour la protection de l''environnement' }
+      - { '@language': fr, '@value': 'Installations? classées? pour l''environnement' }
+      - { '@language': fr, '@value': SEVESO }
+      - { '@language': fr, '@value': 'Tours? aéroréfrigérantes?' }
+      - { '@language': fr, '@value': 'Registre français des émissions polluantes' }
+      - { '@language': fr, '@value': 'Directive sur les émissions industrielles' }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Site industriel Production/Site industriel' }
+      - { '@language': fr, '@value': ICPE }
+      - { '@language': fr, '@value': 'Installation classé pour la protection de l''environnement' }
+      - { '@language': fr, '@value': 'Installations classés pour la protection de l''environnement' }
     'skos:broader':
       '@id': 'themes:industrie'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Sites industriels'
@@ -1423,7 +1858,7 @@
       '@language': fr
       '@value': 'points de mesure, effractions constatées, ...'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Surveillance de la ressource en eau'
@@ -1452,50 +1887,73 @@
       '@language': fr
       '@value': "Trait de côte, typologie de l'estran, bathymétrie, sédimentologie, zones de sable, granulométrie, ESI, houle,\nmarées, zones inondables, rejets en mer, prises d'eau, sentier littoral, accès au DPM, aires de stationnement,\nsites industriels, amers remarquables, cartes de navigation électroniques\n"
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Topographie en mer et sur le littoral'
   - '@id': 'themes:trafic-routier'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      - { '@language': fr, '@value': 'Limitations? de circulation' }
+      - { '@language': fr, '@value': PIRAA }
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Transports Déplacements/Trafic' }
+      - { '@language': fr, '@value': trafic }
+      - { '@language': fr, '@value': tmja }
     'skos:broader':
       '@id': 'themes:transport-et-deplacements'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Trafic routier et exploitation de la route'
   - '@id': 'themes:transport-collectif'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': 'dépôts de voyageurs'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Transports Déplacements/Transport collectif'
     'skos:broader':
       '@id': 'themes:transport-et-deplacements'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Transport collectif'
   - '@id': 'themes:transport-de-marchandises'
     '@type': 'skos:Concept'
+    'skos:altLabel':
+      '@language': fr
+      '@value': 'Transports Déplacements/Transport de marchandise'
     'skos:broader':
       '@id': 'themes:transport-et-deplacements'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Transport de marchandises'
   - '@id': 'themes:transport-de-matieres-dangereuses'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': TMD
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Transports Déplacements/Transport de matière dangereuse' }
+      - { '@language': fr, '@value': transport-de-matiere-dangereuse }
+      - { '@language': fr, '@value': 'transport de matière dangereuse' }
     'skos:broader':
       '@id': 'themes:transport-et-deplacements'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Transport de matières dangereuses'
   - '@id': 'themes:transport-et-deplacements'
     '@type': 'skos:Concept'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:narrower':
       - { '@id': 'themes:securite-routiere' }
       - { '@id': 'themes:trafic-routier' }
@@ -1507,13 +1965,19 @@
       '@language': fr
       '@value': 'Transport et déplacements'
     'skos:topConceptOf':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
   - '@id': 'themes:transport-exceptionnel'
     '@type': 'skos:Concept'
+    'espsyntax:regexp':
+      '@language': fr
+      '@value': 'arrêtés? de circulation'
+    'skos:altLabel':
+      - { '@language': fr, '@value': 'Transports Déplacements/Transport exceptionnel' }
+      - { '@language': fr, '@value': transports_exceptionnel }
     'skos:broader':
       '@id': 'themes:transport-et-deplacements'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Transport exceptionnel'
@@ -1535,39 +1999,8 @@
     'skos:broader':
       '@id': 'themes:amenagement-et-urbanisme'
     'skos:inScheme':
-      '@id': 'ecospheres:themes'
+      '@id': 'ecospheres:themes-ecospheres'
     'skos:prefLabel':
       '@language': fr
       '@value': 'Zonages d''aménagement'
-  - '@id': 'ecospheres:themes'
-    '@type': 'skos:ConceptScheme'
-    'dct:contributor':
-      '@id': 'persons:GillesGuillouet'
-    'dct:creator':
-      - { '@id': 'persons:BenoitDavid' }
-      - { '@id': 'persons:LeslieLemaire' }
-    'dct:description':
-      '@language': fr
-      '@value': "Les thèmes Ecosphères sont utilisés dans le guichet de la donnée de la transition écologique.  \nIls reprennent les thèmes définis par l'arborescence Covadis et sont structurés conformément\nau [standard SKOS du W3C]().  \nA chaque concept est associé:\n  \n  - des altLabels et des regexps correspondant aux mots-clés rencontrés dans les catalogues\n    moissonnés par le guichet,\n  - une correspondance avec EuroVoc dans la mesure du possible.\nLa constitution de ce thésaurus est en cours.  \nVersion publiée par Benoit DAVID le 7/7/2022.\n"
-    'dct:license':
-      '@id': 'https://www.etalab.gouv.fr/licence-ouverte-open-licence'
-    'dct:modified': '2022-07-08T08:40:00+02:00'
-    'dct:title':
-      '@language': fr
-      '@value': 'Liste des thèmes d''Ecosphères'
-    'skos:hasTopConcept':
-      - { '@id': 'themes:climat' }
-      - { '@id': 'themes:amenagement-et-urbanisme' }
-      - { '@id': 'themes:etablissements-d-activites' }
-      - { '@id': 'themes:eau' }
-      - { '@id': 'themes:foncier-et-occupation-du-sol' }
-      - { '@id': 'themes:habitat-et-politique-de-la-ville' }
-      - { '@id': 'themes:mer-et-littoral' }
-      - { '@id': 'themes:nature-paysages-et-biodiversite' }
-      - { '@id': 'themes:nuisances-dechets-et-pollution' }
-      - { '@id': 'themes:reseaux-d-energie-et-de-communication' }
-      - { '@id': 'themes:risques' }
-      - { '@id': 'themes:industrie' }
-      - { '@id': 'themes:transport-et-deplacements' }
-      - { '@id': 'themes:infrastructures-de-transport' }
 
