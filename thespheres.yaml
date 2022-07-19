@@ -111,7 +111,9 @@ skos:Concept:
   themes:amenagement-et-urbanisme:
     skos:prefLabel: {fr: "Aménagement et urbanisme"}
     skos:exactMatch:
-      - http://eurovoc.europa.eu/4619
+      eurovoc:4619:
+        skos:inScheme: eurovoc:100141
+        skos:prefLabel: {fr: urbanisme}
     skos:altLabel:
       - {fr: Aménagement Urbanisme}
       - {fr: amenagement-urbanisme}
@@ -150,7 +152,9 @@ skos:Concept:
       themes:planification:
         skos:prefLabel: {fr: "Planification"}
         skos:exactMatch:
-          - http://eurovoc.europa.eu/2391
+          eurovoc:2391:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: plan d'urbanisme}
         skos:altLabel:
           - {fr: Aménagement Urbanisme/Zonages Planification}
           - {fr: ptu} # Périmètre de transport urbain
@@ -201,18 +205,33 @@ skos:Concept:
     skos:narrower:
       themes:etablissements-d-enseignement:
         skos:prefLabel: {fr: "Etablissements d'enseignement"}
+        skos:exactMatch:
+          eurovoc:873:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: établissement d'enseignement}
         skos:altLabel:
           - {fr: Culture Société Service/Enseignement}
         espsyntax:regexp:
           - {fr: enseignement}
       themes:equipements-sportifs-ou-culturels:
         skos:prefLabel: {fr: "Équipements sportifs ou culturels"}
+        skos:narrowMatch:
+          eurovoc:853:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: équipement sportif}
+          eurovoc:851:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: équipement socioculturel}
         skos:altLabel:
           - {fr: Culture Société Service/Équipement sportif ou culturel}
         espsyntax:regexp:
           - {fr: Équipements culturels et socio culturels}
       themes:patrimoine-culturel:
         skos:prefLabel: {fr: "Patrimoine culturel"}
+        skos:exactMatch:
+          eurovoc:2278:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: patrimoine culturel}
         skos:altLabel:
           - {fr: Culture Société Service/Patrimoine culturel}
         espsyntax:regexp:
@@ -313,8 +332,10 @@ skos:Concept:
           - {fr: Milieux? humides?}
         skos:narrowMatch:
           eurovoc:260:
+            skos:inScheme: eurovoc:100141
             skos:prefLabel: {fr: cours d'eau}
           eurovoc:609:
+            skos:inScheme: eurovoc:100141
             skos:prefLabel: {fr: eau souterraine}
       themes:ouvrages-hydrauliques:
         skos:prefLabel: {fr: "Ouvrages hydrauliques"}
