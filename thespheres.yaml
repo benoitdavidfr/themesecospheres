@@ -3,7 +3,7 @@ description: |
   Gestion des thèmes Ecosphères et d'une structure adhoc pour les gérer.
   On exploite notamment leur structuration hiérarchique.
 
-  Les altLabels et regexps correspondent aux mots-clés trouvés dans des catalogues.
+  Les altLabels correspondent aux mots-clés trouvés dans des catalogues et les regexps à des titres de fiche de MD.
   
   Mapping avec EuroVoc en cours.
 modified: "2022-07-19"

@@ -10,3 +10,6 @@ La liste des thèmes est disponible en:
 
 La liste des thèmes est gérée dans une structure adhoc en Yaml dans [thespheres.yaml](thespheres.yaml) ;
 son schéma JSON est dans [thespheres.schema.yaml](thespheres.schema.yaml).
+
+Les thèmes sont exposés sur https://registre.georef.eu/ecospheres/themes-ecospheres
+en Html et en JSON-LD.

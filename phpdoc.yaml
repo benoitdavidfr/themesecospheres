@@ -10,8 +10,19 @@ doc: |
     - thespheres.ttl en Turtle
     - thespheres.json en JSON-LD compacté
     - thespheresld.yaml en Yaml-LD compacté
+    - th.registre.yaml est un export registre avec l'URI http://registre/ pour le registre
+    - th.georef.yaml est un export registre avec l'URI http://registre.georef.eu/ pour le registre
   
+  Le sous-répertoire eurovoc contient un outil de visualisation d'EuroVoc
+  
+  AFaire:
+    - faire un export md des thèmes
 journal:
+  18-19/7/2022:
+    - export des thèmes dans le format d'import du registre
+    - fin du transfert des altLabels et regexps
+    - ajout correspondances EuroVoc
+    - réalisation outil de visualisation d'EuroVoc pour faire cette mise en correspondance
   6/7/2022:
     - définition du fichier Yaml thespheres.yaml comme source des thèmes remplacant les fichiers MD
     - adaptation de skosify.php pour générer des versions Turtle, JSON-LD et Yaml-LD
@@ -23,4 +34,4 @@ journal:
     - création du script, publication du résultat sur le GiLab et sur GitHub
 phpScripts:
   - /georef/themesecosphres/slugify.php
-  - /georef/themesecosphres/slugify.php
+  - /georef/themesecosphres/skosify.php
