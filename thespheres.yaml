@@ -38,7 +38,7 @@ skos:ConceptScheme: # dictionnaire des schémas de concepts, le premier est celu
             [EuroVoc](https://op.europa.eu/fr/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc)
             dans la mesure du possible.
         La constitution de ce thésaurus est en cours.  
-        Version intermédiaire publiée par Benoit DAVID le 18/7/2022.
+        Version intermédiaire publiée par Benoit DAVID le 19/7/2022.
     dct:creator:
       persons:BenoitDavid:
         rdf:type: foaf:Person
@@ -50,7 +50,7 @@ skos:ConceptScheme: # dictionnaire des schémas de concepts, le premier est celu
       persons:GillesGuillouet:
         rdf:type: foaf:Person
         foaf:name: {x: Gilles Guillouet}
-    dct:modified: {x: "2022-07-18"}
+    dct:modified: {x: "2022-07-19"}
     dct:license: https://www.etalab.gouv.fr/licence-ouverte-open-licence
   eurovoc:100141:
     dct:title: {fr: "Thésaurus multilingue EuroVoc"}
