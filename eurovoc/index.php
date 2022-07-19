@@ -15,7 +15,10 @@ class Str { // Fonctions sur string
   }
   
   static function clean(string $str): string { // supprime qqs caractères parasites pour construire les mots
-    return str_replace([',',"d'",'(',')','«','»'], ['','','',''], $str);
+    return str_replace(
+      [',',"d'","l'",'(',')','«','»'],
+      ['', '',  '',  '', '', '', ''],
+      $str);
   }
 };
 
@@ -35,10 +38,24 @@ abstract class Resource { // une ressource RDF EuroVoc
     $prop = $this->prop;
     echo '<pre>',Yaml::dump($prop),"</pre>\n";
   }
+  
+  function showHierarchy(): void { // affichage hiérarchique 
+    $type = strtolower($this->childrenClass());
+    echo "<li><a href='?action=show&amp;type=$type&amp;id=$this->id'>",$this->prefLabel('fr'),"</a><ul>\n";
+    foreach ($this->children() as $id)
+      ($this->childrenClass())::$all[$id]->showHierarchy();
+    echo "</ul></li>\n";
+  }
+  
+  abstract function children(): array; // la liste des ids des enfants
+  abstract function childrenClass(): string; // la classe des enfants
 };
 
 class Scheme extends Resource { // schéma de concepts 
   static array $all; // dict. des schemas [id => Scheme]
+  
+  function children(): array { return $this->prop['hasTopConcept']; }
+  function childrenClass(): string { return 'Concept'; }
   
   function show(): void { // visualisation d'un schéma
     echo "<h3><a href='",$this->uri(),"'>",$this->prefLabel('fr'),"</a> ($this->id)</h3>\n";
@@ -70,6 +87,9 @@ class LabelIds { // l'association d'une étiquette à une liste d'ids
 class Concept extends Resource { // un concept Skos 
   static array $all; // dict. des concepts [id => Concept]
 
+  function children(): array { return $this->prop['narrower'] ?? []; }
+  function childrenClass(): string { return 'Concept'; }
+  
   function show(): void { // Affichage d'un concept 
     echo "<h3><a href='",$this->uri(),"'>",$this->prefLabel('fr'),"</a> ($this->id)</h3>\n";
     //echo '<pre>',Yaml::dump($this->prop),"</pre>\n";
@@ -109,10 +129,11 @@ class Concept extends Resource { // un concept Skos
   }
   
   static function showLabels(): void { // affiche les étiquettes triées alphabétiquement
+    echo "<h2>Etiquettes</h2><ul>\n";
     //echo "<pre>"; print_r(self::labels());
-    foreach (self::labels() as $labelIds) {
-      echo "<a href='?action=show&type=concepts&ids=",implode(',', $labelIds->ids()),"'>",$labelIds->label(),"</a><br>\n";
-    }
+    foreach (self::labels() as $labelIds)
+      echo "<li><a href='?action=show&type=concepts&ids=",implode(',', $labelIds->ids()),"'>",$labelIds->label(),"</a></li>\n";
+    echo "</ul>\n";
   }
   
   static function showWords(): void { // affiche les mots contenus dans les étiquettes triés
@@ -129,9 +150,9 @@ class Concept extends Resource { // un concept Skos
     foreach (Str::EmptyWords as $emptyWord)
       unset($words[$emptyWord]);
     ksort($words);
-    foreach ($words as $wordIds) {
-      echo "<a href='?action=show&type=concepts&ids=",implode(',', $wordIds->ids()),"'> ",$wordIds->label()," </a><br>\n";
-    }
+    echo "<h2>Liste des mots extraits des étiquettes</h2><ul>\n";
+    foreach ($words as $wordIds)
+      echo "<li><a href='?action=show&type=concepts&ids=",implode(',', $wordIds->ids()),"'> ",$wordIds->label()," </a></li>\n";
   }
 };
 
@@ -141,6 +162,9 @@ class Domain extends Concept { // Un domaine regroupe des schemes
   static array $all; // liste des micro-thésaurus [id => Domain]
   
   function addScheme(string $schemeId): void { $this->schemes[] = $schemeId; }
+  
+  function children(): array { return $this->schemes; }
+  function childrenClass(): string { return 'Scheme'; }
   
   static function showAll() {
     foreach (self::$all as $id => $domain) {
@@ -152,6 +176,14 @@ class Domain extends Concept { // Un domaine regroupe des schemes
     echo "<h3>",$this->prefLabel('fr'),"</h3><ul>\n";
     foreach ($this->schemes as $schId)
       echo "<li><a href='?action=show&amp;type=scheme&amp;id=$schId'>",Scheme::$all[$schId]->prefLabel('fr'),"</a></li>\n";
+    echo "</ul>\n";
+  }
+  
+  static function showAllHierarchy(): void {
+    echo "<ul>\n";
+    foreach (self::$all as $id => $domain) {
+      $domain->showHierarchy();
+    }
     echo "</ul>\n";
   }
 };
@@ -191,14 +223,19 @@ class EuroVoc {
   static function action(): void { // les actions à exécuter 
     switch ($_GET['action'] ?? null) {
       case null: { // cas où aucune action n'est définie 
-        echo "<a href='?action=show&type=allDomains'>Visualisation hiérarchique</a><br>\n";
-        echo "<a href='?action=show&type=labels'>Visualisation à plat des étiquettes</a><br>\n";
-        echo "<a href='?action=show&type=words'>Visualisation des mots</a><br>\n";
+        echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc</title></head><body>\n";
+        echo "<h3>Menu</h3><ul>\n";
+        echo "<li><a href='?action=show&type=allDomains'>Navigation interactive</a></li>\n";
+        echo "<li><a href='?action=show&type=hierarchy'>Affichage hiérarchie Domaines/Schémas/Concepts</a></li>\n";
+        echo "<li><a href='?action=show&type=labels'>Affichage à plat des étiquettes</a></li>\n";
+        echo "<li><a href='?action=show&type=words'>Affichage des mots extraits des étiquettes</a></li>\n";
+        echo "</ul>\n";
         break;
       }
       case 'show': { // cas de l'action show en fonction de quoi 
         switch ($_GET['type']) {
           case 'allDomains': {
+            echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc/domaines</title></head><body>\n";
             Domain::showAll();
             break;
           }
@@ -207,30 +244,40 @@ class EuroVoc {
             break;
           }
           case 'scheme': {
+            echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc/schéma</title></head><body>\n";
             Scheme::$all[$_GET['id']]->show();
             break;
           }
           case 'concept': {
+            echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc/concept</title></head><body>\n";
             Concept::$all[$_GET['id']]->show();
             break;
           }
-          case 'concepts': {
+          case 'concepts': { // affichage d'une liste de concepts définis par leur id
             $ids = explode(',', $_GET['ids']);
             if (count($ids) == 1)
               Concept::$all[$ids[0]]->show();
             else {
-              foreach ($ids as $id) {
-                echo "<a href='?action=show&type=concept&id=$id'>",Concept::$all[$id]->prefLabel('fr'),"</a><br>\n";
-              }
+              echo "<h2>Concepts</h2><ul>\n";
+              foreach ($ids as $id)
+                echo "<li><a href='?action=show&type=concept&id=$id'>",Concept::$all[$id]->prefLabel('fr'),"</a></li>\n";
+              echo "</ul>\n";
             }
             break;
           }
           case 'labels': {
+            echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc/labels</title></head><body>\n";
             Concept::showLabels();
             break;
           }
           case 'words': {
+            echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc/words</title></head><body>\n";
             Concept::showWords();
+            break;
+          }
+          case 'hierarchy': {
+            echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc/Hiérachie</title></head><body>\n";
+            Domain::showAllHierarchy();
             break;
           }
           default: {

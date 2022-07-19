@@ -249,6 +249,10 @@ skos:Concept:
           - {fr: Établissements? d'accueil de la petite enfance}
       themes:equipements-de-tourisme:
         skos:prefLabel: {fr: "Équipements de tourisme"}
+        skos:exactMatch:
+          eurovoc:3343:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: infrastructure touristique}
         skos:altLabel:
           - {fr: Culture Société Service/Tourisme}
         espsyntax:regexp:
@@ -264,7 +268,7 @@ skos:Concept:
           - {fr: cimetière}
           - {fr: Etablissements Recevant du Public}
           - {fr: Grandes surfaces}
-    
+  
   themes:eau:
     skos:prefLabel: {fr: "Eau"}
     skos:exactMatch:
@@ -367,6 +371,10 @@ skos:Concept:
         skos:prefLabel: {fr: "Surveillance de la ressource en eau"}
         skos:definition:
           fr: points de mesure, effractions constatées, ...
+        skos:broadMatch:
+          eurovoc:3140:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: surveillance de l'environnement}
         skos:altLabel:
           - {fr: Eau/Surveillance}
           - {fr: hydrometrie}
@@ -418,11 +426,19 @@ skos:Concept:
       themes:foncier-agricole:
         skos:prefLabel: {fr: "Foncier agricole"}
         skos:definition: {fr: "definition: Divisions, regroupements, changement propriétaires"}
+        skos:broadMatch:
+          eurovoc:5226:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: aménagement foncier}
         skos:altLabel:
           - {fr: Foncier Sol/Foncier agricole}
       themes:mutation-fonciere:
         skos:prefLabel: {fr: "Mutation foncière"}
         skos:definition: {fr: "Remembrement, travaux connexes"}
+        skos:exactMatch:
+          eurovoc:3265:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: remembrement}
         skos:altLabel:
           - {fr: "Foncier Sol/Mutation foncière"}
       themes:occupation-du-sol:
@@ -438,13 +454,16 @@ skos:Concept:
           - {fr: "Espaces bâtis"}
       themes:propriete-fonciere:
         skos:prefLabel: {fr: "Propriété foncière"}
-        skos:scopeNote: {fr: "intègre le cadastre et le définition du domaine public"}
+        skos:scopeNote: {fr: "intègre le cadastre et la définition du domaine public"}
+        skos:exactMatch:
+          eurovoc:2813:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: propriété foncière}
         skos:altLabel:
           - {fr: "Foncier Sol/Propriété foncière"}
         espsyntax:regexp:
           - {fr: "Domaine Public"}
           - {fr: "parcellaire"}
-          - {fr: ""}
   
   themes:habitat-et-politique-de-la-ville:
     skos:prefLabel: {fr: "Habitat et politique de la ville"}
@@ -459,6 +478,10 @@ skos:Concept:
       themes:besoins-en-logements:
         skos:prefLabel: {fr: "Besoins en logements"}
         skos:definition: {fr: "Demande de logement social, accueil des gens du voyage"}
+        skos:exactMatch:
+          eurovoc:4850:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: besoin de logement}
         skos:altLabel:
           - {fr: "Habitat Politique de la ville/Besoins en logement"}
           - {fr: "gens-du-voyage"}
@@ -471,6 +494,10 @@ skos:Concept:
           fr: |
             Zones d'instruction des permis de construire, nombre de logements, SHON, nombre de logements
             autorisés, statistiques de permis de construire, règles de construction
+        skos:exactMatch:
+          eurovoc:2475:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: politique de la construction}
         skos:altLabel:
           - {fr: "Habitat Politique de la ville/Construction"}
           - {fr: "permis-de-construire"}
@@ -482,11 +509,19 @@ skos:Concept:
       themes:habitat-indigne:
         skos:prefLabel: {fr: "Habitat indigne"}
         skos:definition: {fr: "Inventaire de l'habitat susceptible d'être indigne"}
+        skos:exactMatch:
+          eurovoc:1694:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: logement insalubre}
         skos:altLabel:
           - {fr: "Habitat Politique de la ville/Habitat indigne"}
       themes:occupation-des-logements:
         skos:prefLabel: {fr: "Occupation des logements"}
         skos:definition: {fr: "Aides au logements, taux d'occupation, suivi des loyers, ..."}
+        skos:exactMatch:
+          eurovoc:556:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: droit du logement}
         skos:altLabel:
           - {fr: "Habitat Politique de la ville/Occupation des logements"}
           - {fr: "loyer"}
@@ -496,6 +531,10 @@ skos:Concept:
       themes:parc-locatif-social:
         skos:prefLabel: {fr: "Parc locatif social"}
         skos:definition: {fr: "Zonage du locatif, hébergement d'urgence, logements en prêt locatif, PALULOS"}
+        skos:exactMatch:
+          eurovoc:1695:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: logement social}
         skos:altLabel:
           - {fr: "Habitat Politique de la ville/Parc locatif social"}
           - {fr: "bailleurs-sociaux"}
@@ -538,12 +577,17 @@ skos:Concept:
           - {fr: "Programme d'intérêt général \\(PIG\\) habitat"}
       themes:renovation-urbaine:
         skos:prefLabel: {fr: "Rénovation urbaine"}
+        skos:exactMatch:
+          eurovoc:3281:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "rénovation urbaine"}
         skos:altLabel:
           - {fr: "Habitat Politique de la ville/Rénovation"}
         espsyntax:regexp:
           - {fr: "ANAH"}
           - {fr: "rénovation urbaine"}
           - {fr: "ANRU"}
+        
   
   themes:mer-et-littoral:
     skos:prefLabel: {fr: "Mer et littoral"}
