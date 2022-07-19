@@ -24,11 +24,11 @@ A chaque concept sont associés:
     [EuroVoc](https://op.europa.eu/fr/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc)
     dans la mesure du possible.
 La constitution de ce thésaurus est en cours.  
-Version intermédiaire publiée par Benoit DAVID le 18/7/2022.
+Version intermédiaire publiée par Benoit DAVID le 19/7/2022.
 "@fr;
   dct:creator persons:BenoitDavid, persons:LeslieLemaire;
   dct:contributor persons:GillesGuillouet;
-  dct:modified "2022-07-18";
+  dct:modified "2022-07-19";
   dct:license <https://www.etalab.gouv.fr/licence-ouverte-open-licence>.
 
 eurovoc:100141
@@ -95,9 +95,14 @@ themes:amenagement-et-urbanisme
   skos:inScheme ecospheres:themes-ecospheres;
   skos:topConceptOf ecospheres:themes-ecospheres;
   skos:prefLabel "Aménagement et urbanisme"@fr;
-  skos:exactMatch <http://eurovoc.europa.eu/4619>;
+  skos:exactMatch eurovoc:4619;
   skos:altLabel "Aménagement Urbanisme"@fr, "amenagement-urbanisme"@fr;
   skos:narrower themes:servitudes-d-utilite-publique, themes:politique-europeenne-d-amenagement, themes:zonages-d-amenagement, themes:planification, themes:etudes.
+
+eurovoc:4619
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "urbanisme"@fr.
 
 themes:servitudes-d-utilite-publique
   rdf:type skos:Concept;
@@ -127,9 +132,14 @@ themes:planification
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:amenagement-et-urbanisme;
   skos:prefLabel "Planification"@fr;
-  skos:exactMatch <http://eurovoc.europa.eu/2391>;
+  skos:exactMatch eurovoc:2391;
   skos:altLabel "Aménagement Urbanisme/Zonages Planification"@fr, "ptu"@fr, "loi-littoral"@fr, "loi-montagne"@fr, "documents-durbanisme"@fr, "plu"@fr, "plui"@fr, "pluis"@fr, "document-durbanisme"@fr, "document-urbanisme"@fr, "documents-durba"@fr, "scot"@fr, "ZONAGES PLANIFICATION"@fr, "amenagement_urbanisme/n_zonages_planification"@fr, "zonage planification"@fr, "urbanisme planification"@fr;
   espsyntax:regexp "Directives? Territoriales? d'Aménagement"@fr, "DTA"@fr, "DTADD"@fr, "Document d’urbanisme"@fr, "cartes? communales?"@fr, "P\.L\.U\."@fr, "PLU"@fr, "Schémas? de Cohérence Territoriale"@fr, "SCOT"@fr, "Règlement National d'Urbanisme"@fr, "PDU"@fr, "Plan de déplacement urbain"@fr, "loi littoral"@fr, "Loi Montagne"@fr, "Zone de montagne au titre de la loi du 9 janvier 1985"@fr.
+
+eurovoc:2391
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "plan d'urbanisme"@fr.
 
 themes:etudes
   rdf:type skos:Concept;
@@ -151,24 +161,47 @@ themes:etablissements-d-enseignement
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:etablissements-d-activites;
   skos:prefLabel "Etablissements d'enseignement"@fr;
+  skos:exactMatch eurovoc:873;
   skos:altLabel "Culture Société Service/Enseignement"@fr;
   espsyntax:regexp "enseignement"@fr.
+
+eurovoc:873
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "établissement d'enseignement"@fr.
 
 themes:equipements-sportifs-ou-culturels
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:etablissements-d-activites;
   skos:prefLabel "Équipements sportifs ou culturels"@fr;
+  skos:narrowMatch eurovoc:853, eurovoc:851;
   skos:altLabel "Culture Société Service/Équipement sportif ou culturel"@fr;
   espsyntax:regexp "Équipements culturels et socio culturels"@fr.
+
+eurovoc:853
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "équipement sportif"@fr.
+
+eurovoc:851
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "équipement socioculturel"@fr.
 
 themes:patrimoine-culturel
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:etablissements-d-activites;
   skos:prefLabel "Patrimoine culturel"@fr;
+  skos:exactMatch eurovoc:2278;
   skos:altLabel "Culture Société Service/Patrimoine culturel"@fr;
   espsyntax:regexp "Monuments? Historiques?"@fr, "Entreprises? du patrimoine vivant"@fr.
+
+eurovoc:2278
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "patrimoine culturel"@fr.
 
 themes:etablissements-de-sante-et-medico-sociaux
   rdf:type skos:Concept;
@@ -183,8 +216,14 @@ themes:equipements-de-tourisme
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:etablissements-d-activites;
   skos:prefLabel "Équipements de tourisme"@fr;
+  skos:exactMatch eurovoc:3343;
   skos:altLabel "Culture Société Service/Tourisme"@fr;
   espsyntax:regexp "Campings?"@fr, "Etablissements Recevant du Public de type restaurant"@fr, "hébergements touristiques"@fr.
+
+eurovoc:3343
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "infrastructure touristique"@fr.
 
 themes:autres-etablissements-recevant-du-public
   rdf:type skos:Concept;
@@ -256,14 +295,12 @@ eau souterraine, connaissance des zones, humides, ...)
 
 eurovoc:260
   rdf:type skos:Concept;
-  skos:inScheme ecospheres:themes-ecospheres;
-  skos:broader themes:masses-d-eau;
+  skos:inScheme eurovoc:100141;
   skos:prefLabel "cours d'eau"@fr.
 
 eurovoc:609
   rdf:type skos:Concept;
-  skos:inScheme ecospheres:themes-ecospheres;
-  skos:broader themes:masses-d-eau;
+  skos:inScheme eurovoc:100141;
   skos:prefLabel "eau souterraine"@fr.
 
 themes:ouvrages-hydrauliques
@@ -299,8 +336,14 @@ themes:surveillance-de-la-ressource-en-eau
   skos:broader themes:eau;
   skos:prefLabel "Surveillance de la ressource en eau"@fr;
   skos:definition "points de mesure, effractions constatées, ..."@fr;
+  skos:broadMatch eurovoc:3140;
   skos:altLabel "Eau/Surveillance"@fr, "hydrometrie"@fr, "prevision-de-crue"@fr, "hydrologie"@fr;
   espsyntax:regexp "Vigicrues"@fr.
+
+eurovoc:3140
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "surveillance de l'environnement"@fr.
 
 themes:interventions-sur-les-cours-d-eau
   rdf:type skos:Concept;
@@ -343,7 +386,13 @@ themes:foncier-agricole
   skos:broader themes:foncier-et-occupation-du-sol;
   skos:prefLabel "Foncier agricole"@fr;
   skos:definition "definition: Divisions, regroupements, changement propriétaires"@fr;
+  skos:broadMatch eurovoc:5226;
   skos:altLabel "Foncier Sol/Foncier agricole"@fr.
+
+eurovoc:5226
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "aménagement foncier"@fr.
 
 themes:mutation-fonciere
   rdf:type skos:Concept;
@@ -351,7 +400,13 @@ themes:mutation-fonciere
   skos:broader themes:foncier-et-occupation-du-sol;
   skos:prefLabel "Mutation foncière"@fr;
   skos:definition "Remembrement, travaux connexes"@fr;
+  skos:exactMatch eurovoc:3265;
   skos:altLabel "Foncier Sol/Mutation foncière"@fr.
+
+eurovoc:3265
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "remembrement"@fr.
 
 themes:occupation-du-sol
   rdf:type skos:Concept;
@@ -366,9 +421,15 @@ themes:propriete-fonciere
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:foncier-et-occupation-du-sol;
   skos:prefLabel "Propriété foncière"@fr;
-  skos:scopeNote "intègre le cadastre et le définition du domaine public"@fr;
+  skos:scopeNote "intègre le cadastre et la définition du domaine public"@fr;
+  skos:exactMatch eurovoc:2813;
   skos:altLabel "Foncier Sol/Propriété foncière"@fr;
-  espsyntax:regexp "Domaine Public"@fr, "parcellaire"@fr, ""@fr.
+  espsyntax:regexp "Domaine Public"@fr, "parcellaire"@fr.
+
+eurovoc:2813
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "propriété foncière"@fr.
 
 themes:habitat-et-politique-de-la-ville
   rdf:type skos:Concept;
@@ -391,8 +452,14 @@ themes:besoins-en-logements
   skos:broader themes:habitat-et-politique-de-la-ville;
   skos:prefLabel "Besoins en logements"@fr;
   skos:definition "Demande de logement social, accueil des gens du voyage"@fr;
+  skos:exactMatch eurovoc:4850;
   skos:altLabel "Habitat Politique de la ville/Besoins en logement"@fr, "gens-du-voyage"@fr, "gens-voyage"@fr;
   espsyntax:regexp "gens du voyage"@fr.
+
+eurovoc:4850
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "besoin de logement"@fr.
 
 themes:construction
   rdf:type skos:Concept;
@@ -402,8 +469,14 @@ themes:construction
   skos:definition "Zones d'instruction des permis de construire, nombre de logements, SHON, nombre de logements
 autorisés, statistiques de permis de construire, règles de construction
 "@fr;
+  skos:exactMatch eurovoc:2475;
   skos:altLabel "Habitat Politique de la ville/Construction"@fr, "permis-de-construire"@fr, "regles-de-construction"@fr, "sitadel"@fr;
   espsyntax:regexp "Construction de logements"@fr, "Construction de locaux"@fr.
+
+eurovoc:2475
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "politique de la construction"@fr.
 
 themes:habitat-indigne
   rdf:type skos:Concept;
@@ -411,7 +484,13 @@ themes:habitat-indigne
   skos:broader themes:habitat-et-politique-de-la-ville;
   skos:prefLabel "Habitat indigne"@fr;
   skos:definition "Inventaire de l'habitat susceptible d'être indigne"@fr;
+  skos:exactMatch eurovoc:1694;
   skos:altLabel "Habitat Politique de la ville/Habitat indigne"@fr.
+
+eurovoc:1694
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "logement insalubre"@fr.
 
 themes:occupation-des-logements
   rdf:type skos:Concept;
@@ -419,8 +498,14 @@ themes:occupation-des-logements
   skos:broader themes:habitat-et-politique-de-la-ville;
   skos:prefLabel "Occupation des logements"@fr;
   skos:definition "Aides au logements, taux d'occupation, suivi des loyers, ..."@fr;
+  skos:exactMatch eurovoc:556;
   skos:altLabel "Habitat Politique de la ville/Occupation des logements"@fr, "loyer"@fr;
   espsyntax:regexp "Bâtiment majoritairement d'activités vacant"@fr, "Local d'activités vacant"@fr.
+
+eurovoc:556
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "droit du logement"@fr.
 
 themes:parc-locatif-social
   rdf:type skos:Concept;
@@ -428,8 +513,14 @@ themes:parc-locatif-social
   skos:broader themes:habitat-et-politique-de-la-ville;
   skos:prefLabel "Parc locatif social"@fr;
   skos:definition "Zonage du locatif, hébergement d'urgence, logements en prêt locatif, PALULOS"@fr;
+  skos:exactMatch eurovoc:1695;
   skos:altLabel "Habitat Politique de la ville/Parc locatif social"@fr, "bailleurs-sociaux"@fr, "logement-locatif-social"@fr;
   espsyntax:regexp "hébergement d'urgence"@fr.
+
+eurovoc:1695
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "logement social"@fr.
 
 themes:parc-de-logements
   rdf:type skos:Concept;
@@ -456,8 +547,14 @@ themes:renovation-urbaine
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:habitat-et-politique-de-la-ville;
   skos:prefLabel "Rénovation urbaine"@fr;
+  skos:exactMatch eurovoc:3281;
   skos:altLabel "Habitat Politique de la ville/Rénovation"@fr;
   espsyntax:regexp "ANAH"@fr, "rénovation urbaine"@fr, "ANRU"@fr.
+
+eurovoc:3281
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "rénovation urbaine"@fr.
 
 themes:mer-et-littoral
   rdf:type skos:Concept;
@@ -467,9 +564,20 @@ themes:mer-et-littoral
   skos:changeNote "Par rapport au thème Covadis 'Mer Littoral', suppression des sous-thèmes 'Culture marine', 'Pêche maritime'
 et 'Autres activités' remontés dans le thème parent de 1er niveau.
 "@fr;
+  skos:narrowMatch eurovoc:1870, eurovoc:1683;
   skos:altLabel "Mer Littoral/Culture marine"@fr, "crustaces"@fr, "bulots"@fr, "moules"@fr, "autres-coquillages"@fr, "aquaculture"@fr, "Mer Littoral/Pêche maritime"@fr, "peche"@fr, "Mer Littoral/Autres activités"@fr, "dragues"@fr, "granulats-marins"@fr;
   espsyntax:regexp "conchylicole"@fr, "Concessions? de cultures marines"@fr, "parcs ostréicoles"@fr, "Parcs à palourdes"@fr, "Gisements de coquillages"@fr, "Gisements coquillers"@fr, "Classement sanitaire des zones conchylicoles"@fr, "mytilicole"@fr, "Zones de pêche"@fr, "Réserve de pêche"@fr, "Limites de pêche"@fr, "cantonnements? de pêche"@fr, "Éolien posé"@fr, "Éolien flottant"@fr, "énergie houlomotrice"@fr, "hydrolien"@fr;
   skos:narrower themes:ecologie-du-littoral, themes:limite-administrative-speciale-en-mer, themes:lutte-anti-pollution-en-mer, themes:navigation-maritime, themes:topographie-en-mer, themes:chasse-maritime.
+
+eurovoc:1870
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "mer"@fr.
+
+eurovoc:1683
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "littoral"@fr.
 
 themes:ecologie-du-littoral
   rdf:type skos:Concept;
@@ -502,8 +610,14 @@ themes:lutte-anti-pollution-en-mer
   skos:broader themes:mer-et-littoral;
   skos:prefLabel "Lutte anti-pollution en mer et sur le littoral"@fr;
   skos:definition "Plan de pose de barrages, CNPE, plan de gestion de polluants"@fr;
+  skos:broadMatch eurovoc:1870, eurovoc:1707;
   skos:altLabel "Mer Littoral/Lutte anti-pollution"@fr;
   espsyntax:regexp "plans? de protection POLMAR"@fr.
+
+eurovoc:1707
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "lutte contre la pollution"@fr.
 
 themes:navigation-maritime
   rdf:type skos:Concept;
@@ -514,8 +628,14 @@ themes:navigation-maritime
 cantonnements, zones de navigation, balises/épaves, activités des CROSS, formation et qualification
 des gens de mer
 "@fr;
+  skos:exactMatch eurovoc:2041;
   skos:altLabel "Mer Littoral/Navigation maritime"@fr, "cross"@fr, "cantonnement"@fr, "sauvetage"@fr, "enseignement-maritime"@fr, "formations-maritimes"@fr, "gens-de-mer"@fr;
   espsyntax:regexp "Mouillages"@fr, "Dispositif de séparation de trafics"@fr, "protection épave"@fr, "Épave dangereuse"@fr.
+
+eurovoc:2041
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "navigation maritime"@fr.
 
 themes:topographie-en-mer
   rdf:type skos:Concept;
@@ -549,14 +669,26 @@ themes:inventaires-nature-et-biodiversite
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:nature-paysages-et-biodiversite;
   skos:prefLabel "Inventaires nature et biodiversité"@fr;
+  skos:broadMatch eurovoc:919, eurovoc:5463;
   skos:altLabel "Nature Paysage Biodiversité/Inventaire Nature Biodiversité"@fr, "znieff1"@fr, "znieff2"@fr, "Nature Paysage Biodiversité / Inventaire Nature Biodiversité"@fr, "INVENTAIRE NATURE BIODIVERSITE"@fr, "inventaire_nature_biodiversite"@fr;
   espsyntax:regexp "Habitats? naturels?"@fr, "ZNIEFF"@fr, "Intérêts? Ecologiques? Faunistiques? et Floristiques?"@fr, "Observation de la flore"@fr, "Régions? biogéographiques?"@fr, "patrimoine géologique"@fr, "continuité écologique"@fr.
+
+eurovoc:919
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "évaluation des ressources"@fr.
+
+eurovoc:5463
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "biodiversité"@fr.
 
 themes:inventaires-des-paysages
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:nature-paysages-et-biodiversite;
   skos:prefLabel "Inventaires des paysages"@fr;
+  skos:broadMatch eurovoc:919;
   skos:altLabel "Nature Paysage Biodiversité/Inventaire Paysage"@fr;
   espsyntax:regexp "Parcs et jardins"@fr, "paysages?"@fr, "paysagères?"@fr.
 
@@ -565,24 +697,42 @@ themes:protection-et-gestion-de-la-nature
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:nature-paysages-et-biodiversite;
   skos:prefLabel "Protection et gestion de la nature"@fr;
+  skos:broadMatch eurovoc:2825, eurovoc:5463;
   skos:altLabel "Nature Paysage Biodiversité/Zonages Nature"@fr, "Schéma régional de cohérence écologique"@fr, "nature_paysage_biodiversite/n_zonages_nature"@fr, "zonages nature"@fr, "schema-regional-de-coherence-ecologique"@fr, "srce"@fr, "coherence-ecologique"@fr, "coherence-coherence-ecologique"@fr, "trame-verte-et-bleue"@fr, "tvb"@fr;
   espsyntax:regexp "parcs? nation(al|aux)"@fr, "Arrêtés? préfector(al|aux) de protection des? biotopes?"@fr, "Arrêtés? de Protection de Biotopes?"@fr, "Arrêtés? de Protection de Géotopes?"@fr, "réserves? naturelles?"@fr, "Réserves? de Biosphère"@fr, "Ramsar"@fr, "natura 2000"@fr, "Espaces? Naturels? Sensibles?"@fr, "Schéma régional de cohérence écologique"@fr, "SRCE"@fr, "Sites du Conservatoire"@fr.
+
+eurovoc:2825
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "protection de l'environnement"@fr.
 
 themes:protection-et-gestion-des-paysages
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:nature-paysages-et-biodiversite;
   skos:prefLabel "Protection et gestion des paysages"@fr;
+  skos:exactMatch eurovoc:2841;
   skos:altLabel "Nature Paysage Biodiversité/Zonages Paysage"@fr;
   espsyntax:regexp "Zones de protection loi 1930"@fr, "sites classés"@fr, "sites inscrits"@fr, "ZPPAUP"@fr, "Patrimoine mondial UNESCO"@fr, "Label grand site de France"@fr.
+
+eurovoc:2841
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "protection du paysage"@fr.
 
 themes:chasse
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:nature-paysages-et-biodiversite;
   skos:prefLabel "Chasse"@fr;
+  skos:exactMatch eurovoc:5396;
   skos:altLabel "Nature Paysage Biodiversité/Chasse"@fr;
   espsyntax:regexp "chasse"@fr.
+
+eurovoc:5396
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "chasse"@fr.
 
 themes:nuisances-dechets-et-pollution
   rdf:type skos:Concept;
@@ -596,38 +746,71 @@ themes:bruit
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:nuisances-dechets-et-pollution;
   skos:prefLabel "Bruit"@fr;
+  skos:exactMatch eurovoc:5048;
   skos:altLabel "Nuisance/Bruit"@fr, "bruit"@fr;
   espsyntax:regexp "Classement sonore"@fr, "gêne sonore"@fr, "Cartes? de bruit strat(é|e)gique"@fr, "plans? d'exposition au bruit"@fr, "Niveau de bruit"@fr, "cartographie du bruit"@fr.
+
+eurovoc:5048
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "bruit"@fr.
 
 themes:dechets
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:nuisances-dechets-et-pollution;
   skos:prefLabel "Déchets"@fr;
+  skos:exactMatch eurovoc:343;
   skos:altLabel "Nuisance/Déchet"@fr, "déchetterie"@fr;
   espsyntax:regexp "déchet"@fr, "Incinérateur"@fr.
+
+eurovoc:343
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "déchet"@fr.
 
 themes:perturbations-electromagnetiques
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:nuisances-dechets-et-pollution;
   skos:prefLabel "Perturbations électromagnétiques"@fr;
+  skos:exactMatch eurovoc:5319;
   skos:altLabel "Nuisance/Nuisance électromagnétique"@fr, "perturbations électromagnétiques"@fr, "perturbation électromagnétique"@fr.
+
+eurovoc:5319
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "nuisance électromagnétique"@fr.
 
 themes:pollution-des-sols
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:nuisances-dechets-et-pollution;
   skos:prefLabel "Pollution des sols"@fr;
+  skos:exactMatch eurovoc:2534;
   skos:altLabel "Nuisance/Pollution du sol"@fr;
   espsyntax:regexp "Sites? pollués?"@fr, "BASOL"@fr.
+
+eurovoc:2534
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "pollution du sol"@fr.
 
 themes:qualite-de-l-air
   rdf:type skos:Concept;
   skos:inScheme ecospheres:themes-ecospheres;
   skos:broader themes:nuisances-dechets-et-pollution;
   skos:prefLabel "Qualité de l'air"@fr;
+  skos:changeNote "Le sous-thème Covadis \"Air Climat/Qualité Pollution\" a été déplacé dans le thème EcoSphères
+\"Nuisances, déchets et pollution\"
+"@fr;
+  skos:exactMatch eurovoc:2527;
   skos:altLabel "Air Climat/Qualité Pollution"@fr, "qualite-de-l-air"@fr, "pollution-atmospherique"@fr, "dioxyde-d-azote"@fr, "dioxyde-de-soufre"@fr, "monoxyde-de-carbone"@fr, "ozone"@fr, "particules"@fr, "pm10"@fr, "pm25"@fr.
+
+eurovoc:2527
+  rdf:type skos:Concept;
+  skos:inScheme eurovoc:100141;
+  skos:prefLabel "pollution atmosphérique"@fr.
 
 themes:reseaux-d-energie-et-de-communication
   rdf:type skos:Concept;

@@ -80,8 +80,10 @@ class Label { // Une étiquette potentiellement dans différentes langues
   
   function asTurtle(): string {
     $ttl = '';
-    foreach ($this->strings as $lang => $string)
+    foreach ($this->strings as $lang => $string) {
+      $string = str_replace('"', '\"', $string); // échappement des '""
       $ttl .= "\"$string\"".($lang<>'x' ? "@$lang" : '').', ';
+    }
     return substr($ttl, 0, -2);
   }
 };
@@ -269,9 +271,8 @@ abstract class RdfResource {
             $ttl .= "<$object>";
           elseif (strpos($object, ':') !== false) // URI compacté
             $ttl .= $object;
-          else {
+          else
             throw new Exception("Objet \"$object\" non interprété");
-          }
         }
         elseif (is_object($object)) { // Etiquette
           $ttl .= $object->asTurtle();

@@ -31,6 +31,61 @@
             }
         },
         {
+            "@id": "eurovoc:1683",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "littoral"
+            }
+        },
+        {
+            "@id": "eurovoc:1694",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "logement insalubre"
+            }
+        },
+        {
+            "@id": "eurovoc:1695",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "logement social"
+            }
+        },
+        {
+            "@id": "eurovoc:1707",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "lutte contre la pollution"
+            }
+        },
+        {
+            "@id": "eurovoc:1870",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "mer"
+            }
+        },
+        {
             "@id": "eurovoc:1892",
             "@type": "skos:Concept",
             "skos:inScheme": {
@@ -42,17 +97,146 @@
             }
         },
         {
+            "@id": "eurovoc:2041",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "navigation maritime"
+            }
+        },
+        {
+            "@id": "eurovoc:2278",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "patrimoine culturel"
+            }
+        },
+        {
+            "@id": "eurovoc:2391",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "plan d'urbanisme"
+            }
+        },
+        {
+            "@id": "eurovoc:2475",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "politique de la construction"
+            }
+        },
+        {
+            "@id": "eurovoc:2527",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "pollution atmosphérique"
+            }
+        },
+        {
+            "@id": "eurovoc:2534",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "pollution du sol"
+            }
+        },
+        {
             "@id": "eurovoc:260",
             "@type": "skos:Concept",
-            "skos:broader": {
-                "@id": "themes:masses-d-eau"
-            },
             "skos:inScheme": {
-                "@id": "ecospheres:themes-ecospheres"
+                "@id": "eurovoc:100141"
             },
             "skos:prefLabel": {
                 "@language": "fr",
                 "@value": "cours d'eau"
+            }
+        },
+        {
+            "@id": "eurovoc:2813",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "propriété foncière"
+            }
+        },
+        {
+            "@id": "eurovoc:2825",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "protection de l'environnement"
+            }
+        },
+        {
+            "@id": "eurovoc:2841",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "protection du paysage"
+            }
+        },
+        {
+            "@id": "eurovoc:3140",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "surveillance de l'environnement"
+            }
+        },
+        {
+            "@id": "eurovoc:3265",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "remembrement"
+            }
+        },
+        {
+            "@id": "eurovoc:3281",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "rénovation urbaine"
             }
         },
         {
@@ -67,6 +251,28 @@
             }
         },
         {
+            "@id": "eurovoc:3343",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "infrastructure touristique"
+            }
+        },
+        {
+            "@id": "eurovoc:343",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "déchet"
+            }
+        },
+        {
             "@id": "eurovoc:4485",
             "@type": "skos:Concept",
             "skos:inScheme": {
@@ -78,6 +284,83 @@
             }
         },
         {
+            "@id": "eurovoc:4619",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "urbanisme"
+            }
+        },
+        {
+            "@id": "eurovoc:4850",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "besoin de logement"
+            }
+        },
+        {
+            "@id": "eurovoc:5048",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "bruit"
+            }
+        },
+        {
+            "@id": "eurovoc:5226",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "aménagement foncier"
+            }
+        },
+        {
+            "@id": "eurovoc:5319",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "nuisance électromagnétique"
+            }
+        },
+        {
+            "@id": "eurovoc:5396",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "chasse"
+            }
+        },
+        {
+            "@id": "eurovoc:5463",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "biodiversité"
+            }
+        },
+        {
             "@id": "eurovoc:5482",
             "@type": "skos:Concept",
             "skos:inScheme": {
@@ -86,6 +369,17 @@
             "skos:prefLabel": {
                 "@language": "fr",
                 "@value": "changement climatique"
+            }
+        },
+        {
+            "@id": "eurovoc:556",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "droit du logement"
             }
         },
         {
@@ -124,11 +418,8 @@
         {
             "@id": "eurovoc:609",
             "@type": "skos:Concept",
-            "skos:broader": {
-                "@id": "themes:masses-d-eau"
-            },
             "skos:inScheme": {
-                "@id": "ecospheres:themes-ecospheres"
+                "@id": "eurovoc:100141"
             },
             "skos:prefLabel": {
                 "@language": "fr",
@@ -147,6 +438,50 @@
             }
         },
         {
+            "@id": "eurovoc:851",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "équipement socioculturel"
+            }
+        },
+        {
+            "@id": "eurovoc:853",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "équipement sportif"
+            }
+        },
+        {
+            "@id": "eurovoc:873",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "établissement d'enseignement"
+            }
+        },
+        {
+            "@id": "eurovoc:919",
+            "@type": "skos:Concept",
+            "skos:inScheme": {
+                "@id": "eurovoc:100141"
+            },
+            "skos:prefLabel": {
+                "@language": "fr",
+                "@value": "évaluation des ressources"
+            }
+        },
+        {
             "@id": "ecospheres:themes-ecospheres",
             "@type": "skos:ConceptScheme",
             "dct:contributor": {
@@ -162,12 +497,12 @@
             ],
             "dct:description": {
                 "@language": "fr",
-                "@value": "Les thèmes Ecosphères sont utilisés dans le guichet de la donnée de la transition écologique.  \nIls sont construits à partir de l'arborescence Covadis et sont structurés comme un thésaurus\nconformément au [standard SKOS du W3C](https://www.w3.org/2004/02/skos/).  \nA chaque concept sont associés:\n  \n  - des altLabels correspondant aux mots-clés rencontrés dans les catalogues moissonnés par le guichet,\n  - des expressions régulières permettant d'associer des fiches de métadonnées des catalogues\n    moissonnés par le guichet,\n  - une correspondance avec\n    [EuroVoc](https://op.europa.eu/fr/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc)\n    dans la mesure du possible.\nLa constitution de ce thésaurus est en cours.  \nVersion intermédiaire publiée par Benoit DAVID le 18/7/2022.\n"
+                "@value": "Les thèmes Ecosphères sont utilisés dans le guichet de la donnée de la transition écologique.  \nIls sont construits à partir de l'arborescence Covadis et sont structurés comme un thésaurus\nconformément au [standard SKOS du W3C](https://www.w3.org/2004/02/skos/).  \nA chaque concept sont associés:\n  \n  - des altLabels correspondant aux mots-clés rencontrés dans les catalogues moissonnés par le guichet,\n  - des expressions régulières permettant d'associer des fiches de métadonnées des catalogues\n    moissonnés par le guichet,\n  - une correspondance avec\n    [EuroVoc](https://op.europa.eu/fr/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc)\n    dans la mesure du possible.\nLa constitution de ce thésaurus est en cours.  \nVersion intermédiaire publiée par Benoit DAVID le 19/7/2022.\n"
             },
             "dct:license": {
                 "@id": "https://www.etalab.gouv.fr/licence-ouverte-open-licence"
             },
-            "dct:modified": "2022-07-18",
+            "dct:modified": "2022-07-19",
             "dct:title": {
                 "@language": "fr",
                 "@value": "Liste des thèmes d'Ecosphères"
@@ -473,6 +808,9 @@
                 "@language": "fr",
                 "@value": "Demande de logement social, accueil des gens du voyage"
             },
+            "skos:exactMatch": {
+                "@id": "eurovoc:4850"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
             },
@@ -522,6 +860,9 @@
             ],
             "skos:broader": {
                 "@id": "themes:nuisances-dechets-et-pollution"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:5048"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -601,6 +942,9 @@
             },
             "skos:broader": {
                 "@id": "themes:nature-paysages-et-biodiversite"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:5396"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -735,6 +1079,9 @@
                 "@language": "fr",
                 "@value": "Zones d'instruction des permis de construire, nombre de logements, SHON, nombre de logements\nautorisés, statistiques de permis de construire, règles de construction\n"
             },
+            "skos:exactMatch": {
+                "@id": "eurovoc:2475"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
             },
@@ -768,6 +1115,9 @@
             ],
             "skos:broader": {
                 "@id": "themes:nuisances-dechets-et-pollution"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:343"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -916,6 +1266,9 @@
             "skos:broader": {
                 "@id": "themes:etablissements-d-activites"
             },
+            "skos:exactMatch": {
+                "@id": "eurovoc:3343"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
             },
@@ -941,6 +1294,14 @@
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
             },
+            "skos:narrowMatch": [
+                {
+                    "@id": "eurovoc:853"
+                },
+                {
+                    "@id": "eurovoc:851"
+                }
+            ],
             "skos:prefLabel": {
                 "@language": "fr",
                 "@value": "Équipements sportifs ou culturels"
@@ -993,6 +1354,9 @@
             },
             "skos:broader": {
                 "@id": "themes:etablissements-d-activites"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:873"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -1094,6 +1458,9 @@
             "skos:altLabel": {
                 "@language": "fr",
                 "@value": "Foncier Sol/Foncier agricole"
+            },
+            "skos:broadMatch": {
+                "@id": "eurovoc:5226"
             },
             "skos:broader": {
                 "@id": "themes:foncier-et-occupation-du-sol"
@@ -1272,6 +1639,9 @@
             "skos:definition": {
                 "@language": "fr",
                 "@value": "Inventaire de l'habitat susceptible d'être indigne"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:1694"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -1623,6 +1993,9 @@
                 "@language": "fr",
                 "@value": "Nature Paysage Biodiversité/Inventaire Paysage"
             },
+            "skos:broadMatch": {
+                "@id": "eurovoc:919"
+            },
             "skos:broader": {
                 "@id": "themes:nature-paysages-et-biodiversite"
             },
@@ -1693,6 +2066,14 @@
                     "@value": "inventaire_nature_biodiversite"
                 }
             ],
+            "skos:broadMatch": [
+                {
+                    "@id": "eurovoc:919"
+                },
+                {
+                    "@id": "eurovoc:5463"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:nature-paysages-et-biodiversite"
             },
@@ -1761,6 +2142,14 @@
                 "@language": "fr",
                 "@value": "Mer Littoral/Lutte anti-pollution"
             },
+            "skos:broadMatch": [
+                {
+                    "@id": "eurovoc:1870"
+                },
+                {
+                    "@id": "eurovoc:1707"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:mer-et-littoral"
             },
@@ -1964,6 +2353,14 @@
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
             },
+            "skos:narrowMatch": [
+                {
+                    "@id": "eurovoc:1870"
+                },
+                {
+                    "@id": "eurovoc:1683"
+                }
+            ],
             "skos:narrower": [
                 {
                     "@id": "themes:ecologie-du-littoral"
@@ -2085,6 +2482,9 @@
                 "@language": "fr",
                 "@value": "Remembrement, travaux connexes"
             },
+            "skos:exactMatch": {
+                "@id": "eurovoc:3265"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
             },
@@ -2182,6 +2582,9 @@
                 "@language": "fr",
                 "@value": "Plaisance et mouillage, zones portuaires, nautique, plan de balisage, zones militaires, câbles sous-marins,\ncantonnements, zones de navigation, balises/épaves, activités des CROSS, formation et qualification\ndes gens de mer\n"
             },
+            "skos:exactMatch": {
+                "@id": "eurovoc:2041"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
             },
@@ -2250,6 +2653,9 @@
             "skos:definition": {
                 "@language": "fr",
                 "@value": "Aides au logements, taux d'occupation, suivi des loyers, ..."
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:556"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -2407,6 +2813,9 @@
                 "@language": "fr",
                 "@value": "Zonage du locatif, hébergement d'urgence, logements en prêt locatif, PALULOS"
             },
+            "skos:exactMatch": {
+                "@id": "eurovoc:1695"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
             },
@@ -2493,6 +2902,9 @@
             "skos:broader": {
                 "@id": "themes:etablissements-d-activites"
             },
+            "skos:exactMatch": {
+                "@id": "eurovoc:2278"
+            },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
             },
@@ -2551,6 +2963,9 @@
             ],
             "skos:broader": {
                 "@id": "themes:nuisances-dechets-et-pollution"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:5319"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -2854,6 +3269,9 @@
             },
             "skos:broader": {
                 "@id": "themes:nuisances-dechets-et-pollution"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:2534"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -3244,10 +3662,6 @@
                 {
                     "@language": "fr",
                     "@value": "parcellaire"
-                },
-                {
-                    "@language": "fr",
-                    "@value": ""
                 }
             ],
             "skos:altLabel": {
@@ -3256,6 +3670,9 @@
             },
             "skos:broader": {
                 "@id": "themes:foncier-et-occupation-du-sol"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:2813"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -3266,7 +3683,7 @@
             },
             "skos:scopeNote": {
                 "@language": "fr",
-                "@value": "intègre le cadastre et le définition du domaine public"
+                "@value": "intègre le cadastre et la définition du domaine public"
             }
         },
         {
@@ -3453,6 +3870,14 @@
                     "@value": "tvb"
                 }
             ],
+            "skos:broadMatch": [
+                {
+                    "@id": "eurovoc:2825"
+                },
+                {
+                    "@id": "eurovoc:5463"
+                }
+            ],
             "skos:broader": {
                 "@id": "themes:nature-paysages-et-biodiversite"
             },
@@ -3499,6 +3924,9 @@
             },
             "skos:broader": {
                 "@id": "themes:nature-paysages-et-biodiversite"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:2841"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -3555,6 +3983,13 @@
             ],
             "skos:broader": {
                 "@id": "themes:nuisances-dechets-et-pollution"
+            },
+            "skos:changeNote": {
+                "@language": "fr",
+                "@value": "Le sous-thème Covadis \"Air Climat/Qualité Pollution\" a été déplacé dans le thème EcoSphères\n\"Nuisances, déchets et pollution\"\n"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:2527"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -3735,6 +4170,9 @@
             },
             "skos:broader": {
                 "@id": "themes:habitat-et-politique-de-la-ville"
+            },
+            "skos:exactMatch": {
+                "@id": "eurovoc:3281"
             },
             "skos:inScheme": {
                 "@id": "ecospheres:themes-ecospheres"
@@ -4190,6 +4628,9 @@
                     "@value": "hydrologie"
                 }
             ],
+            "skos:broadMatch": {
+                "@id": "eurovoc:3140"
+            },
             "skos:broader": {
                 "@id": "themes:eau"
             },
