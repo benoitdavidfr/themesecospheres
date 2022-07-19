@@ -1,5 +1,5 @@
 <?php
-// eurovoc/index.php - visualisation d'EuroVoc avec Visualisation à plat des étiquettes et des mots - Benoit David - 18/7/2022
+// eurovoc/index.php - visualisation d'EuroVoc avec Visualisation à plat des étiquettes et des mots - Benoit David - 19/7/2022
 require_once __DIR__.'/../vendor/autoload.php';
 
 use Symfony\Component\Yaml\Yaml;
@@ -24,7 +24,7 @@ class Str { // Fonctions sur string
 
 abstract class Resource { // une ressource RDF EuroVoc
   protected string $id; // identifiant de la ressource
-  protected array $prop; // propriétés telles que stockées dans le fichier
+  protected array $prop; // propriétés telles que stockées dans le fichier Yaml
   
   function __construct(string $id, array $prop) { $this->id = $id; $this->prop = $prop; }
   
@@ -38,26 +38,14 @@ abstract class Resource { // une ressource RDF EuroVoc
     $prop = $this->prop;
     echo '<pre>',Yaml::dump($prop),"</pre>\n";
   }
-  
-  function showHierarchy(): void { // affichage hiérarchique 
-    $type = strtolower($this->childrenClass());
-    echo "<li><a href='?action=show&amp;type=$type&amp;id=$this->id'>",$this->prefLabel('fr'),"</a><ul>\n";
-    foreach ($this->children() as $id)
-      ($this->childrenClass())::$all[$id]->showHierarchy();
-    echo "</ul></li>\n";
-  }
-  
-  abstract function children(): array; // la liste des ids des enfants
-  abstract function childrenClass(): string; // la classe des enfants
 };
 
 class Scheme extends Resource { // schéma de concepts 
   static array $all; // dict. des schemas [id => Scheme]
   
-  function children(): array { return $this->prop['hasTopConcept']; }
-  function childrenClass(): string { return 'Concept'; }
+  function domains(): array { return $this->prop['domain'] ?? []; }
   
-  function show(): void { // visualisation d'un schéma
+  function show(): void { // affichage d'un schéma
     echo "<h3><a href='",$this->uri(),"'>",$this->prefLabel('fr'),"</a> ($this->id)</h3>\n";
     $prop = $this->prop;
     foreach ($prop['domain'] ?? [] as $no => $id)
@@ -65,6 +53,14 @@ class Scheme extends Resource { // schéma de concepts
     foreach ($prop['hasTopConcept'] ?? [] as $no => $id)
       $prop['hasTopConcept'][$no] = "<a href=\"?action=show&type=concept&id=$id\">".Concept::$all[$id]->prefLabel('fr')."<a>";
     echo '<pre>',Yaml::dump($prop),"</pre>\n";
+  }
+
+  function showHierarchy(): void { // affichage hiérarchique 
+    echo "<h4><a href='?action=show&amp;type=scheme&amp;id=$this->id'>",$this->prefLabel('fr'),"</a></h4><ul>\n";
+    //if (0)
+    foreach ($this->prop['hasTopConcept'] as $id)
+      Concept::$all[$id]->showHierarchy();
+    echo "</ul>\n";
   }
 };
 
@@ -87,9 +83,6 @@ class LabelIds { // l'association d'une étiquette à une liste d'ids
 class Concept extends Resource { // un concept Skos 
   static array $all; // dict. des concepts [id => Concept]
 
-  function children(): array { return $this->prop['narrower'] ?? []; }
-  function childrenClass(): string { return 'Concept'; }
-  
   function show(): void { // Affichage d'un concept 
     echo "<h3><a href='",$this->uri(),"'>",$this->prefLabel('fr'),"</a> ($this->id)</h3>\n";
     //echo '<pre>',Yaml::dump($this->prop),"</pre>\n";
@@ -107,6 +100,13 @@ class Concept extends Resource { // un concept Skos
     echo '<pre>',Yaml::dump($prop, 4, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK),"</pre>\n";
   }
 
+  function showHierarchy(): void { // affichage hiérarchique 
+    echo "<li><a href='?action=show&amp;type=concept&amp;id=$this->id'>",$this->prefLabel('fr'),"</a><ul>\n";
+    foreach ($this->prop['narrower'] ?? [] as $id)
+      Concept::$all[$id]->showHierarchy();
+    echo "</ul></li>\n";
+  }
+  
   static function labels(): array { // fabrique la liste triée des étiquettes sous la forme [{lowerLabel} => LabelIds]
     $labels = []; // [{lowerLabel} => LabelIds]
     foreach (self::$all as $id => $c) {
@@ -159,12 +159,9 @@ class Concept extends Resource { // un concept Skos
 class Domain extends Concept { // Un domaine regroupe des schemes 
   protected array $schemes; // liste des id de scheme rattachés à ce domaine
 
-  static array $all; // liste des micro-thésaurus [id => Domain]
+  static array $all; // liste des domaines [id => Domain]
   
   function addScheme(string $schemeId): void { $this->schemes[] = $schemeId; }
-  
-  function children(): array { return $this->schemes; }
-  function childrenClass(): string { return 'Scheme'; }
   
   static function showAll() {
     foreach (self::$all as $id => $domain) {
@@ -172,7 +169,7 @@ class Domain extends Concept { // Un domaine regroupe des schemes
     }
   }
   
-  function show(): void {
+  function show(): void { // affiche un domaine
     echo "<h3>",$this->prefLabel('fr'),"</h3><ul>\n";
     foreach ($this->schemes as $schId)
       echo "<li><a href='?action=show&amp;type=scheme&amp;id=$schId'>",Scheme::$all[$schId]->prefLabel('fr'),"</a></li>\n";
@@ -180,11 +177,16 @@ class Domain extends Concept { // Un domaine regroupe des schemes
   }
   
   static function showAllHierarchy(): void {
-    echo "<ul>\n";
-    foreach (self::$all as $id => $domain) {
+    echo "<h2>Affichage hiérarchique des domaines, schémas et concepts</h2>\n";
+    foreach (self::$all as $domain) {
       $domain->showHierarchy();
     }
-    echo "</ul>\n";
+  }
+  
+  function showHierarchy(): void { // affichage hiérarchique 
+    echo "<h3><a href='?action=show&amp;type=domain&amp;id=$this->id'>",$this->prefLabel('fr'),"</a></h3>\n";
+    foreach ($this->schemes as $id)
+      Scheme::$all[$id]->showHierarchy();
   }
 };
 
@@ -202,15 +204,24 @@ class EuroVoc {
     foreach ($yaml['domainScheme']['hasTopConcept'] as $id) {
       Domain::$all[$id] = new Domain($id, $yaml['domains'][$id]);
     }
+    uasort(Domain::$all, function(Domain $a, Domain $b): int { return strcmp($a->prefLabel('fr'), $b->prefLabel('fr')); });
+    
     foreach ($yaml['schemes'] as $id => $prop) {
-      Scheme::$all[$id] = new Scheme($id, $yaml['schemes'][$id]);
-      foreach ($yaml['schemes'][$id]['domain'] ?? [] as $domain) {
-        Domain::$all[$domain]->addScheme($id);
-      }
+      if ($id <> 'candidates')
+        Scheme::$all[$id] = new Scheme($id, $yaml['schemes'][$id]);
     }
+    uasort(Scheme::$all, function(Scheme $a, Scheme $b): int { return strcmp($a->prefLabel('fr'), $b->prefLabel('fr')); });
+    // affectation des schemes à leur domaine maintenant qu'il sont dans l'ordre
+    foreach (Scheme::$all as $schId => $scheme) {
+      foreach ($scheme->domains() as $domain)
+        Domain::$all[$domain]->addScheme($schId);
+    }
+    
     foreach ($yaml['concepts'] as $id => $prop) {
       Concept::$all[$id] = new Concept($id, $yaml['concepts'][$id]);
     }
+
+    //if (0)
     file_put_contents(__DIR__.'/eurovoc.pser',
       serialize([
         'domains'=> Domain::$all,
@@ -226,7 +237,7 @@ class EuroVoc {
         echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc</title></head><body>\n";
         echo "<h3>Menu</h3><ul>\n";
         echo "<li><a href='?action=show&type=allDomains'>Navigation interactive</a></li>\n";
-        echo "<li><a href='?action=show&type=hierarchy'>Affichage hiérarchie Domaines/Schémas/Concepts</a></li>\n";
+        echo "<li><a href='?action=show&type=hierarchy'>Affichage de la hiérarchie Domaines/Schémas/Concepts</a></li>\n";
         echo "<li><a href='?action=show&type=labels'>Affichage à plat des étiquettes</a></li>\n";
         echo "<li><a href='?action=show&type=words'>Affichage des mots extraits des étiquettes</a></li>\n";
         echo "</ul>\n";
@@ -240,6 +251,7 @@ class EuroVoc {
             break;
           }
           case 'domain': {
+            echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc/domaine</title></head><body>\n";
             Domain::$all[$_GET['id']]->show();
             break;
           }
@@ -255,9 +267,12 @@ class EuroVoc {
           }
           case 'concepts': { // affichage d'une liste de concepts définis par leur id
             $ids = explode(',', $_GET['ids']);
-            if (count($ids) == 1)
+            if (count($ids) == 1) {
+              echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc/concept</title></head><body>\n";
               Concept::$all[$ids[0]]->show();
+            }
             else {
+              echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc/concepts</title></head><body>\n";
               echo "<h2>Concepts</h2><ul>\n";
               foreach ($ids as $id)
                 echo "<li><a href='?action=show&type=concept&id=$id'>",Concept::$all[$id]->prefLabel('fr'),"</a></li>\n";
@@ -276,7 +291,7 @@ class EuroVoc {
             break;
           }
           case 'hierarchy': {
-            echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc/Hiérachie</title></head><body>\n";
+            echo "<!DOCTYPE HTML><html><head><meta charset='UTF-8'><title>EuroVoc/Hiérarchie</title></head><body>\n";
             Domain::showAllHierarchy();
             break;
           }

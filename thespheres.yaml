@@ -587,7 +587,6 @@ skos:Concept:
           - {fr: "ANAH"}
           - {fr: "rénovation urbaine"}
           - {fr: "ANRU"}
-        
   
   themes:mer-et-littoral:
     skos:prefLabel: {fr: "Mer et littoral"}
@@ -595,6 +594,13 @@ skos:Concept:
       fr: |
         Par rapport au thème Covadis 'Mer Littoral', suppression des sous-thèmes 'Culture marine', 'Pêche maritime'
         et 'Autres activités' remontés dans le thème parent de 1er niveau.
+    skos:narrowMatch: # <=> mer ou littoral
+      eurovoc:1870:
+        skos:inScheme: eurovoc:100141
+        skos:prefLabel: {fr: "mer"}
+      eurovoc:1683:
+        skos:inScheme: eurovoc:100141
+        skos:prefLabel: {fr: "littoral"}
     skos:altLabel:
       - {fr: "Mer Littoral/Culture marine"}
       - {fr: "crustaces"}
@@ -664,6 +670,13 @@ skos:Concept:
       themes:lutte-anti-pollution-en-mer:
         skos:prefLabel: {fr: "Lutte anti-pollution en mer et sur le littoral"}
         skos:definition: {fr: "Plan de pose de barrages, CNPE, plan de gestion de polluants"}
+        skos:broadMatch: # <=> "lutte contre la pollution" et "mer"
+          eurovoc:1870:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "mer"}
+          eurovoc:1707:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "lutte contre la pollution"}
         skos:altLabel:
           - {fr: "Mer Littoral/Lutte anti-pollution"}
         espsyntax:regexp:
@@ -675,6 +688,10 @@ skos:Concept:
             Plaisance et mouillage, zones portuaires, nautique, plan de balisage, zones militaires, câbles sous-marins,
             cantonnements, zones de navigation, balises/épaves, activités des CROSS, formation et qualification
             des gens de mer
+        skos:exactMatch:
+          eurovoc:2041:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "navigation maritime"}
         skos:altLabel:
           - {fr: "Mer Littoral/Navigation maritime"}
           - {fr: "cross"}
@@ -722,6 +739,13 @@ skos:Concept:
     skos:narrower:
       themes:inventaires-nature-et-biodiversite:
         skos:prefLabel: {fr: "Inventaires nature et biodiversité"}
+        skos:broadMatch: # <=> "évaluation des ressources" et "biodiversité"
+          eurovoc:919:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "évaluation des ressources"}
+          eurovoc:5463:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "biodiversité"}
         skos:altLabel:
           - {fr: Nature Paysage Biodiversité/Inventaire Nature Biodiversité}
           - {fr: znieff1}
@@ -739,6 +763,10 @@ skos:Concept:
           - {fr: continuité écologique}
       themes:inventaires-des-paysages:
         skos:prefLabel: {fr: "Inventaires des paysages"}
+        skos:broadMatch:
+          eurovoc:919:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "évaluation des ressources"}
         skos:altLabel:
           - {fr: Nature Paysage Biodiversité/Inventaire Paysage}
         espsyntax:regexp:
@@ -747,6 +775,13 @@ skos:Concept:
           - {fr: paysagères?}
       themes:protection-et-gestion-de-la-nature:
         skos:prefLabel: {fr: "Protection et gestion de la nature"}
+        skos:broadMatch: # <=> "protection de l'environnement" et "biodiversité"
+          eurovoc:2825:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "protection de l'environnement"}
+          eurovoc:5463:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "biodiversité"}
         skos:altLabel:
           - {fr: Nature Paysage Biodiversité/Zonages Nature}
           - {fr: Schéma régional de cohérence écologique}
@@ -773,6 +808,10 @@ skos:Concept:
           - {fr: Sites du Conservatoire}
       themes:protection-et-gestion-des-paysages:
         skos:prefLabel: {fr: "Protection et gestion des paysages"}
+        skos:exactMatch:
+          eurovoc:2841:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "protection du paysage"}
         skos:altLabel:
           - {fr: Nature Paysage Biodiversité/Zonages Paysage}
         espsyntax:regexp:
@@ -784,6 +823,10 @@ skos:Concept:
           - {fr: Label grand site de France}
       themes:chasse:
         skos:prefLabel: {fr: "Chasse"}
+        skos:exactMatch:
+          eurovoc:5396:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "chasse"}
         skos:altLabel:
           - {fr: Nature Paysage Biodiversité/Chasse}
         espsyntax:regexp:
@@ -794,6 +837,10 @@ skos:Concept:
     skos:narrower:
       themes:bruit:
         skos:prefLabel: {fr: "Bruit"}
+        skos:exactMatch:
+          eurovoc:5048:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "bruit"}
         skos:altLabel:
           - {fr: Nuisance/Bruit}
           - {fr: bruit}
@@ -806,6 +853,10 @@ skos:Concept:
           - {fr: cartographie du bruit}
       themes:dechets:
         skos:prefLabel: {fr: "Déchets"}
+        skos:exactMatch:
+          eurovoc:343:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "déchet"}
         skos:altLabel:
           - {fr: Nuisance/Déchet}
           - {fr: déchetterie}
@@ -814,12 +865,20 @@ skos:Concept:
           - {fr: Incinérateur}
       themes:perturbations-electromagnetiques:
         skos:prefLabel: {fr: "Perturbations électromagnétiques"}
+        skos:exactMatch:
+          eurovoc:5319:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "nuisance électromagnétique"}
         skos:altLabel:
           - {fr: Nuisance/Nuisance électromagnétique}
           - {fr: perturbations électromagnétiques}
           - {fr: perturbation électromagnétique}
       themes:pollution-des-sols:
         skos:prefLabel: {fr: "Pollution des sols"}
+        skos:exactMatch:
+          eurovoc:2534:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "pollution du sol"}
         skos:altLabel:
           - {fr: Nuisance/Pollution du sol}
         espsyntax:regexp:
@@ -827,6 +886,14 @@ skos:Concept:
           - {fr: BASOL}
       themes:qualite-de-l-air:
         skos:prefLabel: {fr: "Qualité de l'air"}
+        skos:changeNote:
+          fr: |
+            Le sous-thème Covadis "Air Climat/Qualité Pollution" a été déplacé dans le thème EcoSphères
+            "Nuisances, déchets et pollution"
+        skos:exactMatch:
+          eurovoc:2527:
+            skos:inScheme: eurovoc:100141
+            skos:prefLabel: {fr: "pollution atmosphérique"}
         skos:altLabel:
           - {fr: Air Climat/Qualité Pollution}
           - {fr: qualite-de-l-air}
