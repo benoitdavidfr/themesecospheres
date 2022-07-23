@@ -170,8 +170,9 @@ abstract class RdfResource {
   const PhpClassNameForRdfType = [
     'foaf:Person'=> 'FoafPerson',
   ];
-  const RegistreUri = 'http://registre/'; // Test en dev
+  //const RegistreUri = 'http://registre/'; // Test en dev
   //const RegistreUri = 'http://registre.georef.eu/'; // Registre provisoire sur georef
+  const RegistreUri = 'http://registre.data.developpement-durable.gouv.fr/'; // Registre cible
   
   protected array $prop; // [{predicat} => [{object}]] où {object} ::= URI | compactURI | Label
   static array $prefix = [];

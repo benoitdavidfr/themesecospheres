@@ -16,6 +16,7 @@ doc: |
   Le sous-répertoire eurovoc contient un outil de visualisation d'EuroVoc
   
   AFaire:
+    - ajouter une mise en correspondance avec les thèmes data EU - https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/data-theme
     - faire un export md des thèmes
 journal:
   18-19/7/2022:

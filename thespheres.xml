@@ -1,32 +1,40 @@
+
+Deprecated: Return type of EasyRdf\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /var/www/html/georef/themesecospheres/vendor/easyrdf/easyrdf/lib/Resource.php on line 772
+
+Deprecated: Return type of EasyRdf\Resource::offsetGet($offset) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /var/www/html/georef/themesecospheres/vendor/easyrdf/easyrdf/lib/Resource.php on line 789
+
+Deprecated: Return type of EasyRdf\Resource::offsetSet($offset, $value) should either be compatible with ArrayAccess::offsetSet(mixed $offset, mixed $value): void, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /var/www/html/georef/themesecospheres/vendor/easyrdf/easyrdf/lib/Resource.php on line 807
+
+Deprecated: Return type of EasyRdf\Resource::offsetUnset($offset) should either be compatible with ArrayAccess::offsetUnset(mixed $offset): void, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /var/www/html/georef/themesecospheres/vendor/easyrdf/easyrdf/lib/Resource.php on line 824
 <?xml version="1.0" encoding="utf-8" ?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:dc="http://purl.org/dc/terms/"
-         xmlns:ns0="http://registre/ecospheres/syntax#">
+         xmlns:ns0="http://registre.data.developpement-durable.gouv.fr/ecospheres/syntax#">
 
-  <skos:ConceptScheme rdf:about="http://registre/ecospheres/themes-ecospheres">
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/climat"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/etablissements-d-activites"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/eau"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/mer-et-littoral"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/industrie"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/transport-et-deplacements"/>
-    <skos:hasTopConcept rdf:resource="http://registre/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
-    <dc:title xml:lang="fr">Liste des thèmes d'Ecosphères</dc:title>
+  <skos:ConceptScheme rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres">
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"/>
+    <skos:hasTopConcept rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
+    <dc:title xml:lang="fr">Liste des thèmes d&#039;Ecosphères</dc:title>
     <dc:description xml:lang="fr">Les thèmes Ecosphères sont utilisés dans le guichet de la donnée de la transition écologique.  
-Ils sont construits à partir de l'arborescence Covadis et sont structurés comme un thésaurus
+Ils sont construits à partir de l&#039;arborescence Covadis et sont structurés comme un thésaurus
 conformément au [standard SKOS du W3C](https://www.w3.org/2004/02/skos/).  
 A chaque concept sont associés:
   
   - des altLabels correspondant aux mots-clés rencontrés dans les catalogues moissonnés par le guichet,
-  - des expressions régulières permettant d'associer des fiches de métadonnées des catalogues
+  - des expressions régulières permettant d&#039;associer des fiches de métadonnées des catalogues
     moissonnés par le guichet,
   - une correspondance avec
     [EuroVoc](https://op.europa.eu/fr/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc)
@@ -34,9 +42,9 @@ A chaque concept sont associés:
 La constitution de ce thésaurus est en cours.  
 Version intermédiaire publiée par Benoit DAVID le 19/7/2022.
 </dc:description>
-    <dc:creator rdf:resource="http://registre/ecospheres/persons/BenoitDavid"/>
-    <dc:creator rdf:resource="http://registre/ecospheres/persons/LeslieLemaire"/>
-    <dc:contributor rdf:resource="http://registre/ecospheres/persons/GillesGuillouet"/>
+    <dc:creator rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/BenoitDavid"/>
+    <dc:creator rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/LeslieLemaire"/>
+    <dc:contributor rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/persons/GillesGuillouet"/>
     <dc:modified>2022-07-19</dc:modified>
     <dc:license rdf:resource="https://www.etalab.gouv.fr/licence-ouverte-open-licence"/>
   </skos:ConceptScheme>
@@ -49,18 +57,18 @@ EuroVoc is managed by the Publications Office of the European Union, which moved
 
 EuroVoc users include the European Union institutions, the Publications Office of the EU, national and regional parliaments in Europe, plus national governments and private users around the world.
 </dc:description>
-    <dc:description xml:lang="fr">EuroVoc est un thésaurus multilingue et multidisciplinaire couvrant les activités de l'UE. Il contient des termes dans 24 langues de l'UE (bulgare, croate, tchèque, danois, néerlandais, anglais, estonien, finnois, français, allemand, grec, hongrois, irlandais, italien, letton, lituanien, maltais, polonais, portugais, roumain, slovaque, slovène, espagnol et suédois), ainsi que dans les trois langues des pays candidats à l'adhésion à l'UE : albanais, macédonien et serbe.
+    <dc:description xml:lang="fr">EuroVoc est un thésaurus multilingue et multidisciplinaire couvrant les activités de l&#039;UE. Il contient des termes dans 24 langues de l&#039;UE (bulgare, croate, tchèque, danois, néerlandais, anglais, estonien, finnois, français, allemand, grec, hongrois, irlandais, italien, letton, lituanien, maltais, polonais, portugais, roumain, slovaque, slovène, espagnol et suédois), ainsi que dans les trois langues des pays candidats à l&#039;adhésion à l&#039;UE : albanais, macédonien et serbe.
 
-EuroVoc est géré par l'Office des publications de l'Union européenne, qui a évolué vers une gestion de thésaurus basée sur des ontologies et des technologies Web sémantiques conformes aux recommandations du W3C ainsi qu'aux dernières tendances en matière de normes de thésaurus.
+EuroVoc est géré par l&#039;Office des publications de l&#039;Union européenne, qui a évolué vers une gestion de thésaurus basée sur des ontologies et des technologies Web sémantiques conformes aux recommandations du W3C ainsi qu&#039;aux dernières tendances en matière de normes de thésaurus.
 
-Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, l'Office des publications de l'UE, les parlements nationaux et régionaux d'Europe, ainsi que les gouvernements nationaux et les utilisateurs privés du monde entier.
+Les utilisateurs d&#039;EuroVoc comprennent les institutions de l&#039;Union européenne, l&#039;Office des publications de l&#039;UE, les parlements nationaux et régionaux d&#039;Europe, ainsi que les gouvernements nationaux et les utilisateurs privés du monde entier.
 </dc:description>
     <dc:modified>2021-12-17</dc:modified>
   </skos:ConceptScheme>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/climat">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
     <skos:prefLabel xml:lang="fr">Climat</skos:prefLabel>
     <skos:exactMatch>
       <skos:Concept rdf:about="http://eurovoc.europa.eu/6011">
@@ -70,12 +78,12 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
     </skos:exactMatch>
 
     <skos:altLabel xml:lang="fr">air-climat</skos:altLabel>
-    <skos:changeNote xml:lang="fr">Le sous-thème Covadis 'Air Climat/Qualité Pollution' a été déplacé dans nuisances-dechets-et-pollution.
+    <skos:changeNote xml:lang="fr">Le sous-thème Covadis &#039;Air Climat/Qualité Pollution&#039; a été déplacé dans nuisances-dechets-et-pollution.
 </skos:changeNote>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/changement-climatique">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/climat"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/changement-climatique">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat"/>
         <skos:prefLabel xml:lang="fr">Changement climatique</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/5482">
@@ -90,16 +98,16 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
         <ns0:regexp xml:lang="fr">Plan Climat Air Energie territorr?ial</ns0:regexp>
         <ns0:regexp xml:lang="fr">Air, Énergie et Climat</ns0:regexp>
         <ns0:regexp xml:lang="fr">PCAET</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Plans de Protection de l'Atmosphère</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Plans de Protection de l&#039;Atmosphère</ns0:regexp>
         <ns0:regexp xml:lang="fr">SRCAE</ns0:regexp>
         <ns0:regexp xml:lang="fr">territoires? à énergie positive</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/meteorologie">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/climat"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/meteorologie">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/climat"/>
         <skos:prefLabel xml:lang="fr">Météorologie</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/1892">
@@ -114,9 +122,9 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/amenagement-et-urbanisme">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
     <skos:prefLabel xml:lang="fr">Aménagement et urbanisme</skos:prefLabel>
     <skos:exactMatch>
       <skos:Concept rdf:about="http://eurovoc.europa.eu/4619">
@@ -128,10 +136,10 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
     <skos:altLabel xml:lang="fr">Aménagement Urbanisme</skos:altLabel>
     <skos:altLabel xml:lang="fr">amenagement-urbanisme</skos:altLabel>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/servitudes-d-utilite-publique">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
-        <skos:prefLabel xml:lang="fr">Servitudes d'utilité publique</skos:prefLabel>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/servitudes-d-utilite-publique">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
+        <skos:prefLabel xml:lang="fr">Servitudes d&#039;utilité publique</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Aménagement Urbanisme/Assiette Servitude</skos:altLabel>
         <skos:altLabel xml:lang="fr">servitude-d-utilite-publique</skos:altLabel>
         <skos:altLabel xml:lang="fr">ASSIETTE SERVITUDE</skos:altLabel>
@@ -144,19 +152,19 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/politique-europeenne-d-amenagement">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
-        <skos:prefLabel xml:lang="fr">Politique européenne d'aménagement</skos:prefLabel>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/politique-europeenne-d-amenagement">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
+        <skos:prefLabel xml:lang="fr">Politique européenne d&#039;aménagement</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Aménagement Urbanisme/Politique européenne</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/zonages-d-amenagement">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
-        <skos:prefLabel xml:lang="fr">Zonages d'aménagement</skos:prefLabel>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/zonages-d-amenagement">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
+        <skos:prefLabel xml:lang="fr">Zonages d&#039;aménagement</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Aménagement Urbanisme/Zonages Aménagement</skos:altLabel>
         <skos:altLabel xml:lang="fr">zonages aménagement</skos:altLabel>
         <skos:altLabel xml:lang="fr">zonages-amenagement</skos:altLabel>
@@ -172,14 +180,14 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/planification">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/planification">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
         <skos:prefLabel xml:lang="fr">Planification</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/2391">
             <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
-            <skos:prefLabel xml:lang="fr">plan d'urbanisme</skos:prefLabel>
+            <skos:prefLabel xml:lang="fr">plan d&#039;urbanisme</skos:prefLabel>
           </skos:Concept>
         </skos:exactMatch>
 
@@ -199,7 +207,7 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
         <skos:altLabel xml:lang="fr">amenagement_urbanisme/n_zonages_planification</skos:altLabel>
         <skos:altLabel xml:lang="fr">zonage planification</skos:altLabel>
         <skos:altLabel xml:lang="fr">urbanisme planification</skos:altLabel>
-        <ns0:regexp xml:lang="fr">Directives? Territoriales? d'Aménagement</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Directives? Territoriales? d&#039;Aménagement</ns0:regexp>
         <ns0:regexp xml:lang="fr">DTA</ns0:regexp>
         <ns0:regexp xml:lang="fr">DTADD</ns0:regexp>
         <ns0:regexp xml:lang="fr">Document d’urbanisme</ns0:regexp>
@@ -208,7 +216,7 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
         <ns0:regexp xml:lang="fr">PLU</ns0:regexp>
         <ns0:regexp xml:lang="fr">Schémas? de Cohérence Territoriale</ns0:regexp>
         <ns0:regexp xml:lang="fr">SCOT</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Règlement National d'Urbanisme</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Règlement National d&#039;Urbanisme</ns0:regexp>
         <ns0:regexp xml:lang="fr">PDU</ns0:regexp>
         <ns0:regexp xml:lang="fr">Plan de déplacement urbain</ns0:regexp>
         <ns0:regexp xml:lang="fr">loi littoral</ns0:regexp>
@@ -218,9 +226,9 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/etudes">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etudes">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-et-urbanisme"/>
         <skos:prefLabel xml:lang="fr">Études</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Aménagement Urbanisme/Zonages Étude</skos:altLabel>
         <skos:altLabel xml:lang="fr">Aménagement Urbanisme / Zonages Étude</skos:altLabel>
@@ -228,25 +236,25 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
         <ns0:regexp xml:lang="fr">Taches? urbaines?</ns0:regexp>
         <ns0:regexp xml:lang="fr">Aires? urbaines?</ns0:regexp>
         <ns0:regexp xml:lang="fr">IRIS</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Zone d'emploi</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zone d&#039;emploi</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/etablissements-d-activites">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:prefLabel xml:lang="fr">Établissements d'activités</skos:prefLabel>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:prefLabel xml:lang="fr">Établissements d&#039;activités</skos:prefLabel>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/etablissements-d-enseignement">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/etablissements-d-activites"/>
-        <skos:prefLabel xml:lang="fr">Etablissements d'enseignement</skos:prefLabel>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-enseignement">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
+        <skos:prefLabel xml:lang="fr">Etablissements d&#039;enseignement</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/873">
             <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
-            <skos:prefLabel xml:lang="fr">établissement d'enseignement</skos:prefLabel>
+            <skos:prefLabel xml:lang="fr">établissement d&#039;enseignement</skos:prefLabel>
           </skos:Concept>
         </skos:exactMatch>
 
@@ -256,9 +264,9 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/equipements-sportifs-ou-culturels">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/etablissements-d-activites"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-sportifs-ou-culturels">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
         <skos:prefLabel xml:lang="fr">Équipements sportifs ou culturels</skos:prefLabel>
         <skos:narrowMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/853">
@@ -280,9 +288,9 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/patrimoine-culturel">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/etablissements-d-activites"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/patrimoine-culturel">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
         <skos:prefLabel xml:lang="fr">Patrimoine culturel</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/2278">
@@ -298,23 +306,23 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/etablissements-de-sante-et-medico-sociaux">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/etablissements-d-activites"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-de-sante-et-medico-sociaux">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
         <skos:prefLabel xml:lang="fr">Établissements de santé et médico-sociaux</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Culture Société Service/Santé Social</skos:altLabel>
         <ns0:regexp xml:lang="fr">E\.P\.A\.D\.</ns0:regexp>
         <ns0:regexp xml:lang="fr">EPAD</ns0:regexp>
         <ns0:regexp xml:lang="fr">Fonctions médicales et paramédicales</ns0:regexp>
         <ns0:regexp xml:lang="fr">Établissements et services de santé</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Établissements? d'accueil de la petite enfance</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Établissements? d&#039;accueil de la petite enfance</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/equipements-de-tourisme">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/etablissements-d-activites"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/equipements-de-tourisme">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
         <skos:prefLabel xml:lang="fr">Équipements de tourisme</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/3343">
@@ -331,9 +339,9 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/autres-etablissements-recevant-du-public">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/etablissements-d-activites"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/autres-etablissements-recevant-du-public">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/etablissements-d-activites"/>
         <skos:prefLabel xml:lang="fr">Autres établissements recevant du public</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Culture Société Service/ERP Autre</skos:altLabel>
         <ns0:regexp xml:lang="fr">Stations? de distribution de carburants?</ns0:regexp>
@@ -345,9 +353,9 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/eau">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
     <skos:prefLabel xml:lang="fr">Eau</skos:prefLabel>
     <skos:exactMatch>
       <skos:Concept rdf:about="http://eurovoc.europa.eu/597">
@@ -357,13 +365,13 @@ Les utilisateurs d'EuroVoc comprennent les institutions de l'Union européenne, 
     </skos:exactMatch>
 
     <skos:altLabel xml:lang="fr">Eau/Utilisation Autre</skos:altLabel>
-    <skos:changeNote xml:lang="fr">Le thème Covadis 'Eau/Utilisation Autre' ayant été supprimé, les mots-clés correspondants
+    <skos:changeNote xml:lang="fr">Le thème Covadis &#039;Eau/Utilisation Autre&#039; ayant été supprimé, les mots-clés correspondants
 sont affectés au thème Eau.
 </skos:changeNote>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/alimentation-en-eau-potable">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/eau"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/alimentation-en-eau-potable">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Alimentation en eau potable</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/607">
@@ -378,22 +386,22 @@ sont affectés au thème Eau.
         <ns0:regexp xml:lang="fr">eau potable</ns0:regexp>
         <ns0:regexp xml:lang="fr">Périmètres? de protection immédiats?</ns0:regexp>
         <ns0:regexp xml:lang="fr">Périmètres? de protection rapprochés?</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Aires? d'alimentation des? captages?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Aires? d&#039;alimentation des? captages?</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/assainissement">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/eau"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/assainissement">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Assainissement</skos:prefLabel>
-        <skos:definition xml:lang="fr">Les stations d'épuration, leur points de rejet, les réseaux d'assainissement, les stations
+        <skos:definition xml:lang="fr">Les stations d&#039;épuration, leur points de rejet, les réseaux d&#039;assainissement, les stations
 de pompage, ...
 </skos:definition>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/4485">
             <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
-            <skos:prefLabel xml:lang="fr">traitement de l'eau</skos:prefLabel>
+            <skos:prefLabel xml:lang="fr">traitement de l&#039;eau</skos:prefLabel>
           </skos:Concept>
         </skos:exactMatch>
 
@@ -401,7 +409,7 @@ de pompage, ...
         <skos:altLabel xml:lang="fr">eau/n_assainissement</skos:altLabel>
         <ns0:regexp xml:lang="fr">assainissement</ns0:regexp>
         <ns0:regexp xml:lang="fr">STEP</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Stations? d'épurations?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Stations? d&#039;épurations?</ns0:regexp>
         <ns0:regexp xml:lang="fr">Stations? de traitement des eaux usées</ns0:regexp>
         <ns0:regexp xml:lang="fr">Systèmes? de traitement des eaux usées</ns0:regexp>
         <ns0:regexp xml:lang="fr">STEU</ns0:regexp>
@@ -409,26 +417,26 @@ de pompage, ...
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/masses-d-eau">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/eau"/>
-        <skos:prefLabel xml:lang="fr">Masses d'eau</skos:prefLabel>
-        <skos:definition xml:lang="fr">Les masses d'eau au sens de la DCE et autres masses d'eau (surface, cours d'eau, plan d'eau naturel,
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/masses-d-eau">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
+        <skos:prefLabel xml:lang="fr">Masses d&#039;eau</skos:prefLabel>
+        <skos:definition xml:lang="fr">Les masses d&#039;eau au sens de la DCE et autres masses d&#039;eau (surface, cours d&#039;eau, plan d&#039;eau naturel,
 eau souterraine, connaissance des zones, humides, ...)
 </skos:definition>
-        <skos:altLabel xml:lang="fr">Eau/Masse d'eau</skos:altLabel>
+        <skos:altLabel xml:lang="fr">Eau/Masse d&#039;eau</skos:altLabel>
         <skos:altLabel xml:lang="fr">eau/n_masse_eau</skos:altLabel>
-        <ns0:regexp xml:lang="fr">masses? d'eau</ns0:regexp>
+        <ns0:regexp xml:lang="fr">masses? d&#039;eau</ns0:regexp>
         <ns0:regexp xml:lang="fr">Tronçons hydrographiques</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Cours d'eau</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Plans? d'eau</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Cours d&#039;eau</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Plans? d&#039;eau</ns0:regexp>
         <ns0:regexp xml:lang="fr">Etang</ns0:regexp>
         <ns0:regexp xml:lang="fr">Zones? humides?</ns0:regexp>
         <ns0:regexp xml:lang="fr">Milieux? humides?</ns0:regexp>
         <skos:narrowMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/260">
             <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
-            <skos:prefLabel xml:lang="fr">cours d'eau</skos:prefLabel>
+            <skos:prefLabel xml:lang="fr">cours d&#039;eau</skos:prefLabel>
           </skos:Concept>
         </skos:narrowMatch>
 
@@ -443,26 +451,26 @@ eau souterraine, connaissance des zones, humides, ...)
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/ouvrages-hydrauliques">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/eau"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ouvrages-hydrauliques">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Ouvrages hydrauliques</skos:prefLabel>
-        <skos:definition xml:lang="fr">plans d'eau artificiels, réservoirs, ORSFP, pisciculture, déversoirs d'orage, bassins d'orage,
-moulins, usines hydroélectriques, bassins d'infiltration, bassins d'évaporation, digues,
-obstacles à l'écoulement, ...
+        <skos:definition xml:lang="fr">plans d&#039;eau artificiels, réservoirs, ORSFP, pisciculture, déversoirs d&#039;orage, bassins d&#039;orage,
+moulins, usines hydroélectriques, bassins d&#039;infiltration, bassins d&#039;évaporation, digues,
+obstacles à l&#039;écoulement, ...
 </skos:definition>
         <skos:altLabel xml:lang="fr">Eau/Ouvrage</skos:altLabel>
         <skos:altLabel xml:lang="fr">Eau / Ouvrage</skos:altLabel>
         <ns0:regexp xml:lang="fr">ouvrages? hydrauliques?</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Obstacles? à l'écoulement</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Obstacles? à l&#039;écoulement</ns0:regexp>
         <ns0:regexp xml:lang="fr">Digues</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/peche-en-eaux-interieures">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/eau"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/peche-en-eaux-interieures">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Pêche en eaux intérieures</skos:prefLabel>
         <skos:definition xml:lang="fr">Réserve de pêche, police de la pêche,… (en eaux intérieures)
 </skos:definition>
@@ -479,15 +487,15 @@ obstacles à l'écoulement, ...
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/surveillance-de-la-ressource-en-eau">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/eau"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/surveillance-de-la-ressource-en-eau">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
         <skos:prefLabel xml:lang="fr">Surveillance de la ressource en eau</skos:prefLabel>
         <skos:definition xml:lang="fr">points de mesure, effractions constatées, ...</skos:definition>
         <skos:broadMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/3140">
             <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
-            <skos:prefLabel xml:lang="fr">surveillance de l'environnement</skos:prefLabel>
+            <skos:prefLabel xml:lang="fr">surveillance de l&#039;environnement</skos:prefLabel>
           </skos:Concept>
         </skos:broadMatch>
 
@@ -500,21 +508,21 @@ obstacles à l'écoulement, ...
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/interventions-sur-les-cours-d-eau">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/eau"/>
-        <skos:prefLabel xml:lang="fr">Interventions sur les cours d'eau</skos:prefLabel>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/interventions-sur-les-cours-d-eau">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
+        <skos:prefLabel xml:lang="fr">Interventions sur les cours d&#039;eau</skos:prefLabel>
         <skos:definition xml:lang="fr">Travaux sur linéaire, curage-dragage, drainages</skos:definition>
-        <skos:changeNote xml:lang="fr">Correspond dans l'arborescence Covadis au sous-thème 'Eau/Travaux Action'</skos:changeNote>
+        <skos:changeNote xml:lang="fr">Correspond dans l&#039;arborescence Covadis au sous-thème &#039;Eau/Travaux Action&#039;</skos:changeNote>
         <skos:altLabel xml:lang="fr">Eau/Travaux Action</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/protection-de-l-eau">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/eau"/>
-        <skos:prefLabel xml:lang="fr">Protection de l'eau</skos:prefLabel>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-de-l-eau">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/eau"/>
+        <skos:prefLabel xml:lang="fr">Protection de l&#039;eau</skos:prefLabel>
         <skos:definition xml:lang="fr">Zonage réglementaire : zones sensibles eutrophisation, zones vulnérables nitrates,
 zones sensibles pollution pesticides, zones PMPOA, imperméabilisation, zones drainées,
 contrats de rivière, SAGE
@@ -526,18 +534,18 @@ contrats de rivière, SAGE
           </skos:Concept>
         </skos:exactMatch>
 
-        <skos:changeNote xml:lang="fr">Inclus et étend le sous-thème Covadis 'Eau/Zonages Eau'.</skos:changeNote>
+        <skos:changeNote xml:lang="fr">Inclus et étend le sous-thème Covadis &#039;Eau/Zonages Eau&#039;.</skos:changeNote>
         <skos:altLabel xml:lang="fr">Eau/Zonages Eau</skos:altLabel>
         <skos:altLabel xml:lang="fr">eau/n_zonages_eau</skos:altLabel>
         <skos:altLabel xml:lang="fr">zonages eau</skos:altLabel>
-        <ns0:regexp xml:lang="fr">Schémas? d'Aménagement et de Gestion des Eaux</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Schémas? d&#039;Aménagement et de Gestion des Eaux</ns0:regexp>
         <ns0:regexp xml:lang="fr">SAGE</ns0:regexp>
         <ns0:regexp xml:lang="fr">Zones? sensibles?</ns0:regexp>
         <ns0:regexp xml:lang="fr">Zones? Vulnérables?</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Zones? d'Actions? Renforcées? Nitrate</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zones? d&#039;Actions? Renforcées? Nitrate</ns0:regexp>
         <ns0:regexp xml:lang="fr">protection des eaux contre la pollution par les nitrates</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Cours d'eau Classement</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Classement piscicole des cours d'eau</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Cours d&#039;eau Classement</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Classement piscicole des cours d&#039;eau</ns0:regexp>
         <ns0:regexp xml:lang="fr">Zones? de répartition des eaux</ns0:regexp>
         <ns0:regexp xml:lang="fr">ZRE</ns0:regexp>
         <ns0:regexp xml:lang="fr">frayères</ns0:regexp>
@@ -547,14 +555,14 @@ contrats de rivière, SAGE
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
     <skos:prefLabel xml:lang="fr">Foncier et occupation du sol</skos:prefLabel>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/foncier-agricole">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-agricole">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
         <skos:prefLabel xml:lang="fr">Foncier agricole</skos:prefLabel>
         <skos:definition xml:lang="fr">definition: Divisions, regroupements, changement propriétaires</skos:definition>
         <skos:broadMatch>
@@ -569,9 +577,9 @@ contrats de rivière, SAGE
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/mutation-fonciere">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mutation-fonciere">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
         <skos:prefLabel xml:lang="fr">Mutation foncière</skos:prefLabel>
         <skos:definition xml:lang="fr">Remembrement, travaux connexes</skos:definition>
         <skos:exactMatch>
@@ -586,9 +594,9 @@ contrats de rivière, SAGE
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/occupation-du-sol">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/occupation-du-sol">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
         <skos:prefLabel xml:lang="fr">Occupation du sol</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Foncier Sol/Occupation du sol</skos:altLabel>
         <skos:altLabel xml:lang="fr">usage du sol</skos:altLabel>
@@ -601,9 +609,9 @@ contrats de rivière, SAGE
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/propriete-fonciere">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/propriete-fonciere">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/foncier-et-occupation-du-sol"/>
         <skos:prefLabel xml:lang="fr">Propriété foncière</skos:prefLabel>
         <skos:scopeNote xml:lang="fr">intègre le cadastre et la définition du domaine public</skos:scopeNote>
         <skos:exactMatch>
@@ -621,15 +629,15 @@ contrats de rivière, SAGE
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
     <skos:prefLabel xml:lang="fr">Habitat et politique de la ville</skos:prefLabel>
     <skos:altLabel xml:lang="fr">Habitat Politique de la ville</skos:altLabel>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/accession-a-la-propriete">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/accession-a-la-propriete">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Accession à la propriété</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Accession Propriété</skos:altLabel>
         <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Accession à la propriété</skos:altLabel>
@@ -637,9 +645,9 @@ contrats de rivière, SAGE
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/besoins-en-logements">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/besoins-en-logements">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Besoins en logements</skos:prefLabel>
         <skos:definition xml:lang="fr">Demande de logement social, accueil des gens du voyage</skos:definition>
         <skos:exactMatch>
@@ -657,11 +665,11 @@ contrats de rivière, SAGE
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/construction">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/construction">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Construction</skos:prefLabel>
-        <skos:definition xml:lang="fr">Zones d'instruction des permis de construire, nombre de logements, SHON, nombre de logements
+        <skos:definition xml:lang="fr">Zones d&#039;instruction des permis de construire, nombre de logements, SHON, nombre de logements
 autorisés, statistiques de permis de construire, règles de construction
 </skos:definition>
         <skos:exactMatch>
@@ -681,11 +689,11 @@ autorisés, statistiques de permis de construire, règles de construction
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/habitat-indigne">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-indigne">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Habitat indigne</skos:prefLabel>
-        <skos:definition xml:lang="fr">Inventaire de l'habitat susceptible d'être indigne</skos:definition>
+        <skos:definition xml:lang="fr">Inventaire de l&#039;habitat susceptible d&#039;être indigne</skos:definition>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/1694">
             <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
@@ -698,11 +706,11 @@ autorisés, statistiques de permis de construire, règles de construction
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/occupation-des-logements">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/occupation-des-logements">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Occupation des logements</skos:prefLabel>
-        <skos:definition xml:lang="fr">Aides au logements, taux d'occupation, suivi des loyers, ...</skos:definition>
+        <skos:definition xml:lang="fr">Aides au logements, taux d&#039;occupation, suivi des loyers, ...</skos:definition>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/556">
             <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
@@ -712,17 +720,17 @@ autorisés, statistiques de permis de construire, règles de construction
 
         <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Occupation des logements</skos:altLabel>
         <skos:altLabel xml:lang="fr">loyer</skos:altLabel>
-        <ns0:regexp xml:lang="fr">Bâtiment majoritairement d'activités vacant</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Local d'activités vacant</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Bâtiment majoritairement d&#039;activités vacant</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Local d&#039;activités vacant</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/parc-locatif-social">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parc-locatif-social">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Parc locatif social</skos:prefLabel>
-        <skos:definition xml:lang="fr">Zonage du locatif, hébergement d'urgence, logements en prêt locatif, PALULOS</skos:definition>
+        <skos:definition xml:lang="fr">Zonage du locatif, hébergement d&#039;urgence, logements en prêt locatif, PALULOS</skos:definition>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/1695">
             <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
@@ -733,14 +741,14 @@ autorisés, statistiques de permis de construire, règles de construction
         <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Parc locatif social</skos:altLabel>
         <skos:altLabel xml:lang="fr">bailleurs-sociaux</skos:altLabel>
         <skos:altLabel xml:lang="fr">logement-locatif-social</skos:altLabel>
-        <ns0:regexp xml:lang="fr">hébergement d'urgence</ns0:regexp>
+        <ns0:regexp xml:lang="fr">hébergement d&#039;urgence</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/parc-de-logements">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parc-de-logements">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Parc de logements</skos:prefLabel>
         <skos:definition xml:lang="fr">Résidences principales collectives, logements vacants, résidences secondaires</skos:definition>
         <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Parc Logements</skos:altLabel>
@@ -750,12 +758,12 @@ autorisés, statistiques de permis de construire, règles de construction
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/politique-de-la-ville">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/politique-de-la-ville">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Politique de la ville</skos:prefLabel>
-        <skos:definition xml:lang="fr">PRU, Opération programmée pour l'amélioration de l'habitat (OPAH), SRU, ZUS, ZRU,
-quartier prioritaire, Programme local de l'habitat (PLH),
+        <skos:definition xml:lang="fr">PRU, Opération programmée pour l&#039;amélioration de l&#039;habitat (OPAH), SRU, ZUS, ZRU,
+quartier prioritaire, Programme local de l&#039;habitat (PLH),
 Contrat urbain de cohésion sociale (CUCS) ...
 </skos:definition>
         <skos:altLabel xml:lang="fr">Habitat Politique de la ville/Politique</skos:altLabel>
@@ -770,19 +778,19 @@ Contrat urbain de cohésion sociale (CUCS) ...
         <ns0:regexp xml:lang="fr">SRU</ns0:regexp>
         <ns0:regexp xml:lang="fr">ZRU</ns0:regexp>
         <ns0:regexp xml:lang="fr">PRU</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Programmes? loca(l|ux) de l'habitat</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Programmes? loca(l|ux) de l&#039;habitat</ns0:regexp>
         <ns0:regexp xml:lang="fr">PLH</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Opération programmée d'amélioration de l'habitat</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Opération Programmée pour l'Amélioration de l'Habitat</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Opération programmée d&#039;amélioration de l&#039;habitat</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Opération Programmée pour l&#039;Amélioration de l&#039;Habitat</ns0:regexp>
         <ns0:regexp xml:lang="fr">OPAH</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Programme d'intérêt général \(PIG\) habitat</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Programme d&#039;intérêt général \(PIG\) habitat</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/renovation-urbaine">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/renovation-urbaine">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/habitat-et-politique-de-la-ville"/>
         <skos:prefLabel xml:lang="fr">Rénovation urbaine</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/3281">
@@ -800,12 +808,12 @@ Contrat urbain de cohésion sociale (CUCS) ...
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/mer-et-littoral">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
     <skos:prefLabel xml:lang="fr">Mer et littoral</skos:prefLabel>
-    <skos:changeNote xml:lang="fr">Par rapport au thème Covadis 'Mer Littoral', suppression des sous-thèmes 'Culture marine', 'Pêche maritime'
-et 'Autres activités' remontés dans le thème parent de 1er niveau.
+    <skos:changeNote xml:lang="fr">Par rapport au thème Covadis &#039;Mer Littoral&#039;, suppression des sous-thèmes &#039;Culture marine&#039;, &#039;Pêche maritime&#039;
+et &#039;Autres activités&#039; remontés dans le thème parent de 1er niveau.
 </skos:changeNote>
     <skos:narrowMatch rdf:resource="http://eurovoc.europa.eu/1870"/>
     <skos:narrowMatch>
@@ -843,9 +851,9 @@ et 'Autres activités' remontés dans le thème parent de 1er niveau.
     <ns0:regexp xml:lang="fr">énergie houlomotrice</ns0:regexp>
     <ns0:regexp xml:lang="fr">hydrolien</ns0:regexp>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/ecologie-du-littoral">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/mer-et-littoral"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/ecologie-du-littoral">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Écologie du littoral</skos:prefLabel>
         <skos:definition xml:lang="fr">Évolution du trait de côte, qualité des eaux littorales, sites du conservatoire, Avifaune,
 habitats naturels, arrêtés de biotope en mer, ZNIEFF en mer, sites inscrits/classés en mer,
@@ -857,7 +865,7 @@ mammifères marins, Indicateurs de sensibilité, Inventaire permanent du LIttora
         <ns0:regexp xml:lang="fr">habitats marins</ns0:regexp>
         <ns0:regexp xml:lang="fr">habitats côtiers</ns0:regexp>
         <ns0:regexp xml:lang="fr">habitats récifaux</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Nature de l'estran</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Nature de l&#039;estran</ns0:regexp>
         <ns0:regexp xml:lang="fr">herbiers de Zostera</ns0:regexp>
         <ns0:regexp xml:lang="fr">tortues marines</ns0:regexp>
         <ns0:regexp xml:lang="fr">Sites? du Conservatoire du Littoral</ns0:regexp>
@@ -867,11 +875,11 @@ mammifères marins, Indicateurs de sensibilité, Inventaire permanent du LIttora
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/limite-administrative-speciale-en-mer">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/mer-et-littoral"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/limite-administrative-speciale-en-mer">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Limite administrative spéciale en mer et sur le littoral</skos:prefLabel>
-        <skos:definition xml:lang="fr">Zone d'activité des préfectures maritimes, ligne de base, limite des 300m, limites des 1-3-6-12 miles
+        <skos:definition xml:lang="fr">Zone d&#039;activité des préfectures maritimes, ligne de base, limite des 300m, limites des 1-3-6-12 miles
 nautiques, ZEE, limites des communes et des départements en mer, limite du domaine public, limite de salure
 des eaux, Lignes Transversales de la Mer, planification maritime
 </skos:definition>
@@ -885,9 +893,9 @@ des eaux, Lignes Transversales de la Mer, planification maritime
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/lutte-anti-pollution-en-mer">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/mer-et-littoral"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/lutte-anti-pollution-en-mer">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Lutte anti-pollution en mer et sur le littoral</skos:prefLabel>
         <skos:definition xml:lang="fr">Plan de pose de barrages, CNPE, plan de gestion de polluants</skos:definition>
         <skos:broadMatch rdf:resource="http://eurovoc.europa.eu/1870"/>
@@ -904,9 +912,9 @@ des eaux, Lignes Transversales de la Mer, planification maritime
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/navigation-maritime">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/mer-et-littoral"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/navigation-maritime">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Navigation maritime</skos:prefLabel>
         <skos:definition xml:lang="fr">Plaisance et mouillage, zones portuaires, nautique, plan de balisage, zones militaires, câbles sous-marins,
 cantonnements, zones de navigation, balises/épaves, activités des CROSS, formation et qualification
@@ -934,12 +942,12 @@ des gens de mer
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/topographie-en-mer">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/mer-et-littoral"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/topographie-en-mer">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Topographie en mer et sur le littoral</skos:prefLabel>
-        <skos:definition xml:lang="fr">Trait de côte, typologie de l'estran, bathymétrie, sédimentologie, zones de sable, granulométrie, ESI, houle,
-marées, zones inondables, rejets en mer, prises d'eau, sentier littoral, accès au DPM, aires de stationnement,
+        <skos:definition xml:lang="fr">Trait de côte, typologie de l&#039;estran, bathymétrie, sédimentologie, zones de sable, granulométrie, ESI, houle,
+marées, zones inondables, rejets en mer, prises d&#039;eau, sentier littoral, accès au DPM, aires de stationnement,
 sites industriels, amers remarquables, cartes de navigation électroniques
 </skos:definition>
         <skos:altLabel xml:lang="fr">Mer Littoral/Topographie</skos:altLabel>
@@ -952,7 +960,7 @@ sites industriels, amers remarquables, cartes de navigation électroniques
         <ns0:regexp xml:lang="fr">Accès au littoral</ns0:regexp>
         <ns0:regexp xml:lang="fr">Ortho-littorale</ns0:regexp>
         <ns0:regexp xml:lang="fr">Ortho littorale</ns0:regexp>
-        <ns0:regexp xml:lang="fr">prises d'eau de mer</ns0:regexp>
+        <ns0:regexp xml:lang="fr">prises d&#039;eau de mer</ns0:regexp>
         <ns0:regexp xml:lang="fr">Sentier du Littoral</ns0:regexp>
         <ns0:regexp xml:lang="fr">Artificialisation côte</ns0:regexp>
         <ns0:regexp xml:lang="fr">exutoires</ns0:regexp>
@@ -960,9 +968,9 @@ sites industriels, amers remarquables, cartes de navigation électroniques
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/chasse-maritime">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/mer-et-littoral"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/chasse-maritime">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mer-et-littoral"/>
         <skos:prefLabel xml:lang="fr">Chasse maritime</skos:prefLabel>
         <skos:definition xml:lang="fr">Zones de chasse réglementée, concession baux</skos:definition>
         <skos:altLabel xml:lang="fr">Mer Littoral/Chasse maritime</skos:altLabel>
@@ -976,14 +984,14 @@ sites industriels, amers remarquables, cartes de navigation électroniques
     <skos:prefLabel xml:lang="fr">mer</skos:prefLabel>
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
     <skos:prefLabel xml:lang="fr">Nature, paysages et biodiversité</skos:prefLabel>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/inventaires-nature-et-biodiversite">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/inventaires-nature-et-biodiversite">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
         <skos:prefLabel xml:lang="fr">Inventaires nature et biodiversité</skos:prefLabel>
         <skos:broadMatch rdf:resource="http://eurovoc.europa.eu/919"/>
         <skos:broadMatch rdf:resource="http://eurovoc.europa.eu/5463"/>
@@ -1004,9 +1012,9 @@ sites industriels, amers remarquables, cartes de navigation électroniques
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/inventaires-des-paysages">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/inventaires-des-paysages">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
         <skos:prefLabel xml:lang="fr">Inventaires des paysages</skos:prefLabel>
         <skos:broadMatch rdf:resource="http://eurovoc.europa.eu/919"/>
         <skos:altLabel xml:lang="fr">Nature Paysage Biodiversité/Inventaire Paysage</skos:altLabel>
@@ -1017,14 +1025,14 @@ sites industriels, amers remarquables, cartes de navigation électroniques
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/protection-et-gestion-de-la-nature">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-et-gestion-de-la-nature">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
         <skos:prefLabel xml:lang="fr">Protection et gestion de la nature</skos:prefLabel>
         <skos:broadMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/2825">
             <skos:inScheme rdf:resource="http://eurovoc.europa.eu/100141"/>
-            <skos:prefLabel xml:lang="fr">protection de l'environnement</skos:prefLabel>
+            <skos:prefLabel xml:lang="fr">protection de l&#039;environnement</skos:prefLabel>
           </skos:Concept>
         </skos:broadMatch>
 
@@ -1055,9 +1063,9 @@ sites industriels, amers remarquables, cartes de navigation électroniques
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/protection-et-gestion-des-paysages">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/protection-et-gestion-des-paysages">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
         <skos:prefLabel xml:lang="fr">Protection et gestion des paysages</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/2841">
@@ -1077,9 +1085,9 @@ sites industriels, amers remarquables, cartes de navigation électroniques
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/chasse">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/chasse">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nature-paysages-et-biodiversite"/>
         <skos:prefLabel xml:lang="fr">Chasse</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/5396">
@@ -1105,14 +1113,14 @@ sites industriels, amers remarquables, cartes de navigation électroniques
     <skos:prefLabel xml:lang="fr">biodiversité</skos:prefLabel>
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
     <skos:prefLabel xml:lang="fr">Nuisances, déchets et pollution</skos:prefLabel>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/bruit">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/bruit">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
         <skos:prefLabel xml:lang="fr">Bruit</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/5048">
@@ -1126,16 +1134,16 @@ sites industriels, amers remarquables, cartes de navigation électroniques
         <ns0:regexp xml:lang="fr">Classement sonore</ns0:regexp>
         <ns0:regexp xml:lang="fr">gêne sonore</ns0:regexp>
         <ns0:regexp xml:lang="fr">Cartes? de bruit strat(é|e)gique</ns0:regexp>
-        <ns0:regexp xml:lang="fr">plans? d'exposition au bruit</ns0:regexp>
+        <ns0:regexp xml:lang="fr">plans? d&#039;exposition au bruit</ns0:regexp>
         <ns0:regexp xml:lang="fr">Niveau de bruit</ns0:regexp>
         <ns0:regexp xml:lang="fr">cartographie du bruit</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/dechets">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/dechets">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
         <skos:prefLabel xml:lang="fr">Déchets</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/343">
@@ -1152,9 +1160,9 @@ sites industriels, amers remarquables, cartes de navigation électroniques
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/perturbations-electromagnetiques">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/perturbations-electromagnetiques">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
         <skos:prefLabel xml:lang="fr">Perturbations électromagnétiques</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/5319">
@@ -1170,9 +1178,9 @@ sites industriels, amers remarquables, cartes de navigation électroniques
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/pollution-des-sols">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/pollution-des-sols">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
         <skos:prefLabel xml:lang="fr">Pollution des sols</skos:prefLabel>
         <skos:exactMatch>
           <skos:Concept rdf:about="http://eurovoc.europa.eu/2534">
@@ -1188,10 +1196,10 @@ sites industriels, amers remarquables, cartes de navigation électroniques
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/qualite-de-l-air">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
-        <skos:prefLabel xml:lang="fr">Qualité de l'air</skos:prefLabel>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/qualite-de-l-air">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/nuisances-dechets-et-pollution"/>
+        <skos:prefLabel xml:lang="fr">Qualité de l&#039;air</skos:prefLabel>
         <skos:changeNote xml:lang="fr">Le sous-thème Covadis &quot;Air Climat/Qualité Pollution&quot; a été déplacé dans le thème EcoSphères
 &quot;Nuisances, déchets et pollution&quot;
 </skos:changeNote>
@@ -1217,12 +1225,12 @@ sites industriels, amers remarquables, cartes de navigation électroniques
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:prefLabel xml:lang="fr">Réseaux d'énergie et de communication</skos:prefLabel>
-    <skos:editorialNote xml:lang="fr">Où mettre les jeux concernant l'énergie mais pas les réseaux ?  
-Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:prefLabel xml:lang="fr">Réseaux d&#039;énergie et de communication</skos:prefLabel>
+    <skos:editorialNote xml:lang="fr">Où mettre les jeux concernant l&#039;énergie mais pas les réseaux ?  
+Il faudrait étendre ce thème pour intégrer tout le champ de l&#039;énergie.
 </skos:editorialNote>
     <skos:altLabel xml:lang="fr">Réseau Énergie Divers/Autre</skos:altLabel>
     <skos:altLabel xml:lang="fr">energie</skos:altLabel>
@@ -1232,25 +1240,25 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
     <skos:altLabel xml:lang="fr">geothermie</skos:altLabel>
     <ns0:regexp xml:lang="fr">Réseaux? de chaleur</ns0:regexp>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/amenagement-numerique-des-territoires">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/amenagement-numerique-des-territoires">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"/>
         <skos:prefLabel xml:lang="fr">Aménagement numérique des territoires</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Réseau Énergie Divers/Aménagement numérique des territoires</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/reseau-electrique">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-electrique">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"/>
         <skos:prefLabel xml:lang="fr">Réseau électrique</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Réseau Énergie Divers/Électricité</skos:altLabel>
         <skos:altLabel xml:lang="fr">electricite</skos:altLabel>
-        <ns0:regexp xml:lang="fr">Transport d'électricité</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Transport d&#039;électricité</ns0:regexp>
         <ns0:regexp xml:lang="fr">haute tension</ns0:regexp>
         <ns0:regexp xml:lang="fr">haute-tension</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Pylones? d'électricité</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Pylones? d&#039;électricité</ns0:regexp>
         <ns0:regexp xml:lang="fr">Barrages? hydroélectriques?</ns0:regexp>
         <ns0:regexp xml:lang="fr">Centrales? hydroélectriques?</ns0:regexp>
         <ns0:regexp xml:lang="fr">photovoltaiques?</ns0:regexp>
@@ -1259,9 +1267,9 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/reseau-hydrocarbures">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-hydrocarbures">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"/>
         <skos:prefLabel xml:lang="fr">Réseau de transport et de stockage des hydrocarbures</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Réseau Énergie Divers/Hydrocarbure</skos:altLabel>
         <skos:altLabel xml:lang="fr">gaz-naturel</skos:altLabel>
@@ -1275,9 +1283,9 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/reseau-de-telecommunication">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-de-telecommunication">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseaux-d-energie-et-de-communication"/>
         <skos:prefLabel xml:lang="fr">Réseau de télécommunication</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Réseau Énergie Divers/Télécommunication</skos:altLabel>
       </skos:Concept>
@@ -1285,40 +1293,40 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/risques">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
     <skos:prefLabel xml:lang="fr">Risques</skos:prefLabel>
     <skos:altLabel xml:lang="fr">risques</skos:altLabel>
     <ns0:regexp xml:lang="fr">Aléas naturels connus</ns0:regexp>
-    <ns0:regexp xml:lang="fr">risque d'érodabilté</ns0:regexp>
+    <ns0:regexp xml:lang="fr">risque d&#039;érodabilté</ns0:regexp>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/prevention-des-avalanches">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-avalanches">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
         <skos:prefLabel xml:lang="fr">Prévention des avalanches</skos:prefLabel>
-        <skos:definition xml:lang="fr">Connaissance et prévention du risque d'avalanches</skos:definition>
+        <skos:definition xml:lang="fr">Connaissance et prévention du risque d&#039;avalanches</skos:definition>
         <skos:altLabel xml:lang="fr">Risque/Avalanche</skos:altLabel>
         <ns0:regexp xml:lang="fr">avalanche</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/prevention-des-eruptions-volcaniques">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-eruptions-volcaniques">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
         <skos:prefLabel xml:lang="fr">Prévention des éruptions volcaniques</skos:prefLabel>
-        <skos:definition xml:lang="fr">Connaissance et prévention du risque d'éruption volcanique</skos:definition>
+        <skos:definition xml:lang="fr">Connaissance et prévention du risque d&#039;éruption volcanique</skos:definition>
         <skos:altLabel xml:lang="fr">Risque/Eruption volcanique</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/prevention-des-inondations">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-inondations">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
         <skos:prefLabel xml:lang="fr">Prévention des inondations</skos:prefLabel>
-        <skos:definition xml:lang="fr">Connaissance et prévention du risque d'inondation</skos:definition>
+        <skos:definition xml:lang="fr">Connaissance et prévention du risque d&#039;inondation</skos:definition>
         <skos:altLabel xml:lang="fr">Risque/Inondation</skos:altLabel>
         <skos:altLabel xml:lang="fr">inondation</skos:altLabel>
         <skos:altLabel xml:lang="fr">papi</skos:altLabel>
@@ -1327,25 +1335,25 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
         <skos:altLabel xml:lang="fr">risques-inondations</skos:altLabel>
         <skos:altLabel xml:lang="fr">risque-inondation</skos:altLabel>
         <skos:altLabel xml:lang="fr">innondation</skos:altLabel>
-        <ns0:regexp xml:lang="fr">territoires? à risque d'inondation</ns0:regexp>
+        <ns0:regexp xml:lang="fr">territoires? à risque d&#039;inondation</ns0:regexp>
         <ns0:regexp xml:lang="fr"> TRI </ns0:regexp>
         <ns0:regexp xml:lang="fr">Atlas des Zones Inondables</ns0:regexp>
         <ns0:regexp xml:lang="fr">Zones inondables connues</ns0:regexp>
         <ns0:regexp xml:lang="fr">repères de crue</ns0:regexp>
         <ns0:regexp xml:lang="fr">Crue</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Enveloppes? Approchées? d'Inondations? Potentielles?</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Enveloppes? Approchées? d&#039;Inondations? Potentielles?</ns0:regexp>
         <ns0:regexp xml:lang="fr">EAIP</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Plans d'actions pour la prévention des inondations</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Plans d&#039;actions pour la prévention des inondations</ns0:regexp>
         <ns0:regexp xml:lang="fr">PAPI</ns0:regexp>
         <ns0:regexp xml:lang="fr">Cartographie informative des zones inondables</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Risques? d'Inondation</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Risques? d&#039;Inondation</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/prevention-du-risque-mouvement-de-terrain">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-mouvement-de-terrain">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
         <skos:prefLabel xml:lang="fr">Prévention du risque mouvement de terrain</skos:prefLabel>
         <skos:definition xml:lang="fr">Connaissance et prévention du risque de mouvement de terrain</skos:definition>
         <skos:altLabel xml:lang="fr">Risque/Mouvement de terrain</skos:altLabel>
@@ -1358,9 +1366,9 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/prevention-du-risque-radon">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-radon">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
         <skos:prefLabel xml:lang="fr">Prévention du risque radon</skos:prefLabel>
         <skos:definition xml:lang="fr">Connaissance et prévention du risque radon</skos:definition>
         <skos:altLabel xml:lang="fr">Risque/Radon</skos:altLabel>
@@ -1369,9 +1377,9 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/prevention-du-risque-minier">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-minier">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
         <skos:prefLabel xml:lang="fr">Prévention du risque minier</skos:prefLabel>
         <skos:definition xml:lang="fr">Connaissance et prévention du risque minier</skos:definition>
         <skos:altLabel xml:lang="fr">Risque/Risque minier</skos:altLabel>
@@ -1384,9 +1392,9 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/prevention-des-risques-technologiques">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-des-risques-technologiques">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
         <skos:prefLabel xml:lang="fr">Prévention des risques technologiques</skos:prefLabel>
         <skos:definition xml:lang="fr">Connaissance des riques technologiques (industriels, nucléaires, technologiques, rupture de barrages)</skos:definition>
         <skos:altLabel xml:lang="fr">Risque/Risque technologique</skos:altLabel>
@@ -1398,9 +1406,9 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/prevention-du-risque-sismique">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/prevention-du-risque-sismique">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
         <skos:prefLabel xml:lang="fr">Prévention du risque sismique</skos:prefLabel>
         <skos:definition xml:lang="fr">Connaissance et prévention du risque sismique</skos:definition>
         <skos:altLabel xml:lang="fr">Risque/Séisme</skos:altLabel>
@@ -1410,9 +1418,9 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-naturels">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-naturels">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
         <skos:prefLabel xml:lang="fr">Réglementation de prévention des risques naturels</skos:prefLabel>
         <skos:editorialNote xml:lang="fr">Intégrer à ce sous-thème les Plans de Prévention des Risques Miniers ou créer un nouveau sous-thème ?
 </skos:editorialNote>
@@ -1429,7 +1437,7 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
         <skos:altLabel xml:lang="fr">risque/n_zonages_risque_naturel/id_gaspar</skos:altLabel>
         <skos:altLabel xml:lang="fr">risques/n_zonages_risque_naturel/id_gaspar</skos:altLabel>
         <ns0:regexp xml:lang="fr">plans? de prévention des risques naturels</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Plans? de Prévention des Risques d'Inondation</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Plans? de Prévention des Risques d&#039;Inondation</ns0:regexp>
         <ns0:regexp xml:lang="fr">Plan des surfaces submersibles</ns0:regexp>
         <ns0:regexp xml:lang="fr">PSS</ns0:regexp>
         <ns0:regexp xml:lang="fr">Arrêtés de catastrophe naturelle</ns0:regexp>
@@ -1440,9 +1448,9 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-technologiques">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reglementation-de-prevention-des-risques-technologiques">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
         <skos:prefLabel xml:lang="fr">Réglementation de prévention des risques technologiques</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Risque/Zonages Risque technologique</skos:altLabel>
         <skos:altLabel xml:lang="fr">Risque/Risque technologique</skos:altLabel>
@@ -1455,11 +1463,11 @@ Il faudrait étendre ce thème pour intégrer tout le champ de l'énergie.
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/gestion-du-risque">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/risques"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/gestion-du-risque">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/risques"/>
         <skos:prefLabel xml:lang="fr">Gestion du risque</skos:prefLabel>
-        <skos:definition xml:lang="fr">Entreprises requisitionnables, plans de secours, limites de compétence des SPC, cours d'eau équipés pour
+        <skos:definition xml:lang="fr">Entreprises requisitionnables, plans de secours, limites de compétence des SPC, cours d&#039;eau équipés pour
 la surveillance des crues, documents communaux de synthèse, ...  
 y compris information et sensibilisation de la population
 </skos:definition>
@@ -1475,20 +1483,20 @@ y compris information et sensibilisation de la population
         <ns0:regexp xml:lang="fr">PPI</ns0:regexp>
         <ns0:regexp xml:lang="fr">SDIS</ns0:regexp>
         <ns0:regexp xml:lang="fr">Plan Communal de Sauvegarde</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Document d'information communal sur les risques majeurs</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Document d&#039;information communal sur les risques majeurs</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/industrie">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:prefLabel xml:lang="fr">Industrie, production d'énergie et exploitation du sol</skos:prefLabel>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:prefLabel xml:lang="fr">Industrie, production d&#039;énergie et exploitation du sol</skos:prefLabel>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/mines">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/industrie"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/mines">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie"/>
         <skos:prefLabel xml:lang="fr">Mines, carrières et extraction de granulats</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Site industriel Production/Mine Carrière Granulats</skos:altLabel>
         <skos:altLabel xml:lang="fr">permis-dexploitation</skos:altLabel>
@@ -1504,17 +1512,17 @@ y compris information et sensibilisation de la population
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/sites-industriels">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/industrie"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/sites-industriels">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie"/>
         <skos:prefLabel xml:lang="fr">Sites industriels</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Site industriel Production/Site industriel</skos:altLabel>
         <skos:altLabel xml:lang="fr">ICPE</skos:altLabel>
-        <skos:altLabel xml:lang="fr">Installation classé pour la protection de l'environnement</skos:altLabel>
-        <skos:altLabel xml:lang="fr">Installations classés pour la protection de l'environnement</skos:altLabel>
+        <skos:altLabel xml:lang="fr">Installation classé pour la protection de l&#039;environnement</skos:altLabel>
+        <skos:altLabel xml:lang="fr">Installations classés pour la protection de l&#039;environnement</skos:altLabel>
         <ns0:regexp xml:lang="fr">ICPE</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Installations? classées? pour la protection de l'environnement</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Installations? classées? pour l'environnement</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Installations? classées? pour la protection de l&#039;environnement</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Installations? classées? pour l&#039;environnement</ns0:regexp>
         <ns0:regexp xml:lang="fr">SEVESO</ns0:regexp>
         <ns0:regexp xml:lang="fr">Tours? aéroréfrigérantes?</ns0:regexp>
         <ns0:regexp xml:lang="fr">Registre français des émissions polluantes</ns0:regexp>
@@ -1523,9 +1531,9 @@ y compris information et sensibilisation de la population
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/parcs-eoliens">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/industrie"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/parcs-eoliens">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie"/>
         <skos:prefLabel xml:lang="fr">Parcs éoliens</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Site industriel Production/Site éolien</skos:altLabel>
         <skos:altLabel xml:lang="fr">site-site-industriel-production-site-eolien</skos:altLabel>
@@ -1534,18 +1542,18 @@ y compris information et sensibilisation de la population
         <skos:altLabel xml:lang="fr">eolien-terrestre</skos:altLabel>
         <skos:altLabel xml:lang="fr">eolienne</skos:altLabel>
         <ns0:regexp xml:lang="fr">Éoliennes?</ns0:regexp>
-        <ns0:regexp xml:lang="fr">Zone favorable à l'éolien</ns0:regexp>
+        <ns0:regexp xml:lang="fr">Zone favorable à l&#039;éolien</ns0:regexp>
         <ns0:regexp xml:lang="fr">Parcs? éoliens?</ns0:regexp>
         <ns0:regexp xml:lang="fr">Mâts? éoliens?</ns0:regexp>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/production-d-energie-hors-eolien">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/industrie"/>
-        <skos:prefLabel xml:lang="fr">Production d'énergie hors éolien</skos:prefLabel>
-        <skos:altLabel xml:lang="fr">Site industriel Production/Site de production d'énergie</skos:altLabel>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/production-d-energie-hors-eolien">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/industrie"/>
+        <skos:prefLabel xml:lang="fr">Production d&#039;énergie hors éolien</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">Site industriel Production/Site de production d&#039;énergie</skos:altLabel>
         <skos:altLabel xml:lang="fr">photovoltaique</skos:altLabel>
         <ns0:regexp xml:lang="fr">installation nucléaire</ns0:regexp>
       </skos:Concept>
@@ -1553,14 +1561,14 @@ y compris information et sensibilisation de la population
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/transport-et-deplacements">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
     <skos:prefLabel xml:lang="fr">Transport et déplacements</skos:prefLabel>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/securite-routiere">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/transport-et-deplacements"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/securite-routiere">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"/>
         <skos:prefLabel xml:lang="fr">Sécurité routière</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Déplacements/Sécurité routière</skos:altLabel>
         <skos:altLabel xml:lang="fr">sécurité routière</skos:altLabel>
@@ -1572,9 +1580,9 @@ y compris information et sensibilisation de la population
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/trafic-routier">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/transport-et-deplacements"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/trafic-routier">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"/>
         <skos:prefLabel xml:lang="fr">Trafic routier et exploitation de la route</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Déplacements/Trafic</skos:altLabel>
         <skos:altLabel xml:lang="fr">trafic</skos:altLabel>
@@ -1585,9 +1593,9 @@ y compris information et sensibilisation de la population
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/transport-collectif">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/transport-et-deplacements"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-collectif">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"/>
         <skos:prefLabel xml:lang="fr">Transport collectif</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Déplacements/Transport collectif</skos:altLabel>
         <ns0:regexp xml:lang="fr">dépôts de voyageurs</ns0:regexp>
@@ -1595,9 +1603,9 @@ y compris information et sensibilisation de la population
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/transport-exceptionnel">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/transport-et-deplacements"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-exceptionnel">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"/>
         <skos:prefLabel xml:lang="fr">Transport exceptionnel</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Déplacements/Transport exceptionnel</skos:altLabel>
         <skos:altLabel xml:lang="fr">transports_exceptionnel</skos:altLabel>
@@ -1606,18 +1614,18 @@ y compris information et sensibilisation de la population
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/transport-de-marchandises">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/transport-et-deplacements"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-de-marchandises">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"/>
         <skos:prefLabel xml:lang="fr">Transport de marchandises</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Déplacements/Transport de marchandise</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/transport-de-matieres-dangereuses">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/transport-et-deplacements"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-de-matieres-dangereuses">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/transport-et-deplacements"/>
         <skos:prefLabel xml:lang="fr">Transport de matières dangereuses</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Déplacements/Transport de matière dangereuse</skos:altLabel>
         <skos:altLabel xml:lang="fr">transport-de-matiere-dangereuse</skos:altLabel>
@@ -1628,14 +1636,14 @@ y compris information et sensibilisation de la population
 
   </skos:Concept>
 
-  <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/infrastructures-de-transport">
-    <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-    <skos:topConceptOf rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
+  <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport">
+    <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+    <skos:topConceptOf rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
     <skos:prefLabel xml:lang="fr">Infrastructures de transport</skos:prefLabel>
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/infrastructure-aeroportuaire">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-aeroportuaire">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
         <skos:prefLabel xml:lang="fr">Infrastructure aéroportuaire</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Infrastructure/Aérien</skos:altLabel>
         <skos:altLabel xml:lang="fr">Infrastructure aéroportuaire (aéroport)</skos:altLabel>
@@ -1646,9 +1654,9 @@ y compris information et sensibilisation de la population
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/circulation-douce">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/circulation-douce">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
         <skos:prefLabel xml:lang="fr">Circulation douce</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Infrastructure/Circulation douce</skos:altLabel>
         <ns0:regexp xml:lang="fr">cyclables?</ns0:regexp>
@@ -1658,10 +1666,10 @@ y compris information et sensibilisation de la population
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/infrastructure-ferree">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
-        <skos:prefLabel xml:lang="fr">Infrastructure ferrée, gares et ouvrages d'art</skos:prefLabel>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-ferree">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
+        <skos:prefLabel xml:lang="fr">Infrastructure ferrée, gares et ouvrages d&#039;art</skos:prefLabel>
         <skos:scopeNote xml:lang="fr">plus les métros et et remontées mécaniques</skos:scopeNote>
         <skos:altLabel xml:lang="fr">Transports Infrastructure/Ferroviaire</skos:altLabel>
         <ns0:regexp xml:lang="fr">Réseau ferré</ns0:regexp>
@@ -1677,36 +1685,36 @@ y compris information et sensibilisation de la population
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/reseau-navigable">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/reseau-navigable">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
         <skos:prefLabel xml:lang="fr">Réseau navigable et ouvrages de navigation</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Infrastructure/Fluvial</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/infrastructure-portuaire">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-portuaire">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
         <skos:prefLabel xml:lang="fr">Infrastructure portuaire</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Infrastructure/Maritime</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/plateformes-multi-modales">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/plateformes-multi-modales">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
         <skos:prefLabel xml:lang="fr">Plateformes multi-modales</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Infrastructure/Plate-forme multimodale</skos:altLabel>
       </skos:Concept>
     </skos:narrower>
 
     <skos:narrower>
-      <skos:Concept rdf:about="http://registre/ecospheres/themes-ecospheres/infrastructure-routiere">
-        <skos:inScheme rdf:resource="http://registre/ecospheres/themes-ecospheres"/>
-        <skos:broader rdf:resource="http://registre/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
+      <skos:Concept rdf:about="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructure-routiere">
+        <skos:inScheme rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres"/>
+        <skos:broader rdf:resource="http://registre.data.developpement-durable.gouv.fr/ecospheres/themes-ecospheres/infrastructures-de-transport"/>
         <skos:prefLabel xml:lang="fr">Infrastructure routière</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Transports Infrastructure/Routier</skos:altLabel>
         <skos:altLabel xml:lang="fr">routes-nationales</skos:altLabel>
