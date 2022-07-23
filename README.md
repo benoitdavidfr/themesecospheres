@@ -13,3 +13,5 @@ dont le schéma JSON est défini dans [thespheres.schema.yaml](thespheres.schema
 
 Les thèmes sont exposés sur https://registre.georef.eu/ecospheres/themes-ecospheres
 en Html et en JSON-LD.
+
+Modification le 23/7/2022 pour utiliser l'URI cible pour le registre : http://registre.data.developpement-durable.gouv.fr/

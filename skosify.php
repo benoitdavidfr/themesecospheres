@@ -8,6 +8,8 @@ doc: |
   Peut afficher en Turtle ou dans les autres formats proposés par EasyRdf ainsi que Yaml-LD.
   Le fichier yaml des thèmes est dans un schéma adhoc défini pour simplifier la gestion.
 journal: |
+  23/7/2022:
+    - utilisation URI cible
   19/7/2022:
     - correction bug échappement des '"' en turtle
   7/7/2022:
